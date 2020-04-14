@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
-    <lastBuildDate>Mon, 13 Apr 2020 19:30:04 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://vchv.tk/index.xml" rel="self" type="application/rss+xml" />
     
@@ -64,6 +64,19 @@
       
       <guid>https://vchv.tk/economics-about-scarce-cost-demand-and-price/</guid>
       <description>前言 经济是一种研究资源是如何分配的学科，这必然会深刻的影响和决定政治。 人类世界的四大基本约束：东西不够；生命有限；互相依赖；需要协调。 关注作</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://vchv.tk/about/</link>
+      <pubDate>Sun, 10 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://vchv.tk/about/</guid>
+      <description>Simplicity, is hidden complexity.
+The essence of flat, is super curved.
+Uncomfortable, is the new comfortable.
+Right is right. Left is also right.
+No detail, can be too detailed.</description>
     </item>
     
   </channel>
