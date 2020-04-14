@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术应用 on Vchv - concise elegance powerful</title>
+    <link>https://vchv.tk/categories/%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/</link>
+    <description>Recent content in 技术应用 on Vchv - concise elegance powerful</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>vchv</copyright>
+    <lastBuildDate>Mon, 13 Apr 2020 19:30:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://vchv.tk/categories/%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>从零开始搭建一个hugo博客</title>
+      <link>https://vchv.tk/build-a-hugo-blog-from-zero/</link>
+      <pubDate>Mon, 13 Apr 2020 19:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
+      <description>前言 有一个虚拟主机，有一个域名，缺一些静态文件，所以使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPre</description>
+    </item>
+    
+  </channel>
+</rss>

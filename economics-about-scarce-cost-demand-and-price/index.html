@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>经济学课之一（稀缺、成本、需求、价格） - Vchv - concise elegance powerful</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="前言 经济是一种研究资源是如何分配的学科，这必然会深刻的影响和决定政治。 人类世界的四大基本约束：东西不够；生命有限；互相依赖；需要协调。 关注作" /><meta name="keywords" content="vchv, 个人生活, python" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.0 with theme even" />
+
+
+<link rel="canonical" href="https://vchv.tk/economics-about-scarce-cost-demand-and-price/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="经济学课之一（稀缺、成本、需求、价格）" />
+<meta property="og:description" content="前言 经济是一种研究资源是如何分配的学科，这必然会深刻的影响和决定政治。 人类世界的四大基本约束：东西不够；生命有限；互相依赖；需要协调。 关注作" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vchv.tk/economics-about-scarce-cost-demand-and-price/" />
+<meta property="article:published_time" content="2019-12-03T20:30:04+08:00" />
+<meta property="article:modified_time" content="2019-12-03T20:30:04+08:00" />
+<meta itemprop="name" content="经济学课之一（稀缺、成本、需求、价格）">
+<meta itemprop="description" content="前言 经济是一种研究资源是如何分配的学科，这必然会深刻的影响和决定政治。 人类世界的四大基本约束：东西不够；生命有限；互相依赖；需要协调。 关注作">
+<meta itemprop="datePublished" content="2019-12-03T20:30:04&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-03T20:30:04&#43;08:00" />
+<meta itemprop="wordCount" content="10688">
+
+
+
+<meta itemprop="keywords" content="经济学课程,稀缺,成本,需求,价格," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="经济学课之一（稀缺、成本、需求、价格）"/>
+<meta name="twitter:description" content="前言 经济是一种研究资源是如何分配的学科，这必然会深刻的影响和决定政治。 人类世界的四大基本约束：东西不够；生命有限；互相依赖；需要协调。 关注作"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">经济学课之一（稀缺、成本、需求、价格）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-12-03 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"> 经济学 </a>
+            </div>
+          <span class="more-meta"> 约 10688 字 </span>
+          <span class="more-meta"> 预计阅读 22 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#新概念新收获">新概念新收获</a></li>
+    <li><a href="#经济学课表目录">经济学课表（目录）</a></li>
+    <li><a href="#东西不够">东西不够</a>
+      <ul>
+        <li><a href="#稀缺">稀缺</a></li>
+        <li><a href="#成本">成本</a></li>
+        <li><a href="#需求">需求</a></li>
+        <li><a href="#价格">价格</a></li>
+      </ul>
+    </li>
+    <li><a href="#第一季度总结人类如何做出选择">第一季度总结：人类如何做出选择？</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2019-12-03T20:30:04" title="December 3, 2019">December 3, 2019</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<ul>
+<li>经济是一种研究资源是如何分配的学科，这必然会深刻的影响和决定政治。</li>
+<li>人类世界的四大基本约束：东西不够；生命有限；互相依赖；需要协调。</li>
+<li>关注作者是如何将一种观点讲清楚，让人接受的。</li>
+<li>经济学是如何改变你的世界观的，什么是真相？那些童话故事很美，但不是真相，真相就是稀缺。</li>
+</ul>
+<h2 id="新概念新收获">新概念新收获</h2>
+<ul>
+<li>公平与效率的关系，公平背后的考量。</li>
+<li>成本的概念，成本是放弃了的最大代价。</li>
+<li>经济学的根基在于稀缺，而非人的理性或自私。</li>
+<li>什么决定成本？是供需。也就是使用价值决定成本，而非价值决定成本。</li>
+<li>科斯定律来解决社会成本问题。</li>
+<li>边际：新增的新增。</li>
+<li>主观价值论：个人估值。</li>
+<li>交易产生了“交易者剩余&rdquo;。</li>
+<li>价格的三个作用：传递稀缺信息；指导生产；奖惩分配。</li>
+<li>最适合的竞争机制是什么？价格。</li>
+</ul>
+<h2 id="经济学课表目录">经济学课表（目录）</h2>
+<ol>
+<li>人性与稀缺：经济学视角；人的本性；稀缺与选择</li>
+<li>成本的深义：成本初探；成本进阶；科斯定律；交易费用</li>
+<li>需求的规律：主观价值论；需求一二三规律</li>
+<li>价格的作用：价格初探；价格进阶；价格管制；价格的教益</li>
+<li>权利的安排：权利的辨析；权利的保护；权利的限制；所有制论衡；共用品与私用品</li>
+<li>耐心的回报：时间偏好与利息；有效市场假说；债券、保险和期货；政策评论</li>
+<li>生产的规划：比较优势；生产的规律；定价的规律</li>
+<li>信任的建立：信息不对称；制度的对策；合约的履行；责任的分摊</li>
+<li>依存与对抗：决策权归属；工资与收入；劳资关系</li>
+<li>公司的结构：有限责任；公司治理</li>
+<li>竞争的逻辑：商业模式与竞争政策；大的也是美的；倾销与捆绑；垂直限制；市场深意</li>
+<li>趋势的调控：货币的作用；宏观调控；宏观学派；学术的运气</li>
+<li>政治与法律：官僚体制；投票的规律；观念的外部性；国家发展</li>
+<li>读厚与读薄：经济学人；拓展与应用；何为地道</li>
+</ol>
+<h2 id="东西不够">东西不够</h2>
+<h3 id="稀缺">稀缺</h3>
+<h4 id="001-经济学无处不在">001-经济学无处不在</h4>
+<h5 id="战俘营里的经济组织经济学无处不在">战俘营里的经济组织：经济学无处不在</h5>
+<ul>
+<li>经济学在任何地方都适用，即使是在战俘营里，只要有人、有不同的需求。</li>
+<li>有人的地方就有交易：物质的总量哪怕不发生变化，只要人与人之间能够交易，幸福就能够无中生有地产生。</li>
+<li>价格与价格波动：有了市场就会有价格，有了价格就会有价格波动。</li>
+<li>货币：有了交易就会产生对货币的需求；有了货币，就有所谓的劣币驱逐良币。</li>
+<li>通胀与通缩：货币的供给发生变化</li>
+<li>跨境贸易：与另一个营发生交易</li>
+<li>户籍制度：德国人、英国人、美国人、欧洲人</li>
+<li>舆论压力：不应该交易，道德等舆论</li>
+<li>仇富情绪：仇恨不对称信息的中间商</li>
+</ul>
+<h5 id="马粪争夺案公平和效率效率决定了公平">马粪争夺案：公平和效率，效率决定了公平</h5>
+<ul>
+<li>鼓励创造财富，还是鼓励对财富做标志</li>
+<li>鼓励人们创造财富，社会才会越来越好</li>
+<li>公正背后是效率的考量，两者可以同进退，公正的也是符合社会效率的。</li>
+</ul>
+<h5 id="看得见的和看不见的">看得见的和看不见的</h5>
+<ul>
+<li>好的经济学家能同时考虑哪些可以看得见的后果，以及哪些只能通过推测看得到的后果</li>
+<li>看见看不见的东西要靠想象力</li>
+<li>做决策时要充分考虑看不见的东西</li>
+</ul>
+<h5 id="经济学不关心阴谋论现代经济学与古代的区别关心事与愿违的因果规律">经济学不关心阴谋论：现代经济学与古代的区别，关心事与愿违的因果规律</h5>
+<ul>
+<li>现代经济学的开山祖师：亚当斯密（1723-1790）-《国民财富的性质和原因探究》</li>
+<li>过去的学问研究的是事与愿符的规律，经济学研究的是事与愿违的规律</li>
+<li>美好愿望不一定带来美好结果：房子涨价，谁涨的按下去；奸商，打击坏人等等</li>
+<li>坏人干坏事的影响其实有限：所有人都会警觉起来阻止他</li>
+<li>好人好心不一定干好事：扶贫政策、最低工资制度、同工同酬制度、福利制度等等</li>
+<li>政府立法不是解决问题的终点</li>
+</ul>
+<blockquote>
+<p>愿上帝保佑我们免受友人的供给——要是攻击来自敌人，我们倒能设法防卫。​</p>
+</blockquote>
+<h5 id="小结经济规律普遍存在制度安排看未来看到看不见的东西事与愿违的现象和规律">小结：经济规律普遍存在；制度安排看未来；看到看不见的东西；事与愿违的现象和规律</h5>
+<hr>
+<h4 id="002-自私和理性不是经济学的基础">002-自私和理性不是经济学的基础。</h4>
+<h5 id="理性之争人做决策的时候是不是完全理性的">理性之争：人做决策的时候是不是完全理性的？</h5>
+<ul>
+<li>不确定性，进化与经济理论《Uncertainty, Evolution and Economic Theory》Armen(1914-2013)</li>
+<li>万物存活看条件，和理性与否无关！经济学家关心存活条件。</li>
+<li>经济学关心的事情跟人是不是理性的、是怎么想的、意图是什么没有关系！ 进化论。</li>
+</ul>
+<blockquote>
+<p>如果一个事实是客观存在的，不以人的主观意识为转移的，那么随大流往往是明智的选择。如果一个事实，会随着人们对它的预期和采取的行动而变化，也就是说人的主观意愿会对事件发展产生巨大的影响，那么随大流很可能是错误的。这个时候如果能有准确清晰的判断，并在此指导下特立独行，成功的概率会大很多。</p>
+</blockquote>
+<h5 id="亚当斯密的人性观自私还是无私爱心与市场">亚当斯密的人性观：自私还是无私，爱心与市场。</h5>
+<ul>
+<li>《道德情操论》《The Theory of Moral Sentiments, 1759》||《国富论，1776》</li>
+<li>人性自私，同时具有同情心和爱心，人的爱心有限，随着距离拉远而下降。</li>
+<li>仅靠爱心不够，陌生人互助需要市场协调。</li>
+<li>人际互动二分法：小圈子靠爱心，大世界靠市场</li>
+<li>人是自私的——他有爱心——爱心有限，爱心不能扩张——于是我们需要一个陌生人互助的平台，那就是市场。</li>
+</ul>
+<blockquote>
+<p>每一个人，不需要自己关心社会福利，他也不知道自己怎么去推动社会的福利。他只需要关心自己，追求他自己的福利就可以了。但是他在追求自己福利的过程中，会有一只看不见的手，让他努力转变为对公共事业的推动。这只看不见的手，会让他的自私自利推动社会福利的改进。
+我们每天之所以能够吃上晚饭，不是因为面包师，不是因为屠夫，不是因为酿酒师，他们爱我们，他们的慈善，而是因为他们要自私自利，他们要追求他们的利益。每当我们跟他们做生意的时候，我们不说我们自己需要什么，而是说他们需要什么。</p>
+</blockquote>
+<h5 id="铅笔的故事成千上万陌生人互相协调工作的平台">铅笔的故事：成千上万陌生人互相协调工作的平台</h5>
+<h5 id="商业是最大的慈善我们每天都要依靠大量陌生人给予的慈善那就是商业">商业是最大的慈善：我们每天都要依靠大量陌生人给予的慈善，那就是商业</h5>
+<ul>
+<li>世界银行失败的扶贫史</li>
+<li>哈利波特的商业奇迹</li>
+<li>四大原因让行善扶贫难以见效
+<ul>
+<li>缺乏反馈机制，我们不知道行善怎么才是有效率的。</li>
+<li>委托代理的问题</li>
+<li>所托非人的问题</li>
+<li>养懒汉效应</li>
+</ul>
+</li>
+</ul>
+<h5 id="小结经济学规律不以人的理性与否而转移随大流与特立独行成功率不相上下具体问题具体分析人性的二分法行善与投资的差别如果不理性的代价低的话人就愿意不理性如果代价足够高的话他们就会变得理性">小结：经济学规律，不以人的理性与否而转移；随大流与特立独行，成功率不相上下，具体问题具体分析；人性的二分法；行善与投资的差别。如果不理性的代价低的话，人就愿意不理性，如果代价足够高的话，他们就会变得理性。</h5>
+<hr>
+<h4 id="003-稀缺是经济学的根基">003-稀缺是经济学的根基！</h4>
+<h5 id="稀缺经济学的根基">稀缺—经济学的根基！</h5>
+<ul>
+<li>你想要的的，别人也想要</li>
+<li>人的需求在不断变化，不断升级</li>
+<li>人的需求是无限的</li>
+</ul>
+<h5 id="选择和歧视">选择和歧视</h5>
+<ul>
+<li>稀缺、选择、区别对待、歧视，四位一体。</li>
+<li>歧视的定义：有稀缺就得有选择，有选择就必须要有标准，选择的标准就是歧视。</li>
+<li>资源有限，一块木材用来做铅笔就不能用来盖房子了；时间有限，用来看经济学课程就不能看编程课程了；金钱有限，买了小新pro就不能买magic book了。</li>
+<li>歧视与逆向歧视</li>
+<li>歧视不是问题，如何歧视才是问题</li>
+</ul>
+<h5 id="凡歧视必得付出代价">凡歧视必得付出代价</h5>
+<ul>
+<li>偏好和信息不对称</li>
+<li>市场竞争让人心胸宽广：竞争的压力，迫使人们减少那些不恰当的歧视。</li>
+</ul>
+<h5 id="歧视的作用和限制歧视的恶果">歧视的作用和限制歧视的恶果</h5>
+<ul>
+<li>谁来歧视</li>
+<li>歧视的后果谁来承担</li>
+<li>凡是歧视就一定要付出代价</li>
+</ul>
+<h5 id="小结竞争压力迫使人们减少不恰当的歧视">小结：竞争压力，迫使人们减少不恰当的歧视</h5>
+<hr>
+<h3 id="成本">成本</h3>
+<h4 id="004-学懂成本概念就学懂经济学一半">004-学懂成本概念就学懂经济学一半!</h4>
+<ul>
+<li>成本是什么？成本是我为了这个选择而放弃做其他事情中的最大价值。</li>
+</ul>
+<h5 id="一句话给成本下定义">一句话给成本下定义</h5>
+<ul>
+<li>企业家：有没有消费者为他的经营活动买单？猜对了盈利，猜错了，亏损。</li>
+<li>成本是放弃了的最大代价：一个资源，它有若干的选项，被选中的那个选项，它的成本是那些所有落选的选项当中，价值最高的那个。简单说，成本就是放弃了东西中的最大值。问题是你放弃的东西还未实现，你得靠想象才知道它有多大的价值。</li>
+<li>成本概念看似简单，实则深不可测——想象那些放弃了的东西实现的价值。</li>
+<li>公共品使用的成本、制度变迁的成本、社会的成本，竞争本身带来的成本。</li>
+</ul>
+<h5 id="你的成本由别人决定">你的成本由别人决定</h5>
+<ul>
+<li>负面的感受不是成本，比如你为这个选择多累多苦，你要付出的最大代价才是成本。</li>
+<li>你的成本由别人决定：我有自己的房子，自己做生意，成本为0吗？不，你可以租出去更赚钱。</li>
+<li>你的职业范围由社会决定：你坚持初心的成本由社会上的其他人做主。</li>
+</ul>
+<h5 id="别只盯着钱货币成本等于总成本">别只盯着钱：货币成本等于总成本</h5>
+<ul>
+<li>货币成本不等于全部成本：你选择价格低的房子，但是每天的时间增加了。</li>
+<li>给士兵发薪比免费征兵更便宜：</li>
+<li>中间商赚差价，让商品价格更便宜</li>
+<li>减少中间环节，将让药品价格不降反升</li>
+</ul>
+<h5 id="沉没成本不是成本">沉没成本不是成本</h5>
+<ul>
+<li>沉没成本：不适合就赶快换</li>
+<li>边际成本：决定行为选项—— 我们要投入多少才能得到预期的回报</li>
+<li>将就错误可能是更有效率的决策</li>
+<li>边际概念在产业政策中的运用</li>
+</ul>
+<h5 id="小结成本是放弃了的最大代价不是你的东西就不算是放弃比较优势原理宪法时刻沉没成本不是成本有时需要果断放弃有时需要将就如何选择要看边际成本和边际收益">小结：成本是放弃了的最大代价，不是你的东西就不算是放弃。比较优势原理。宪法时刻。沉没成本不是成本，有时需要果断放弃，有时需要将就，如何选择，要看边际成本和边际收益。</h5>
+<hr>
+<h4 id="005-寸进成本的深意">005-寸进成本的深意</h4>
+<h5 id="从成本角度理解盈利与亏损">从成本角度理解盈利与亏损</h5>
+<ul>
+<li>凡是盈利都是意外（windfall profit）——盈利提高了资源未来使用的成本</li>
+<li>亏损会降低资源使用成本（windfall loss）——亏损会降低资源未来使用的成本</li>
+<li>盈利还是亏损，在经济学中的概念里，都是意外发生的。经济学是容纳不了盈利和亏损这两个概念的，我们都把它当做意外来处理。</li>
+<li>重新估值不难，难的是找出盈利或亏损原因：归功与归咎</li>
+</ul>
+<h5 id="供需决定论最终产品的供需决定原材料的成本">供需决定论：最终产品的供需决定原材料的成本</h5>
+<ul>
+<li>资源有价，是因为最终产品有需求</li>
+<li>成本决定论站不住脚：会计学——最终产品的定价=原材料成本*合理的利润率=最终售价</li>
+<li><strong>成本决定论是错的，不是产品的原材料成本决定了产品的最终售价。</strong></li>
+<li>供需关系决定商品价格，商品价格决定资源成本</li>
+</ul>
+<blockquote>
+<p>世界上并不存在合理的利润率，商人是能赚多少就赚多少的。赚完之后，再把他赚的钱，归功到前面的生产要素里面去。同样，世界上也不存在合理的亏损率，要真的亏起来，没有什么合理不合理的，就是血本无归的事情也经常发生。</p>
+</blockquote>
+<pre><code>    商品价值是什么？无差别的人类劳动。无差别的人类劳动量与社会必要劳动时间成正比。商品的使用价值和商品的价值不是一个东西，一个是供需关系，一个是凝结劳动力。
+</code></pre>
+<h5 id="租是对资产的付费">“租”是对资产的付费</h5>
+<ul>
+<li>“租”概念的扩大化：旱涝保收的收入，你白赚的收入。</li>
+<li>“租”解读的另一个角度：旱涝保收是不存在的。</li>
+<li>“租”：一份资源，如果它提供的服务跟它的收费没有关系的时候，它体现出来的就是租。</li>
+<li>“租”和“成本”是资源的一体两面。</li>
+</ul>
+<h5 id="寻租向政府争取特殊优惠或权利的行为">寻租：向政府争取特殊优惠或权利的行为</h5>
+<ul>
+<li>乞丐没有白拿施舍</li>
+<li>政府规制下的资源消耗：在为了拿到优惠政策时，每家企业都付出了资源。</li>
+<li>寻租概念的起源：《关于税、垄断和偷窃的福利成本》1967.《寻租社会的政治经济学》1974年</li>
+<li>寻租概念的特定含义：向政府争取优惠政策，让自己得到好处，而社会总资源发生耗散的行为。如一家企业花钱投入研究，一家企业想方设法，获得政府特殊的优惠政策。</li>
+</ul>
+<h5 id="小结供需决定成本价值与使用价值租的概念竞争会让静态的格局变成动态的格局">小结：供需决定成本；价值与使用价值；“租”的概念；竞争会让静态的格局变成动态的格局。</h5>
+<hr>
+<h4 id="006-认识社会成本">006-认识社会成本</h4>
+<p><strong>科斯定律（成王败寇）：只要交易费用足够低，那么无论资源归谁所有，资源的用途都应该是一样的，谁用得好资源就归谁用；谁避免意外的成本更低，谁避免意外的责任就更大。</strong></p>
+<ul>
+<li>资源归谁所有，资源用在什么用途上，它跟产权的所有者无关。跟谁能产生更大的效益来决定。</li>
+<li>与当事人的数目也无关，不看人头，看经济效益。</li>
+<li>与补偿不补偿没有直接关系，随着默认责任的改变，原来要补偿的，后来可能就变得不需要补偿了。</li>
+<li>跟收入高低无关。</li>
+</ul>
+<h5 id="社会成本问题伤害与被伤害">社会成本问题：伤害与被伤害</h5>
+<ul>
+<li>
+<p>科斯的非凡见解《社会成本问题》1960.</p>
+</li>
+<li>
+<p>思考：行使你的权利，但应该以不伤害别人的权利为界。</p>
+<ul>
+<li>牛与小麦：一边牛一边小麦，牛去吃小麦，阻止不？</li>
+<li>泳池阳光与酒店副楼：阳光归谁所有？</li>
+<li>烟囱与邻居：左边盖高了，挡住了烟囱出口，自己烟呛到了自己。</li>
+<li>火车与亚麻：烧煤的火车喷出的火星烧了亚麻地。</li>
+<li>糖果商与医生：糖果商的噪音，伤害了医生给病人看病需要的安宁</li>
+<li>养鸡场与新居民：养鸡场的诶子，伤害了居民应该享受到的新鲜空气</li>
+<li>水泥厂与老居民：伤害了周围居民的健康，时不时告一告拿点补助</li>
+</ul>
+</li>
+</ul>
+<h5 id="社会成本问题值得与不值得">社会成本问题：值得与不值得</h5>
+<ul>
+<li>所有的伤害都是相互的，换个角度，双方在争夺一些稀缺的资源。</li>
+<li><strong>爱泼斯坦的123归纳法：如果资产属于一个人会发生什么情况？属于两个人？属于3个人？</strong></li>
+<li>谁避免意外成本最低，谁的责任就最大</li>
+</ul>
+<h5 id="科斯定律资源总会到可以用它的人手上谁用的好就归谁">科斯定律：资源总会到可以用它的人手上。谁用的好就归谁</h5>
+<ul>
+<li>淘宝店数据归谁所有？</li>
+<li>Kindle阅读器中的数据产权</li>
+<li>隐私权与公共安全的权衡</li>
+<li>钻石归矿工还是白富美</li>
+<li>绝命毒师</li>
+<li>女朋友与科斯定律：谁用的好就归谁。</li>
+</ul>
+<h5 id="越富足越健康">越富足越健康</h5>
+<ul>
+<li>马车与汽车：马粪与尾气《the good old days, they were terrible》</li>
+<li>科斯对价</li>
+<li>干净的煤和肮脏的空气</li>
+<li>布餐巾和纸餐巾：哪个更环保？</li>
+</ul>
+<h5 id="小结科斯定律多做正外部性的尝试科斯定律需要反复思考反复掂量先看世界运行的规律再谈应不应该男人和女人谁守规矩">小结：科斯定律；多做正外部性的尝试；科斯定律需要反复思考、反复掂量；先看世界运行的规律，再谈应不应该；男人和女人谁守规矩？</h5>
+<hr>
+<h4 id="007-科斯定律的应用讲数不讲理">007-科斯定律的应用：讲数不讲理</h4>
+<h5 id="有人群就有交易费用">有人群就有交易费用</h5>
+<ul>
+<li>制度安排：不仅是有形的、卸载法律条文上面的，也包括我们的家庭、风俗、习惯、舆论，所有这些都是一种制度安排。</li>
+<li>交易费用：凡是在一个人的社会里不存在，而在多个人的社会里存在的成分，就叫交易费用。如保护自己的私有财产，监督他的劳动。</li>
+<li>科斯定律中的前提：<strong>交易费用为零</strong>，现实中交易费用很大。</li>
+<li>科斯对中国经济学人的期许：关注真实世界的经济学，而不是黑板经济学。</li>
+<li>现实中交易费用可能高不可攀</li>
+<li>风俗习惯与道德规范为何重要，因为节省交易费用。</li>
+</ul>
+<h5 id="征地的权衡">征地的权衡</h5>
+<ul>
+<li>
+<p>私人产权和政府征地权之间的平衡</p>
+<pre><code>  - 政府有没有征地权？
+  - 征地权的界限有待摸索。判例法
+  - 香港的征地制度
+  - 中国征地问题的症结所在：政府是土地的所有者。
+</code></pre>
+</li>
+</ul>
+<h5 id="寻求合作解">寻求合作解</h5>
+<ul>
+<li>
+<p>招一个平衡点</p>
+<pre><code>  - 怎么在大学宿舍办Party？安静权这个资源值多少钱。
+  - 联邦通讯委员会
+  - 餐厅该不该戒烟
+  - 蜜蜂的寓言
+  - 大学纪念品让谁占了便宜
+  - 瑞格利球场的门票
+</code></pre>
+</li>
+</ul>
+<h5 id="成本概念的递进">成本概念的递进</h5>
+<ul>
+<li>成本概念深不可测：成本的概念是想象出来的，你舍弃的选择。</li>
+<li>成本是放弃了的最大代价，成本是向前看的，而不是往后看的。</li>
+<li>产品价格与成本无关：最终商品的供求关系，决定了最终商品的价格，而最终商品的价格倒过来决定商品生产的原材料的成本。</li>
+<li>存在于想象中的体制成本</li>
+<li><img src="https://vepfuq.by.files.1drv.com/y4mQ1NpYv2_7yVt-NGD-tWmdE8dIPsFCkK3S3_6iXKmVHnOI_3-h5ymr2tTryY-3s3CJ0SiiIujZN9E8a5sO7h78PibMv2cDPjXwMPe5RgW3nEoWqToYHtR9VkFO-ubqbWRPwl3p5HblbiEpx0MQWmEIDbCVdVhusERCZR15f6vo00tsFHfY60Ko9RI3P0xqDbVzvzZbauq2ftdZCvAZnTVlg?width=670&amp;height=706&amp;cropmode=none" alt="成本概念"></li>
+</ul>
+<h5 id="小结成本的概念经济学改变人的观念关于习俗规矩降低交易成本彩礼的制度功能地铁先降价后涨价谁赚了谁赔了">小结：成本的概念；经济学改变人的观念，关于习俗，规矩，降低交易成本；彩礼的制度功能；地铁先降价后涨价，谁赚了谁赔了。</h5>
+<hr>
+<h3 id="需求">需求</h3>
+<h4 id="008-主观价值论需求第一定律">008-主观价值论+需求第一定律</h4>
+<h5 id="个人主义的主观价值论">个人主义的主观价值论</h5>
+<ul>
+<li>
+<p>了解了供给和需求就是经济学家了吗？</p>
+</li>
+<li>
+<p>个人估值的多层含义</p>
+<ul>
+<li>个人估值：一个人对一件商品的个人估值，是他为了得到这件商品所愿意支付的其他商品的最高数量。</li>
+<li>只有个人才有行动能力</li>
+<li>所有价值和估值都起源于个人</li>
+<li>个人行动都是可观察可记录的</li>
+</ul>
+</li>
+<li>
+<p>微妙的个人估值论</p>
+<ul>
+<li>它是由个人决定的，集体不能决定，一定是个人的</li>
+<li>它是完全主观的</li>
+<li>它是基于行动的，不是单纯的愿望。因为它基于行动，所以我们外人也可以观察，也可以记录下来，也可以刻画，也可以从中找到它的规律。</li>
+</ul>
+</li>
+<li>
+<p>主观价值论与客观价值论的区别</p>
+<ul>
+<li>凡是  客观价值论能解释的现象，主观价值论也能解释，或者说个人估值概念也能解释。</li>
+<li>客观价值论不能解释的现象，主观价值论也能解释</li>
+<li>主观价值论能够更好地指导生。//不是你为它付出了多少，而是你能不能销售它。</li>
+</ul>
+</li>
+</ul>
+<h5 id="边际革命">边际革命</h5>
+<ul>
+<li>钻石与水的故事：对人的重要程度和价格不成正比</li>
+<li>边际的概念：<strong>新增带来的新增。</strong>//边际收入是你多卖一个产品，你能够新增的收入；边际产量是你多增加一份投入，所能多获得的产量；边际效用是你多消耗一个单位的商品，所能带来的新增的享受。</li>
+<li>边际平衡：边际收益与边际成本趋同</li>
+</ul>
+<h5 id="需求第一定律无论何时何地价格提高商品的需求量就减少价格降到一定的程度需求量就会增加">需求第一定律：无论何时何地，价格提高，商品的需求量就减少，价格降到一定的程度，需求量就会增加。</h5>
+<p><strong>需求曲线</strong></p>
+<ul>
+<li>需求曲线中的自变量和因变量：**横坐标是需求，纵坐标是价格。**价格是自变量，需求是因变量。当价格发生变化，需求量会发生变化。</li>
+<li><strong>需求</strong>与<strong>需求量</strong>的重要区别</li>
+<li>需求曲线永远是向下倾斜的</li>
+</ul>
+<p><strong>供应曲线</strong></p>
+<ul>
+<li>需求和供应取决于市场价格</li>
+<li>价格上升，需求者可变供给者</li>
+<li><strong>“消费者剩余”最好叫“交易者剩余”</strong>：个人估值与实际价格之间的差价。</li>
+</ul>
+<h5 id="小结人们为什么送礼而不送钱">小结：人们为什么送礼而不送钱？</h5>
+<ul>
+<li>边际这个概念指导我们的行动，而非平均、总量等等。</li>
+<li>经济学家不喜欢讨论人性善恶。</li>
+<li>边际平衡：边际收益等于边际成本。</li>
+</ul>
+<hr>
+<h4 id="009-需求第二定律和第三定律">009-需求第二定律和第三定律</h4>
+<h5 id="需求第二定律1">需求第二定律1</h5>
+<ul>
+<li>需求第二定律：需求对价格的弹性，和价格变化之后流逝的时间长度成正比。也就是说，随着时间的推移，需求对价格的弹性会增加。</li>
+<li>需求的价格弹性：需求量的变化百分比/价格变化的百分比。即为：每当价格变化百分之一，需求量会变化百分之几。</li>
+<li>Q：这个计算式子怎么感觉不太对，和斜率式子分不清？？
+需求曲线可能不是直线。有待考察需求第一定律。</li>
+<li>需求曲线上的弹性处处不等，价格越高弹性越大。</li>
+<li>一件商品是奢侈品还是必需品，完全取决于价格。</li>
+</ul>
+<h5 id="需求第二定律2">需求第二定律2</h5>
+<ul>
+<li>不存在“垂直的需求曲线”：价格变化不会产生需求的变化。</li>
+<li>人会寻找替代方案；时间越长，它能找到的替代方案就越多。</li>
+<li>随着时间推移，需求弹性会越来越高。</li>
+<li>几千几万年不会的人性规律。</li>
+</ul>
+<h5 id="需求第二定律3意外冲击的交易费用由谁来承担">需求第二定律3：意外冲击的交易费用由谁来承担？</h5>
+<ul>
+<li>房地产交易税由谁承担？</li>
+<li>税负由买卖双方共同承担</li>
+<li>供应者和需求者，谁承担更大税务？</li>
+<li>弹性大小决定承担税负分摊比例</li>
+<li>法律无效定律（the law of the irrelevance of the law)</li>
+</ul>
+<h5 id="需求第三定律好东西运到远方去">需求第三定律：好东西运到远方去</h5>
+<ul>
+<li>精选苹果价格何以下降（和精选苹果原来比）</li>
+<li>附加成本使精选产品相对价格下降</li>
+<li>附加成本上升不是好事，因为选择少了。</li>
+</ul>
+<h5 id="小结人们如何应付意外事件">小结：人们如何应付意外事件？</h5>
+<ul>
+<li>“需求量”与“需求”存在重要区分；交易剩余（消费者剩余）</li>
+<li>没有永远的奢侈品，也没有永远的必需品</li>
+<li>“税负分担原则”</li>
+<li>人们如何提前应付意外事件</li>
+<li>连动物和植物都不存在刚需</li>
+<li>好东西运到远方去</li>
+</ul>
+<hr>
+<h3 id="价格">价格</h3>
+<h4 id="010-计划经济经济是不是可以计划">010-计划经济：经济是不是可以计划？</h4>
+<h5 id="经济计算问题">经济计算问题</h5>
+<ul>
+<li>人类的雄心：预测未来，推知过去。“拉普拉斯假说”</li>
+<li>预测经济：三个不可逾越的根本障碍。
+<ul>
+<li>人际之间的效用不可比较——你喜欢这个我喜欢那个，社会的总目标应该是什么？</li>
+<li>数据不可得——人们不知道，知道了不告诉你，还会误导你，倾向性误导你，会到预测产生新的反应</li>
+<li>奖惩很难恰如其分</li>
+</ul>
+</li>
+</ul>
+<h5 id="知识在社会中的运用">知识在社会中的运用</h5>
+<ul>
+<li>《the use of knowledge in society》1974.哈耶克（F. A. Hayek）at 《journal of economic review》</li>
+<li>精力体系要解决的是变化的问题，而不是边际平衡的问题。</li>
+<li>关于变化的知识，永远没法集中在一个大脑里。（知识：不仅是高大上的知识，而是信息：谁在什么地方，需要什么东西，需要什么品质，需要什么数量，他愿意出什么样的代价来获得等具体的信息。）</li>
+<li>价格能够近乎完美地解决以上的问题
+<ul>
+<li>价格是衡量人们需要的尺度</li>
+<li>价格能够指导生产。//决定你在哪里生产？</li>
+<li><strong>价格能够做出奖惩</strong>，或者说它能指导人们对商品的分配，有钱的人多拿，没钱的人少拿。</li>
+<li>价格非常有效、非常节俭、目标非常明确地传递关于稀缺的信息
+<ul>
+<li>价格传递了关于稀缺的信息</li>
+<li>价格传递关于稀缺信息的时候，用了最经济的方式去传送的</li>
+<li>价格传递的关于稀缺的信息，只会传到相关的人那里</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="如何分饼决定饼做多大">如何分饼决定饼做多大</h5>
+<ul>
+<li>价格只能在具体的交易中形成，而不是其他。价格不是一个可以随意控制的指标。价格只是反映事实的一个信号。将价格比喻为温度计显示的数字。</li>
+<li>富人不能优先享受，人们就不会对价格作反应</li>
+<li>如何分饼，决定了饼能做多大。分地与拜杜法案</li>
+</ul>
+<h5 id="换个角度看发国难财的行为">换个角度看发国难财的行为</h5>
+<ul>
+<li>乘人之危有别于拦路抢劫。//国难是由哪个发国难财的人造成的吗？不是的话，那么这个人就是帮助了别人。</li>
+<li>阻止别人发国难财，只会让遭受灾害的人处境更糟</li>
+<li>价格不是请客吃饭，价格永远起调节的作用</li>
+</ul>
+<h5 id="小结为什么人工智能不能替代人">小结：为什么人工智能不能替代人</h5>
+<ul>
+<li>人工智能，大数据，他们的收集本身就是有出发点的</li>
+<li>供给不自由，价格依然有意义</li>
+</ul>
+<hr>
+<h4 id="011-不应该用钱来买什么">011-不应该用钱来买什么？</h4>
+<ul>
+<li>有什么是不应该用金钱来买卖的？</li>
+<li>不用金钱来买卖，那应该根据什么标准来分配才公平？</li>
+<li>实行这些分配标准，事实上效果如何？</li>
+</ul>
+<h5 id="世上有哪些竞争规则">世上有哪些竞争规则</h5>
+<ul>
+<li>暴力依然是非常重要和常见的竞争规则。暴力，只有当它失败的时候，人们才会谴责它；当它成功的时候，人们会膜拜它。</li>
+<li>靠智力高低竞争资源</li>
+<li>以论资排辈界定产权</li>
+<li>按社会身份分配财产</li>
+<li>按照劳动时间、先到先得与随机分配</li>
+<li>按需分配与价高者得</li>
+<li>按价格分配</li>
+</ul>
+<h5 id="各种竞争规则孰优孰劣">各种竞争规则孰优孰劣</h5>
+<ul>
+<li>没有任何一个规则比别的规则更公平</li>
+<li>每种竞争规则本身都会带来成本</li>
+<li>许多竞争带来的成本，其他人都难以得益</li>
+<li>按出价高低竞争，可让社会财富告诉增加。这个规则对社会更有利</li>
+</ul>
+<h5 id="庆祝10万订阅陪你排队买早餐的经济学家">庆祝10万订阅：陪你排队买早餐的经济学家</h5>
+<ul>
+<li>碎片化时间，既可以用来做碎片化的学习，又可以用来做系统化的学习。</li>
+<li>传递经济学的震动与快感</li>
+<li>经济学让你更理性、从容和进取</li>
+</ul>
+<h5 id="何谓短缺和过剩稀缺短缺过剩">何谓短缺和过剩：稀缺、短缺、过剩</h5>
+<ul>
+<li>稀缺和短缺的关系。//稀缺是一个事实，是经济学大厦的根基；短缺是在进行价格管制的时候压低了价格，导致无人愿意生产。价格是一种竞争规则，短缺必然会导致其他的竞争规则。</li>
+<li>短缺是因为价格受到了抑制。</li>
+<li>过剩是价格被人为拔高的结果。//比如粮食</li>
+</ul>
+<h5 id="最省事儿地违反价格管制">最省事儿地违反价格管制</h5>
+<ul>
+<li>张五常《一种价格管制理论（A Theory of Price Control，1974）》</li>
+<li>价格管制必然导致价值耗散</li>
+<li>人是追求损失最小化的动物；也追求利润最大化的动物。</li>
+<li>人们如何应付价格管制？选择（挑选）买家；捆绑销售；中介辛苦费；改变用途规避管制</li>
+</ul>
+<h5 id="小结美国石油短缺为何在一夜之间消失放弃了价格管制但有代价">小结：美国石油短缺为何在一夜之间消失？放弃了价格管制，但有代价。</h5>
+<hr>
+<h4 id="012-引入现实为什么会有那么多价格管制政策">012-引入现实：为什么会有那么多价格管制政策？</h4>
+<ul>
+<li>不要轻视对纯概念的学习，因为它给你建立一套参考系。稀缺、成本、选择、歧视、租、需求、弹性、价格、短缺和过剩，这些概念逐渐在你脑海里扎根、关联、生长，使得你每天所见所闻，都萌发了新的涵义。</li>
+<li>理论是一个平面，现实是一个立体。任何经济政策都不是从理论推导出来的，而是由社会上不同的人通过博弈所形成的。</li>
+</ul>
+<h5 id="春运火车票价还不够高">春运火车票价还不够高</h5>
+<ul>
+<li>经济学思维品质的试金石</li>
+<li>人们都想要的物品（稀缺）就是商品，不承认火车票是商品属于鸵鸟心态</li>
+<li>春节回家过年不是刚需（甚至没有刚需，没有一条垂直的需求曲线）</li>
+<li>黄牛党没有能力炒高一件商品的价格，黄牛党可以为社会节省无谓的损失</li>
+<li>实名制让火车票价格更贵</li>
+<li>春节运力不可能做到毫不吃力</li>
+<li>垄断商品不是反对市场定价的理由</li>
+<li>火车票定价应该参照航空公司的做法</li>
+<li>限制火车票价格诱发官员腐败</li>
+<li>价格管制下的“小马甲天不明排队”“电话追拨器”“抢票软件”，迂回的竞争方式。</li>
+</ul>
+<h5 id="美国的房租管制">美国的房租管制</h5>
+<ul>
+<li>地震能摧毁房屋，但不能制造短缺</li>
+<li>价格管制不能直接摧毁房屋，却能制造房屋短缺</li>
+<li>弗里德曼论公平与权利：一个社会如果把个人的权利置于公平之上的话，那么这个社会运行的结果当然不会是公平的，但是它却离公平很近。如果要把追求公平，放在追求保护个人权利之上的话，这个社会就既不能保证个人的权利，也不能达到所谓的公平。</li>
+</ul>
+<h5 id="解除价格管制果断与沉稳的拿捏">解除价格管制——果断与沉稳的拿捏</h5>
+<ul>
+<li>解除价格管制让商品在一夜之间重回商店橱窗</li>
+<li>经济改革：果断与沉稳的那些不容易。//制度变迁的代价，只要过时的观念和既得利益缠住了相当多的人群，任何激进和彻底的改革在实际上都寸步难行。</li>
+</ul>
+<h5 id="解除价格管制穷人怎么办实物补贴和货币补贴的权衡">解除价格管制，穷人怎么办？实物补贴和货币补贴的权衡</h5>
+<ul>
+<li>道德哲学家Michael Sandel）《公正》《钱不应该买什么》，但是教授的享受要不要花钱？教授的解决方案是什么？不用钱的话，凭什么获得？</li>
+<li>帮助穷人：实物补贴还是货币补贴？
+<ul>
+<li>给穷人钱比给穷人食物要更有帮助，但是现实大多都给实物或者进行价格管制。</li>
+<li>政府没有那么多的钱给穷人，政府印钱和收税，都很不容易来钱，不是大风刮来的。</li>
+<li>政府有父爱主义，怕穷人乱花钱，吃喝嫖赌浪费掉。</li>
+<li>实物补贴政府可以选择合作对象，于是……</li>
+</ul>
+</li>
+<li>公交补贴：把钱交给公司还是交给市民？两种情况下，公司所要讨好的人不同。</li>
+<li>弗里德曼的教育券建议：将教育补贴学校改为补贴家长和学生。</li>
+<li>餐厅和住宿补贴问题同样存在</li>
+</ul>
+<h5 id="小结讨好领导和讨好客户哪个更划算">小结：讨好领导和讨好客户哪个更划算？</h5>
+<ul>
+<li>人们只想自己得到的更多，虽然有时他们会羡慕和嫉妒别人，但绝不会因为这个就拒绝自己变多。</li>
+<li>政府维持价格管制政策的三大原因
+<ul>
+<li>维稳问题，如果价格自由浮动，可能会因为引发剧烈的动荡。</li>
+<li>既得利益在起作用。</li>
+<li>人们确实无知，不明白价格管制所导致的，那些非价格的竞争本身是引发了巨大的成本的，无谓的损失（Deadweight Loss）。</li>
+</ul>
+</li>
+<li>铁道部为何取消火车票价格折扣？</li>
+<li>讨好老板和讨好客户有什么区别？</li>
+</ul>
+<hr>
+<h4 id="013-理清房价涨跌的因果关系">013-理清房价涨跌的因果关系</h4>
+<ul>
+<li>一个城市的房价上升，是好事还是坏事？
+<ul>
+<li>这个还是要理清因果关系，才能判断，是房价上升导致城市发展好了，还是城市发展好了导致房价上升，不好分辨因果。我的观点是好事，带动城市经济发展，但对我个人来说是坏事，我买不起。</li>
+</ul>
+</li>
+<li>限购的短期结果、长期结果是什么？
+<ul>
+<li>以其他方式来竞争，但是目前听说房源是足够充足的，那么会产生过剩，资本家倒牛奶？短期结果是降低方式热度，长期会造成短缺或者过剩。</li>
+</ul>
+</li>
+<li>以你所在的城市判断，目前买房划算，还是租房划算？
+<ul>
+<li>我所工作的城市，将会建高铁站，但具体什么影响不好说，这个问题要回答，还是要先回答第一题，谁是因，谁是果？</li>
+</ul>
+</li>
+</ul>
+<h5 id="房价上升好不好">房价上升好不好？</h5>
+<ul>
+<li>无论房价涨跌，都不应该人为管制</li>
+<li>房价上涨的正面因素
+<ul>
+<li>大城市资源好，你见到的是不同的人，你遇到的是不同的经历，你得到的是不同的机会</li>
+<li>重要的不是你是谁，而是你跟谁在一起</li>
+<li>人口集聚提高大城市的经济效率，发达国家的人口在集聚</li>
+<li>一个城市不可能只有光鲜的街道，功能的必要性，仓库、储物间、厨房</li>
+</ul>
+</li>
+<li>房价上涨的负面因素
+<ul>
+<li>政府的规划限制</li>
+<li>房屋的交易方式不灵活</li>
+</ul>
+</li>
+</ul>
+<h5 id="廉价保障房更贵">廉价保障房更贵</h5>
+<ul>
+<li>人们如何应对房屋限购：上有政策下有对策。</li>
+<li>房屋限购只能让实际房价更高，盖房子的人是冲着收益去的。</li>
+<li>住房市场化让人们买房更容易。//通过古今比对来论证自己的观点，后又说明我们感官情况与实际情况的差距。后面其实是观念的问题。</li>
+<li>政府提供廉价住房将减少社会流动性：
+<ol>
+<li>房子并非标准品而是一种综合的服务，比如户口、学校、环境，房子本身的复杂度。</li>
+<li>廉价保障房不是免费午餐，政府用的越多，私人用的越少。</li>
+<li>限制住房的有偿转让，流动性减少。</li>
+</ol>
+</li>
+</ul>
+<h5 id="没有使用需求就没有投资需求">没有“使用需求”就没有“投资需求”</h5>
+<ul>
+<li>空置率不可能客观衡量与计算。</li>
+<li>任何价格管制都不可能成功。//人们总是以对策来消解政策，他们要达到自己各自的目的，这是一种永恒的规律。</li>
+<li>使用需求是投资需求的基础。//没有使用需求，谁会去投资？</li>
+</ul>
+<h5 id="价格是高度分权的结果">价格是高度分权的结果</h5>
+<ul>
+<li>大城市平均房价还有上升余地。//中国的聚聚化还在进行中</li>
+<li>中美房价租售比的差异。//应注意房子的附加价值。</li>
+<li>价格协调人与人之间的关系。//一种复合规律的竞争方式，损失最小的竞争方式。</li>
+<li>价高者得是最有效的竞争方式。</li>
+<li>过剩与短缺均源于价格管制</li>
+<li>没有任何人可以控制市场价格。</li>
+</ul>
+<blockquote>
+<p>从亚当斯密到欧文费雪，半个世纪的经济学成就，就是建立了一个高度分权的抽象模型，其中没有任何人可以控制价格或其他重要的市场指标。</p>
+</blockquote>
+<h5 id="小结城市兴衰有其内在规律">小结：城市兴衰有其内在规律</h5>
+<ul>
+<li>什么样的城市房价在上涨</li>
+<li>投资和投机有什么区别</li>
+<li>“价格是高度分权的结果”分权是什么意思？</li>
+<li>价格、利率、汇率、平均工资率，失业率等等宏观经济指标。</li>
+</ul>
+<hr>
+<h2 id="第一季度总结人类如何做出选择">第一季度总结：人类如何做出选择？</h2>
+<ul>
+<li><strong>稀缺、成本、需求、价格。</strong></li>
+<li><strong>凡选择必有歧视。</strong>  凡选择都要有选择的标准，选择的标准就是歧视。</li>
+<li>导致歧视的几个原因：
+<ol>
+<li>信息不对称，人们为了效率只能以偏概全，但是重要性（必要性）增加后，即歧视的后果需要自己直接承担的话，歧视就会减少。</li>
+<li>人的偏好、不同品味也会造成歧视。比如人们更爱听女高音，而不是女低音。</li>
+</ol>
+</li>
+<li><strong>凡竞争必有成本。</strong>  价格、排队、找关系、需求、资格等竞争方式。</li>
+<li><strong>凡政策必遭对策。</strong>  经济学研究的是：好人在什么情况下所做的事情会变成坏事；那些自私自利的人，什么时候他们的所作所为会变成对社会有利的事情。</li>
+<li><strong>凡争夺必有妥协。</strong>  科斯定律，单向的伤害其实是双方对资源的争夺。123定律。</li>
+</ul>
+<hr>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-12-03
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E8%AF%BE%E7%A8%8B/">经济学课程</a>
+          <a href="/tags/%E7%A8%80%E7%BC%BA/">稀缺</a>
+          <a href="/tags/%E6%88%90%E6%9C%AC/">成本</a>
+          <a href="/tags/%E9%9C%80%E6%B1%82/">需求</a>
+          <a href="/tags/%E4%BB%B7%E6%A0%BC/">价格</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/economics-about-rights-time-and-trust/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">经济学课之二（权利、时间、分工、信任）</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  false ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="brblmdxj_1@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/zhahuya" class="iconfont icon-github" title="github"></a>
+  <a href="https://vchv.tk/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
