@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
-    <lastBuildDate>Sun, 10 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 21:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://vchv.tk/index.xml" rel="self" type="application/rss+xml" />
     
@@ -67,9 +67,9 @@
     </item>
     
     <item>
-      <title>About</title>
+      <title>about</title>
       <link>https://vchv.tk/about/</link>
-      <pubDate>Sun, 10 Nov 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Nov 2019 21:00:00 +0800</pubDate>
       
       <guid>https://vchv.tk/about/</guid>
       <description>Simplicity, is hidden complexity.
