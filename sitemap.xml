@@ -121,6 +121,13 @@
   </url>
   
   <url>
+    <loc>https://vchv.tk/test-for-gitinfo/</loc>
+    <lastmod>2020-03-30T19:30:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://vchv.tk/tags/%E5%88%9B%E9%80%A0/</loc>
     <lastmod>2020-03-30T19:30:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
