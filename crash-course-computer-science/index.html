@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Crash Course Computer Science - Vchv - 书写过往，让前路更清晰</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="前言 第二次看这个，精看深究细节&#43;学英语，计划慢慢来，每天看一个小片段。 1914-1918 第一次世界大战 1939-1945 第二次世界大战 1947-1991 冷战、太空竞赛、军备（核武器）竞赛 1912.1.1-1949.12.7" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://vchv.tk/crash-course-computer-science/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Crash Course Computer Science" />
+<meta property="og:description" content="前言 第二次看这个，精看深究细节&#43;学英语，计划慢慢来，每天看一个小片段。 1914-1918 第一次世界大战 1939-1945 第二次世界大战 1947-1991 冷战、太空竞赛、军备（核武器）竞赛 1912.1.1-1949.12.7" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vchv.tk/crash-course-computer-science/" />
+<meta property="article:published_time" content="2019-12-28T20:30:04+08:00" />
+<meta property="article:modified_time" content="2019-12-28T20:30:04+08:00" />
+<meta itemprop="name" content="Crash Course Computer Science">
+<meta itemprop="description" content="前言 第二次看这个，精看深究细节&#43;学英语，计划慢慢来，每天看一个小片段。 1914-1918 第一次世界大战 1939-1945 第二次世界大战 1947-1991 冷战、太空竞赛、军备（核武器）竞赛 1912.1.1-1949.12.7">
+<meta itemprop="datePublished" content="2019-12-28T20:30:04&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-28T20:30:04&#43;08:00" />
+<meta itemprop="wordCount" content="13946">
+
+
+
+<meta itemprop="keywords" content="十分钟速成课,Crash Course,Computer Science," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Crash Course Computer Science"/>
+<meta name="twitter:description" content="前言 第二次看这个，精看深究细节&#43;学英语，计划慢慢来，每天看一个小片段。 1914-1918 第一次世界大战 1939-1945 第二次世界大战 1947-1991 冷战、太空竞赛、军备（核武器）竞赛 1912.1.1-1949.12.7"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Crash Course Computer Science</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-12-28 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
+            </div>
+          <span class="more-meta"> 约 13946 字 </span>
+          <span class="more-meta"> 预计阅读 28 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#前言">前言</a></li>
+            <li><a href="#我知道了">我知道了</a></li>
+            <li><a href="#01-early-computing">01-Early Computing</a></li>
+            <li><a href="#02-electronic-computing">02-Electronic Computing</a></li>
+            <li><a href="#03-boolean-logiclogic-gates">03-Boolean Logic&amp;Logic Gates</a></li>
+            <li><a href="#04-representing-numbers-and-letters-with-binary">04-Representing Numbers and Letters with Binary</a></li>
+            <li><a href="#05-how-computers-calculate---the-alu">05-How Computers Calculate - the ALU</a></li>
+            <li><a href="#06-registers-and-ram">06-Registers and RAM</a></li>
+            <li><a href="#07-the-central-processing-unit">07-The Central Processing Unit</a></li>
+            <li><a href="#08-instructionprograms">08-Instruction&amp;Programs</a></li>
+            <li><a href="#09-advanced-cpu-design">09-Advanced CPU design</a></li>
+            <li><a href="#10-early-programing">10-Early Programing</a></li>
+            <li><a href="#11-the-first-programming-languages">11-The first Programming Languages</a></li>
+            <li><a href="#12-programming-basics-statementsfunction">12-Programming Basics-Statements&amp;Function</a></li>
+            <li><a href="#13-intro-to-algorithms">13-Intro to Algorithms</a></li>
+            <li><a href="#14-data-structure">14-Data Structure</a></li>
+            <li><a href="#15-alan-turing">15-Alan Turing</a></li>
+            <li><a href="#16--software-engineering">16- Software Engineering</a></li>
+            <li><a href="#17-integrated-circuitsmoores-law">17-Integrated Circuits&amp;Moore&rsquo;s law</a></li>
+            <li><a href="#18-operating-systems">18-Operating systems</a></li>
+            <li><a href="#19-memorystorage">19-Memory&amp;Storage</a></li>
+            <li><a href="#20-files-and-files-system">20-Files and Files System</a></li>
+            <li><a href="#21-compression">21-Compression</a></li>
+            <li><a href="#22-keyboardcommand-line-interfaces">22-Keyboard&amp;Command line Interfaces</a></li>
+            <li><a href="#23-screens2d-graphics">23-Screens&amp;2D Graphics</a></li>
+            <li><a href="#24-the-cold-warcomsumerism">24-The cold War&amp;comsumerism</a></li>
+            <li><a href="#25-the-person-computer-revolution">25-The Person Computer Revolution</a></li>
+            <li><a href="#26-graphical-user-interface">26-Graphical User Interface</a></li>
+            <li><a href="#27-3d-graphics">27-3D Graphics</a></li>
+            <li><a href="#28-computer-network">28-Computer Network</a></li>
+            <li><a href="#29-the-internet">29-The Internet</a></li>
+            <li><a href="#30-the-world-wide-web">30-The World Wide Web</a></li>
+            <li><a href="#31-cybersecurity">31-Cybersecurity</a></li>
+            <li><a href="#32-hackerscyber-attacks">32-Hackers&amp;Cyber Attacks</a></li>
+            <li><a href="#33-crypto-graphy">33-Crypto graphy</a></li>
+            <li><a href="#34-machine-learningartificial-intelligence">34-Machine Learning&amp;Artificial Intelligence</a></li>
+            <li><a href="#35-computer-vision">35-Computer Vision</a></li>
+            <li><a href="#36-natural-language-processing">36-Natural Language Processing</a></li>
+            <li><a href="#37-robots">37-Robots</a></li>
+            <li><a href="#38-psychology-of-computing">38-Psychology of Computing</a></li>
+            <li><a href="#39-educational-technology">39-Educational Technology</a></li>
+            <li><a href="#40-the-singularity-skynet-and-the-future-of-computing">40-The Singularity Skynet and the Future of Computing</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2019-12-28T20:30:04" title="December 28, 2019">December 28, 2019</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <h4 id="前言">前言</h4>
+<p>第二次看这个，精看深究细节+学英语，计划慢慢来，每天看一个小片段。</p>
+<p>1914-1918  第一次世界大战</p>
+<p>1939-1945  第二次世界大战</p>
+<p>1947-1991  冷战、太空竞赛、军备（核武器）竞赛</p>
+<p>1912.1.1-1949.12.7 迁台</p>
+<p>1949.10.1-至今</p>
+<h4 id="我知道了">我知道了</h4>
+<ol>
+<li>编程语言一层一层的抽象化，越来越高级，将程序员从硬件的细节中抽离出来，来完成更亦可赛艇（Exciting）的工作。</li>
+<li>真空管和晶体管（半导体）</li>
+<li>寄存器——缓存——内存——存储</li>
+<li>变量的意义</li>
+</ol>
+<h4 id="01-early-computing">01-Early Computing</h4>
+<ul>
+<li>牛比的人心算很牛比。算人口，算牲口数量。</li>
+<li>算盘，一般的人拿着工具也牛比。</li>
+<li>步进计算器Machine，最差的人操作工具也很牛比。</li>
+<li>计算表，把一些大数的数值算一次记下来以供后面查询，例如867523的平方等。军事上计算炮弹的落点和发射角度，制距离和角度表。</li>
+<li>打孔卡片制表机——IBM（International Business Machine Corporation, 1924），起初用来人口普查。</li>
+<li>20世纪中叶——人口爆炸与全球贸易！</li>
+</ul>
+<h4 id="02-electronic-computing">02-Electronic Computing</h4>
+<ul>
+<li>
+<p>1944年，IBM制造的超级巨无霸The Harvard Mark 1，提供给政府使用，曼哈顿计划。</p>
+<ul>
+<li>Mechanical Relay（机械继电器）：用电控制的机械开关。线圈通电产生磁场，吸引金属臂，从而闭合电路。</li>
+<li>速度慢：这个开关是有反应时间的，最好的继电器1秒能翻转50次，还不够快。</li>
+<li>会磨损：损坏、变慢，总计3500多个继电器，即使每个能用10年，每天也都要换修。</li>
+<li>Bug，机器里找出了一只虫子。</li>
+</ul>
+</li>
+<li>
+<p>1904年，二极管：电流只能单向流动的电子部件；真空管：一种类似灯泡的东西。</p>
+<ul>
+<li>1943年 Colossus MK 1，大规模使用<strong>真空管</strong>，1600个真空管，破解纳粹的通信。</li>
+<li>由机械结构转为电子结构，很快了，但还是容易坏。</li>
+</ul>
+</li>
+<li>
+<p>1947年，贝尔实验室，<strong>晶体管</strong>：改变半导体的电荷，控制半导体材料的导电性。</p>
+<ul>
+<li>速度快：每秒10000次，现在可以每秒可以运行几百万次；寿命长。</li>
+<li>1957年，IBM 608，有3000个晶体管。</li>
+<li>我们可以让它开闭一秒几百万次，但是我们怎么计算呢？</li>
+</ul>
+</li>
+</ul>
+<h4 id="03-boolean-logiclogic-gates">03-Boolean Logic&amp;Logic Gates</h4>
+<ul>
+<li>从十进制到二进制（Binary）</li>
+<li>true=1：当电流通过；false=0：无电流通过。</li>
+<li>晶体管不仅可以控制电流是否通过，也可以控制通过电流的大小，因此早期有3种状态或者5种状态，对应3进制和5进制，但是状态越多，越容易受到干扰，越难区分信号。</li>
+<li>数学上有一个分支：布尔代数（Boolean Algebra）专门处理“true”和“false”的事情，它已经解决了所有的法则和运算。</li>
+<li>乔治.布尔，使用数学式子，扩展亚里士多德基于哲学的逻辑方法。</li>
+<li>布尔代数的三个基本操作：Not、And、Or   、异或。
+<ul>
+<li>一个晶体管代入布尔逻辑的输出显示：not</li>
+<li>两个晶体管串联代入布尔逻辑输出显示：and</li>
+<li>两个晶体管并联输出显示：or</li>
+</ul>
+</li>
+<li>幸运的是即使你是专业的程序员，你也不需要考虑逻辑是怎么样在物理层面实现的。</li>
+</ul>
+<h4 id="04-representing-numbers-and-letters-with-binary">04-Representing Numbers and Letters with Binary</h4>
+<ul>
+<li>十进制：0-9；二进制：0-1，2的0次方、1次方、2次方、3次方……</li>
+<li>Bit（比特）：一个二进制数字就是一个bit。</li>
+<li>Byte（字节）：8个比特bit；1B=8b。
+<ul>
+<li>128+64+32+16+8+4+2+1=255</li>
+<li>2<!-- raw HTML omitted -->7<!-- raw HTML omitted -->+ 2<!-- raw HTML omitted -->6<!-- raw HTML omitted -->+ 2<!-- raw HTML omitted -->5<!-- raw HTML omitted -->+ 2<!-- raw HTML omitted -->4<!-- raw HTML omitted -->+ 2<!-- raw HTML omitted -->3<!-- raw HTML omitted -->+ 2<!-- raw HTML omitted -->2<!-- raw HTML omitted -->+ 2<!-- raw HTML omitted -->1<!-- raw HTML omitted -->+ 2<!-- raw HTML omitted -->0<!-- raw HTML omitted -->=255</li>
+</ul>
+</li>
+<li>1TB=1024GB；1GB=2<!-- raw HTML omitted -->10<!-- raw HTML omitted -->MB；1M=2<!-- raw HTML omitted -->10<!-- raw HTML omitted -->KB；1KB=2<!-- raw HTML omitted -->10<!-- raw HTML omitted -->B；1B=8b。1TB=2<!-- raw HTML omitted -->40<!-- raw HTML omitted -->*8bit。</li>
+<li>32位与64位（bits）：以32bits位一块来运行，32位能表示的最大数是43亿左右。</li>
+<li>正数和负数：使用第一位来区分，1为负数，0为正数，剩下的31位来表示数字，能表示的数字范围是：负20亿-正20亿，但是全球人口有70亿，美国国债有20万亿美元，所以需要64位。</li>
+<li>非整数：浮点数，例如12.8654</li>
+<li>一个字节可以表示0-255总计256个不同的状态，如果一个状态对应一个符号，就是256个符号，从00000000到11111111。</li>
+<li>字符编码：拉丁字母可以表示、但亚洲的汉字有几千个怎么办？——Unicode
+<ul>
+<li>ASCII（American Standard Code for Information Interchange）1963年。使用了7bit，第一位统一规定为0：可存128个不同的值，可以表示大写字母、小写字母，数字0-9，@这样的符号，。这样的标点符号。</li>
+<li>简体中文开始使用了GB2312，使用2个字节表示一个汉字，理论上可以表示256*256=65536个符号。</li>
+<li>法文、俄文也都用了自己的编码。</li>
+<li>世界上存在着多种编码方式，同一个二进制数字可以被解释成不同的符号。因此，要想打开一个文本文件，就必须知道它的编码方式，否则用错误的编码方式解读，就会出现乱码。</li>
+<li>Unicode，1992年。</li>
+<li>UTF-8 是 Unicode 的实现方式之一，它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。</li>
+</ul>
+</li>
+</ul>
+<h4 id="05-how-computers-calculate---the-alu">05-How Computers Calculate - the ALU</h4>
+<ul>
+<li>
+<p>1970年 the Intel 74181</p>
+</li>
+<li>
+<p>The ALU（Arithmetic and Logic Unit）算术逻辑单元</p>
+<ul>
+<li>Arithmetic Unit：</li>
+<li>Logic Unit ：</li>
+</ul>
+</li>
+<li>
+<p>学完这节，你会懂得计算机是怎样在没有齿轮和杠杆的情况下进行运算的。不好意思，没懂-_-||</p>
+</li>
+</ul>
+<h4 id="06-registers-and-ram">06-Registers and RAM</h4>
+<ul>
+<li>or gate latch zero0</li>
+<li>and gate latch one1</li>
+<li>combine them can remember one bit</li>
+<li>A group of latches operating this is called a register,which holds a single number,and the number of bits in a register is called its width.</li>
+<li>寄存器能存一个数字，这个数字有多少位，叫“带宽”</li>
+<li>16*16=256bit ，8bit Address.</li>
+<li>Random-Access Memory：可以随时访问任何位置</li>
+<li>没懂-_-||，但了解一点点小知识。</li>
+</ul>
+<h4 id="07-the-central-processing-unit">07-The Central Processing Unit</h4>
+<ul>
+<li>图书《编码》入门书籍</li>
+<li>指令表：指令+描述+4位操作码+地址或者寄存器</li>
+<li>CPU=ALU+control unit+some memory+a <strong>clock</strong></li>
+<li>看不懂-_-||</li>
+</ul>
+<h4 id="08-instructionprograms">08-Instruction&amp;Programs</h4>
+<ul>
+<li>
+<p>0010（operate code） 1110（address code）=load_A 14</p>
+</li>
+<li>
+<p>单纯的jump会产生死循环，所以我们需要有条件的jump，jump_negative</p>
+</li>
+<li>
+<p>操作码只有4位的话，我们最多组合16条操作指令；指定内存地址码4位的话，只能表示16个地址。</p>
+</li>
+<li>
+<p>策略一：现代计算机的指令长度（Instruction Length）：32bit or 64bit</p>
+</li>
+<li>
+<p>策略二：可变指令长度（Variable Length Instruction）：</p>
+</li>
+<li>
+<p>Intel 4004 Instruction Set ：支持46条指令</p>
+</li>
+<li>
+<p>Intel Core I7：支持上千条指令和指令变种，从1byte-16byte，8位到128位组合</p>
+</li>
+<li>
+<p>终于看懂的一集（Episode）</p>
+</li>
+</ul>
+<h4 id="09-advanced-cpu-design">09-Advanced CPU design</h4>
+<ul>
+<li>3.6GHz（10亿Hz）：一秒运算36亿次指令。每秒钟产生10亿个脉冲信号。//赫兹是电，磁，声波和机械振动 周期循环时频率的单位。即 每秒的周期次数(周期/秒）。</li>
+<li>给CPU加一点ram即缓存（cache）来减缓延迟。</li>
+<li>Dirty bit：缓存中的数据，存满了就移动到RAM，清干净以后再用。</li>
+<li>CPU的顺序处理：fetch（1周期） decode（1） execute（1）   fetch decode execute and so on</li>
+<li>CPU的并行处理：洗衣服和甩干衣服，可以同时进行工作。</li>
+</ul>
+<blockquote>
+<p>理想情况下，流水线一个时钟周期完成一个1个指令，在fetch阶段，decode和execute在闲置，所以一次性处理多条指令（fetch decode execute），进行并行处理。</p>
+</blockquote>
+<hr>
+<h4 id="10-early-programing">10-Early Programing</h4>
+<ul>
+<li>1801年，编程式纺织机，打孔机来编织图案</li>
+<li>1890年，穿孔卡片用于美国人口普查：种族、婚姻、子女、国别。储存的是数据，而不是程序。</li>
+<li>之后60年间，这些机器被加强，可以做加法、减法，甚至可以做一些小决定，决定何时执行某命令。</li>
+<li>1946年，第一台通用电子计算机ENIAC，在插线板平台插线来编程，就像穿孔卡片一样</li>
+<li>冯诺依曼计算机</li>
+<li>1980年代，Punch Card Reader</li>
+<li>1980年代，与其插一堆线到插线板，不如用一大堆开关和按钮，做到一样的效果。Huge Control Console</li>
+<li>三种方式：Punch card；插线板；开关控制台。</li>
+</ul>
+<h4 id="11-the-first-programming-languages">11-The first Programming Languages</h4>
+<ul>
+<li>英语和摩斯密码的区别，都能传递信息。</li>
+<li>机器语言：101010101010101010</li>
+<li>首先写出“高级语言”：从内存取下一个销售额，然后加到天、周、年的总和上面去。然后使用“操作码表”把需求转换成二进制机器码，这实在是太麻烦了，没人忍受得了！！！</li>
+<li>每个操作码分配一个简单的名字-助记符，助记符+数据，形成指令。比如：load_A 14</li>
+<li>但是计算机并不懂这个指令，于是写一个程序，将文字指令转换为二进制指令。这个程序叫做汇编器（Assembler）</li>
+<li>汇编语言：一条汇编指令对应一条机器指令。</li>
+<li>高级编程语言：一条指令可能会转成几十条二进制指令。</li>
+<li>1952年，第一个编译器（Compiler）：把高级语言转换成低级语言，比如汇编或者二进制码。</li>
+<li>**变量（Variable）：**内存地址的抽象。对于实际储存在哪里则是眼不见心不烦（Out of sight, Out of mind）</li>
+<li>IBM 1957 Release the Fortran（Formula Translation）Program Language.</li>
+<li>数据系统语言委员会（Committee On Data System Languages）：1959年，组建的一个联盟，为了开发一种通用编程语言，可以在不同的机器上通用，普通面向商业语言（COBOL）</li>
+<li>1960年代：ALGOl，Lisp，Basic</li>
+<li>1970年代：Pascal，C，Smalltalk</li>
+<li>1980年代：C++，Objective-C，Perl</li>
+<li>1990年代：Python，Ruby，Java</li>
+<li>2000年代：Swift，C#，Go</li>
+</ul>
+<h4 id="12-programming-basics-statementsfunction">12-Programming Basics-Statements&amp;Function</h4>
+<ul>
+<li>自然语言：I want tea or It is raining.也是需要遵循一定的规则的。</li>
+<li>程序更需要遵循语法规则（syntax）。</li>
+<li>赋值语句：a=5，创建一个叫a的变量，把数字5放里面。</li>
+<li>控制流语句（Control Flow Statement）：条件语句（if then）</li>
+<li>模块化编程</li>
+</ul>
+<h4 id="13-intro-to-algorithms">13-Intro to Algorithms</h4>
+<ul>
+<li>
+<p>算法：解决问题的具体步骤。</p>
+</li>
+<li>
+<p>算法：早在现代计算机之前，1000多年以前就有了这种专门研究计算的领域。</p>
+</li>
+<li>
+<p>算法复杂度：big O notation</p>
+</li>
+<li>
+<p>排序（Sort）——使用最频繁的算法，比如最新的新闻，按姓氏排通讯录，最便宜的机票。</p>
+<ul>
+<li>数组（Array）：一组数据的排列。</li>
+<li>选择排序（smallest）：从上往下选择最小的数，确定一个再确定另一个。如果有N个东西，要循环N次，每次循环中再循环N-1次。O（n<!-- raw HTML omitted -->2<!-- raw HTML omitted -->）效率不高。</li>
+<li>归并排序（merge sort）：O（n*log n）</li>
+</ul>
+</li>
+<li>
+<p>网络节点排序：寻找两个地点的最近路程，使用Dijkstra算法。</p>
+</li>
+</ul>
+<h4 id="14-data-structure">14-Data Structure</h4>
+<ul>
+<li>
+<p>数据结构：算法处理的数据，存在内存里的格式是什么？就像一个整洁的房间和一个混乱无序的房间。</p>
+</li>
+<li>
+<p>数组：Array-List-Vector，一堆数字，需要转换成二进制数字存储。</p>
+</li>
+<li>
+<p>字符串（String）：字母、数字、标点符号等组成的数组，也需要转换成二进制101010存储。</p>
+<ul>
+<li>字符串在内存里以二进制0结尾，字符“null”，表示字符串结尾。0告诉函数什么时候该停下来。</li>
+</ul>
+</li>
+<li>
+<p>矩阵（Matrix）：数组的数组，分为行和列。</p>
+</li>
+<li>
+<p>结构体（Struct）：将不同类型但有关系的变量储存在一起，比如你的银行账号和余额。直接顺序堆叠的话很难在中间增减内容。
+- 指针（Pointer）：一种特殊的变量，指向一个内存地址。</p>
+<ul>
+<li>节点（Node）：一种结构体，由一个变量+指针构成。</li>
+<li>树（Tree）：一种结构体，由一个变量+指针+指针构成。
+<ul>
+<li>二叉树（Binary Tree）树是单向连接的，root leaves children parents。</li>
+</ul>
+</li>
+<li>图（Graph)：可以随意指向。</li>
+<li>红黑树：</li>
+<li>堆：</li>
+</ul>
+</li>
+<li>
+<p>链表（Linked list）：更加灵活的结构体，节点中的指针可以解决在结构体中增减变量这种灵活性的问题。通过节点指向下一个节点实现的。许多复杂的数据结构都使用链表来储存数据。</p>
+<ul>
+<li>队列（Queue）：先进先出（排队先来后到），比如你可能想搓个澡就走，但前面的3个人都要按摩！先进先出。</li>
+<li>栈（Stack）：后进先出，就像弹匣，一个一个压进去，一发一发打出来。</li>
+</ul>
+</li>
+<li>
+<p>幸运的是，大多数编程语言自带了预先做好的数据结构。</p>
+</li>
+<li>
+<p>听懂了，但还有要深入学习的地方，这是《数据结构与算法》。</p>
+</li>
+</ul>
+<h4 id="15-alan-turing">15-Alan Turing</h4>
+<ul>
+<li>
+<p>可判定性问题：是否存在一种算法，输入正式逻辑语句，输出正确的“是”或“否”答案？比如：是否有一个数大于所有数？不，没有！</p>
+</li>
+<li>
+<p>图灵和丘奇证明了计算是有极限的，起步了“可计算性理论”，叫做“Church-Turing Thesis”。</p>
+<ul>
+<li>Lambda算子：回答这个问题，不存在。</li>
+<li>图灵机可以实现任何计算；而“停机问题”证明了不是所有问题都能用计算解决。
+<ul>
+<li>图灵机（Turing Machine）：一台假想的计算机，只要有足够的规则，状态和纸带，可以创造任何东西。</li>
+<li>停机问题：</li>
+<li>图灵完备（Turing Complete）：</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>图灵在一战期间任职于英国，负责解密英格玛机（Enigma Machiness)。</p>
+</li>
+<li>
+<p>图灵测试（Turing Test）：如果计算机能欺骗人类相信它是人类，才算是智能。</p>
+<ul>
+<li>1950年，图灵设想未来的计算机拥有和人类一样的智力，或至少难以区分。</li>
+<li>验证码：一种图灵测试。</li>
+</ul>
+</li>
+<li>
+<p>不允许同性恋，服毒自杀，英年早逝，年仅41岁。</p>
+</li>
+<li>
+<p>图灵奖</p>
+</li>
+<li>
+<p>没懂图灵机、可计算理论是什么意思。</p>
+</li>
+</ul>
+<h4 id="16--software-engineering">16- Software Engineering</h4>
+<ul>
+<li>
+<p>4000万行代码，如何管理？软件工程喽！</p>
+</li>
+<li>
+<p>对象：Car.Engine.CruiseControl.Setcruisespeed(55)</p>
+</li>
+<li>
+<p>面向对象编程：把函数打包成对象的思想。</p>
+<ul>
+<li>建造摩天大楼：电工装电线；管道工配管；焊接工焊接；油漆工涂油漆；</li>
+</ul>
+</li>
+<li>
+<p>程序编程接口（API）：不需要知道具体细节，只要知道怎么使用就行了。</p>
+<ul>
+<li>面向对象的编程语言可以指定函数是Public还是Private，来设置访问权限。</li>
+<li>面向对象：隐藏复杂度，选择性的公布功能。</li>
+</ul>
+</li>
+<li>
+<p>代码在编译前就只是文字而已，你可以使用记事本或任何文字处理器来写它。</p>
+</li>
+<li>
+<p>IDE（Integrated Development Environments）集成开发环境：使用专门的工具来写代码，工具集成很多有用的功能，比如帮忙加括号，关键词高亮，拼写检查，甚至直接编译和运行代码，定位错误，提供有用信息（Debug）。</p>
+</li>
+<li>
+<p>注释和说明文档：用来解释自己的代码，防止过两天连自己都看不懂。</p>
+</li>
+<li>
+<p>源代码管理/版本控制（Source Control）：可以跟踪所有变化！比如分布式版本控制系统Git。</p>
+</li>
+<li>
+<p>质量保证测试（QA/Quality Assurance）：beta版本，没有经过充分测试的版本；alpha版本，内部测试。</p>
+</li>
+</ul>
+<h4 id="17-integrated-circuitsmoores-law">17-Integrated Circuits&amp;Moore&rsquo;s law</h4>
+<ul>
+<li>分立元件：一堆真空管，一堆晶体管，需要使用线来连接，随着管子使用的增加，线也越来越多，逐渐超出可控制的限度。</li>
+<li>集成电路IC（Integrated Circuits）：1959.仙童半导体，使用硅来制作。</li>
+<li>印刷电路板PCB（Printed Circuit Boards）：</li>
+<li>光刻：</li>
+<li>集成电路和摩尔定律，不太懂，了解好了。</li>
+</ul>
+<h4 id="18-operating-systems">18-Operating systems</h4>
+<ul>
+<li>
+<p>操作系统（Operating System），一个程序而已，但是它有操作硬件的特殊权限，可以运行和管理其他程序。</p>
+</li>
+<li>
+<p>Device Driver（设备驱动程序）：操作系统提供API来抽象硬件，程序员可以使用标准化机制，和输入输出硬件（I/O）交互。比如：Print（XXXX）</p>
+</li>
+<li>
+<p>多任务处理：CPU太厉害了，但输入输出太慢了，因此产生了多任务处理，一个CPU处理好1个任务，等待output hardware去运行，CPU先去干别的，这边好了以后再回来，这种切换，就需要调度。</p>
+</li>
+<li>
+<p>虚拟内存（Virtual Memory Address）：每个任务运行都需要加载在内存里，如果有3个任务分别分配了0-999，1000-1999,2000-3999的内存地址，其中第一个任务想加点内存，这样在物理的储存中，位置就不是连续的了，这给人带来巨大的困扰。因此操作系统把内存地址虚拟化，程序可以假定内存总是从地址0开始的，简单又一致，但数据实际在物理位置上是分散的。</p>
+</li>
+<li>
+<p>内存保护：虚拟内存还能更好的隔离每个任务，如果一个任务出错乱写东西，不会影响其他的任务和整个系统。</p>
+</li>
+<li>
+<p>多任务|多用户|分时（每个用户只能用一小部分处理器，内存等）系统</p>
+</li>
+<li>
+<p>Terminal（终端）：键盘+屏幕 连接到主计算机！终端本身没有处理能力。//云计算的雏形。</p>
+</li>
+<li>
+<p>1969年，Multics.  考虑了安全问题、错误恢复问题，将全部功能加一起，这个操作系统的资源占用很大！</p>
+</li>
+<li>
+<p>1971年，Unix系统，将操作系统分为两部分：内核kernel（主管内存管理、多任务调度、I/O）；有用的工具，如程序和运行库。</p>
+</li>
+<li>
+<p>Panic：为了简单，并没有内建恢复的代码，如果有错误，机器就恐慌（崩溃），你需要重启它。</p>
+</li>
+<li>
+<p>1980年代，计算机的价格降到普通人可以买得起的地步，Person/home  Computer。</p>
+</li>
+<li>
+<p>1981年，微软的Ms-DOS，只有160kb，运行在个人弱鸡电脑上的系统。因为没有内存保护，所以经常蓝屏，甚至到了1985年发布在90年代很流行的windows系统，也是如此。</p>
+</li>
+</ul>
+<h4 id="19-memorystorage">19-Memory&amp;Storage</h4>
+<ul>
+<li>早期储存介质：打孔卡片&amp;打孔纸带。1940年纸卡标准是80列*12行，储存96bits数据</li>
+<li>延迟线存储器（Delay Line Memory）：一个声波管子。128条延迟线，每条存352bits，可惜如果你想要一条线的第106个数据，只能等它转过来，这就是“顺序存储器”。</li>
+<li>磁芯存储器（Magnetic Core Memory）：可以随时访问任何一位数据。</li>
+<li>1970年，磁带（magnetic tape）： 磁带是连续的，必须倒带或快进到达特定位置。</li>
+<li>磁盘：寻道时间只需要1/6秒。</li>
+<li>软盘：和硬盘一样，便于携带，1970~1990年流行，现在没了。</li>
+<li>1972年，光盘（Compact Disk）：光盘的小坑坑，造成光的不同反射，光学传感器捕捉到，并解码为1或0.</li>
+<li>固态硬盘（Solid State Drives）：寻道时间没有，访问数据低于1/1000秒。</li>
+</ul>
+<h4 id="20-files-and-files-system">20-Files and Files System</h4>
+<ul>
+<li>文件格式（file format）：可以随便排列文件数据完全没问题，但是按格式排会更好。你甚至可以创造一种格式。</li>
+<li>元数据（Metadata）：数据的数据，在文件开头，实际数据前面的数据。也就文件头header。</li>
+<li>TXT：0001011111011010101010101111000110010101——ASCII编码</li>
+<li>WAV：按照波形采集的二进制数字，每秒上千次采样。</li>
+<li>BMP：bitmap，每个像素都由3原色组成。元数据+实际数据。元数据记录了，图片宽度，高度，颜色深度等。</li>
+<li>所有文件格式底层全是一长串的二进制数字！</li>
+<li>目录文件：存多个文件时，记录其他文件的位置。
+<ul>
+<li>文件名+.+扩展名。比如halo.txt</li>
+<li>目录文件里面记录的信息：<strong>所属目录</strong>，创建时间、最后修改时间、拥有者、权限、文件起始位置和长度、<strong>块信息blocks</strong>。</li>
+<li>如果添加文件，删除文件，更改文件，必须更新目录文件。</li>
+</ul>
+</li>
+<li>现代文件系统把空间分成一块一块而不是紧密排列，这样在增减改查时留有余地。如果块空间不够，就增加一个新块。</li>
+<li>删除文件只是把目录文件的索引删除了，文件数据还在，在没有被覆盖的情况下可以找回来。</li>
+<li>碎片整理：大文件可能不按顺序的存在几百个块里，整理可以帮助恢复秩序。
+<ul>
+<li>碎片：文件的增、删、改导致产生的文件分布在不同的块里，甚至顺序也不同。</li>
+</ul>
+</li>
+<li>分层文件系统：文件夹的嵌套，只需要在根目录的目录文件里记下所属目录信息。移动文件到另一个文件夹，其实只是修改了目录文件的文件所属目录信息，因此非常快。</li>
+</ul>
+<h4 id="21-compression">21-Compression</h4>
+<ul>
+<li>
+<p>文件格式和文件系统都很好，但我们希望文件能小一些，这样能存多一些，能传快一些。</p>
+</li>
+<li>
+<p>无损压缩：压缩不会损失信息，很重要，你不会想要有有损压缩的Word文档把！</p>
+<ul>
+<li>游程编码（Run-length Encoding）：假如有7个黄色，直接压缩成7*黄。</li>
+<li>字典编码：霍夫曼树（Huffman Tree）</li>
+</ul>
+</li>
+<li>
+<p>有损压缩：有些信息人类是注意不到的，可以删掉</p>
+<ul>
+<li>Mp3格式：相比WAV和flac，能小10倍之多。</li>
+<li>JPEG格式：对图片进行了压缩。</li>
+<li>MPEG-4格式：可以比原文件小20到200倍。</li>
+</ul>
+</li>
+</ul>
+<h4 id="22-keyboardcommand-line-interfaces">22-Keyboard&amp;Command line Interfaces</h4>
+<ul>
+<li>
+<p>早期输入设备：齿轮、旋钮、开关等机械结构</p>
+</li>
+<li>
+<p>早期输出：打印在纸上</p>
+</li>
+<li>
+<p>交互：人和计算机可以交流，而不是单方面的输入，等待漫长的运行，输出，结束。</p>
+</li>
+<li>
+<p>1868年，肖尔斯发明现代打字机，1874年完成设计和制造，QWERTY布局。</p>
+</li>
+<li>
+<p>十指打字：1888年McGurrin赢得了打字比赛</p>
+</li>
+<li>
+<p>电传打字机（Teletype Machine）：1960~1970年常见，这个界面要记住，关于回车和换行的区别。</p>
+</li>
+<li>
+<p>命令行（Command line Interface）：人机交互界面，直到1980年图形化界面出现。</p>
+<ul>
+<li>ls：list 查看当前目录有啥文件</li>
+<li>cat：concatenate连接 显示文件的内容</li>
+<li>cd：change directory 进入文件夹</li>
+</ul>
+</li>
+<li>
+<p>终端（Terminal）：虚拟电传打字机或玻璃电传打字机，一个键盘+一个屏幕。1970年，早期的文字游戏，需要有想象力！</p>
+<ul>
+<li>文字冒险游戏：你站在路的尽头，一栋小砖房的前面……</li>
+</ul>
+</li>
+</ul>
+<h4 id="23-screens2d-graphics">23-Screens&amp;2D Graphics</h4>
+<ul>
+<li>
+<p>阴极射线管（Cathode Ray Tubes）：矢量扫描；光栅扫描。</p>
+</li>
+<li>
+<p>液晶显示器（Liquid Crystal Displays）</p>
+</li>
+<li>
+<p>字符生成器：从内存中读取数据，显示到屏幕上</p>
+</li>
+<li>
+<p>1962年，Sketchpad交互式图形界面，用来Computer-Aided Disign（CAD）。</p>
+</li>
+<li>
+<p>位图显示：内存中的位（bit）与屏幕上的像素（pixel）对应。</p>
+<ul>
+<li>“帧缓冲区”：内存的一个特殊区域，存储像素数据。</li>
+<li>VRAM（Video Radom Access Memory）：后来这些数据存在vram里，显卡上</li>
+</ul>
+</li>
+<li>
+<p>程序员要画直线、曲线、三角形、四边形，图形，文字怎么办？当然不会自己写一个了，已经有现成的函数了。</p>
+</li>
+</ul>
+<h4 id="24-the-cold-warcomsumerism">24-The cold War&amp;comsumerism</h4>
+<ul>
+<li>1946年——1991年  45年冷战</li>
+<li>以前的工业革命，增强了人类的物理能力，而计算机增强了人类智力，大大增强人类的机械记忆，记忆容量。百科全书。</li>
+<li>1950年，国家科学基金会（National Science Foundation）</li>
+<li>1961年，苏联宇航员加加林第一个进入太空，美国受不了了，要登月！</li>
+<li>阿波罗登月计划：电脑计算复杂的轨道来引导太空船。</li>
+<li>1960~1970年，美国公司靠政府活着，而日本公司则趁机发展了起来，占领了消费者市场</li>
+<li>政府和消费者促进计算机行业的飞速发展</li>
+</ul>
+<h4 id="25-the-person-computer-revolution">25-The Person Computer Revolution</h4>
+<ul>
+<li>1970年代，70年代，各种组件的成本都下降了，集成电路+CPU（变小，变快，变强大）</li>
+<li>自己可以拥有自己的个人计算机了，没必要多用户挤一起了</li>
+<li>解释器（Interpreter）：解释器在运行时转换；编译器则是提前转换好。</li>
+<li>1977年：Apple-II提供了全部的组装好的设备，还有其他两个，都带了basic程序。</li>
+<li>IBM PC：独立12人小组发布了IBM-PC，使用了Intel的cpu和Microsoft的DOS系统，并且使用开放式架构，第三方可以做硬件（外设），包括显卡、声卡、外置硬盘、游戏控制杆和其他，形成了巨大的生态系统。</li>
+<li>IBM 兼容（IBM Compatible）：雪球效应！</li>
+<li>苹果自己做计算机，自己做操作系统，自己做外围设备（显示器、键盘、打印机）</li>
+</ul>
+<h4 id="26-graphical-user-interface">26-Graphical User Interface</h4>
+<ul>
+<li>
+<p>你不需要去探索有什么功能，图形界面给你显示了什么，你就可以做什么，选择并点击就行了。</p>
+<ul>
+<li>当我们看到一个黑乎乎的命令行时，第一个迷茫就是“我能做什么？”或者“它有什么功能？”。</li>
+</ul>
+</li>
+<li>
+<p>1968年，恩格尔巴特 Engelbart 图形用户界面的创始人。</p>
+</li>
+<li>
+<p>帕洛阿尔托研究中心（Palo Alto Research Center）：要尽可能贴近人的习惯，让人能直接上手操作，设计了桌面（桌面隐喻），窗口！——窗口、图标、菜单、指针、按钮，勾选框，滑动条，标签页！Window-Icon-Menus-Point-Button-CheckBox-Slide-Tab</p>
+</li>
+<li>
+<p>创建图形界面（Gui）：先画一个窗口，再添加几行文字、几个按钮，最后将代码与“事件”相连，每次按按钮时，都触发代码。</p>
+</li>
+<li>
+<p>点击 一个按钮，与按钮相连的处理该事件的函数就会触发，即运行代码。</p>
+</li>
+<li>
+<p>剪切、粘贴：来自打印机，真的是剪刀剪切，胶水粘贴，再复制一遍，就看不出来了。文字处理软件出来后，这种手工做法就消失了。</p>
+</li>
+<li>
+<p>所见即所得：你的文字处理软件上是什么样，打印在纸上也是这样子。</p>
+</li>
+<li>
+<p>Steven Jobs 去施乐公司参观！以上5点都是施乐公司的啊！</p>
+</li>
+<li>
+<p>1983年，Apple Lisa 25000美元，太贵了，没人买！</p>
+</li>
+<li>
+<p>1984年，Apple Macintosh，6000美元，价钱还可以，成功了！但是没人给这台机器做软件。</p>
+</li>
+<li>
+<p>IBM PC Compatible追上来了，价格更低，也有了图形界面。IBM PC兼容是开放架构，还有微软给它做系统，因此迅速占领市场！</p>
+</li>
+<li>
+<p>Windows 95更好的领先的图形界面！</p>
+</li>
+</ul>
+<h4 id="27-3d-graphics">27-3D Graphics</h4>
+<ul>
+<li>
+<p>如何渲染3D图形到2D屏幕上</p>
+</li>
+<li>
+<p>3D投影：xyz，Z轴被拍平在了2D上。用手电筒去照射魔方投影到墙上！</p>
+<ul>
+<li>正交投影：</li>
+<li>透视投射：</li>
+</ul>
+</li>
+<li>
+<p>三角形：三个点可以确定一个平面。二点只能定义一个线段，</p>
+</li>
+<li>
+<p>一个茶壶的立体模型：茶壶的真实度与多边形数量的平衡。</p>
+</li>
+<li>
+<p>图形填充：扫描线算法，填充的速度叫做填充速率。但是这样的填充边缘的比较不像三角形。</p>
+</li>
+<li>
+<p>抗锯齿：边缘羽化（就是图形内部深一点，边缘的浅一点）</p>
+</li>
+<li>
+<p>画家算法：</p>
+</li>
+<li>
+<p>光照：</p>
+</li>
+<li>
+<p>纹理：</p>
+</li>
+<li>
+<p>没懂！不过对我也不重要！</p>
+</li>
+</ul>
+<hr>
+<h4 id="28-computer-network">28-Computer Network</h4>
+<ul>
+<li>
+<p>发一封邮件到美国，需要几个月，现在一下就可以了。</p>
+</li>
+<li>
+<p>1970年以前，大多数计算机都是独立运行的。直到计算机多了起来，连接和分享才变得有意义起来。</p>
+</li>
+<li>
+<p>局域网（Local Area Network）：小到一个房间的两台机器，大到一个学校的几千台机器，大到整个朝鲜，大到整个cn。</p>
+</li>
+<li>
+<p>以太网（Ethernet）：施乐的“palo alto 研究中心”，最成功的局域网。</p>
+<ul>
+<li>网线连接起来的六台机器，但是信息发给谁呢？在数据前面加上Mac地址。</li>
+<li>Mac address：Media Access Control Address</li>
+<li>载波侦听多路访问（Carrier Sense Multiple Access）：Carrier是载体，铜线（以太网）或者空气（WiFi），很多计算机同时侦听载体，所以是侦听和多路。</li>
+<li>带宽（Bandwidth）：载体传输数据的速度</li>
+<li>冲突：多台计算机争夺 载体 的使用权。比如10个人开会，每个人都要说话。</li>
+<li>指数退避：如果发现载体繁忙，自己就先等1+随机秒，如果1.3秒后空闲，就传输，如果不空闲，那么等2+随机秒，如果还不空闲，再等4+随机秒，……8+随机秒……。</li>
+<li>冲突域：载体和其中的设备总称为冲突域，我们要减少同一载体中设备的数量。</li>
+<li>交换机（网桥）switch：拆分为两个冲突域，记录一个列表，写着哪个Mac地址在哪一边。</li>
+</ul>
+</li>
+<li>
+<p>互联网：使用路由搭建起来的巨型分布式网络。路由：从A到B的无数的节点。</p>
+<ul>
+<li>专线：交换数据可以使用专线，直接从A-B，假设有5条线。第六个人要等5条线有一条空出来，他才可以继续打电话。还有接线员哦。</li>
+<li>报文交换（Message Switch）：就像邮政系统一样，一个驿站一个驿站进行传输。更可靠，更容错。</li>
+<li>跳数（hop count）：信息沿着路由跳转的次数。比如C路由器认为最短的路程是D，D认为最短的路程是C，于是两者互相传输，无限循环。所以有跳数限制。</li>
+<li>数据包（packet）：如果有一个巨大无比的报文（1亿亿个数据）在传输，阻塞了一条站与站的通道，它要传100年，但是你只想传一个1bit的文件，只需要0.001S，但你要等它先传完，你要等100年或是选另一条效率稍低的线路。因此把大的报文分成很多小块，避免大的报文堵塞网络，但是不同的数据包可能经过不同的线路到达目的地，到达的顺序不同。</li>
+<li>TCP/IP：IP协议之上的TCP协议，可以解决传输与乱序问题。</li>
+<li>分组交换网络：去中心化的路由网络</li>
+</ul>
+</li>
+<li>
+<p>IP（Internet Protocol）：定义数据包报文的具体格式，告诉<strong>路由器</strong>目标地址。IP地址是Mac地址向上一层的抽象。</p>
+<ul>
+<li>可以灵活的根据 路由网络 来分配IP地址，Mac地址是死的，和硬件设备绑定的。</li>
+<li>Mac地址是你的身份证号，IP地址是你的邮编，假如要向你寄信，要写邮编而不是身份证号，因为邮政网络系统是根据邮编运行的。</li>
+</ul>
+</li>
+<li>
+<p>因特网控制消息协议（Internet Control Message Protocal）：ICMP</p>
+</li>
+<li>
+<p>边界网关协议（Border Gateway Protocol）：bgp</p>
+</li>
+<li>
+<p>ARPANET：世界上第一个分组交换网络</p>
+</li>
+</ul>
+<h4 id="29-the-internet">29-The Internet</h4>
+<ul>
+<li>
+<p>如果要访问www.bilibili.com，路线：你的设备——LAN（局域网）的路由器——WAN（广域网）的路由器=ISP（Internet Service Provider）——区域性路由器（覆盖一个街区）——区域性路由器（覆盖整个城市）——主干网路由器——跳出来到服务器所在的城市、街区、地址。可以使用traceroute追踪数据包在互联网协议网络中经过的路由器的IP地址。</p>
+</li>
+<li>
+<p>互联网：巨型分布式网络</p>
+</li>
+<li>
+<p>一份数据包：IP Header+UDP or TCP Header+Data</p>
+</li>
+<li>
+<p>**互联网协议（IP）**Internet Protocol：数据包想在互联网上传输，要符合”互联网协议（IP）“的标准。就像寄邮件需要写清楚地址、邮编一样，有大小和重量限制。但是IP只写明了地址，具体给谁没说明，没有收件人，数据包是给QQ还是剑网3？</p>
+</li>
+<li>
+<p>**用户数据包协议（UDP）**User Datagram Protocol：端口号Port+校验和Checksum</p>
+<ul>
+<li>端口号（Port）：每个要访问网络的程序，都要向操作系统申请一个端口号。</li>
+<li>IP负责把数据包送到正确的计算机；UDP负责把数据包送到正确的程序。</li>
+<li>Checksum：把数据求和来对比验证数据是否正确。用16bits表示，超出的将会扔掉，保留低位。</li>
+<li>UDP不提供数据修复或数据重发的机制。如果接收的不正确，直接扔掉。另外也不清楚数据包是否到达目的地。简单又快。</li>
+</ul>
+</li>
+<li>
+<p>**传输控制协议（TCP）**Transmission Control Protocol：所有数据必须到达，使命必达。</p>
+<ul>
+<li>TCP/IP：IP Header+TCP Header+Data</li>
+<li>端口号+校验和+序号（1~N）</li>
+<li>TCP要求接收方收到数据并确认无误后，发送一个确认码（ACK），代表收到了。</li>
+<li>TCP可以一次发很多包，接收方也可以一次回很多确认码。</li>
+<li>因为要发了确认包，所以多发了很多数据，你需要考虑值得这样做不，一般游戏、在线视频等不需要如此。</li>
+</ul>
+</li>
+<li>
+<p>域名系统（DNS）Domain Name System：</p>
+<ul>
+<li>Top Level Domains：.com and .gov and .cn and .edu and .org ……</li>
+<li>Second Level Domains：google.com and bilibili.com and baidu.com……</li>
+<li>Sub-Domain of Parent：drive.google.com images.google.com</li>
+</ul>
+</li>
+<li>
+<p>开放式系统互联通信参考模型（OSI）Open System Interconnection）：物理层、数据链路层、网络层、传输层、会话层、表示层、应用程序层。</p>
+</li>
+</ul>
+<h4 id="30-the-world-wide-web">30-The World Wide Web</h4>
+<ul>
+<li>
+<p><strong>万维网</strong>（www）World Wide Web：万维网不是互联网，万维网运行在互联网上。</p>
+<ul>
+<li>互联网（Internet）是传递数据的管道，各种程序都会用，其中传输数据最多的程序是万维网。</li>
+<li>万维网的最基本单位，是单个页面（Single Page）。</li>
+<li>超链接（hyper links）：</li>
+<li>超文本（HyperText）：</li>
+<li>网页（Page）：每个网页需要有一个唯一的地址：<strong>U</strong>niform <strong>R</strong>esource <strong>L</strong>ocator。</li>
+</ul>
+</li>
+<li>
+<p><strong>超文本传输协议</strong>（HTTP）Hyper Text Transfer Protocol：</p>
+<ul>
+<li>1989年创立协议，只有一个指令：Get！</li>
+<li>状态码（Status Code）：服务器说“200 ok”，找到了，给你！
+<ul>
+<li>400·499代表客户端出错了。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>超文本标记语言</strong>（HTML）Hyper Text Markup Language：不止于想发纯文本，还想发链接，图片和视频等其他东西。</p>
+<ul>
+<li>HTML第一版的版本号是0.8，创建于1990年，有18种标记指令。</li>
+<li>现在的HTML有100多种标签，还有CSS和JavaScript辅助，一起做页面。</li>
+</ul>
+</li>
+<li>
+<p>Web browser and Web Server：：1991年正式发布。</p>
+<ul>
+<li>Web浏览器：网景领航员；IE；Opera；Mozilla等。</li>
+<li>Web服务器（Web Server）：Apache；Nginx等。</li>
+</ul>
+</li>
+<li>
+<p>搜索引擎：1996年诞生的Google</p>
+<ul>
+<li>最开始，大家维护一个目录：把万维网上的页面做一个收录，进行链接。Jerry and David&rsquo;s guide to the World Wide Web，1994年改名Yahoo！门户网站的先驱。</li>
+<li>这种人工收录随着网页的变多变得力不从心。</li>
+<li>爬虫：跟着链接到处跑，见到新链接就加进来。</li>
+<li>排序：开始的排序很单纯，按关键词出现的次数来排。</li>
+</ul>
+</li>
+<li>
+<p>网络中立性：应该平等对待所有数据包，不管是我的邮件还是你在看视频，速度和优先级应该是一样的。</p>
+<ul>
+<li>互联网服务供应商ISP是信息的“守门员”，有强烈的动机去以此碾压对手。</li>
+<li>Netflix和Google这种大公司也可以花钱买特权，让他们的数据先到达用户。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="31-cybersecurity">31-Cybersecurity</h4>
+<ul>
+<li>
+<p>计算机没有道德观念，只要给他代码，它就运行，破坏医院计算机的代码和保持病人心跳的代码没什么区别。</p>
+</li>
+<li>
+<p>保密性（Secrecy）：只有有权限的人才能读取计算机系统和数据。</p>
+</li>
+<li>
+<p>完整性（Integrity）：只有有权限的人才能使用和修改系统和数据。</p>
+</li>
+<li>
+<p>可用性（Availability）：有权限的人应该随时可以访问系统和数据。</p>
+<ul>
+<li>拒绝服务攻击（Denial of Service Attacks）：发送很多虚假请求到网站服务器，让服务器变慢甚至挂掉，这就是攻击可用性。</li>
+</ul>
+</li>
+<li>
+<p>威胁模型分析（Threat Model）：要怎么保护，具体看对抗谁。</p>
+<ul>
+<li>权限应该给适合的人，拒绝错误的人。</li>
+</ul>
+</li>
+<li>
+<p>身份认证（Authentication）：让计算机知道你是谁？</p>
+<ul>
+<li>what you know？比如用户名和密码</li>
+<li>what you have？基于用户有特定物体，比如钥匙</li>
+<li>what you are？基于你的特征，比如指纹、脸部</li>
+<li>使用双因素验证或多因素验证。</li>
+</ul>
+</li>
+<li>
+<p>个人识别码（PIN）Personal Identification Number：2540，对人来说很难猜，但对计算机来说很简单，总共只有一万种可能，穷举就可以了，从0000-9999去猜。</p>
+</li>
+<li>
+<p>沙箱（Sandbox）：熊孩子只能弄坏自己的城堡，不影响他人。</p>
+</li>
+</ul>
+<h4 id="32-hackerscyber-attacks">32-Hackers&amp;Cyber Attacks</h4>
+<ul>
+<li>网络钓鱼：我中过一次，太丢人了_(:з」∠)_</li>
+<li>假托：</li>
+<li>木马：伪装成图片或者发票的恶意软件</li>
+<li>缓冲区溢出：</li>
+<li>代码注入：</li>
+</ul>
+<h4 id="33-crypto-graphy">33-Crypto graphy</h4>
+<ul>
+<li>
+<p>encryption</p>
+</li>
+<li>
+<p>decryption</p>
+</li>
+<li>
+<p>凯撒加密：把26个英文字母向前移3位。这一种叫做替换加密，但统计上有缺陷，比如把E换成X，但是E在英文中出现的频率是可大致确定的，由此可确定X是哪个字符。1587年，替换加密的密文被破译，导致阴谋暴露。</p>
+</li>
+<li>
+<p>1900年，密码学做了加密机器，著名的有德国的Enigma（英格玛），纳粹战时加密通讯信息。</p>
+</li>
+<li>
+<p>加密算法：1977年，IBM和NSA开发“数据加密标准”Data Encryption Standard，56bits，不过随着硬件性能的提升，不再有效DES</p>
+</li>
+<li>
+<p>2001年：”高级加密标准“AES Advanced Encryption Standard，128.192.256bits。</p>
+</li>
+<li>
+<p>密钥交换（Key Exchange）：不发送密钥，但依然让两台计算机在密钥上达成共识的算法。</p>
+<ul>
+<li>单向函数：正向很容易算， 但从结果逆向推算出输入非常困难。</li>
+<li>Diffie-Hellman Key Exchange：单向函数是模幂运算</li>
+</ul>
+</li>
+<li>
+<p>对称加密：DES、AES</p>
+</li>
+<li>
+<p>非对称加密：RSA，名字来源于发明者Rivest Shamir Adleman</p>
+</li>
+<li>
+<p>RSA非对称加密，公钥，私钥这个没弄明白┏(＾0＾)┛</p>
+</li>
+</ul>
+<h4 id="34-machine-learningartificial-intelligence">34-Machine Learning&amp;Artificial Intelligence</h4>
+<ul>
+<li>
+<p>机器学习和人工智能是不同的，前者是后者技术之一。</p>
+<ul>
+<li>机器学习：让机器从数据中寻找关联，做出一些决定，比如推荐歌曲</li>
+</ul>
+</li>
+<li>
+<p>特征（Features）：来确定你是你，帮助分类的值</p>
+<ul>
+<li>从一大堆数据中找出特定的值</li>
+<li>如果特征增加，2/3/5、百、千种特征，机器学习在做这些</li>
+</ul>
+</li>
+<li>
+<p>统计学算法：使用数据做决定</p>
+<ul>
+<li>决策树</li>
+<li>支持向量机</li>
+</ul>
+</li>
+<li>
+<p>人工神经网络：基本单位是神经元</p>
+<ul>
+<li>输入——输出</li>
+<li>隐藏层：权重和偏差值、传递函数</li>
+</ul>
+</li>
+</ul>
+<h4 id="35-computer-vision">35-Computer Vision</h4>
+<ul>
+<li>计算机视觉：让计算机理解图像和视频</li>
+<li>颜色跟踪算法：受较多干扰，较少使用。</li>
+<li>卷积：色差</li>
+<li>卷积神经网络：</li>
+</ul>
+<h4 id="36-natural-language-processing">36-Natural Language Processing</h4>
+<ul>
+<li>自然语言识别（NLP）：</li>
+<li>从手写规则到机器学习</li>
+<li>快速傅里叶变换（Fast Fourier Transform）：从波形到频率的转换</li>
+</ul>
+<h4 id="37-robots">37-Robots</h4>
+<ul>
+<li>比例-积分-微分控制器（PID）：</li>
+<li>机器人三定律：</li>
+</ul>
+<h4 id="38-psychology-of-computing">38-Psychology of Computing</h4>
+<ul>
+<li>运用社会心理学、认知心理学、行为心理学、感知心理学的原理来设计软件。</li>
+<li>易用性（usability）：</li>
+<li>信息分块：人类短期记忆一般能记住5~9个，这对计算机来说是个多余的负担。</li>
+<li>直观性：看一眼就知道杂用</li>
+<li>增强凝视：修正视频时盯着摄像头和人看的角度问题</li>
+</ul>
+<h4 id="39-educational-technology">39-Educational Technology</h4>
+<ul>
+<li>调速</li>
+<li>暂停</li>
+<li>反馈</li>
+<li>贝叶斯知识追踪</li>
+<li>教育数据挖掘</li>
+</ul>
+<h4 id="40-the-singularity-skynet-and-the-future-of-computing">40-The Singularity Skynet and the Future of Computing</h4>
+<p>奇点：智能科技的失控性发展
+工作：手工型的/思考型的；重复性的；创造性的。
+未来：~~</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-12-28
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%8D%81%E5%88%86%E9%92%9F%E9%80%9F%E6%88%90%E8%AF%BE/">十分钟速成课</a>
+          <a href="/tags/crash-course/">Crash Course</a>
+          <a href="/tags/computer-science/">Computer Science</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/deliberate-practice/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">刻意练习：如何从新手到大师</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/html-css/">
+            <span class="next-text nav-default">大前端学习（HTML&#43;CSS）</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

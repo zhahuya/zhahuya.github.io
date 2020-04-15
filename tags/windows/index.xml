@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on Vchv - 书写过往，让前路更清晰</title>
-    <link>https://zhahuya.github.io/tags/windows/</link>
+    <link>https://vchv.tk/tags/windows/</link>
     <description>Recent content in Windows on Vchv - 书写过往，让前路更清晰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
     <lastBuildDate>Sat, 04 Apr 2020 19:30:04 +0800</lastBuildDate>
     
-	<atom:link href="https://zhahuya.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vchv.tk/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>我在使用的软件分享</title>
-      <link>https://zhahuya.github.io/great-software/</link>
+      <link>https://vchv.tk/great-software/</link>
       <pubDate>Sat, 04 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://zhahuya.github.io/great-software/</guid>
+      <guid>https://vchv.tk/great-software/</guid>
       <description>前言 之前发在xx的，没有使用 Markdown 排版实在是太糟糕了，现在把它重新写一下。 这些软件的共同特点就是极其小，几乎都是5M以下，中位数可能在2M，但是</description>
     </item>
     

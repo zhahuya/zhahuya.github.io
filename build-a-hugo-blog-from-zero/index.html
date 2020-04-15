@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.69.0 with theme even" />
 
 
-<link rel="canonical" href="https://zhahuya.github.io/build-a-hugo-blog-from-zero/" />
+<link rel="canonical" href="https://vchv.tk/build-a-hugo-blog-from-zero/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -35,25 +35,25 @@
 
 
 
-<link href="https://zhahuya.github.io/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="从零开始搭建一个hugo博客" />
 <meta property="og:description" content="前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zhahuya.github.io/build-a-hugo-blog-from-zero/" />
+<meta property="og:url" content="https://vchv.tk/build-a-hugo-blog-from-zero/" />
 <meta property="article:published_time" content="2020-04-13T19:30:04+08:00" />
 <meta property="article:modified_time" content="2020-04-15T19:11:49+08:00" />
 <meta itemprop="name" content="从零开始搭建一个hugo博客">
 <meta itemprop="description" content="前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发">
 <meta itemprop="datePublished" content="2020-04-13T19:30:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-15T19:11:49&#43;08:00" />
-<meta itemprop="wordCount" content="1467">
+<meta itemprop="wordCount" content="2209">
 
 
 
-<meta itemprop="keywords" content="Hugo,github,onedrive,博客," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Hugo,github,onedrive,even,博客," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="从零开始搭建一个hugo博客"/>
 <meta name="twitter:description" content="前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发"/>
 
@@ -127,10 +127,10 @@
       <div class="post-meta">
         <span class="post-time"> 2020-04-13 </span>
         <div class="post-category">
-            <a href="/categories/%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"> 技术应用 </a>
+            <a href="/categories/%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF/"> 应用技术 </a>
             </div>
-          <span class="more-meta"> 约 1467 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+          <span class="more-meta"> 约 2209 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
         
       </div>
     </header>
@@ -148,6 +148,17 @@
     <li><a href="#使用-git-管理-public-文件">使用 git 管理 public 文件</a></li>
     <li><a href="#为-git-设置代理">为 git 设置代理</a></li>
     <li><a href="#同步的问题">同步的问题</a></li>
+    <li><a href="#改善-even-主题">改善 even 主题</a>
+      <ul>
+        <li><a href="#even-主题的优点">even 主题的优点</a></li>
+        <li><a href="#even-主题的不足">even 主题的不足</a></li>
+        <li><a href="#提升-even-的表现">提升 even 的表现</a></li>
+        <li><a href="#todo-list">Todo list</a></li>
+        <li><a href="#基于-even-改造的主题janehttpsgithubcomxianminhugo-theme-jane">基于 even 改造的主题：<a href="https://github.com/xianmin/hugo-theme-jane">Jane</a></a></li>
+        <li><a href="#一款同样优秀的主题loveithttpsgithubcomdillonzqloveit">一款同样优秀的主题：<a href="https://github.com/dillonzq/LoveIt">LoveIt</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#日常操作">日常操作</a></li>
     <li><a href="#将-public-里的文件上传到你的虚拟主机空间">将 public 里的文件上传到你的虚拟主机空间</a></li>
     <li><a href="#解析你的域名到你的虚拟主机">解析你的域名到你的虚拟主机</a></li>
     <li><a href="#后记">后记</a></li>
@@ -236,6 +247,116 @@
 <h2 id="同步的问题"><del>同步的问题</del></h2>
 <p><del>- 现在我们使用 Git 来同步整个网站目录（“Myblog”文件夹），这样主题 even 只能以 submodule 的形式获取和同步，public/ 则是使用 gitignore 来忽略，其实 public/ 也是一个 git 仓库。这样我不能对 even 本身有任何改动，因为到了另一台电脑上，我只能获取原本仓库的主题文件，对主题文件的改动就丢失了。不去改动原主题文件，这一点其实是 hugo 所倡导的，它的文件结构也说明了这一点。</del></p>
 <p><del>- 另一个思路：使用 onedrive 或“坚果云”来同步整个网站目录（”Myblog“文件夹），主题文件和 public 文件就各是各的正常的 git 仓库，这样还可以保证整个站点目录的完整性。</del></p>
+<h2 id="改善-even-主题">改善 even 主题</h2>
+<blockquote>
+<p>作者的文档：<a href="https://blog.olowolo.com/post/hugo-quick-start/">快速开始</a></p>
+</blockquote>
+<h3 id="even-主题的优点">even 主题的优点</h3>
+<ol>
+<li>设计优秀：全页面一片纯色、浑然一体，简洁大方。向各种方块说不（Jane和loveit主题）。</li>
+<li>得体、易用的文章目录，缺陷一是支持的层级太浅，只到3级题目，二是样式不如（loveIt）美观。向花里胡哨的目录说不（Jane主题）。</li>
+</ol>
+<h3 id="even-主题的不足">even 主题的不足</h3>
+<ol>
+<li>【已解决】文章目录支持的层级太浅，只支持到3级标题；目录的样式是 Markdown 中无序列表的样式，不美观。</li>
+<li>【已解决】社交分享模块图标黑又大，笨重，难看，无法全部去除，会留下RSS图标。</li>
+<li>无内置搜索</li>
+<li>无流行的暗黑主题</li>
+<li>不支持分享文章</li>
+</ol>
+<h3 id="提升-even-的表现">提升 even 的表现</h3>
+<ol>
+<li>添加一个关于选项：content 添加 about 文档，然后添加模块</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+[[menu.main]]
+  name = &#34;关于&#34;
+  weight = 50
+  identifier = &#34;about&#34;
+  url = &#34;/about/&#34;
+
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>
+<p>去除网页底部的一排 social link 图标，尤其是RSS：到<code>themes\even\layouts\partials\footer.html</code>，将第一个 div 全部注释掉 <code>&lt;!--&gt;&lt;--&gt;</code></p>
+</li>
+<li>
+<p>front matter 添加<code>url: enhance even</code>，将会使文章链接变为域名+url的格式。</p>
+</li>
+<li>
+<p>修复 目录导航 只能支持3级标题的bug，作者回复：</p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<p>Hugo (&gt;=0.60.0) uses Goldmark as default renderer.
+You may add the following settings to your config.toml.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+</code></pre></td></tr></table>
+</div>
+</div><p>See <a href="https://gohugo.io/getting-started/configuration-markup/#table-of-contents">https://gohugo.io/getting-started/configuration-markup/#table-of-contents</a></p>
+<!-- raw HTML omitted -->
+<ol start="5">
+<li>enablegitinfo = true 生效，输入：<code>git config core.quotepath false</code>
+<blockquote>
+<p>参考：<a href="https://github.com/olOwOlo/hugo-theme-even/pull/124">feat(lastmod): use git commit to generate lastmod info</a></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="todo-list">Todo list</h3>
+<ul>
+<li><input disabled="" type="checkbox"> 内置搜索，功能和样式</li>
+<li><input disabled="" type="checkbox"> 暗黑主题</li>
+<li><input disabled="" type="checkbox"> 文章内链接默认使用新标签页打开</li>
+<li><input checked="" disabled="" type="checkbox"> enablegitinfo 让这个设置有效</li>
+<li><input disabled="" type="checkbox"> 添加一些可爱的小图标</li>
+<li><input disabled="" type="checkbox"> 启用公共 CDN</li>
+</ul>
+<h3 id="基于-even-改造的主题janehttpsgithubcomxianminhugo-theme-jane">基于 even 改造的主题：<a href="https://github.com/xianmin/hugo-theme-jane">Jane</a></h3>
+<ol>
+<li>貌似丢失了原作的精髓……</li>
+</ol>
+<h3 id="一款同样优秀的主题loveithttpsgithubcomdillonzqloveit">一款同样优秀的主题：<a href="https://github.com/dillonzq/LoveIt">LoveIt</a></h3>
+<ol>
+<li>一款同样干净、简洁、优雅、强大、活跃的主题。</li>
+<li>文章目录要比 even 更加好看得体，层级从2到6，可以自定义。</li>
+<li>流行的暗黑模式</li>
+</ol>
+<h2 id="日常操作">日常操作</h2>
+<ol>
+<li>在 Vnote 中写作完成后，将文件放入 content/post 中</li>
+<li>使用<code>hugo server</code>进行预览</li>
+<li>生成public文件： <code>hugo</code></li>
+<li>将站点文件 push 到云端</li>
+<li>将 public/ 文件 push 到云端</li>
+<li>对 even 的改动使用 onedrive 单独保存</li>
+</ol>
 <h2 id="将-public-里的文件上传到你的虚拟主机空间">将 public 里的文件上传到你的虚拟主机空间</h2>
 <h2 id="解析你的域名到你的虚拟主机">解析你的域名到你的虚拟主机</h2>
 <h2 id="后记">后记</h2>
@@ -271,16 +392,17 @@
           <a href="/tags/hugo/">Hugo</a>
           <a href="/tags/github/">github</a>
           <a href="/tags/onedrive/">onedrive</a>
+          <a href="/tags/even/">even</a>
           <a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/enhance-the-theme-even-of-hugo/">
+        <a class="prev" href="/use-markdown-in-a-proper-way/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">改善自己的even主题</span>
+            <span class="prev-text nav-default">正确使用Markdown</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/great-software/">
-            <span class="next-text nav-default">我在使用的软件分享</span>
+        <a class="next" href="/learn-web-design/">
+            <span class="next-text nav-default">【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -357,7 +479,7 @@
 
 
 
-<script type="text/javascript" src="https://zhahuya.github.io/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
 
 
 

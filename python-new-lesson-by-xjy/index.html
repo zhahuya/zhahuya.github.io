@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python零基础入门学习（新版） - Vchv - 书写过往，让前路更清晰</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="前言 我知道了 序章 Python is powerful&amp;hellip;and fast; plays well with others; runs everywhere; is friendly &amp;amp; easy to learn; is Open. 语法知识&#43;案例开发的结合 环境搭建&amp;amp;课程介绍 IDLE：Integrated Development and Learning Environment" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://vchv.tk/python-new-lesson-by-xjy/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python零基础入门学习（新版）" />
+<meta property="og:description" content="前言 我知道了 序章 Python is powerful&hellip;and fast; plays well with others; runs everywhere; is friendly &amp; easy to learn; is Open. 语法知识&#43;案例开发的结合 环境搭建&amp;课程介绍 IDLE：Integrated Development and Learning Environment" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vchv.tk/python-new-lesson-by-xjy/" />
+<meta property="article:published_time" content="2020-01-08T20:30:04+08:00" />
+<meta property="article:modified_time" content="2020-01-08T20:30:04+08:00" />
+<meta itemprop="name" content="Python零基础入门学习（新版）">
+<meta itemprop="description" content="前言 我知道了 序章 Python is powerful&hellip;and fast; plays well with others; runs everywhere; is friendly &amp; easy to learn; is Open. 语法知识&#43;案例开发的结合 环境搭建&amp;课程介绍 IDLE：Integrated Development and Learning Environment">
+<meta itemprop="datePublished" content="2020-01-08T20:30:04&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-08T20:30:04&#43;08:00" />
+<meta itemprop="wordCount" content="1839">
+
+
+
+<meta itemprop="keywords" content="Python,编程语言," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python零基础入门学习（新版）"/>
+<meta name="twitter:description" content="前言 我知道了 序章 Python is powerful&hellip;and fast; plays well with others; runs everywhere; is friendly &amp; easy to learn; is Open. 语法知识&#43;案例开发的结合 环境搭建&amp;课程介绍 IDLE：Integrated Development and Learning Environment"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python零基础入门学习（新版）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-01-08 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
+            </div>
+          <span class="more-meta"> 约 1839 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#我知道了">我知道了</a></li>
+    <li><a href="#序章">序章</a></li>
+    <li><a href="#环境搭建课程介绍">环境搭建&amp;课程介绍</a></li>
+    <li><a href="#python语言注意">Python语言注意</a></li>
+    <li><a href="#shortcut-key">Shortcut Key</a></li>
+    <li><a href="#variable--string">Variable &amp; String</a></li>
+    <li><a href="#理解代码">理解代码</a></li>
+    <li><a href="#改进小游戏">改进小游戏</a></li>
+    <li><a href="#数字类型">数字类型</a></li>
+    <li><a href="#布尔类型boolean">布尔类型（Boolean）</a></li>
+    <li><a href="#短路逻辑和运算符优先级">短路逻辑和运算符优先级</a></li>
+    <li><a href="#谋定而后动流程图和思维导图">谋定而后动：流程图和思维导图</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2020-01-08T20:30:04" title="January 8, 2020">January 8, 2020</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<h2 id="我知道了">我知道了</h2>
+<h2 id="序章">序章</h2>
+<ul>
+<li>Python is powerful&hellip;and fast; plays well with others; runs everywhere; is friendly &amp; easy to learn; is Open.</li>
+<li>语法知识+案例开发的结合</li>
+</ul>
+<h2 id="环境搭建课程介绍">环境搭建&amp;课程介绍</h2>
+<ul>
+<li>IDLE：Integrated Development and Learning Environment</li>
+<li>PIP：</li>
+<li>交互模式：输入指令，就有反馈。你问我答</li>
+<li>编辑器模式：</li>
+</ul>
+<h2 id="python语言注意">Python语言注意</h2>
+<ul>
+<li>标点符号：全部要是英文符号。可以修改字体配置让中英文符号差异更明显。</li>
+<li>缩进：缩进不仅是美观，还是python的命！推荐使用</li>
+<li>函数拼写：input print这些关键字正确吗？</li>
+</ul>
+<h2 id="shortcut-key">Shortcut Key</h2>
+<p>在Integrated Development and Learning Environment环境中的快捷键</p>
+<ul>
+<li>alt+p ; 上一句代码</li>
+<li>tab：缩进4个空格；补全命令和路径</li>
+</ul>
+<h2 id="variable--string">Variable &amp; String</h2>
+<ul>
+<li>
+<p>Variable：通常由字母、数字和下划线构成，但不能以数字打头；区分大小写；汉字也支持作为变量名了。</p>
+</li>
+<li>
+<p>String：Single Quotes；double quotes；triple quoted（&lsquo;&lsquo;&lsquo;长字符串&rsquo;''）。</p>
+<ul>
+<li>print(‘I love china . &lsquo;)     等同于   print(&ldquo;I love china . &ldquo;)</li>
+<li>print(&lsquo;let&rsquo;s go!')     SyntaxError：invaild syntax</li>
+<li>print('&ldquo;Life is short , you need Python.&quot;')    输出&quot;Life is short , you need Python.&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>转义字符：反斜线\</p>
+<ul>
+<li>print(&quot;&quot;Life is short, let's learn Python. &quot;&quot;)    等同于   print('&quot;Life is short, let's learn Python. &quot;')</li>
+<li>print(&ldquo;I love Python. \nI love FishC. &ldquo;)  换行转义字符。</li>
+<li>Window使用\来表示路径，比如D:\three\two\one\now  与\转义字符相冲突。</li>
+<li>print(&ldquo;D:\three\two\one\now&rdquo;)   紧致套娃！假如有100个路径你还要这样搞吗？！</li>
+<li>Raw Strings：print(r&quot;D:\three\two\one\now&rdquo;)  原始字符串即不进行转义。</li>
+<li>转义字符（\）在字符串的最后表示这事还没完！</li>
+</ul>
+</li>
+<li>
+<p>Triple quoted（长字符串）：<code>'''   ''' |  &quot;&quot;&quot;   &quot;&quot;&quot;</code>  可以进行换行输入。</p>
+</li>
+<li>
+<p>Concatenation and multiplication of strings</p>
+<ul>
+<li>字符串的相加叫拼接，字符串*数字可以进行多次的复制。</li>
+</ul>
+</li>
+</ul>
+<h2 id="理解代码">理解代码</h2>
+<ul>
+<li>input函数：让用户输入一个字符串，并保存。</li>
+<li>比较运算符：大于、大于等于；小于，小于等于；等于、不等于；对象ID</li>
+<li>转义字符：\n 换行</li>
+</ul>
+<h2 id="改进小游戏">改进小游戏</h2>
+<ul>
+<li>
+<p>三个需求</p>
+<ul>
+<li>当用户猜错的时候，程序应该给出提示</li>
+<li>多给用户点机会</li>
+<li>每次运行程序，答案应该是随机的</li>
+</ul>
+</li>
+<li>
+<p>嵌套。</p>
+</li>
+<li>
+<p>while条件：如果条件为真（True）执行这里的语句。</p>
+</li>
+<li>
+<p>break：执行到此直接跳出。</p>
+</li>
+<li>
+<p>import：导入模块，模块。python的强大之处，模块！</p>
+</li>
+<li>
+<p>random：随机数模块（伪随机）</p>
+<ul>
+<li>random.randint(a,b)</li>
+<li>惊，随机数竟然是可以重现！<code>random.getstate()|random.setstate(x)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="数字类型">数字类型</h2>
+<ul>
+<li>
+<p>整数（Integer）：</p>
+</li>
+<li>
+<p>浮点数（Float）：浮点数的计算并不是精确了。</p>
+<ul>
+<li>0.1+0.2 = 0.3   false</li>
+<li>精确的话，需要引入 <code>decimal</code>模块。</li>
+</ul>
+</li>
+<li>
+<p>复数（Complex numbers）：1+2j   一个实部，一个虚部。</p>
+</li>
+<li>
+<p>Python的数字运算表：+-*/ ；//向下取整除法；%余数；**；乘方</p>
+</li>
+</ul>
+<h2 id="布尔类型boolean">布尔类型（Boolean）</h2>
+<ul>
+<li>
+<p>只有两个值（value）：True False</p>
+</li>
+<li>
+<p>布尔类型其实是特殊的整数类型。True ==1 ；False == 0。</p>
+</li>
+<li>
+<p>函数：bool。1 == True；0 == False</p>
+<ul>
+<li>所有字符串类型都是True</li>
+<li>所有数字除了0都是True</li>
+<li>定义为False的对象：None和False</li>
+<li>值为0的数字类型：0；0.0；0j；Decimal（0）；Fraction（0,1）</li>
+<li>空的序列和集合：''；（）；{}；[]；set()；range(0)；但是字符串中有一个空格就是True。</li>
+</ul>
+</li>
+<li>
+<p>条件语句：需要真假判断。</p>
+<ul>
+<li>分支语句</li>
+<li>循环语句</li>
+</ul>
+</li>
+<li>
+<p>逻辑运算符（Boolean Operations）</p>
+<ul>
+<li>and</li>
+<li>or</li>
+<li>not</li>
+</ul>
+</li>
+</ul>
+<h2 id="短路逻辑和运算符优先级">短路逻辑和运算符优先级</h2>
+<ul>
+<li>
+<p>(not 1) or (0 and 1) or (3 and 4) or (5 and 6) or (7 and 8 and 9)</p>
+</li>
+<li>
+<p>短路逻辑：从左往右，只有当第一个【操作数】的值无法确定逻辑运算的结果时，才对第二个【操作数】进行求值。</p>
+<ul>
+<li>and 的逻辑是需要比较两个操作数的情况。</li>
+<li>or 的逻辑是只要有一个是True，就可以返回结果了。</li>
+<li>只要确定了正确（True），就直接扔数字出来就好了。</li>
+</ul>
+</li>
+<li>
+<p>not 1 or 0 and 1 or 3 and 4 or 5 and 6 or 7 and 8 and 9</p>
+</li>
+<li>
+<p>运算符优先级：先执行优先级高的运算符，附【运算符优先级查询表】</p>
+<ul>
+<li>乘除&gt;加减&gt;比较&gt;not&gt;and&gt;or</li>
+</ul>
+</li>
+</ul>
+<h2 id="谋定而后动流程图和思维导图">谋定而后动：流程图和思维导图</h2>
+<ul>
+<li>
+<p>流程图（Flowchart）：一种用于表示 算法或代码流程 的框图组合，它以不同类型的框框代表不同种类的程序步骤，没两个步骤之间以箭头连接起来。一种线性的图示！</p>
+<ul>
+<li>代码的指导文档</li>
+<li>有助于规划高效的程序结构</li>
+<li>便于与他人交流</li>
+</ul>
+</li>
+<li>
+<p>流程图的表示样式：箭头；圆框（开始和结束）；长方形（程序过程）；◇（条件判断）；平行四边形（输入/输出）；</p>
+</li>
+<li>
+<p>思维导图（Mind Map）：又叫心智图，是表达发散性思维的有效的图形思维工具，它简单却又极其有效，是一种革命性的思维工具。</p>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-01-08
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">Python</a>
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/math-common-sense/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">数学通识</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/relations-and-motive/">
+            <span class="next-text nav-default">心理学课之二（关系、动力）</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Code-The hidden language of Computer Hardware and Software - Vchv - 书写过往，让前路更清晰</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="前言 Code: The Hidden Language of Computer Hardware and Software 一本被盛赞的计算机科学入门书籍，在不同的地方看到推荐，大概有3&#43;次，根据介绍，推测和Crash Course的CS课程差" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://vchv.tk/everything-is-code/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Code-The hidden language of Computer Hardware and Software" />
+<meta property="og:description" content="前言 Code: The Hidden Language of Computer Hardware and Software 一本被盛赞的计算机科学入门书籍，在不同的地方看到推荐，大概有3&#43;次，根据介绍，推测和Crash Course的CS课程差" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vchv.tk/everything-is-code/" />
+<meta property="article:published_time" content="2020-02-04T19:30:04+08:00" />
+<meta property="article:modified_time" content="2020-02-04T19:30:04+08:00" />
+<meta itemprop="name" content="Code-The hidden language of Computer Hardware and Software">
+<meta itemprop="description" content="前言 Code: The Hidden Language of Computer Hardware and Software 一本被盛赞的计算机科学入门书籍，在不同的地方看到推荐，大概有3&#43;次，根据介绍，推测和Crash Course的CS课程差">
+<meta itemprop="datePublished" content="2020-02-04T19:30:04&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-04T19:30:04&#43;08:00" />
+<meta itemprop="wordCount" content="2367">
+
+
+
+<meta itemprop="keywords" content="编程语言,Code,哲学思维,人生指导," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Code-The hidden language of Computer Hardware and Software"/>
+<meta name="twitter:description" content="前言 Code: The Hidden Language of Computer Hardware and Software 一本被盛赞的计算机科学入门书籍，在不同的地方看到推荐，大概有3&#43;次，根据介绍，推测和Crash Course的CS课程差"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Code-The hidden language of Computer Hardware and Software</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-02-04 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
+            </div>
+          <span class="more-meta"> 约 2367 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#阅读英文需要注意以下几点">阅读英文需要注意以下几点</a></li>
+    <li><a href="#preface-to-the-paperback-edition">Preface to the Paperback Edition</a></li>
+    <li><a href="#chapter-1-best-friends">Chapter 1. Best Friends</a></li>
+    <li><a href="#chapter-2-codes-and-combinations">Chapter 2. Codes and Combinations</a></li>
+    <li><a href="#chapter-3-braille-and-binary-codes">Chapter 3. Braille and Binary Codes</a></li>
+    <li><a href="#chapter-4-anatomy-of-a-flashlight">Chapter 4. Anatomy of a Flashlight</a></li>
+    <li><a href="#chapter-5-seeing-around-corners">Chapter 5. Seeing Around Corners</a></li>
+    <li><a href="#chapter-6-telegraphs-and-relays">Chapter 6. Telegraphs and Relays</a></li>
+    <li><a href="#chapter-7-our-ten-digits">Chapter 7. Our Ten Digits</a></li>
+    <li><a href="#chapter-8-alternatives-to-ten">Chapter 8. Alternatives to Ten</a></li>
+    <li><a href="#chapter-9-bit-by-bit-by-bit">Chapter 9. Bit by Bit By bit</a></li>
+    <li><a href="#chapter-10-logic-and-switches">Chapter 10. Logic and Switches</a></li>
+    <li><a href="#chapter-11-gatesnot-bill">Chapter 11. Gates(Not Bill)</a></li>
+    <li><a href="#chapter-12-a-binary-adding-machine">Chapter 12. A Binary Adding Machine</a></li>
+    <li><a href="#chapter-13-but-what-about-subtraction">Chapter 13. But What About Subtraction?</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2020-02-04T19:30:04" title="February 4, 2020">February 4, 2020</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<ul>
+<li>Code: The Hidden Language of Computer Hardware and Software</li>
+<li>一本被盛赞的计算机科学入门书籍，在不同的地方看到推荐，大概有3+次，根据介绍，推测和Crash Course的CS课程差不多有趣。</li>
+<li>本书为1/16的开本，字数：44.2万。</li>
+<li>推荐序很不错，但译者序的表达有点小差啊，我有点小担心，这部译著的质量。</li>
+<li>直接看英文了，通过彩云小译简单翻译了一下，再通过蒙哥阅读器阅读，完美。</li>
+</ul>
+<h2 id="阅读英文需要注意以下几点">阅读英文需要注意以下几点</h2>
+<ol>
+<li>找到句子的主干，即谓语动词</li>
+<li>名词词组：
+<ol>
+<li>a big apple</li>
+<li>something blue</li>
+<li>apple tree</li>
+<li>非谓语动词在名词后修饰：something to eat/the man standing by the window</li>
+</ol>
+</li>
+<li>时间：过去的过去、过去、过去的将来；现在；将来；</li>
+<li>状态：一般；正在进行时；完成时；</li>
+</ol>
+<h2 id="preface-to-the-paperback-edition">Preface to the Paperback Edition</h2>
+<ul>
+<li>
+<p>这本书是讲述计算机如何工作的，但很不同的是讲解的人很牛比！</p>
+</li>
+<li>
+<p>I also hope that you might recognize the computer to be one of the crowning achievements of twentieth century technology and appreeciate it as a beautiful thing in itself without metaphors and similes getting in the way.</p>
+<ul>
+<li>译者翻译：计算机是二十世纪技术领域的登峰造极之作，它是一种值得欣赏、具有“美”学文化底蕴的人类伟大成果，这种美不需要明喻与暗喻的额外修饰。</li>
+<li>其实作者本意在于：通过认识计算机本身，我们就可认识它有多美，而无需通过比喻和类比，比如作者前面的例子，为了简单理解存储器和内存，人们作了个比喻，把存储器比喻成文件柜，内存比喻为桌面，这确实方便理解，但作者并不满足于这种解释。</li>
+</ul>
+</li>
+<li>
+<p>译者翻译：我希望这本书能够成为大家理解这些问题的助手，这种理解我希望不是抽象层面上的，而是具有一定深度的，这种深度甚至不逊于“电气工程师”和“程序员”的理解。</p>
+<ul>
+<li>这句话的翻译腔太浓了，甚至到了影响正常中文使用者理解的程度。</li>
+</ul>
+</li>
+<li>
+<p>The further back in time you go, the simpler the technologies become.</p>
+<ul>
+<li>译者翻译：学习技术发展史的重要意义在于 追溯的历史越久远，技术的脉络就越清晰。</li>
+<li>”技术的脉络“，这个词纯粹是翻译者的脑补，作者的意思是越向前追溯，技术就越简单。</li>
+</ul>
+</li>
+</ul>
+<h2 id="chapter-1-best-friends">Chapter 1. Best Friends</h2>
+<ul>
+<li>the code you invented   VS Morse code</li>
+<li>You could say Endlish vocabulary is a type of code</li>
+<li>Just as Morse code provides a good introduction to the nature of codes, the telegraph provides a good introduction to the hardware of the computer.</li>
+</ul>
+<h2 id="chapter-2-codes-and-combinations">Chapter 2. Codes and Combinations</h2>
+<ul>
+<li>Morse code is said to be a binary(literally meaning two by two)code because the components of the code consist of only two things&ndash;a dot and a dash.</li>
+</ul>
+<h2 id="chapter-3-braille-and-binary-codes">Chapter 3. Braille and Binary Codes</h2>
+<ul>
+<li>Dissect Braille code and see how it works.</li>
+<li>We just want some insight into the nature of codes.</li>
+<li>shift codes</li>
+<li>escape codes</li>
+</ul>
+<h2 id="chapter-4-anatomy-of-a-flashlight">Chapter 4. Anatomy of a Flashlight</h2>
+<ul>
+<li>
+<p>all matter——the stuff that we can see and feel(usually)——is made up of extremely small things called atoms.</p>
+</li>
+<li>
+<p>Every atom is composed of three types of particles: neutrons, protons, and eletrons.</p>
+</li>
+<li>
+<p><a href="http://web.mit.edu/yenjie/www/lm-gb/physics/modern/q11.htm">物质是由什么组成的？-无名小站</a></p>
+</li>
+<li>
+<p>物质是一个科学上没有明确定义的词，一般是指静止质量不为零的东西。</p>
+</li>
+<li>
+<p>原子的英文名（Atom）是从希腊语ἄτομος（atomos，“不可切分的”）转化而来。</p>
+<ul>
+<li>所有可以用肉眼看到的物体都是由原子组成，而原子是由互相作用的次原子粒子所组成，其中包括由质子和中子组成的原子核，以及许多电子组成的电子云。</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.bilibili.com/video/av29968017?from=search&amp;seid=10525831785809676397">世界是由什么构成的？-妈咪说</a></p>
+<ul>
+<li>原子：电子  +  原子核（中子 + 质子）</li>
+<li>原子核只占原子中一点点点点的小地方</li>
+<li>质量、电荷、寿命</li>
+<li>只要到这一层就足够啦！</li>
+</ul>
+</li>
+<li>
+<p>这一章讲了电子、电流（A）、电阻（欧姆）、电压（V）、功率（P）</p>
+</li>
+</ul>
+<h2 id="chapter-5-seeing-around-corners">Chapter 5. Seeing Around Corners</h2>
+<ul>
+<li>You&rsquo;re twelve years old, your second-best friend lives in the house next door to yours.</li>
+<li>地球为什么可以被当做导线，用来构建回路？</li>
+</ul>
+<h2 id="chapter-6-telegraphs-and-relays">Chapter 6. Telegraphs and Relays</h2>
+<ul>
+<li>
+<p>In the early 1800s, you could communicate <strong>instantly</strong> and you could communicate over <strong>long distances</strong>, but you couldn&rsquo;t do both at the same time.</p>
+</li>
+<li>
+<p>The electromagnet is the foundation of the telegraph. Turning the switch on and off at one end causes the electromagnet to do something at the other end.</p>
+</li>
+<li>
+<p>The historic day was May 24, 1844.(the first telegraph used the Morse)</p>
+<ul>
+<li>the practical lightbulb wouldn&rsquo;t be invented until 1879.</li>
+</ul>
+</li>
+<li>
+<p>the relay is a switch, but a switch that&rsquo;s turned on and off not by human hands but by a current.</p>
+</li>
+</ul>
+<h2 id="chapter-7-our-ten-digits">Chapter 7. Our Ten Digits</h2>
+<ul>
+<li>
+<p>Numbers are certainly the most abstract codes we deal with on a regular basis.</p>
+</li>
+<li>
+<p>Much of this chapter and the next will be devoted to persuading ourselves that this many(3) apples can also be indicated by writing 11.</p>
+</li>
+<li>
+<p>Roman numerals and Indo-Arbic</p>
+</li>
+<li>
+<p>0, The lowly zero is without a doubt one of the most important inventions in the history of numbers and mathematics.</p>
+<ul>
+<li>It supports positional notation because it allows differentiation of 25 from 205 and 250.</li>
+<li>The zero also eases many mathematial operations that are awkward in nonpositiona systems, particularly multiplication and division.</li>
+</ul>
+</li>
+<li>
+<p>Each position corresponds to a power of ten.</p>
+<ul>
+<li>we don&rsquo;t need a special symbol for ten because we set the 1 in a different position and we use the 0 as a placeholder.</li>
+</ul>
+</li>
+</ul>
+<h2 id="chapter-8-alternatives-to-ten">Chapter 8. Alternatives to Ten</h2>
+<ul>
+<li>
+<p>When you&rsquo;re working with number systems other than decimal, you can avoid some confusion if you pronounce a number like 10 as one zero.</p>
+<ul>
+<li>Similarly, 13 is pronounced one three and 20 is pronounced two zero.</li>
+<li>To really avoid confusion, we can say two zero base eight or two zero octal.</li>
+</ul>
+</li>
+<li>
+<p>Anytime we have a binary number composed of a 1 followed by all zeros, that number is a power of two.</p>
+<ul>
+<li>The power is the same as the number of zeros in the binary number.</li>
+</ul>
+</li>
+<li>
+<p><strong>bit: binary digit</strong></p>
+<ul>
+<li>Around 1948, Tukey decided to coin a new shorter word to replace the unwield five syllables of binary digit.</li>
+<li>He considered bigit and binit but settled instead on the short, simple, elegant, and perfectly lovely word bit.</li>
+</ul>
+</li>
+</ul>
+<h2 id="chapter-9-bit-by-bit-by-bit">Chapter 9. Bit by Bit By bit</h2>
+<ul>
+<li>
+<p>The thing about the bit is that it conveys very little information.</p>
+<ul>
+<li>A bit of information is the tiniest amount of information possible. Anythin less than a bit is no information at all.</li>
+</ul>
+</li>
+<li>
+<p>If you can&rsquo;t express something in words, pictures, or sounds, you&rsquo;re not going to be able to encode the information in bits.</p>
+</li>
+<li>
+<p>As we shall see later in this book, bits can represent words, pictures, sounds, music, and movies as well as product codes, film speeds, movie ratings, an invasion of the British army, and the intentions of one&rsquo;s beloved.</p>
+<ul>
+<li>but most fundamentally, bits are numbers.</li>
+<li>All that needs to be done when bits represent other information is to count the number of possibilities.</li>
+<li>This determines the number of bits that are needed so that each possibility can be assigned a number.</li>
+</ul>
+</li>
+</ul>
+<h2 id="chapter-10-logic-and-switches">Chapter 10. Logic and Switches</h2>
+<ul>
+<li>
+<p>The + symbol in Boolean algebra means a union of two classes.</p>
+</li>
+<li>
+<p>The x symbol in Boolean algebra means an intersection of two classes.</p>
+</li>
+<li>
+<p>To avoid confusion between conventional algebra and Boolean algebra, sometimes the symbols U and ∩ are used for union and intersection instead of + and x.</p>
+<ul>
+<li>But part of Boole&rsquo;s liberating influence on mathematics <strong>was</strong> to make the use of familiar operators more abstract, so I&rsquo;ve decided to stick with his decision not to intorduce new symbol into his algebra.</li>
+<li>class   and   set</li>
+<li>we can use the symbol <strong>and or</strong> instead of x +, the <strong>not</strong> means 1-.</li>
+</ul>
+</li>
+<li>
+<p>This simple circuit to be wired in series is actually performing an AND operation in Boolean algebra.</p>
+</li>
+<li>
+<p>The circuit to be connected in parallel is performing an OR operation.</p>
+</li>
+</ul>
+<h2 id="chapter-11-gatesnot-bill">Chapter 11. Gates(Not Bill)</h2>
+<ul>
+<li>
+<p>Logic gates perform simple tasks in logic by blocking or letting through the flow of electrical current.</p>
+</li>
+<li>
+<p>Although this circuit contains nothing that wasn&rsquo;t inented in the nineteenth century, nobody in that century ever realized that Boolean expressions could be directly realized in electrical circuits.</p>
+<ul>
+<li>This equivalence wasn&rsquo;t discovered until the 1930s, most notably by Claude Elwood Shanno(born 1916), whose famous 1938 M.I.T.master&rsquo;s thesis was entitled &ldquo;A Symbolic Analysis of Relay and Switching Cricuits.&rdquo;</li>
+<li>Ten years later, Shannon&rsquo;s article &ldquo;The Mathematical Theory of Communication&rdquo; was the first publication that used the word bit to mean binary digit.</li>
+</ul>
+</li>
+<li>
+<p>control panel</p>
+</li>
+<li>
+<p>The swithches are an input device in computer terminology.</p>
+</li>
+<li>
+<p>Input is information that controls how a circuit behaves.</p>
+</li>
+<li>
+<p>Relays have an advantage over switches in that relays can be switched on and off by other relays rather than by fingers.</p>
+</li>
+<li>
+<p>Connecting relays is the key to build logic gates.</p>
+</li>
+<li>
+<p>AND Gate: To avoid excessive drawing, electrical engineers have a special symbol for an AND gate. That symbol looks like this:   Input - - ——output</p>
+</li>
+<li>
+<p>OR Gate: It&rsquo;s somewhat similar to the symbol for the AND gate except that the input side is rounded, much like the O in OR.</p>
+</li>
+<li>
+<p>Inverter: A single relay wired in this way is called an inverter, because it inverts 0 to 1 and vice versa.</p>
+<ul>
+<li>Notice the little circle mean that the signals are inverted at that point.</li>
+</ul>
+</li>
+<li>
+<p>Buffer: The output of the buffer is the same as the input.</p>
+</li>
+<li>
+<p>If you look at the two inputs to each AND gate to see where they&rsquo;re coming from and try to ignore where they&rsquo;re also going, you&rsquo;ll see that the circuit works.</p>
+</li>
+<li>
+<p>There are two relays in every AND gate and OR gate, and one relay for each inverter.</p>
+</li>
+<li>
+<p>NOR Gate: This behavior is precisely the opposite of what happens with the OR gate. It&rsquo;s called NOT OR, more concisely, NOR.</p>
+</li>
+<li>
+<p>NOT AND Gate: NAND</p>
+</li>
+<li>
+<p>So now we have four logic gates and the inverter. Completing this array of tools is just a regular old relay.</p>
+</li>
+<li>
+<p>De Morgan&rsquo;s Laws: <!-- raw HTML omitted -->.1847</p>
+</li>
+</ul>
+<h2 id="chapter-12-a-binary-adding-machine">Chapter 12. A Binary Adding Machine</h2>
+<ul>
+<li>If we can build something that adds, we&rsquo;re well on our way to building something that uses addition to also subtract, multiply, divide, calculate mortgage payments, guide rockets to Mars, play chess, and foul up our phone bills.</li>
+<li>There&rsquo;s no way that anyone could make sense of 144 relays wired together in strange ways.</li>
+<li>XOR Gate: 1+1 = 0 这个可以用来表示加法进位后的情况</li>
+<li>Half Adder（半加器）：它将两个二进制数相加，得出一个加法位和一个进位位</li>
+<li>Full Adder（全加器）：两个二进制数相加，还有加上前一列的一个进位数字即3个数字相加</li>
+<li>Ripple carry: 这一章可以进行更深一层的原理巩固和动手制作</li>
+</ul>
+<h2 id="chapter-13-but-what-about-subtraction">Chapter 13. But What About Subtraction?</h2>
+<ul>
+<li></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-02-04
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>
+          <a href="/tags/code/">Code</a>
+          <a href="/tags/%E5%93%B2%E5%AD%A6%E6%80%9D%E7%BB%B4/">哲学思维</a>
+          <a href="/tags/%E4%BA%BA%E7%94%9F%E6%8C%87%E5%AF%BC/">人生指导</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/aware-and-space/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">心理学课之四（觉知、空间）</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/reason-feel-spirit/">
+            <span class="next-text nav-default">心理学课之三（思维、身体、情感）</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

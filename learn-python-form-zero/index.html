@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>零基础学Python（极客时间） - Vchv - 书写过往，让前路更清晰</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="前言 和小甲鱼完全不同的风格，小甲鱼的还是比较适合新手，这个比较适合有基础的，可以快速过完整个基本语法。 两者各有各的难点，小甲鱼会把一个东西直" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://vchv.tk/learn-python-form-zero/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="零基础学Python（极客时间）" />
+<meta property="og:description" content="前言 和小甲鱼完全不同的风格，小甲鱼的还是比较适合新手，这个比较适合有基础的，可以快速过完整个基本语法。 两者各有各的难点，小甲鱼会把一个东西直" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vchv.tk/learn-python-form-zero/" />
+<meta property="article:published_time" content="2020-03-23T22:30:04+08:00" />
+<meta property="article:modified_time" content="2020-03-23T22:30:04+08:00" />
+<meta itemprop="name" content="零基础学Python（极客时间）">
+<meta itemprop="description" content="前言 和小甲鱼完全不同的风格，小甲鱼的还是比较适合新手，这个比较适合有基础的，可以快速过完整个基本语法。 两者各有各的难点，小甲鱼会把一个东西直">
+<meta itemprop="datePublished" content="2020-03-23T22:30:04&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-23T22:30:04&#43;08:00" />
+<meta itemprop="wordCount" content="1717">
+
+
+
+<meta itemprop="keywords" content="编程语言,Python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="零基础学Python（极客时间）"/>
+<meta name="twitter:description" content="前言 和小甲鱼完全不同的风格，小甲鱼的还是比较适合新手，这个比较适合有基础的，可以快速过完整个基本语法。 两者各有各的难点，小甲鱼会把一个东西直"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">零基础学Python（极客时间）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-03-23 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
+            </div>
+          <span class="more-meta"> 约 1717 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#我知道了">我知道了</a></li>
+    <li><a href="#目录">目录</a></li>
+    <li><a href="#python语言的特点">Python语言的特点</a></li>
+    <li><a href="#python的发展历史与版本">Python的发展历史与版本</a></li>
+    <li><a href="#python的安装">Python的安装</a></li>
+    <li><a href="#python程序的书写规则">Python程序的书写规则</a></li>
+    <li><a href="#基础数据类型">基础数据类型</a></li>
+    <li><a href="#变量的定义和常用操作">变量的定义和常用操作</a></li>
+    <li><a href="#序列的概念">序列的概念</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#字符串的定义和使用">字符串的定义和使用</a></li>
+            <li><a href="#字符串的常用操作">字符串的常用操作</a></li>
+            <li><a href="#元组的定义和常用操作">元组的定义和常用操作</a></li>
+            <li><a href="#列表的定义与常用操作">列表的定义与常用操作</a></li>
+            <li><a href="#序列总结">序列总结</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#条件语句">条件语句</a></li>
+    <li><a href="#循环语句">循环语句</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#for-循环">for 循环</a></li>
+            <li><a href="#while-循环">while 循环</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<ul>
+<li>和小甲鱼完全不同的风格，小甲鱼的还是比较适合新手，这个比较适合有基础的，可以快速过完整个基本语法。</li>
+<li>两者各有各的难点，小甲鱼会把一个东西直接讲完，比如字符串的所有知识，逻辑运算符的所有知识，序列的所有方法，学起来有时会感觉很吃力；这个会早早地把高阶东西拿出来使用，而且讲的很不详细，其实这两个正好互补，想不到我的小甲鱼那么放荡不羁的，竟然这么细。</li>
+</ul>
+<h2 id="我知道了">我知道了</h2>
+<ol>
+<li>elif 讲的好，我一下就懂了，在小甲鱼那迷糊了半天……</li>
+<li>continue 还是没懂……</li>
+</ol>
+<h2 id="目录">目录</h2>
+<ol>
+<li>Python介绍与安装</li>
+<li>变量、数字、序列、映射和集合（数据结构）</li>
+<li>条件和循环（编程逻辑）</li>
+<li>文件、输入输出、异常</li>
+<li>函数、模块</li>
+<li>面向对象编程（编程思想）</li>
+<li>多线程编程</li>
+<li>标准库</li>
+<li>第三方库</li>
+<li>综合项目</li>
+</ol>
+<h2 id="python语言的特点">Python语言的特点</h2>
+<ul>
+<li>学习编程不一定要做开发工程师，它会教会你一种思考方式。编程是一种技能和工具，是你理解计算机运行的最有效的途径。——乔布斯</li>
+<li>把Python当做你的一个工具。</li>
+<li>Python语言的特点：
+<ol>
+<li>语法简洁</li>
+<li>学习梯度可接受</li>
+<li>跨平台，Windows、Linux、Mac</li>
+<li>可扩展性，扩展C、C++</li>
+<li>开放源代码</li>
+<li>类库丰富</li>
+</ol>
+</li>
+</ul>
+<h2 id="python的发展历史与版本">Python的发展历史与版本</h2>
+<ul>
+<li>
+<p>1990年：Python诞生</p>
+</li>
+<li>
+<p>2000年：Python 2.0发布</p>
+</li>
+<li>
+<p>2008年：Python 3.0发布  不完全兼容2.0</p>
+</li>
+<li>
+<p>2010年：Python 2.7发布  最后一个2.x版本</p>
+</li>
+<li>
+<p>Python 2.x 已经是遗产，Python 3.x 是现在和未来的语言</p>
+</li>
+<li>
+<p>学习Python编程的利器：
+<img src="_v_images/20200323224658849_13938.png" alt=""></p>
+</li>
+</ul>
+<h2 id="python的安装">Python的安装</h2>
+<h2 id="python程序的书写规则">Python程序的书写规则</h2>
+<ul>
+<li>注释：###</li>
+<li>导入模块：<code>import</code></li>
+<li>缩进（indentation）：语句块</li>
+</ul>
+<h2 id="基础数据类型">基础数据类型</h2>
+<ul>
+<li>
+<p>整数（int）：8</p>
+</li>
+<li>
+<p>浮点数（float）：8.8</p>
+</li>
+<li>
+<p>字符串（string）：&rsquo;&rsquo; &quot;&rdquo;</p>
+</li>
+<li>
+<p>布尔值（bool）：True False</p>
+</li>
+<li>
+<p><code>type（）</code> 显示括号内类型</p>
+</li>
+<li>
+<p>类型的转换</p>
+</li>
+</ul>
+<h2 id="变量的定义和常用操作">变量的定义和常用操作</h2>
+<ul>
+<li>赋值
+<ul>
+<li>a = 123    # 变量名称   赋值  值（123）</li>
+<li>b = a       # 变量的多次赋值</li>
+</ul>
+</li>
+<li>变量的命名：临时变量；意义明确的英文字符；驼峰式命名；下划线命名方式；</li>
+</ul>
+<h2 id="序列的概念">序列的概念</h2>
+<ul>
+<li><strong>序列：指它的成员都是有序排列，并且可以通过【下标偏移量】访问到它的 一个或几个 成员。</strong>
+<ul>
+<li>字符串、列表、元组 三种类型都属于序列</li>
+<li>&ldquo;abcd&rdquo;、[0, &ldquo;abcd&rdquo;]、(&ldquo;abc&rdquo;, &ldquo;def&rdquo;)</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 记录生肖、根据年份来判断生肖
+chinese_zodiac = &#39;猴鸡狗猪鼠牛虎兔龙蛇马羊&#39;
+print(chinese_zodiac[0])
+print(chinese_zodiac[0:4]
+print(chinese_zodiac[-1]
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="字符串的定义和使用">字符串的定义和使用</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 承接上文，完成年份匹配生肖
+year = 2018
+print(year % 12)
+print(chinese_zodiac[year % 12])
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="字符串的常用操作">字符串的常用操作</h4>
+<ul>
+<li>序列的基本操作：
+<ol>
+<li><strong>成员关系操作符：in、not in   # 对象  [not] in 序列</strong></li>
+<li>连接操作符：+     # 序列 + 序列</li>
+<li>重复操作符：*      # 序列 * 整数</li>
+<li><strong>切片操作符：[:]     # 序列[0:整数]</strong></li>
+</ol>
+</li>
+</ul>
+<h4 id="元组的定义和常用操作">元组的定义和常用操作</h4>
+<ul>
+<li>元组：(&ldquo;小括号括起来的字符串&rdquo;, &ldquo;这就是一个元组&rdquo;)</li>
+<li>列表：[&lsquo;中括号括起来的字符串&rsquo;]</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">zodiac_name = (u&#34;摩羯座&#34;, u&#34;水瓶座&#34;, u&#34;双鱼座&#34;, u&#34;白羊座&#34;, u&#34;金牛座&#34;, u&#34;双子座&#34;, u&#34;巨蟹座&#34;, u&#34;狮子座&#34;, u&#34;处女座&#34;, u&#34;天秤座&#34;, u&#34;天蝎座&#34;, u&#34;射手座&#34;)    # unicode
+zodiac_days = ((1, 20), (2, 19), (3, 21), (5, 21), (6, 22), (7, 23), (8, 23), (9, 23), (10, 23), (11, 23), (12, 23))
+
+(month, day) = (2, 15)
+
+zodiac_day = filter(lambda x: x&lt;=(month, day), zodiac_days)
+
+zodac_len = len(list(zodiac_day)) % 12
+print(zodiac_name[zodac_len])
+
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>这个例子一下子超纲使用了N个知识点，而且例子本身就有难度字又多，这老师真是个劝退带师！</li>
+</ul>
+<h4 id="列表的定义与常用操作">列表的定义与常用操作</h4>
+<ul>
+<li>列表是可以修改的</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">a_list = [&#39;abc&#39;, &#39;xyz&#39;]
+a_list.append[&#34;X&#34;]
+a_list.remove[&#39;xyz&#39;]
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="序列总结">序列总结</h4>
+<ul>
+<li>序列：字符串；列表；元组</li>
+<li>数字；整数；布尔值；</li>
+<li>变量：变量赋值；关键字；变量命名；命名规范；</li>
+</ul>
+<h2 id="条件语句">条件语句</h2>
+<ul>
+<li>
+<p>if语句：<img src="_v_images/20200324214640280_4880.png" alt=""></p>
+</li>
+<li>
+<p>if 跟着第一个表达式，elif是 第二个表达式，else是 其他的情况。</p>
+</li>
+<li>
+<p>elif 讲的好，我一定就领悟了，在小甲鱼那迷糊了半天的语句……</p>
+</li>
+</ul>
+<h2 id="循环语句">循环语句</h2>
+<ul>
+<li><img src="_v_images/20200324220524189_8487.png" alt=""></li>
+</ul>
+<h4 id="for-循环">for 循环</h4>
+<ul>
+<li>for + 临时变量 in 可迭代对象:
+<ul>
+<li>临时变量就是可迭代对象中的元素</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">for cz in chinese_zodiac:
+	print(cz)
+for i in range(1,13):
+	print(i)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>格式化替换：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">for year in range(2000, 2019):
+    print(&#39;%s 年的生肖是 %s&#39; %(year, chinese_zodiac[year % 12]))
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="while-循环">while 循环</h4>
+<ul>
+<li>while 循环中使用 break 和 continue 来控制程序</li>
+<li>没有听懂 continue 的作用？！</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">while True:
+	print(&#39;a&#39;)
+	break
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-03-23
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>
+          <a href="/tags/python/">Python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/the-first-season-of-2020/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">2020年第一季度总结</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/american-virus-awesome-my-country/">
+            <span class="next-text nav-default">谈谈舆论，厉害了我的国！</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

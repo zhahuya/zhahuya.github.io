@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程语言 on Vchv - 书写过往，让前路更清晰</title>
+    <link>https://vchv.tk/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in 编程语言 on Vchv - 书写过往，让前路更清晰</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>vchv</copyright>
+    <lastBuildDate>Mon, 23 Mar 2020 22:30:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://vchv.tk/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>零基础学Python（极客时间）</title>
+      <link>https://vchv.tk/learn-python-form-zero/</link>
+      <pubDate>Mon, 23 Mar 2020 22:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/learn-python-form-zero/</guid>
+      <description>前言 和小甲鱼完全不同的风格，小甲鱼的还是比较适合新手，这个比较适合有基础的，可以快速过完整个基本语法。 两者各有各的难点，小甲鱼会把一个东西直</description>
+    </item>
+    
+    <item>
+      <title>Code-The hidden language of Computer Hardware and Software</title>
+      <link>https://vchv.tk/everything-is-code/</link>
+      <pubDate>Tue, 04 Feb 2020 19:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/everything-is-code/</guid>
+      <description>前言 Code: The Hidden Language of Computer Hardware and Software 一本被盛赞的计算机科学入门书籍，在不同的地方看到推荐，大概有3+次，根据介绍，推测和Crash Course的CS课程差</description>
+    </item>
+    
+    <item>
+      <title>Python_100days</title>
+      <link>https://vchv.tk/python-100days/</link>
+      <pubDate>Wed, 15 Jan 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/python-100days/</guid>
+      <description>前言 做一些学习笔记。 这个文档只能懂了以后再去看，当成一个路标，查缺补漏的资料，靠这个入门就是从入门到入土。 0——15days 01day 注释：单行注释</description>
+    </item>
+    
+    <item>
+      <title>Python零基础入门学习（老版）</title>
+      <link>https://vchv.tk/python-old-lesson-by-xjy/</link>
+      <pubDate>Mon, 13 Jan 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/python-old-lesson-by-xjy/</guid>
+      <description>前言 到7.8.9节有点看不懂了，结合GitHub上面的100天指引比较好。 时间可以让我们的脑子自发的啃下来开始觉得很难的东西 分支和循环之外，</description>
+    </item>
+    
+    <item>
+      <title>Python零基础入门学习（新版）</title>
+      <link>https://vchv.tk/python-new-lesson-by-xjy/</link>
+      <pubDate>Wed, 08 Jan 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/python-new-lesson-by-xjy/</guid>
+      <description>前言 我知道了 序章 Python is powerful&amp;hellip;and fast; plays well with others; runs everywhere; is friendly &amp;amp; easy to learn; is Open. 语法知识+案例开发的结合 环境搭建&amp;amp;课程介绍 IDLE：Integrated Development and Learning Environment</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机科学 on Vchv - 书写过往，让前路更清晰</title>
+    <link>https://vchv.tk/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/</link>
+    <description>Recent content in 计算机科学 on Vchv - 书写过往，让前路更清晰</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>vchv</copyright>
+    <lastBuildDate>Sun, 05 Apr 2020 19:30:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://vchv.tk/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）</title>
+      <link>https://vchv.tk/learn-web-design/</link>
+      <pubDate>Sun, 05 Apr 2020 19:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/learn-web-design/</guid>
+      <description>前言 根据我在上一个《大前端学习（HTML+CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。 重要知识点拾遗 demo.fishc.com HTML5 and CSS 文档 HTM</description>
+    </item>
+    
+    <item>
+      <title>零基础学Python（极客时间）</title>
+      <link>https://vchv.tk/learn-python-form-zero/</link>
+      <pubDate>Mon, 23 Mar 2020 22:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/learn-python-form-zero/</guid>
+      <description>前言 和小甲鱼完全不同的风格，小甲鱼的还是比较适合新手，这个比较适合有基础的，可以快速过完整个基本语法。 两者各有各的难点，小甲鱼会把一个东西直</description>
+    </item>
+    
+    <item>
+      <title>Code-The hidden language of Computer Hardware and Software</title>
+      <link>https://vchv.tk/everything-is-code/</link>
+      <pubDate>Tue, 04 Feb 2020 19:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/everything-is-code/</guid>
+      <description>前言 Code: The Hidden Language of Computer Hardware and Software 一本被盛赞的计算机科学入门书籍，在不同的地方看到推荐，大概有3+次，根据介绍，推测和Crash Course的CS课程差</description>
+    </item>
+    
+    <item>
+      <title>Python_100days</title>
+      <link>https://vchv.tk/python-100days/</link>
+      <pubDate>Wed, 15 Jan 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/python-100days/</guid>
+      <description>前言 做一些学习笔记。 这个文档只能懂了以后再去看，当成一个路标，查缺补漏的资料，靠这个入门就是从入门到入土。 0——15days 01day 注释：单行注释</description>
+    </item>
+    
+    <item>
+      <title>Python零基础入门学习（老版）</title>
+      <link>https://vchv.tk/python-old-lesson-by-xjy/</link>
+      <pubDate>Mon, 13 Jan 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/python-old-lesson-by-xjy/</guid>
+      <description>前言 到7.8.9节有点看不懂了，结合GitHub上面的100天指引比较好。 时间可以让我们的脑子自发的啃下来开始觉得很难的东西 分支和循环之外，</description>
+    </item>
+    
+    <item>
+      <title>Python零基础入门学习（新版）</title>
+      <link>https://vchv.tk/python-new-lesson-by-xjy/</link>
+      <pubDate>Wed, 08 Jan 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/python-new-lesson-by-xjy/</guid>
+      <description>前言 我知道了 序章 Python is powerful&amp;hellip;and fast; plays well with others; runs everywhere; is friendly &amp;amp; easy to learn; is Open. 语法知识+案例开发的结合 环境搭建&amp;amp;课程介绍 IDLE：Integrated Development and Learning Environment</description>
+    </item>
+    
+    <item>
+      <title>Crash Course Computer Science</title>
+      <link>https://vchv.tk/crash-course-computer-science/</link>
+      <pubDate>Sat, 28 Dec 2019 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/crash-course-computer-science/</guid>
+      <description>前言 第二次看这个，精看深究细节+学英语，计划慢慢来，每天看一个小片段。 1914-1918 第一次世界大战 1939-1945 第二次世界大战 1947-1991 冷战、太空竞赛、军备（核武器）竞赛 1912.1.1-1949.12.7</description>
+    </item>
+    
+    <item>
+      <title>大前端学习（HTML&#43;CSS）</title>
+      <link>https://vchv.tk/html-css/</link>
+      <pubDate>Fri, 27 Dec 2019 17:40:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/html-css/</guid>
+      <description>前言 2020.01.01学到了挺多基础的知识，但我发现我不喜欢调试样式，就像化妆一样，我兴趣不在这个上面，可以转向Python看看，我的时间</description>
+    </item>
+    
+    <item>
+      <title>浪潮之巅</title>
+      <link>https://vchv.tk/top-of-the-wave/</link>
+      <pubDate>Tue, 24 Dec 2019 20:51:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/top-of-the-wave/</guid>
+      <description>前言 按照《如何快速阅读》，先是经别人力荐，为了理解科技行业。看了豆瓣评分（9.0），拿到书后，看了前言、序和目录，文笔不花哨但精准传递信息很</description>
+    </item>
+    
+  </channel>
+</rss>

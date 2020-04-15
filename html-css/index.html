@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>大前端学习（HTML&#43;CSS） - Vchv - 书写过往，让前路更清晰</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="前言 2020.01.01学到了挺多基础的知识，但我发现我不喜欢调试样式，就像化妆一样，我兴趣不在这个上面，可以转向Python看看，我的时间" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://vchv.tk/html-css/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="大前端学习（HTML&#43;CSS）" />
+<meta property="og:description" content="前言 2020.01.01学到了挺多基础的知识，但我发现我不喜欢调试样式，就像化妆一样，我兴趣不在这个上面，可以转向Python看看，我的时间" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vchv.tk/html-css/" />
+<meta property="article:published_time" content="2019-12-27T17:40:04+08:00" />
+<meta property="article:modified_time" content="2019-12-27T17:40:04+08:00" />
+<meta itemprop="name" content="大前端学习（HTML&#43;CSS）">
+<meta itemprop="description" content="前言 2020.01.01学到了挺多基础的知识，但我发现我不喜欢调试样式，就像化妆一样，我兴趣不在这个上面，可以转向Python看看，我的时间">
+<meta itemprop="datePublished" content="2019-12-27T17:40:04&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-27T17:40:04&#43;08:00" />
+<meta itemprop="wordCount" content="4258">
+
+
+
+<meta itemprop="keywords" content="前端学习,HTML,CSS," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="大前端学习（HTML&#43;CSS）"/>
+<meta name="twitter:description" content="前言 2020.01.01学到了挺多基础的知识，但我发现我不喜欢调试样式，就像化妆一样，我兴趣不在这个上面，可以转向Python看看，我的时间"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">大前端学习（HTML&#43;CSS）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-12-27 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
+            </div>
+          <span class="more-meta"> 约 4258 字 </span>
+          <span class="more-meta"> 预计阅读 9 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#前言">前言</a></li>
+            <li><a href="#我知道了">我知道了</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#htmlcss系列之一拨云见日">HTML+CSS系列之一拨云见日</a>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#什么是htmlcss">什么是HTML、CSS？</a></li>
+                <li><a href="#安装vs-code">安装Vs code</a></li>
+                <li><a href="#深入了解网站开发">深入了解网站开发</a></li>
+                <li><a href="#web前端的三大核心技术">Web前端的三大核心技术</a></li>
+              </ul>
+            </li>
+            <li><a href="#html基础结构与属性">HTML基础结构与属性</a>
+              <ul>
+                <li><a href="#html初始代码">HTML初始代码</a></li>
+                <li><a href="#html注释">HTML注释</a></li>
+                <li><a href="#html语义化">HTML语义化</a></li>
+                <li><a href="#html标签">HTML标签</a></li>
+              </ul>
+            </li>
+            <li><a href="#css">CSS</a>
+              <ul>
+                <li><a href="#css语法">CSS语法</a></li>
+                <li><a href="#css样式的引入方式">CSS样式的引入方式</a></li>
+                <li><a href="#css的颜色表示法">CSS的颜色表示法</a></li>
+                <li><a href="#css背景样式">CSS背景样式</a></li>
+              </ul>
+            </li>
+            <li><a href="#切图">切图</a></li>
+            <li><a href="#pc企业站布局">PC企业站布局</a></li>
+            <li><a href="#pc游戏站布局">PC游戏站布局</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#htmlcss系列之二溯本求源">HTML+CSS系列之二溯本求源</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#html-extension">HTML Extension</a></li>
+            <li><a href="#css-extension">CSS Extension</a></li>
+            <li><a href="#html5-new-syntax">HTML5 New Syntax</a></li>
+            <li><a href="#css3-new-syntax">CSS3 New Syntax</a></li>
+            <li><a href="#兼容与hack">兼容与hack</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#htmlcss系列之三风生水起">HTML+CSS系列之三风生水起</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#弹性布局">弹性布局</a></li>
+            <li><a href="#网格布局">网格布局</a></li>
+            <li><a href="#移动端布局">移动端布局</a></li>
+            <li><a href="#响应式布局">响应式布局</a></li>
+            <li><a href="#bootstrap">Bootstrap</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#htmlcss系列之四巧夺天工">HTML+CSS系列之四巧夺天工</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#预编译css">预编译CSS</a></li>
+            <li><a href="#postcss">Postcss</a></li>
+            <li><a href="#css架构">Css架构</a></li>
+            <li><a href="#高级功能">高级功能</a></li>
+            <li><a href="#css与js交互">CSS与Js交互</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2019-12-27T17:40:04" title="December 27, 2019">December 27, 2019</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <h4 id="前言">前言</h4>
+<ul>
+<li>2020.01.01学到了挺多基础的知识，但我发现我不喜欢调试样式，就像化妆一样，我兴趣不在这个上面，可以转向Python看看，我的时间很值钱，要结构化地理解计算机科学，不可能在细节里付出30天的时间！</li>
+<li>2020.04.05日，思考一下这个课程的问题在于讲解的知识太过于细节化，就是事无巨细，手把手教每一个知识点，这样学起来巨浪费时间，最好的办法是先搭建起整体的框架，然后根据自己的需要主动去学习每一个知识点。</li>
+<li>遵循以应用优先的学习原则。在B站上随便搜了一下，基本时间都在2000分钟（30小时以上），委实令人感到绝望，什么都是要时间的！看视频和看书是一样的，要去挑选适合自己的，对自己有帮助的，这样花费的时间和精力才不会被浪费。</li>
+</ul>
+<p><strong>评价方法：</strong></p>
+<ol>
+<li>先听几个片段，包括前言、总览等，听内容的结构是不是清晰、合理，是不是契合自己的感觉，看讲师在“是什么”这种定义问题上清晰、精准。</li>
+<li>其次看评价，一条一条看，可能50条评价能找到一条有价值的评论，这种有价值的评论会输出有价值的信息，这个视频适合谁？适不适合初学？讲解清不清楚？</li>
+<li>结合自己的感觉判断要不要继续下去，寻找3个以上的有价值评价，不适合的直接舍弃。</li>
+<li>一般有质量的评价下面都会指明那些更好的，我们就按图索骥，继续比对视频质量的好坏。</li>
+</ol>
+<p>评价的阶段不能省，磨刀不误砍柴工，你的时间很值钱。</p>
+<h4 id="我知道了">我知道了</h4>
+<ol>
+<li>HTML和Markdown都是一种标记语言，不同的是后一种要轻量的多，也是为了写作方便，前一种是为了写网页。</li>
+<li>HTML是盖房子，Css是装修，JavaScript是行为交互。</li>
+<li>Vscode写代码还是很好用的，但用来写作就不适合了。</li>
+<li>快捷键：剪切Ctrl+X，多光标Alt，快速复制粘贴。</li>
+<li>HTML这个标记语言的标签用法。</li>
+<li>2020.01.01学到了挺多基础的知识，但我发现我不喜欢调试样式，就像化妆一样，我兴趣不在这个上面，可以转向Python看看，我的时间很值钱，要更结构化，不可能在细节里付出30天的时间，无效！</li>
+</ol>
+<hr>
+<p><strong>对这个教程的评价：</strong></p>
+<ul>
+<li>结构非常清晰、合理，授课内容循序渐进，适合初学者。</li>
+<li>老师讲的英文发音非常准确，很大的加分项。</li>
+<li>有些琐碎，一个HTML标签讲解了巨量的内容，可以根据结构，先跳过去了解一个整体的框架，再根据需要深入学习。</li>
+</ul>
+<hr>
+<h2 id="htmlcss系列之一拨云见日">HTML+CSS系列之一拨云见日</h2>
+<p>拨开云雾见天日，守得云开见月明</p>
+<h5 id="什么是htmlcss">什么是HTML、CSS？</h5>
+<ul>
+<li>什么是HTML、CSS？（Hypertext Markup language、Cascading Style Sheets）
+<ul>
+<li>是做网站的标记语言。（Markdown是一种轻量级的标记语言）</li>
+<li>浏览器把代码解析后的样子就是我们看到的网站。</li>
+</ul>
+</li>
+<li>如何去写代码？写到哪里呢？
+<ul>
+<li>一个网站是由N多个网页组成的。每一个网页是 .html文件。</li>
+<li>一部电视剧是由40集组成的，每一集都是一个 .Mp4文件。</li>
+<li>新建一个hello world.html页面。</li>
+</ul>
+</li>
+</ul>
+<h5 id="安装vs-code">安装Vs code</h5>
+<ul>
+<li>安装插件：中文语言包、open in browser、view in browser</li>
+<li>快捷键：Ctrl+S、A  ；<strong>Ctrl+Z、Y</strong>；Ctrl+X、C、V。</li>
+<li><strong>快捷键</strong> ：Shift+End；Shift+home，从头到尾选中一行。</li>
+<li>首行缩进：Tab向后缩进、Tab+Shift向前缩进。</li>
+<li><strong>多光标操作</strong>：Alt+鼠标左键；Ctrl+D选择相同元素的下一个。</li>
+</ul>
+<h5 id="深入了解网站开发">深入了解网站开发</h5>
+<ul>
+<li>UI设计师：设计一个图片页面看看</li>
+<li>Web前端工程师（H5开发）：将设计稿转为代码；将数据库里的数据展示到前端。</li>
+<li>Web后端工程师：数据</li>
+</ul>
+<h5 id="web前端的三大核心技术">Web前端的三大核心技术</h5>
+<ul>
+<li>HTML：结构（盖一个毛坯房）</li>
+<li>CSS：样式（装修）</li>
+<li>JavaScript：行为（安装电梯、空调）</li>
+<li>通过实际代码操作了解了这三项的具体作用</li>
+</ul>
+<h4 id="html基础结构与属性">HTML基础结构与属性</h4>
+<ul>
+<li>HTML：超文本 标记 语言
+<ul>
+<li>超文本：文字+图片、音频、视频</li>
+<li>标记：（例如：Markdown中的##标题标记，**加粗标记等）
+<ul>
+<li>单标签：<code>&lt;img&gt;</code></li>
+<li>双标签：<code>&lt;head&gt;&lt;/head&gt;</code>闭合</li>
+<li>创建标签的快捷键：单词+Tab</li>
+<li>标签可以上下排列，也可以组合嵌套</li>
+<li><a href="http://www.html5star.com/manual/html5label-meaning/">标签含义之元素周期表</a></li>
+<li>标签的属性：&lt;标签 属性 =“值&rdquo; 属性2 = &ldquo;value&quot;&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="html初始代码">HTML初始代码</h5>
+<ul>
+<li>每个 .html文件都有的代码叫做初始代码，要复合html文件的规范写法。</li>
+<li>！+Tab键：快速创建html初始代码。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;!DOCTYPE html&gt;   // 文档声明：告诉浏览器这是一个html文件
+&lt;html lang=&#34;en&#34;&gt;  // html文件的最外层标签：包裹着所有html标签代码。lang=&#34;en&#34; 这是一个英文网站。
+&lt;head&gt;     // url以上的部分。
+&lt;meta charset=&#34;UTF-8&#34;&gt;  //元信息：是编写网页中的一些赋值信息。
+&lt;title&gt;Document&lt;/title&gt;  //设置网页的标题。
+&lt;/head&gt;    // head双标签的结束
+&lt;body&gt;     //显示网页内容的区域。
+hello world！ 
+&lt;/body&gt;    //body双标签的结束。
+&lt;/html&gt;    //html双标签的结束。
+
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="html注释">HTML注释</h5>
+<ul>
+<li>注释的代码，只有在文件中看得到，但是在浏览器显示不出来。</li>
+<li>写法：<code>&lt;!--注释的内容--&gt;</code>
+<ul>
+<li>把暂时不用的代码注释起来，方便以后使用。</li>
+<li>向开发人员提示代码的意义</li>
+<li>快捷键：Ctrl+/ 选中；shift+alt+a。</li>
+</ul>
+</li>
+</ul>
+<h5 id="html语义化">HTML语义化</h5>
+<ul>
+<li>根据网页中内容的结构，选择适合的HTML标签进行编写。（列表、标题等）
+<ul>
+<li>在没有CSS的情况下，页面也能呈现出很好的内容结构。</li>
+<li>有利于SEO，让搜索引擎爬虫更好的理解网页。</li>
+<li>方便其他设备解析（如屏幕阅读器、盲人阅读器等）。</li>
+<li>便于团队开发与维护。</li>
+</ul>
+</li>
+</ul>
+<h5 id="html标签">HTML标签</h5>
+<ul>
+<li>
+<p><strong>标题与段落：</strong></p>
+<ul>
+<li>h标题：双标签<code>&lt;h1&gt;&lt;/h1&gt;……&lt;h6&gt;&lt;/h6&gt;</code>,在一个网页中，h1标题最重要，并且一个 .html文件中只能出现一次h1标签。h5和h6不经常用。</li>
+<li>p段落。</li>
+<li>通过右键检查来调试当前选中的代码</li>
+</ul>
+</li>
+<li>
+<p><strong>文本修饰标签：</strong></p>
+<ul>
+<li>强调：双标签<code>&lt;strong&gt;&lt;/strong&gt;   &lt;em&gt;&lt;/em&gt;</code>
+<ul>
+<li>一个加粗，一个斜体</li>
+<li>strong的强调性更强，em的强调性稍弱</li>
+</ul>
+</li>
+<li>下标：双标签<code>&lt;sub&gt;&lt;/sub&gt;</code></li>
+<li>上标：双标签<code>&lt;sup&gt;&lt;/sup&gt;</code></li>
+<li>删除文本：<code>&lt;del&gt;</code></li>
+<li>插入文本：<code>&lt;ins&gt;</code>  一般情况下，两者配合使用。</li>
+</ul>
+</li>
+<li>
+<p><strong>图片标签与图片属性：</strong></p>
+<ul>
+<li>图片：单标签<code>&lt;img&gt;</code>
+<ul>
+<li>src：引入图片的地址。</li>
+<li>alt（替代）：当图片出现问题的时候，可以显示一些友好的提示。</li>
+<li>title：提示信息，当鼠标移上去的时候，会显示提示信息。</li>
+<li>width、height：图片宽度和高度，单位像素。加上以后会在为刷新出图片时预留一块区域。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>引入文件的地址路径：</strong></p>
+<ul>
+<li>相对路径：.在路径中表示当前路径；..在路径中表示上一级路径</li>
+<li>绝对路径：绝对的地址，没有参照。比如D:\OneDrive\千峰前端资料\img</li>
+<li>推荐相对路径，可以随意拷贝</li>
+<li>反斜线与正斜线：\   /，在windows里面是一样的作用，但是推荐使用/</li>
+</ul>
+</li>
+<li>
+<p><strong>跳转链接：</strong></p>
+<ul>
+<li>链接：双标签<code>&lt;a&gt;&lt;/a&gt;</code>
+<ul>
+<li>href：输入链接的地址</li>
+<li>target：改变链接打开的方式，默认情况下：在当前页面打开 <code>_self</code> 新窗口打开<code>_blank</code></li>
+</ul>
+</li>
+<li>单标签<code>&lt;base&gt;</code>：改变链接的默认行为。</li>
+</ul>
+</li>
+<li>
+<p><strong>跳转锚点：</strong>  例如：返回顶页</p>
+<ul>
+<li>实现一：#号+ID属性</li>
+<li>实现二：#号+name属性</li>
+</ul>
+</li>
+<li>
+<p><strong>特殊符号：</strong>  输入无法打出来的特殊字符和空格字符。</p>
+<ul>
+<li>解决冲突（左右尖括号等）、添加多个空格的实现（在代码当中是忽略空格的）。</li>
+<li>特殊符号对照表：&amp;+字符。</li>
+</ul>
+</li>
+<li>
+<p><strong>列表标签：</strong></p>
+<ul>
+<li>无序列表：<code>&lt;ul&gt;&lt;/ul&gt;&lt;li&gt;&lt;/li&gt;</code>，列表的最外层容器、列表项。注意：ul和li必须是组合出现的，他们之间不能有其他的标签。</li>
+<li>有序列表：<code>&lt;ol&gt;&lt;/ol&gt;&lt;li&gt;&lt;/li&gt;</code>，经常使用无序列表代替。</li>
+<li>type=&quot;circle&rdquo;，使用CSS去控制这个形状或者不同的序号。</li>
+<li>定义列表：<code>dl dt dd</code>，列表项需要添加标题和对标题进行描述。</li>
+<li>嵌套列表：列表之间可以互相嵌套，形成多级列表。</li>
+</ul>
+</li>
+<li>
+<p><strong>表格标签：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;
+&lt;td&gt;
+&lt;caption&gt;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong><code>&lt;div&gt;与&lt;span&gt;</code>：</strong></p>
+<ul>
+<li>div ：做一个区域划分的块。</li>
+<li>span：对文字进行修饰的内联。</li>
+<li>division（块），用来划分一个区域，相当于一块区域容器，可以容纳段落、标题、表格、图像等各种网页元素。HTML中大多数的标签都可以嵌套在<code>&lt;div&gt;</code>标签中，div中还可以嵌套多层div，用来将网页分割成独立的、不同的部分，来实现网页的规划和布局。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="css">CSS</h4>
+<h5 id="css语法">CSS语法</h5>
+<ul>
+<li>格式：选择器{属性1:值1; 属性2:value2}</li>
+<li>单位：px（像素pixel）、%（百分比）</li>
+<li>基本样式：width： height： background-color：</li>
+<li>CSS注释：/* CSS注释的内容 */，快捷键和HTML一样。</li>
+</ul>
+<h5 id="css样式的引入方式">CSS样式的引入方式</h5>
+<ul>
+<li>内联样式（行内、行间）：在HTML标签上添加style属性来实现的。//非常的麻烦，需要写很多很多重复的代码。</li>
+<li>内部样式：在<code>&lt;style&gt;</code>标签内添加的样式，在head中，可以复用代码。
+<ul>
+<li>符合W3C的规范标准：结构、样式、行为分离处理。</li>
+</ul>
+</li>
+<li>外部样式：引入一个单独的CSS文件，name.css
+<ul>
+<li>通过 <code>&lt;link&gt;</code>标签引入外部资源，rel：指定资源跟页面的关系，href：指定资源的地址。</li>
+<li>@import方式引入外部样式（不建议使用）</li>
+</ul>
+</li>
+</ul>
+<h5 id="css的颜色表示法">CSS的颜色表示法</h5>
+<ul>
+<li>单词表示法：red orange yellow green blue ……</li>
+<li>十六进制表示法：0 1 2 3 4 5 6 7 8 9 a b c d e f 。#000000 #ffffff</li>
+<li>RGB三原色表示法：rgb（红绿蓝）-rgb(255,255,255)</li>
+<li>使用Chrome浏览器扩展程序Fehelper取色器提取任意的颜色！</li>
+<li>Photoshop取色！</li>
+</ul>
+<h5 id="css背景样式">CSS背景样式</h5>
+<ul>
+<li>background-color：背景颜色</li>
+<li>background-image：背景图片
+<ul>
+<li>URL（背景地址）</li>
+<li>背景图默认会水平垂直都铺满</li>
+</ul>
+</li>
+<li>background-repeat：背景图片的平铺方式
+<ul>
+<li>repeat-x   X轴平铺</li>
+<li>repeat-y</li>
+<li>repeat(x,y)</li>
+<li>no repeat</li>
+</ul>
+</li>
+<li>background-position：背景位置
+<ul>
+<li>x y ：100px or 50%  20px or 30%</li>
+<li>x：left center right</li>
+<li>y：top center bottom</li>
+</ul>
+</li>
+<li>background-attachment：背景图随滚动条移动的方式
+<ul>
+<li>scroll：默认值（背景位置是按照当前元素进行偏移的）</li>
+<li>fixed：背景位置是按照浏览器进行偏移的）</li>
+</ul>
+</li>
+</ul>
+<h4 id="切图">切图</h4>
+<h4 id="pc企业站布局">PC企业站布局</h4>
+<h4 id="pc游戏站布局">PC游戏站布局</h4>
+<h2 id="htmlcss系列之二溯本求源">HTML+CSS系列之二溯本求源</h2>
+<h4 id="html-extension">HTML Extension</h4>
+<h4 id="css-extension">CSS Extension</h4>
+<h4 id="html5-new-syntax">HTML5 New Syntax</h4>
+<h4 id="css3-new-syntax">CSS3 New Syntax</h4>
+<h4 id="兼容与hack">兼容与hack</h4>
+<h2 id="htmlcss系列之三风生水起">HTML+CSS系列之三风生水起</h2>
+<h4 id="弹性布局">弹性布局</h4>
+<h4 id="网格布局">网格布局</h4>
+<h4 id="移动端布局">移动端布局</h4>
+<h4 id="响应式布局">响应式布局</h4>
+<h4 id="bootstrap">Bootstrap</h4>
+<h2 id="htmlcss系列之四巧夺天工">HTML+CSS系列之四巧夺天工</h2>
+<h4 id="预编译css">预编译CSS</h4>
+<h4 id="postcss">Postcss</h4>
+<h4 id="css架构">Css架构</h4>
+<h4 id="高级功能">高级功能</h4>
+<h4 id="css与js交互">CSS与Js交互</h4>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-12-27
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/">前端学习</a>
+          <a href="/tags/html/">HTML</a>
+          <a href="/tags/css/">CSS</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/crash-course-computer-science/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Crash Course Computer Science</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/top-of-the-wave/">
+            <span class="next-text nav-default">浪潮之巅</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

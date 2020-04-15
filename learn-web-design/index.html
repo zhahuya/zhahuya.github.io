@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3） - Vchv - 书写过往，让前路更清晰</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="前言 根据我在上一个《大前端学习（HTML&#43;CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。 重要知识点拾遗 demo.fishc.com HTML5 and CSS 文档 HTM" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://vchv.tk/learn-web-design/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）" />
+<meta property="og:description" content="前言 根据我在上一个《大前端学习（HTML&#43;CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。 重要知识点拾遗 demo.fishc.com HTML5 and CSS 文档 HTM" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vchv.tk/learn-web-design/" />
+<meta property="article:published_time" content="2020-04-05T19:30:04+08:00" />
+<meta property="article:modified_time" content="2020-04-05T19:30:04+08:00" />
+<meta itemprop="name" content="【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）">
+<meta itemprop="description" content="前言 根据我在上一个《大前端学习（HTML&#43;CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。 重要知识点拾遗 demo.fishc.com HTML5 and CSS 文档 HTM">
+<meta itemprop="datePublished" content="2020-04-05T19:30:04&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-05T19:30:04&#43;08:00" />
+<meta itemprop="wordCount" content="2257">
+
+
+
+<meta itemprop="keywords" content="前端学习,HTML,CSS," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）"/>
+<meta name="twitter:description" content="前言 根据我在上一个《大前端学习（HTML&#43;CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。 重要知识点拾遗 demo.fishc.com HTML5 and CSS 文档 HTM"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-05 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
+            </div>
+          <span class="more-meta"> 约 2257 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#重要知识点拾遗">重要知识点拾遗</a>
+      <ul>
+        <li><a href="#01-学习web开发有前途吗">01-学习Web开发有前途吗？</a></li>
+        <li><a href="#02-万维网的发展历史与第一个程序">02-万维网的发展历史与第一个程序</a></li>
+        <li><a href="#03-这个系列我们打算怎么玩">03-这个系列我们打算怎么玩？</a></li>
+        <li><a href="#04-从一段鬼畜的密文说起head元素内的各种标签">04-从一段鬼畜的密文说起（head元素内的各种标签）</a></li>
+        <li><a href="#05-一只特立独行的猪style标签">05-一只特立独行的猪（style标签）</a></li>
+        <li><a href="#06-相濡以沫不如相见于江湖链接外部样式表css">06-相濡以沫不如相“见”于江湖（链接外部样式表CSS）</a></li>
+        <li><a href="#07-为网页注入灵魂script标签">07-为网页注入灵魂（Script标签）</a></li>
+        <li><a href="#08-前端工程师的自我修养注释">08-前端工程师的自我修养(注释）</a></li>
+        <li><a href="#09-相拥与独行">09-相拥与独行</a></li>
+        <li><a href="#10-所见即所得">10-所见即所得</a></li>
+        <li><a href="#11-引用大作战">11-引用大作战</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<ul>
+<li>根据我在上一个《大前端学习（HTML+CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。</li>
+</ul>
+<h2 id="重要知识点拾遗">重要知识点拾遗</h2>
+<ul>
+<li>
+<p><a href="https://ilovefishc.com/html5/">demo.fishc.com</a></p>
+</li>
+<li>
+<p><a href="https://man.ilovefishc.com/">HTML5 and CSS 文档</a></p>
+</li>
+<li>
+<p>HTML：Hyper text Markup language</p>
+</li>
+<li>
+<p>CSS：Cascade Style Sheet</p>
+</li>
+<li>
+<p><strong>元素（element）——标签（label）——属性（attribute）——值（value）</strong></p>
+</li>
+<li>
+<p>block element and inline element</p>
+</li>
+</ul>
+<h3 id="01-学习web开发有前途吗">01-学习Web开发有前途吗？</h3>
+<ul>
+<li>薪资不低</li>
+<li>海量成熟框架等你来战</li>
+<li>全栈工程师，前端没有秘密</li>
+</ul>
+<h3 id="02-万维网的发展历史与第一个程序">02-万维网的发展历史与第一个程序</h3>
+<ul>
+<li>1989年，WWW诞生。蒂姆.博纳斯.李（Tim Bernes Lee） 发明了HTML，发明了万维网（world wide web），创立了W3C（W3 consortium）</li>
+<li>1993年，图片浏览器诞生。马克.安德森（Marc Andreessen）发明了Mosaic，它是第一个可以在文字中嵌入图片的浏览器。不止图片，超文字形式的&quot;链接&quot;能够链接到其它文件，音频、视频等等。</li>
+<li>1994年，网景浏览器发布。网景（Netspace）公司成立，第一家尝试利用万维网的公司，由吉姆·克拉克邀请马克·安德森共同创立。第一个产品是网页浏览器 —— Netscape Navigator（Mosaic Killer），发行于1994年10月13日。</li>
+<li>1994年，万维网联盟（W3C）成立，制定新标准来促进业界成员间的兼容性和协议。</li>
+<li>1995年，第一次浏览器大战，网景浏览器与IE。</li>
+<li>1998年，网景在浏览器大战中失败，选择开源，创造了Mozilla Application Suite，派生出Phoenix。</li>
+<li>2003年，Safari 诞生。</li>
+<li>2004年，Firefox 诞生。它的前身是Phoenix。</li>
+<li>2008年，Chrome 浏览器诞生，时间证明，它是绝对的王者，目前Edge使用chromium内核。</li>
+</ul>
+<h3 id="03-这个系列我们打算怎么玩">03-这个系列我们打算怎么玩？</h3>
+<ul>
+<li>
+<p><a href="https://man.ilovefishc.com/html5/">HTML5速查宝典</a></p>
+<ul>
+<li>服务器错误：5XX</li>
+<li>客户端错误：4XX</li>
+<li>重定向：3XX</li>
+<li>成功：2XX</li>
+<li>信息：1XX</li>
+</ul>
+</li>
+<li>
+<p>扩展阅读：不太重要但需要看一看</p>
+</li>
+<li>
+<p>课后作业：要做配套练习，学了不练等于不学</p>
+</li>
+<li>
+<p>这里要把网站的基础标签全看一遍！！</p>
+<ul>
+<li>元素；元素的名称；元素的内容。HTML元素，<code>&lt;html&gt;&lt;/html&gt;标签</code></li>
+<li>HTML元素中包含head元素和body元素，头和身体。</li>
+<li>head元素可包含标签：<code>&lt;base&gt;, &lt;link&gt;, &lt;meta&gt;, &lt;script&gt;, &lt;style&gt;，&lt;title&gt;</code></li>
+<li>img标签可包含属性（attribute）：src 属性 和 alt 属性</li>
+<li>a标签可包含属性：href  target</li>
+</ul>
+</li>
+</ul>
+<h3 id="04-从一段鬼畜的密文说起head元素内的各种标签">04-从一段鬼畜的密文说起（head元素内的各种标签）</h3>
+<ul>
+<li>标题：title</li>
+<li>编码：解决乱码的问题，要在 head 部声明。</li>
+<li>关键词：</li>
+<li>描述：</li>
+<li>作者：<code>&lt;meta name=&quot;aothor&quot; content=&quot;vchv&quot;&gt;</code></li>
+<li>自适应页面：</li>
+<li>自动跳转页面：</li>
+</ul>
+<h3 id="05-一只特立独行的猪style标签">05-一只特立独行的猪（style标签）</h3>
+<ul>
+<li>style 元素：<code>&lt;style&gt; &lt;/style&gt;</code>标签用于为 HTML 文档定义样式信息。style 元素可以出现在 HTML 文档中的各个部分，一个文档可以包含多个 style 元素。</li>
+</ul>
+<h3 id="06-相濡以沫不如相见于江湖链接外部样式表css">06-相濡以沫不如相“见”于江湖（链接外部样式表CSS）</h3>
+<ul>
+<li>将写在HTML文件里的 style 语句抽取出来，独立写成一个文件，即 css 样式表。</li>
+<li>link 标签
+<ul>
+<li>关联样式表</li>
+<li>关联网站icon</li>
+<li>指定相对URL的解析基准</li>
+</ul>
+</li>
+</ul>
+<h3 id="07-为网页注入灵魂script标签">07-为网页注入灵魂（Script标签）</h3>
+<ul>
+<li>
+<p>JavaScript 和 Java 的关系，就像印度和印度尼西亚；雷锋和雷峰塔；周杰和周杰伦；张三和张三丰……</p>
+</li>
+<li>
+<p>JavaScript 是 C 和 Self language 混合的产物</p>
+</li>
+<li>
+<p><code>&lt;script&gt;&lt;/script&gt;</code> 标签用于在 HTML 文档中加入脚本（例如 JavaScript）</p>
+</li>
+<li>
+<p>引用标签和内嵌标签要注意，&lt;&gt;=&rdquo;&rdquo; 这些写法</p>
+</li>
+<li>
+<p>HTML 解析（HTML parsing）；defer 延迟执行脚本；async 异步执行脚本；</p>
+</li>
+<li>
+<p>![](_v_images/20200408213206996_831.png =402x)</p>
+</li>
+<li>
+<p>![](_v_images/20200408213835321_12039.png =402x)</p>
+</li>
+<li>
+<p>![](_v_images/20200408214137650_31876.png =402x)</p>
+</li>
+<li>
+<p><code>&lt;noscript&gt;</code> 标签用来向不支持 JavaScript 的浏览器显示一些替代内容。</p>
+</li>
+</ul>
+<h3 id="08-前端工程师的自我修养注释">08-前端工程师的自我修养(注释）</h3>
+<ul>
+<li>注释的作用：小提示；注释掉不想被执行的代码</li>
+<li><a href="https://fishc.com.cn/forum.php?mod=viewthread&amp;tid=115069&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D731">对代码注释的理解</a></li>
+<li>HTML 注释：<code>&lt;!--  此处写注释 --&gt;</code></li>
+<li>CSS 注释：<code>/* 此处写注释 */</code></li>
+<li>JavaScript 注释：<code>// 单行的注释    /* 多行的注释 */</code></li>
+</ul>
+<h3 id="09-相拥与独行">09-相拥与独行</h3>
+<ul>
+<li>块级元素：讲究排场</li>
+<li>行内元素：勤俭节约</li>
+<li>一般情况下，行内元素只能包含数据和其他行内元素；而块级元素可以包含行内元素和其他块级元素。</li>
+<li>这种结构上的包含继承区别可以使块级元素创建比行内元素更“大型”的结构。</li>
+<li>为什么要有块级元素和行内元素之分呢？
+<ul>
+<li>HTML 要求浏览器将连续的空白字符合并为一个空格。</li>
+<li>这样可以将 HTML 文档的布局 和 文档自身内容的布局区分开来。</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-所见即所得">10-所见即所得</h3>
+<ul>
+<li>
+<!-- raw HTML omitted -->
+<ul>
+<li>预格式化：保留文本在源代码中的格式，使得页面中显示的和源代码中的效果完全一致。</li>
+<li>呈现为 等宽字体（Monospaced Font），对于代码来说，等宽字体要好一点。</li>
+</ul>
+</li>
+<li>好的字体推荐：</li>
+<li>HTML 字符实体 （character entities）：&lt;&gt; 这是特殊含义的符号，不可以直接显示，如果要显示，就需要使用“字符实体”。</li>
+<li>语义化：语义化要求你使用恰当语义的HTML元素，让页面具有良好的结构与含义，从而让人和机器都能快速理解网页内容。
+<ul>
+<li>code 元素 专门用来显示代码的</li>
+<li>var ：定义程序的变量</li>
+<li>kbd：keyboard 定义用户的输入</li>
+<li>samp：定义程序的输出</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-引用大作战">11-引用大作战</h3>
+<ul>
+<li>
+<p>q 元素 简单的行内引用：q   <!-- raw HTML omitted -->什么表现，一个引用啦！<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>blockquote 元素 块状引用：<!-- raw HTML omitted -->只是
+整体加了一个<br>
+缩进而已啦<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>cite 元素：书籍、歌曲、电视等作品的标题</p>
+</li>
+<li>
+<p>abbr 元素：abbreviation <!-- raw HTML omitted -->缩写<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>dfn 元素：define  表现定义中的术语。<!-- raw HTML omitted -->HTML<!-- raw HTML omitted -->就是一个术语。</p>
+<ul>
+<li>术语又称技术名词，是在特定专业领域中一般概念的词语指称，一个术语表示一个概念。</li>
+</ul>
+</li>
+<li>
+<p>address 元素：会变斜</p>
+</li>
+<li>
+<p>ruby rt rp 元素：<!-- raw HTML omitted -->注<!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->zhù<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->音<!-- raw HTML omitted -->yīn<!-- raw HTML omitted --><!-- raw HTML omitted -->。</p>
+<ul>
+<li>rt 元素用来标记注音符号，rp 元素用来标记当浏览器不支持时所显示的内容。</li>
+</ul>
+</li>
+<li>
+<p>bdo 元素：ltr  left to right  rtl right to left</p>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-04-05
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/">前端学习</a>
+          <a href="/tags/html/">HTML</a>
+          <a href="/tags/css/">CSS</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/build-a-hugo-blog-from-zero/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">从零开始搭建一个hugo博客</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/great-software/">
+            <span class="next-text nav-default">我在使用的软件分享</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

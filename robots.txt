@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://zhahuya.github.io/sitemap.xml
+Sitemap: https://vchv.tk/sitemap.xml

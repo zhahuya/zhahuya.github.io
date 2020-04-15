@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>even on Vchv - 书写过往，让前路更清晰</title>
-    <link>https://zhahuya.github.io/tags/even/</link>
+    <link>https://vchv.tk/tags/even/</link>
     <description>Recent content in even on Vchv - 书写过往，让前路更清晰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
-    <lastBuildDate>Tue, 14 Apr 2020 13:30:04 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 19:30:04 +0800</lastBuildDate>
     
-	<atom:link href="https://zhahuya.github.io/tags/even/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vchv.tk/tags/even/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>改善自己的even主题</title>
-      <link>https://zhahuya.github.io/enhance-the-theme-even-of-hugo/</link>
-      <pubDate>Tue, 14 Apr 2020 13:30:04 +0800</pubDate>
+      <title>从零开始搭建一个hugo博客</title>
+      <link>https://vchv.tk/build-a-hugo-blog-from-zero/</link>
+      <pubDate>Mon, 13 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://zhahuya.github.io/enhance-the-theme-even-of-hugo/</guid>
-      <description>为什么是 hugo? 静态博客可以批量地渲染 .md 文件，然后发表，十分快捷。 相比动态博客（typecho 、 WordPress）及市面上常见的在一个编辑器里写</description>
+      <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
+      <description>前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发</description>
     </item>
     
   </channel>

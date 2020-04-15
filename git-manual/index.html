@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.69.0 with theme even" />
 
 
-<link rel="canonical" href="https://zhahuya.github.io/git-manual/" />
+<link rel="canonical" href="https://vchv.tk/git-manual/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -35,21 +35,21 @@
 
 
 
-<link href="https://zhahuya.github.io/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Git的逻辑与基本操作" />
 <meta property="og:description" content="前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档； 廖雪峰Git教程 Git是一" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zhahuya.github.io/git-manual/" />
+<meta property="og:url" content="https://vchv.tk/git-manual/" />
 <meta property="article:published_time" content="2019-10-25T18:30:04+08:00" />
 <meta property="article:modified_time" content="2020-04-15T19:11:49+08:00" />
 <meta itemprop="name" content="Git的逻辑与基本操作">
 <meta itemprop="description" content="前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档； 廖雪峰Git教程 Git是一">
 <meta itemprop="datePublished" content="2019-10-25T18:30:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-15T19:11:49&#43;08:00" />
-<meta itemprop="wordCount" content="2510">
+<meta itemprop="wordCount" content="2368">
 
 
 
@@ -127,10 +127,10 @@
       <div class="post-meta">
         <span class="post-time"> 2019-10-25 </span>
         <div class="post-category">
-            <a href="/categories/%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"> 技术应用 </a>
+            <a href="/categories/%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF/"> 应用技术 </a>
             </div>
-          <span class="more-meta"> 约 2510 字 </span>
-          <span class="more-meta"> 预计阅读 6 分钟 </span>
+          <span class="more-meta"> 约 2368 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
         
       </div>
     </header>
@@ -146,13 +146,9 @@
         <li><a href="#git的基本操作命令">Git的基本操作命令</a></li>
       </ul>
     </li>
-    <li><a href="#为-git-设置代理">为 Git 设置代理</a>
-      <ul>
-        <li><a href="#hugo框架下git发文的操作">hugo框架下Git发文的操作</a></li>
-        <li><a href="#子模块git-submodule的使用">子模块（git submodule）的使用</a></li>
-        <li><a href="#qa">Q&amp;A</a></li>
-      </ul>
-    </li>
+    <li><a href="#为-git-设置代理">为 Git 设置代理</a></li>
+    <li><a href="#子模块git-submodule的使用">子模块（git submodule）的使用</a></li>
+    <li><a href="#qa">Q&amp;A</a></li>
   </ul>
 </nav>
   </div>
@@ -210,7 +206,6 @@
 <li><code>git stash</code> and <code>git pull</code>and <code>git stash drop</code> ，<code>git stash list</code>  //可以将冲突的文件进行打包，pull完成后扔掉，相当于作了一次云端覆盖本地的操作。</li>
 </ul>
 <p>解决完以上的问题，还会有分支（branch）的问题，当分支和上述推送和拉取结合，又会产生什么样的化学反应，多了几个问题同时又让几个原本的问题变得简单？</p>
-<hr>
 <h2 id="为-git-设置代理">为 Git 设置代理</h2>
 <p><strong>HTTP 和 HTTPS代理</strong></p>
 <blockquote>
@@ -238,21 +233,12 @@
 <p>参考：<a href="https://walkedby.com/sshwindowsproxy/">在 windows 上为 git ssh 设置代理</a></p>
 </blockquote>
 </blockquote>
-<h3 id="hugo框架下git发文的操作">hugo框架下Git发文的操作</h3>
-<ol>
-<li>在Vnote中写作完成后，将文件放入contents中</li>
-<li>使用<code>hugo server</code>进行预览</li>
-<li>生成public文件： <code>hugo</code></li>
-<li>在public文件夹将更新push到云端</li>
-<li>将Hugo源文件push到云端</li>
-<li>使用Git或者云盘将这一套环境（hugo+vnote）进行打包，随处使用。</li>
-</ol>
-<h3 id="子模块git-submodule的使用">子模块（git submodule）的使用</h3>
+<h2 id="子模块git-submodule的使用">子模块（git submodule）的使用</h2>
 <ul>
 <li>如果想把blog目录推送到GitHub仓库里，但是blog目录里面的主题目录其实是一个git repository，一个仓库嵌套着一个仓库，这时需要将主题目录设置为submodule</li>
 <li><a href="http://panqiincs.me/2017/08/06/hexo-blog-code-management/">添加子模块的心得</a></li>
 </ul>
-<h3 id="qa">Q&amp;A</h3>
+<h2 id="qa">Q&amp;A</h2>
 <ol>
 <li>Q：使用工作电脑push之后，回来另一台电脑pull，会出现untracting的问题，这个是怎么导致的？如何解决这个问题？</li>
 </ol>
@@ -332,9 +318,9 @@
           <a href="/tags/git/">Git</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/economics-about-scarce-cost-demand-and-price/">
+        <a class="prev" href="/purchase-desire/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">经济学课之一（稀缺、成本、需求、价格）</span>
+            <span class="prev-text nav-default">近期的一些购物渴望(计算机产品相关）</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         <a class="next" href="/write-blog-by-hugo/">
@@ -415,7 +401,7 @@
 
 
 
-<script type="text/javascript" src="https://zhahuya.github.io/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
 
 
 

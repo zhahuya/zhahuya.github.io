@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>onedrive on Vchv - 书写过往，让前路更清晰</title>
-    <link>https://zhahuya.github.io/tags/onedrive/</link>
+    <link>https://vchv.tk/tags/onedrive/</link>
     <description>Recent content in onedrive on Vchv - 书写过往，让前路更清晰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
     <lastBuildDate>Mon, 13 Apr 2020 19:30:04 +0800</lastBuildDate>
     
-	<atom:link href="https://zhahuya.github.io/tags/onedrive/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vchv.tk/tags/onedrive/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>从零开始搭建一个hugo博客</title>
-      <link>https://zhahuya.github.io/build-a-hugo-blog-from-zero/</link>
+      <link>https://vchv.tk/build-a-hugo-blog-from-zero/</link>
       <pubDate>Mon, 13 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://zhahuya.github.io/build-a-hugo-blog-from-zero/</guid>
+      <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
       <description>前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发</description>
     </item>
     

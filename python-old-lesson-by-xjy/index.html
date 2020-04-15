@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python零基础入门学习（老版） - Vchv - 书写过往，让前路更清晰</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="前言 到7.8.9节有点看不懂了，结合GitHub上面的100天指引比较好。 时间可以让我们的脑子自发的啃下来开始觉得很难的东西 分支和循环之外，" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://vchv.tk/python-old-lesson-by-xjy/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python零基础入门学习（老版）" />
+<meta property="og:description" content="前言 到7.8.9节有点看不懂了，结合GitHub上面的100天指引比较好。 时间可以让我们的脑子自发的啃下来开始觉得很难的东西 分支和循环之外，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vchv.tk/python-old-lesson-by-xjy/" />
+<meta property="article:published_time" content="2020-01-13T20:30:04+08:00" />
+<meta property="article:modified_time" content="2020-01-13T20:30:04+08:00" />
+<meta itemprop="name" content="Python零基础入门学习（老版）">
+<meta itemprop="description" content="前言 到7.8.9节有点看不懂了，结合GitHub上面的100天指引比较好。 时间可以让我们的脑子自发的啃下来开始觉得很难的东西 分支和循环之外，">
+<meta itemprop="datePublished" content="2020-01-13T20:30:04&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-13T20:30:04&#43;08:00" />
+<meta itemprop="wordCount" content="5987">
+
+
+
+<meta itemprop="keywords" content="编程语言,python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python零基础入门学习（老版）"/>
+<meta name="twitter:description" content="前言 到7.8.9节有点看不懂了，结合GitHub上面的100天指引比较好。 时间可以让我们的脑子自发的啃下来开始觉得很难的东西 分支和循环之外，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python零基础入门学习（老版）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-01-13 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
+            </div>
+          <span class="more-meta"> 约 5987 字 </span>
+          <span class="more-meta"> 预计阅读 12 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#我知道了">我知道了</a></li>
+    <li><a href="#01-什么是python">01-什么是Python？</a></li>
+    <li><a href="#02-和python的第一次亲密接触">02-和Python的第一次亲密接触</a></li>
+    <li><a href="#03-用python设计第一个游戏">03-用Python设计第一个游戏</a></li>
+    <li><a href="#04-变量和字符串">04-变量和字符串</a></li>
+    <li><a href="#05-改进我们的猜数小游戏">05-改进我们的猜数小游戏</a></li>
+    <li><a href="#06-python的数据类型">06-Python的数据类型</a></li>
+    <li><a href="#07-python的常用操作符">07-Python的常用操作符</a></li>
+    <li><a href="#08-了不起的分支和循环上">08-了不起的分支和循环（上）</a></li>
+    <li><a href="#09-了不起的分支和循环中">09-了不起的分支和循环（中）</a></li>
+    <li><a href="#10-了不起的分支和循环下">10-了不起的分支和循环（下）</a></li>
+    <li><a href="#11-列表的定义与添加元素">11-列表的定义与添加元素</a></li>
+    <li><a href="#12-列表的获取删除与切片">12-列表的获取、删除与切片</a></li>
+    <li><a href="#13-列表的常用操作符与dirlist">13-列表的常用操作符与dir(list)</a></li>
+    <li><a href="#14-元组戴上了枷锁的列表">14-元组：戴上了枷锁的列表</a></li>
+    <li><a href="#15-字符串的各种内置方法">15-字符串的各种内置方法</a></li>
+    <li><a href="#16-字符串的格式化">16-字符串的格式化</a></li>
+    <li><a href="#17-序列序列">17-序列！序列！</a></li>
+    <li><a href="#18-函数python的乐高积木">18-函数：Python的乐高积木</a></li>
+    <li><a href="#19-函数灵活而强大">19-函数：灵活而强大</a></li>
+    <li><a href="#20-函数全局变量和局部变量">20-函数：全局变量和局部变量</a></li>
+    <li><a href="#21-内嵌函数和闭包">21-内嵌函数和闭包</a></li>
+    <li><a href="#22-函数的lambda表达式">22-函数的lambda表达式</a></li>
+    <li><a href="#23-递归是什么">23-递归是什么？</a></li>
+    <li><a href="#24-递归的分治思想">24-递归的分治思想</a></li>
+    <li><a href="#25-递归之汉诺塔游戏">25-递归之汉诺塔游戏</a></li>
+    <li><a href="#26-字典之当索引不好用时1">26-字典之当索引不好用时1</a></li>
+    <li><a href="#27-字典的内建方法">27-字典的内建方法</a></li>
+    <li><a href="#28-集合">28-集合</a></li>
+    <li><a href="#29-文件基本操作">29-文件：基本操作</a></li>
+    <li><a href="#30-文件分割文件内容并分别保存">30-文件：分割文件内容并分别保存</a></li>
+    <li><a href="#31-文件系统模块">31-文件系统：模块</a></li>
+    <li><a href="#32-永久存储amazing-module-pickle">32-永久存储：Amazing module pickle</a></li>
+    <li><a href="#33-异常处理各种异常类型">33-异常处理：各种异常类型</a></li>
+    <li><a href="#34-异常处理检测和处理">34-异常处理：检测和处理</a></li>
+    <li><a href="#35-丰富的else语句和简洁的with语句">35-丰富的else语句和简洁的with语句</a></li>
+    <li><a href="#36-easygui">36-Easygui</a></li>
+    <li><a href="#37-类和对象介绍对象">37-类和对象：介绍对象</a></li>
+    <li><a href="#38-类和对象面向对象编程待理解">38-类和对象：面向对象编程（待理解）</a></li>
+    <li><a href="#39-类和对象继承">39-类和对象：继承</a></li>
+    <li><a href="#40-类和对象拾遗组合">40-类和对象：拾遗、组合</a></li>
+    <li><a href="#41-类和对象一些相关的bifbuiltin">41-类和对象：一些相关的BIF（builtin)</a></li>
+    <li><a href="#42-魔法方法构造与析构">42-魔法方法：构造与析构</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2020-01-13T20:30:04" title="January 13, 2020">January 13, 2020</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<ul>
+<li>到7.8.9节有点看不懂了，结合GitHub上面的100天指引比较好。
+<ul>
+<li>时间可以让我们的脑子自发的啃下来开始觉得很难的东西</li>
+<li>分支和循环之外，是列表、字符串、元组、字典它们的操作方法</li>
+</ul>
+</li>
+</ul>
+<h2 id="我知道了">我知道了</h2>
+<ul>
+<li>Python区分大小写</li>
+<li>字符串的拼接使用+运算符；字符串和数字的拼接使用逗号</li>
+<li>条件、分支、循环、数组，需要一点数学思维才能更好理解</li>
+<li>函数后面要有（），设置参数</li>
+<li>序列（字符串、元组、列表）的内置方法需要掌握，还有字典的内置方法。</li>
+<li>帮助文档中的[]表示这是一个可选参数</li>
+<li>操作符.方法（参数）</li>
+<li>使用 for in 循环来遍历一个有限集合（可知可变）</li>
+<li>【for in循环】【列表的方法】【逻辑操作符、成员关系操作符】需要强化掌握。</li>
+<li>缩进的层级问题。越是看不懂代码，越是容易在这方面出现不易察觉的问题。</li>
+<li>26.27章节有点小疲惫，学的不上心，另外课后作业的超高难度也令人悲伤。</li>
+<li>工厂函数、方法、参数</li>
+</ul>
+<h2 id="01-什么是python">01-什么是Python？</h2>
+<ul>
+<li>
+<p>Python的优点：</p>
+</li>
+<li>
+<p>可以学到什么？</p>
+<ul>
+<li>Python3的所有常用语法</li>
+<li>面向对象编程思维</li>
+<li>运用模块进行编程</li>
+<li>游戏编程</li>
+<li>计算机仿真</li>
+</ul>
+</li>
+<li>
+<p>学习的捷径</p>
+<ul>
+<li>验证例子</li>
+<li>课后实践</li>
+<li>善用搜索</li>
+<li>放轻松</li>
+</ul>
+</li>
+<li>
+<p>给初学者的几个建议：</p>
+<ul>
+<li>Make English as your working language.</li>
+<li>Practice makes perfect.</li>
+<li>All experience comes from mistakes.</li>
+<li>Don&rsquo;t be one of the leeches.</li>
+<li>Either stand out or kicked out.</li>
+</ul>
+</li>
+</ul>
+<h2 id="02-和python的第一次亲密接触">02-和Python的第一次亲密接触</h2>
+<ul>
+<li>安装Python3</li>
+<li>print函数</li>
+</ul>
+<h2 id="03-用python设计第一个游戏">03-用Python设计第一个游戏</h2>
+<ul>
+<li>缩进（Indentation）：</li>
+<li>内建函数（Built-in Function）：<code>dir(__builtins__)</code>小写的是内建函数；<code>help(input)</code></li>
+<li>拼接：+可以把两个字符串拼接在一起。</li>
+</ul>
+<h2 id="04-变量和字符串">04-变量和字符串</h2>
+<ul>
+<li>
+<p>变量（Variable）：Put Value into the Variable.把值储存在变量中，见Crash course CS。Python里的变量是不分类型的，无需事先声明的。</p>
+<ul>
+<li>在使用变量之前，需要先对其赋值。</li>
+<li><strong>变量名包括字母、数字、下划线，但不能以数字开头。</strong></li>
+<li>大小写是不同的。</li>
+<li>变量理论可以取任何合法的名字，但作为一个优秀的程序员，应尽量给变量起一个专业一点的名字，IO字母要少用，容易和数字1和0弄混。</li>
+</ul>
+</li>
+<li>
+<p>字符串（String）：字符串就是“”内的一切东西，我们也把字符串叫做文本，文本和数字是截然不同的。</p>
+<ul>
+<li>单引号’‘</li>
+<li>双引号“”</li>
+<li>转义符号：\</li>
+<li>r（Raw）：原始字符串、str = &lsquo;C:\now&rsquo;（或者转义的转义）</li>
+<li>3引号字符串：</li>
+</ul>
+</li>
+</ul>
+<h2 id="05-改进我们的猜数小游戏">05-改进我们的猜数小游戏</h2>
+<ul>
+<li>Python的比较操作符：大于、小于、等于、不等于。</li>
+<li>条件分支：if else</li>
+<li>嵌套：</li>
+<li>循环：while</li>
+<li>模块：导入 随机数 模块</li>
+<li>条件的真假问题：只有0 none False 空对计算机来说是假。</li>
+<li>一行输入多个语句，使用分号;隔开即可。</li>
+<li>一行过长的语句可以使用反斜杠或者括号分解成几行。</li>
+<li>短路逻辑（惰性求值）</li>
+</ul>
+<h2 id="06-python的数据类型">06-Python的数据类型</h2>
+<ul>
+<li>
+<p>字符串：</p>
+</li>
+<li>
+<p>数据类型：</p>
+<ul>
+<li>布尔类型：一种特殊的整型。True = 1；False = 0，他们甚至可以运算。</li>
+<li>整型：</li>
+<li>浮点型：看有没有小数点，有就是浮点型。</li>
+<li>科学记数法。</li>
+</ul>
+</li>
+<li>
+<p>类型转换：int() and str() and float()</p>
+</li>
+<li>
+<p>type函数：汇报所输入内容的类型</p>
+</li>
+<li>
+<p>isinstance函数：isinstance(a,b)两者类型进行比较</p>
+</li>
+</ul>
+<h2 id="07-python的常用操作符">07-Python的常用操作符</h2>
+<ul>
+<li>
+<p>这个比新版讲的明了。</p>
+</li>
+<li>
+<p>算数操作符：+ - * / % ** //（地板除）</p>
+<ul>
+<li><strong>新的定义：a = a + 1   可以写成  a += 1</strong></li>
+<li>小数数学的优先级问题：先乘除后加减，小括号里的优先。</li>
+<li>幂运算操作符比左侧的一元操作符优先级高，比右侧的一元操作符优先级低</li>
+</ul>
+</li>
+<li>
+<p>比较操作符：&lt; &lt;= &gt; &gt;=  == !=</p>
+</li>
+<li>
+<p>逻辑操作符：and or not</p>
+</li>
+<li>
+<p>建议对不直观的式子加上（）方便读代码。</p>
+</li>
+<li>
+<p>优先级问题：从上到下优先级依次下降</p>
+<ul>
+<li>幂运算 **</li>
+<li>正负号 +-  一元运算符</li>
+<li>算数运算符 * / // + -</li>
+<li>比较运算符 &laquo;= &gt; &gt;= == !=</li>
+<li>逻辑运算符 not and or</li>
+</ul>
+</li>
+<li>
+<p>关于爱因斯坦数学题：无法去定义了类似X的变量，进行解方程，只能通过遍历去寻找答案。</p>
+</li>
+</ul>
+<h2 id="08-了不起的分支和循环上">08-了不起的分支和循环（上）</h2>
+<ul>
+<li>设计打飞机小游戏的自然语言框架</li>
+</ul>
+<h2 id="09-了不起的分支和循环中">09-了不起的分支和循环（中）</h2>
+<ul>
+<li>if else 语句的多层嵌套在python里看着有点恐怖，因为python需要使用缩进来表示这些，使用elif可以有效减少缩进，看起来更整齐。</li>
+<li>Python可以有效避免“悬挂else”，因为python有缩进对齐的强制要求。</li>
+<li>条件表达式（三元操作符），需要加深理解。
+<ul>
+<li>语法：x if 条件 else y</li>
+</ul>
+</li>
+<li>assert (断言)</li>
+</ul>
+<h2 id="10-了不起的分支和循环下">10-了不起的分支和循环（下）</h2>
+<ul>
+<li>
+<p>while 循环——条件为真时持续循环【循环体】</p>
+<ul>
+<li>while 条件:</li>
+<li>循环体</li>
+</ul>
+</li>
+<li>
+<p><strong>for 循环 —— 遍历一个序列</strong>  需要加强理解，有点难懂！</p>
+<ul>
+<li>for 目标 in 表达式:    # 目标是什么意思？搞不懂！
+<ul>
+<li>循环体</li>
+<li><a href="https://www.programiz.com/python-programming/for-loop">https://www.programiz.com/python-programming/for-loop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>range()</p>
+<ul>
+<li>range( [ start, ] stop [ , step=1 ] )</li>
+<li>这个内置函数的作用生成一个从【start参数的值】开始到【stop参数的值】结束的数字序列。</li>
+<li>三个参数：起始值、最终值、步长（递进）</li>
+<li>例如：range(5,10)</li>
+</ul>
+</li>
+<li>
+<p>break语句：    终止它所在的这个循环</p>
+</li>
+<li>
+<p><strong>continue语句</strong>  ： 它可以用来放弃本次循环后续的代码直接让循环进入下一轮。</p>
+<ul>
+<li>有点难懂，需要加强理解！</li>
+</ul>
+</li>
+<li>
+<p>in 成员判定函数</p>
+</li>
+</ul>
+<h2 id="11-列表的定义与添加元素">11-列表的定义与添加元素</h2>
+<ul>
+<li>
+<p>数组：只能存放同样类型的数据</p>
+</li>
+<li>
+<p>列表：打了激素的数组 [  ]</p>
+<ul>
+<li>创造普通列表：</li>
+<li>混合列表</li>
+<li>空列表</li>
+</ul>
+</li>
+<li>
+<p>向列表添加元素：</p>
+<ul>
+<li>object.append()    将参数作为一个元素增加到列表的末尾</li>
+<li>object.extend()     将参数作为一个列表去扩展列表的末尾。</li>
+<li>object.insert(0,5)   2参数，在第几个元素前加插入一个元素。指定位置插入一个元素。</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-列表的获取删除与切片">12-列表的获取、删除与切片</h2>
+<ul>
+<li>
+<p>获取列表中的某个元素：member[1]</p>
+</li>
+<li>
+<p>从列表删除元素：</p>
+<ul>
+<li>object.remove(&lsquo;小甲鱼&rsquo;)    你需要知道名字</li>
+<li>del object[1]    你需要知道排序</li>
+<li>object.pop()    空着的话操作后面最后一个，添加一个整数参数，就可以挑出哪个</li>
+</ul>
+</li>
+<li>
+<p>列表分片（slice）（切片）：切出一个列表</p>
+<ul>
+<li>object[1:3]  两个参数，取左不取右</li>
+<li>object[:3]    第0个到第三个</li>
+<li>object[1:]    第一个到最后一个</li>
+<li>object[:]      完整复制下来</li>
+</ul>
+</li>
+</ul>
+<h2 id="13-列表的常用操作符与dirlist">13-列表的常用操作符与dir(list)</h2>
+<ul>
+<li>
+<p>常用操作符：</p>
+<ul>
+<li>比较操作符：默认从第0个开始比较，成功了就是True，失败了就是False。字符串比较，就是比较ASCII码的大小。</li>
+<li>逻辑操作符</li>
+<li>连接操作符：使用 + 用来拼接，使用 * 用来复制多个（类似字符串）（最好别用，使用上面的操作）</li>
+<li>重复操作符</li>
+<li>成员关系操作符：只能判定一层，列表中的列表需要再明示一层，list5[1][1]。</li>
+</ul>
+</li>
+<li>
+<p>列表的小伙伴们：dir(list)</p>
+<ul>
+<li>count：计算并返回指定元素的数量</li>
+<li>index： 元素的位置</li>
+<li>reverse</li>
+<li>sort</li>
+<li>sort(func,key)</li>
+<li>sort(reverse=True)</li>
+</ul>
+</li>
+<li>
+<p>字符串也可以进行元素的取值操作！</p>
+</li>
+</ul>
+<h2 id="14-元组戴上了枷锁的列表">14-元组：戴上了枷锁的列表</h2>
+<ul>
+<li>
+<p>元组（tuple）和列表相似，但元组不可添加，删除或更改。</p>
+</li>
+<li>
+<p>创建列表使用[]，创建元组大部分使用（）：tuple1 = (1,2,3,4,5)</p>
+<ul>
+<li>temp = (1)，type结果是一个int整型，而不是一个元组</li>
+<li>temp2 = 2,3,4,5，type结果是一个tuple，关键在于，号！</li>
+<li>创建一个空的元组：temp = ()</li>
+<li>如果要创建一个1个元素的元组，temp4 = (1,)或者temp4 = 1,</li>
+<li>练习：8*（8）=64   8*（8,）=(8,8,8,8,8,8,8,8,8)</li>
+</ul>
+</li>
+<li>
+<p>访问元组的元素：tuple1[1]</p>
+</li>
+<li>
+<p>切片：tuple1[:5]</p>
+</li>
+<li>
+<p>更新和删除一个元组</p>
+<ul>
+<li>切片+（&lsquo;添加内容&rsquo;,）+切片</li>
+</ul>
+</li>
+<li>
+<p>元组相关的操作符</p>
+<ul>
+<li>+拼接，左右类型要一致</li>
+<li>count</li>
+<li>index</li>
+</ul>
+</li>
+</ul>
+<h2 id="15-字符串的各种内置方法">15-字符串的各种内置方法</h2>
+<ul>
+<li>切片：str1[:7]</li>
+<li>字符串和元组一样，都是难以添加、修改或删除的，如果要添加，只能使用切片+拼接的方式</li>
+<li><a href="https://fishc.com.cn/forum.php?mod=viewthread&amp;tid=38992&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D403">字符串的一大堆内置方法</a></li>
+<li>格式化方法：string.format，{}
+<ul>
+<li>位置参数：{0}{1}{2}</li>
+<li>关键字参数：{a}{b}{c}</li>
+<li>replacement，在替换域中：表示格式化符号的开始</li>
+</ul>
+</li>
+</ul>
+<h2 id="16-字符串的格式化">16-字符串的格式化</h2>
+<ul>
+<li>目的：在字符串类型中插入变量！</li>
+<li>格式化符号：%在【字符串】里表示格式化符号
+<ul>
+<li>使用元组来替换更多的字符串变量</li>
+<li>%f 默认使用6位小数表示，可指定小数点精度</li>
+<li>m.n，例如5.3，m表示总位数，n表示小数点后位数</li>
+</ul>
+</li>
+<li><a href="https://fishc.com.cn/forum.php?mod=viewthread&amp;tid=92997&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D403">格式化符号和转义字符</a></li>
+<li>8进制没有8，就像10进制没有10一样，都是从0开始的</li>
+<li>break  and continue are used for the loop not the if syntax</li>
+<li>循环里嵌套 分支 来实现</li>
+</ul>
+<h2 id="17-序列序列">17-序列！序列！</h2>
+<ul>
+<li>
+<p>序列：list（）          列表、元组、字符串</p>
+</li>
+<li>
+<p>迭代：迭代是重复反馈过程的活动，其目的通常是为了接近并到达所需的目标或结果。</p>
+<ul>
+<li>每一次对过程的重复被称为一次“迭代”，而每一次迭代得到的结果会被用来作为下一次迭代的初始值。</li>
+</ul>
+</li>
+<li>
+<p>列表、元组、字符串的共同点：</p>
+<ul>
+<li>都可以通过索引得到每一个元素（index）</li>
+<li>默认索引值总是从0开始</li>
+<li>可以通过【分片】的方法得到一个范围内的元素的集合</li>
+<li>有很多共同的操作符（重复、拼接、成员关系等）</li>
+</ul>
+</li>
+<li>
+<p>list</p>
+</li>
+<li>
+<p>tuple</p>
+</li>
+<li>
+<p>str</p>
+</li>
+<li>
+<p>len(sub)</p>
+</li>
+<li>
+<p>max(序列或者元组)，返回序列或者参数集合中的最大值；min</p>
+</li>
+<li>
+<p>sum（）</p>
+</li>
+<li>
+<p>sorted（）  = list.sort()</p>
+</li>
+<li>
+<p>reversed()   = object.reverse()</p>
+</li>
+<li>
+<p>enumerate()元素索引+元素</p>
+</li>
+<li>
+<p>zip()</p>
+</li>
+<li>
+<p>成员判断：in not in</p>
+</li>
+</ul>
+<h2 id="18-函数python的乐高积木">18-函数：Python的乐高积木</h2>
+<ul>
+<li>函数；对象；模块</li>
+<li>先做了函数，然后有了基于函数的（参数）</li>
+<li>函数的参数可以有很多很多，但是最好不要超过30个，便于维护和管理。</li>
+<li>Return：返回函数的执行结果</li>
+<li>当 Python 执行到 return 语句的时候，Python 认为函数到此结束，需要返回了（尽管没有任何返回值）</li>
+</ul>
+<h2 id="19-函数灵活而强大">19-函数：灵活而强大</h2>
+<ul>
+<li>形式参数（Parameter）：</li>
+<li>实际参数（argument）：</li>
+<li>函数文档：Function.<strong>doc</strong>  # 系统的特殊属性都是以__开始的</li>
+<li>关键字参数：多个函数的顺序问题，使用关键字=，直接确定参数内容</li>
+<li>默认函数：什么参数都没有的话，会打开默认</li>
+<li>*收集参数：可变程度的参数，用一个元组把它打包起来</li>
+<li>使用 for in 循环来遍历一个有限集合</li>
+</ul>
+<h2 id="20-函数全局变量和局部变量">20-函数：全局变量和局部变量</h2>
+<ul>
+<li>
+<p>函数（function）：返回结果 return</p>
+</li>
+<li>
+<p>过程（）：</p>
+</li>
+<li>
+<p>Python里面只有函数，如果不设置返回值，那么会返回none</p>
+</li>
+<li>
+<p>Python是动态类型，不需要事先指定变量的类型</p>
+</li>
+<li>
+<p>变量的作用域：</p>
+<ul>
+<li>局部变量（Local Variable）：</li>
+<li>全局变量（Global Variable）:</li>
+<li>全局变量和局部变量可以存在一个相同名字的变量，它们存在不同的空间里。</li>
+</ul>
+</li>
+<li>
+<p>关键词：global value：你在函数内声明，我就是想在函数内修改这个全局变量，那么可以使用这个关键字：global count</p>
+</li>
+</ul>
+<h2 id="21-内嵌函数和闭包">21-内嵌函数和闭包</h2>
+<ul>
+<li>内嵌函数：函数的嵌套</li>
+<li>闭包（closure）：作用域
+<ul>
+<li>关键字：nonlocal x，声明我想在闭包里修改上部变量</li>
+</ul>
+</li>
+<li>UnboundLocalError: local variable &lsquo;var&rsquo; referenced before assignment，说的是变量 var 没有被定义就拿来使用，肯定错啦！
+<ul>
+<li>这里 outside() 函数里有一个 var 变量，但要注意的是，内嵌函数 inside() 也有一个同名的变量，Python 为了保护变量的作用域，故将 outside() 的 var 变量屏蔽起来，因此此时是无法访问到外层的 var 变量的。</li>
+</ul>
+</li>
+</ul>
+<h2 id="22-函数的lambda表达式">22-函数的lambda表达式</h2>
+<ul>
+<li>使用Lambda可以省下定义函数的过程；省下为函数命名的问题；使代码简洁易读；如：lambda x : 2 * x + 5</li>
+<li>lambda本质上是一种函数，如果需要使用，可以进行赋值</li>
+<li>bif内置函数 builtin function
+<ul>
+<li>filter（） 用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表，将返回 True 的元素放到新列表中</li>
+<li>map（） 根据提供的函数对指定序列做映射</li>
+</ul>
+</li>
+</ul>
+<h2 id="23-递归是什么">23-递归是什么？</h2>
+<ul>
+<li>递归（recursion）：自己调用自己；有返回值</li>
+</ul>
+<h2 id="24-递归的分治思想">24-递归的分治思想</h2>
+<ul>
+<li>分而治之的思想</li>
+<li>斐波那锲数列证明递归在效率上是没有迭代高的</li>
+</ul>
+<h2 id="25-递归之汉诺塔游戏">25-递归之汉诺塔游戏</h2>
+<ul>
+<li>解决一个难题的时候：【耐心】很重要！【思路】也很重要！</li>
+<li>经过课后题的演练，发现自己对序列和序列的操作方法掌握还不够，肯定需要再学一遍。</li>
+</ul>
+<h2 id="26-字典之当索引不好用时1">26-字典之当索引不好用时1</h2>
+<ul>
+<li>字典：{项 = 键（key） ——  值（value）}</li>
+<li>序列：索引（index）  ——  值（value）</li>
+</ul>
+<h2 id="27-字典的内建方法">27-字典的内建方法</h2>
+<ul>
+<li>dict1.fromkeys()</li>
+<li>dict1.keys()</li>
+<li>dict1.values()</li>
+<li>dict1.items()</li>
+<li>dict1.get(key)</li>
+<li>dict1.clear()</li>
+</ul>
+<h2 id="28-集合">28-集合</h2>
+<ul>
+<li>
+<p>集合里所有的元素都是唯一的</p>
+</li>
+<li>
+<p>集合是无序的，不支持索引</p>
+</li>
+<li>
+<p>工厂函数：set()</p>
+</li>
+<li>
+<p>访问集合中的值：</p>
+<ul>
+<li>使用for  in 把集合中的数据一个个读取出来</li>
+<li>通过 in 和 not in 判断一个元素是否在集合中</li>
+</ul>
+</li>
+<li>
+<p>不可变集合：frozenset（）</p>
+</li>
+</ul>
+<h2 id="29-文件基本操作">29-文件：基本操作</h2>
+<ul>
+<li>文件格式：.exe .jpg .txt .ppt .mp4 .avi</li>
+<li>open(file, mode='r&rsquo;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</li>
+<li>文件打开模式：<strong>r   w</strong>  x  a  <strong>b  t</strong>  + U</li>
+<li>文件对象方法：<a href="https://fishc.com.cn/forum.php?mod=viewthread&amp;tid=45279&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D403">汇总方法</a>
+<ul>
+<li>注意字节和字符的区别</li>
+</ul>
+</li>
+</ul>
+<h2 id="30-文件分割文件内容并分别保存">30-文件：分割文件内容并分别保存</h2>
+<h2 id="31-文件系统模块">31-文件系统：模块</h2>
+<ul>
+<li>模块：一个包含所有你定义的函数和变量的文件。
+<ul>
+<li>后缀名是.py</li>
+<li>模块可以被别的程序引入，以使用该模块中的函数等功能</li>
+</ul>
+</li>
+</ul>
+<h2 id="32-永久存储amazing-module-pickle">32-永久存储：Amazing module pickle</h2>
+<ul>
+<li>将对象以二进制保存到一个文件中，需要的时候进行载入</li>
+<li>pickle</li>
+</ul>
+<h2 id="33-异常处理各种异常类型">33-异常处理：各种异常类型</h2>
+<h2 id="34-异常处理检测和处理">34-异常处理：检测和处理</h2>
+<ul>
+<li>try except语句：</li>
+<li>try finally语句：</li>
+<li>raise语句：</li>
+</ul>
+<h2 id="35-丰富的else语句和简洁的with语句">35-丰富的else语句和简洁的with语句</h2>
+<ul>
+<li>if  else</li>
+<li>while   else</li>
+<li>try  except else</li>
+<li>with 语句没听懂</li>
+</ul>
+<h2 id="36-easygui">36-Easygui</h2>
+<h2 id="37-类和对象介绍对象">37-类和对象：介绍对象</h2>
+<ul>
+<li>
+<p>备注：2020.03.21日重启学习</p>
+</li>
+<li>
+<p>对象是什么？对象的特征</p>
+</li>
+<li>
+<p>封装：把一堆数据扔进列表里封装起来；把一些常用的代码块打包成函数；</p>
+</li>
+<li>
+<p>对象：模拟真实世界，把数据和代码封装在一起。</p>
+</li>
+<li>
+<p>小乌龟：外形 + 动作</p>
+<ul>
+<li>外形：绿色；四条腿；10KG；有外壳；大嘴巴</li>
+<li>动作：爬、跑；咬人；吃东西；睡觉</li>
+</ul>
+</li>
+<li>
+<p>对象 = 属性（变量） + 方法（函数）</p>
+</li>
+<li>
+<p>类（Class）：使对象达到量产的效果，对象是类的一个实例（instance）</p>
+<ul>
+<li>类是图纸，根据一张图纸可以设计成千上万的房子，即实例对象</li>
+<li>类约定使用大写字母开头</li>
+</ul>
+</li>
+<li>
+<p>OO（面向对象）的3个特点：Object Oriented</p>
+<ol>
+<li>封装。封装是一种信息隐蔽技术。例如，对于一个【列表】来说，我们可以使用列表的各种方法，其实【列表】就是一个对象，我们使用的方法，我们不知道是如何具体实现的，那其实是封装的函数。</li>
+<li>继承。继承是子类自动共享父类之间数据和方法的机制</li>
+<li>多态。多态是不同对象 对 同一方法响应 不同的行动。</li>
+</ol>
+</li>
+</ul>
+<h2 id="38-类和对象面向对象编程待理解">38-类和对象：面向对象编程（待理解）</h2>
+<ul>
+<li>疑问：self到底是什么？</li>
+<li>self：类的第一个参数是隐藏的，一般都是自身self</li>
+<li>python的魔法方法：一般使用两个下划-线包围，如__init__(self)</li>
+<li>公有（public）和私有（private）
+<ul>
+<li>在变量名字前加 __就会变成私有的，私有需要从内部访问才行</li>
+<li>其实就是把变量改了名字：_Class__variable（变量名）</li>
+<li>其实是伪私有，没有设置权限，只是改了名字</li>
+</ul>
+</li>
+</ul>
+<h2 id="39-类和对象继承">39-类和对象：继承</h2>
+<ul>
+<li>
+<p>鱼类：金鱼（goldfish）、鲤鱼（carp）、三文鱼（salmon）、鲨鱼（shark）</p>
+</li>
+<li>
+<p>继承：不需要每次都定义一个新的鱼类，大部分鱼的属性和方法都是相似的。</p>
+</li>
+<li>
+<p>父类、基类、超类  ——  子类</p>
+</li>
+<li>
+<p>class DirivedClassName( BaseClassName )，例如：class Child(Parent)</p>
+</li>
+<li>
+<p>如果子类中定义与父类同名的方法或属性，则会自动覆盖父类对应的方法或属性</p>
+</li>
+<li>
+<p>调用未绑定的父类方法</p>
+</li>
+<li>
+<p>使用super函数</p>
+</li>
+<li>
+<p>多重继承：class DirivedClassName(base1, base2, base3)，应尽量避免使用它。</p>
+</li>
+</ul>
+<h2 id="40-类和对象拾遗组合">40-类和对象：拾遗、组合</h2>
+<ul>
+<li>
+<p>组合：横向的，没什么关系的类在一起</p>
+</li>
+<li>
+<p>类、类对象和实例对象</p>
+<ul>
+<li>不要试图在一个类里边 定义出所有能想到的特性和方法，应该利用继承和组合机制来进行扩展。</li>
+<li>用不同的词性命名，如属性名用名词，方法名用动词。</li>
+</ul>
+</li>
+<li>
+<p>什么是绑定？</p>
+<ul>
+<li>Python严格要求方法需要有实例才能被调用，这种限制就是Python所谓的绑定。</li>
+</ul>
+</li>
+</ul>
+<h2 id="41-类和对象一些相关的bifbuiltin">41-类和对象：一些相关的BIF（builtin)</h2>
+<ul>
+<li>issubclass(class, classinfo)：是否是子类</li>
+<li>isinstance(object, classinfo)：是否是类的实例</li>
+<li>hasattr(object, name)：attribute 属性、特征</li>
+<li>getattr(object, name[, default]</li>
+<li>setattr(object,name,value]</li>
+<li>delattr(object,name)</li>
+<li>property(fget = None, fset = None, fdel = None, doc = None)</li>
+</ul>
+<h2 id="42-魔法方法构造与析构">42-魔法方法：构造与析构</h2>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-01-13
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/python-100days/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python_100days</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/math-common-sense/">
+            <span class="next-text nav-default">数学通识</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
