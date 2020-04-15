@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
-    <lastBuildDate>Mon, 13 Apr 2020 19:30:04 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2020 13:30:04 +0800</lastBuildDate>
     
 	<atom:link href="https://vchv.tk/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>改善自己的even主题</title>
+      <link>https://vchv.tk/enhance-the-theme-even-of-hugo/</link>
+      <pubDate>Tue, 14 Apr 2020 13:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/enhance-the-theme-even-of-hugo/</guid>
+      <description>为什么是 hugo? 静态博客可以批量地渲染 .md 文件，然后发表，十分快捷。 相比动态博客（typecho 、 WordPress）及市面上常见的在一个编辑器里写</description>
+    </item>
     
     <item>
       <title>从零开始搭建一个hugo博客</title>
@@ -19,6 +28,15 @@
       
       <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
       <description>前言 有一个虚拟主机，有一个域名，缺一些静态文件，所以使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPre</description>
+    </item>
+    
+    <item>
+      <title>使用hugo和Markdown来写博客</title>
+      <link>https://vchv.tk/write-blog-by-hugo/</link>
+      <pubDate>Sun, 20 Oct 2019 14:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/write-blog-by-hugo/</guid>
+      <description>前言 梳理杂乱的思绪与生活，便签太丑，没层次，写完更乱了？你可能需要幕布了。 码字发布很简单，但如果想把文章从“A平台”移到“B平台”怎么办？你</description>
     </item>
     
   </channel>

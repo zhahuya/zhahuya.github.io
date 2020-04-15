@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Git的逻辑与基本操作 - Vchv - concise elegance powerful</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档；廖雪峰Git教程 Git是一" /><meta name="keywords" content="vchv, 个人生活, python" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.0 with theme even" />
+
+
+<link rel="canonical" href="https://vchv.tk/git-manual/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Git的逻辑与基本操作" />
+<meta property="og:description" content="前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档；廖雪峰Git教程 Git是一" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://vchv.tk/git-manual/" />
+<meta property="article:published_time" content="2019-10-25T18:30:04+08:00" />
+<meta property="article:modified_time" content="2019-10-25T18:30:04+08:00" />
+<meta itemprop="name" content="Git的逻辑与基本操作">
+<meta itemprop="description" content="前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档；廖雪峰Git教程 Git是一">
+<meta itemprop="datePublished" content="2019-10-25T18:30:04&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-25T18:30:04&#43;08:00" />
+<meta itemprop="wordCount" content="2361">
+
+
+
+<meta itemprop="keywords" content="Github,Git," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git的逻辑与基本操作"/>
+<meta name="twitter:description" content="前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档；廖雪峰Git教程 Git是一"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Git的逻辑与基本操作</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-25 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"> 技术应用 </a>
+            </div>
+          <span class="more-meta"> 约 2361 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a>
+      <ul>
+        <li><a href="#git与github">Git与GitHub</a></li>
+        <li><a href="#git的基本操作命令">Git的基本操作命令</a></li>
+        <li><a href="#hugo框架下git发文的操作">hugo框架下Git发文的操作</a></li>
+        <li><a href="#子模块git-submodule的使用">子模块（git submodule）的使用</a></li>
+        <li><a href="#qa">Q&amp;A</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+  <div class="post-outdated">
+    <div class="hint">
+      <p>【注意】最后更新于 <span class="timeago" datetime="2019-10-25T18:30:04" title="October 25, 2019">October 25, 2019</span>，文中内容可能已过时，请谨慎使用。</p>
+    </div>
+  </div>
+    <div class="post-content">
+      <h2 id="前言">前言</h2>
+<p>本文主要记录自己使用Git的经验和使用中遇到问题如何解决。</p>
+<h3 id="git与github">Git与GitHub</h3>
+<blockquote>
+<p>推荐教程：<a href="https://git-scm.com/book/zh/v2">Progit官方文档</a>；<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416">廖雪峰Git教程</a></p>
+</blockquote>
+<ul>
+<li>
+<p>Git是一种分布式版本控制系统，GitHub是它联网托管与他人分享交流的一个平台</p>
+</li>
+<li>
+<p>Git：windows系统中一个普通的文件夹git init以后，变成Git仓库。</p>
+</li>
+<li>
+<p>可以把这个Git文件夹抽象成三个空间：working directory，stage，Git repository。</p>
+</li>
+<li>
+<p>git add 命令添加到stage，git commit -m &ldquo;**&quot;，将文件正式提交到Git repository。</p>
+</li>
+<li>
+<p>GitHub：提交到Git repository中的文件，通过<code>git push</code>推送到GitHub repository中，这样就与远端仓库进行了同步。</p>
+</li>
+<li>
+<p>当我们想把远端仓库拉回来，使用git pull。</p>
+</li>
+<li>
+<p>Git中的“commit”操作，相当于给当时做了一个快照，我们可以选择回到那个状态。</p>
+</li>
+</ul>
+<h3 id="git的基本操作命令">Git的基本操作命令</h3>
+<ul>
+<li>第一步必须设置你的Git身份：name and email
+<ul>
+<li><code> git config --global user.name &quot;your name&quot;</code> //设置你的身份才能使用，&ndash;global代表全局，你也可以对某个指定仓库单独设定用户名和email地址。</li>
+<li><code>git config --global user.email &quot;email@example.com&quot;</code> //设置你的身份才能使用。</li>
+</ul>
+</li>
+<li><code>git init</code> // 创建一个名为 .git 的子目录，使本目录（directory）成为Git repository。</li>
+<li><code>git remote add origin 地址</code> // 添加远端仓库，与远端仓库建立连接。</li>
+<li><code>git remote -v</code> //verify，确认当前目录连接的远端仓库是哪一个。</li>
+<li><code>git clone +url</code> //从远端仓库下载到本地，从无到有，区别于git pull。</li>
+<li><code>git pull &lt;origin&gt; &lt;master&gt;</code> //将远端仓库拉取到本地，本地修改后，每次push前先进行git pull操作，保证push到远程仓库时没有版本冲突。<del>会产生几种情况的冲突?</del></li>
+<li><code>git add filename</code> or <code>git add .</code> //添加特定文件和添加全部文件到stage。</li>
+<li><code>git commit -m &quot;descripiton&quot;</code> // 提交到本地仓库（Git repository）并做好备注说明。<del>提交完反悔了要怎么办？</del></li>
+<li><code>git push</code> //将本地仓库（Git repository）推送到远端仓库（GitHub repository）中去。<del>会产生几种情况下的冲突</del></li>
+<li><code>git status</code> //查看基本情况</li>
+<li><code>git config --list</code> <code>git config -l</code> //查看git配置信息</li>
+<li><code>git clean -d -f</code> or <code>git clean -df</code> //可以删除未被追踪的文件（untracked file）</li>
+<li><code>git stash</code> and <code>git pull</code>and <code>git stash drop</code> ，<code>git stash list</code>  //可以将冲突的文件进行打包，pull完成后扔掉，相当于作了一次云端覆盖本地的操作。</li>
+</ul>
+<p>解决完以上的问题，还会有分支（branch）的问题，当分支和上述推送和拉取结合，又会产生什么样的化学反应，多了几个问题同时又让几个原本的问题变得简单？</p>
+<hr>
+<h3 id="hugo框架下git发文的操作">hugo框架下Git发文的操作</h3>
+<ol>
+<li>在Vnote中写作完成后，将文件放入contents中</li>
+<li>使用<code>hugo server</code>进行预览</li>
+<li>生成public文件： <code>hugo --theme=pure --baseUrl=&quot;https://zhahuya.github.io/&quot;</code></li>
+<li>在public文件夹将更新push到云端</li>
+<li>将Hugo源文件push到云端</li>
+<li>使用Git或者云盘将这一套环境（hugo+vnote）进行打包，随处使用。</li>
+</ol>
+<h3 id="子模块git-submodule的使用">子模块（git submodule）的使用</h3>
+<ul>
+<li>如果想把blog目录推送到GitHub仓库里，但是blog目录里面的主题目录其实是一个git repository，一个仓库嵌套着一个仓库，这时需要将主题目录设置为submodule</li>
+<li><a href="http://panqiincs.me/2017/08/06/hexo-blog-code-management/">添加子模块的心得</a></li>
+</ul>
+<h3 id="qa">Q&amp;A</h3>
+<ol>
+<li>Q：使用工作电脑push之后，回来另一台电脑pull，会出现untracting的问题，这个是怎么导致的？如何解决这个问题？</li>
+</ol>
+<ul>
+<li>A：可以使用<code>git clean -d -f</code>来清除这些文件。</li>
+</ul>
+<ol start="2">
+<li>Q：本地commit后，于远端仓库出现了同一处的冲突（conflict），比如远端仓库电话号码：6666，本地仓库电话号码：5555 ，如何进行科学的手动合并？能否以远端仓库为主，覆盖掉本地内容，如何操作？</li>
+</ol>
+<ul>
+<li>A：可以使用<code>git stash</code>将其暂存在栈中，pull完以后，使用<code>git stash drop</code>扔掉，可以使用<code>git stash list</code>来查看暂存栈的文件。</li>
+</ul>
+<ol start="3">
+<li>Q：为什么总是有冲突，untracking和overwritten？</li>
+</ol>
+<ul>
+<li>A：这是因为A仓库里有个B仓库，如果先pullA仓库再pullB仓库，那么B仓库会产生overwritten的问题，需要合并，因为源码已经被A拉取一次了；<br>
+如果先拉取B仓库再拉取A仓库，就会出现untracting问题，因为B仓库里产生了新文件而未被A仓库追踪。1.2.3.5问题皆是如此。<br>
+出现这种问题，可以暂时使用以上两种手段保证云端覆盖本地。<br>
+为避免这种问题，可以使用.gitignore来忽略B仓库文件夹。<br>
+想要完全疏通理解这种复杂的关系，需要更精深地学习Git的原理，更多练习实操。</li>
+</ul>
+<ol start="4">
+<li>Q：fatal: The current branch master has no upstream branch. 为什么会出现？</li>
+</ol>
+<ul>
+<li>A：这是因为本地新建了此Git仓库，在连接了远端仓库origin后，未指定分支branch。</li>
+</ul>
+<ol start="5">
+<li>Q：error: Your local changes to the following files would be overwritten by merge:……，本地的一下文件将会被git服务器上的内容覆盖。</li>
+</ol>
+<ul>
+<li>A：如果你想保留本地的修改，则使用暂存命令<code>git stash</code>，<code>git pull</code>后<code>git stash pop</code>。如果想直接覆盖，<code>git reset --hard</code>, <code>git pull origin master</code>。</li>
+</ul>
+<ol start="6">
+<li>Onedrive的同步逻辑实在是让人搞不明白，虽然比以前强了，但究竟是以本地为准；以云端为准；还是以最新时间为准增量备份？有待进一步考察。</li>
+</ol>
+<ul>
+<li>A：经过最近一段时间的使用，体验极佳，无感同步，准确度极高，导致我几乎不想去追问它的原理了，因为达到了同步达到了无感的程度。个人觉得是以文件夹最新时间为准做的备份。</li>
+</ul>
+<ol start="7">
+<li>Vnote的保存文件的逻辑也令人疑惑，为什么一个文件就是保存不了，为什么文件夹里添加一个文件就没法索引？</li>
+</ol>
+<ul>
+<li>A：第一个问题可能是自己移动文件的时候使用了剪切，已经解决了，第二个问题通过文件菜单的从外部文件新建笔记来把丢掉的笔记重新导入到当前文件夹。</li>
+</ul>
+<ol start="8">
+<li>Vnote中在别的电脑新建的笔记，同步到了新的电脑上可能出现没有被软件索引的问题。</li>
+</ol>
+<ul>
+<li>A：在文件夹区域右键点击“从磁盘中重新加载”即可。</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-10-25
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/github/">Github</a>
+          <a href="/tags/git/">Git</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/economics-about-scarce-cost-demand-and-price/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">经济学课之一（稀缺、成本、需求、价格）</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/write-blog-by-hugo/">
+            <span class="next-text nav-default">使用hugo和Markdown来写博客</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://vchv.tk/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

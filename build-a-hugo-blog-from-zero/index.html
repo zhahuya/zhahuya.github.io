@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.69.0 with theme even" />
+<meta name="generator" content="Hugo 0.67.0 with theme even" />
 
 
 <link rel="canonical" href="https://vchv.tk/build-a-hugo-blog-from-zero/" />
@@ -49,11 +49,11 @@
 <meta itemprop="description" content="前言 有一个虚拟主机，有一个域名，缺一些静态文件，所以使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPre">
 <meta itemprop="datePublished" content="2020-04-13T19:30:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-13T19:30:04&#43;08:00" />
-<meta itemprop="wordCount" content="1886">
+<meta itemprop="wordCount" content="1998">
 
 
 
-<meta itemprop="keywords" content="Hugo,github,博客," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Hugo,github,onedrive,博客," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="从零开始搭建一个hugo博客"/>
 <meta name="twitter:description" content="前言 有一个虚拟主机，有一个域名，缺一些静态文件，所以使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPre"/>
 
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"> 技术应用 </a>
             </div>
-          <span class="more-meta"> 约 1886 字 </span>
+          <span class="more-meta"> 约 1998 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
@@ -137,7 +137,7 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content always-active">
+  <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#前言">前言</a></li>
@@ -148,7 +148,12 @@
     <li><a href="#使用-git-管理-blog-文件">使用 git 管理 Blog 文件</a></li>
     <li><a href="#同步的问题">同步的问题</a>
       <ul>
-        <li></li>
+        <li>
+          <ul>
+            <li><a href="#作废创建博客添加主题调试博客">作废：创建博客，添加主题，调试博客</a></li>
+            <li><a href="#作废使用-git-管理站点文件">作废：使用 git 管理站点文件</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#将-public-里的文件上传到你的虚拟主机空间">将 public 里的文件上传到你的虚拟主机空间</a></li>
@@ -185,14 +190,29 @@
 </ul>
 <h2 id="使用-onedrive-同步站点文件">使用 onedrive 同步站点文件</h2>
 <ol>
-<li>在 onedrive 中打开 gitbash 执行：<code>hugo new site &quot;Blog Source&quot;</code></li>
-<li>下载 even 主题：<code>git clone git@github.com:olOwOlo/hugo-theme-even.git themes/even</code></li>
-<li>在主题的 exampleSite 目录下有一个 config.toml 文件，将这个 config.toml 文件复制到你的站点目录下，根据自己的需求更改即可。
+<li>
+<p>在 onedrive 中打开 gitbash 执行：<code>hugo new site &quot;Blog Source&quot;</code></p>
+</li>
+<li>
+<p>下载 even 主题：<code>git clone git@github.com:olOwOlo/hugo-theme-even.git themes/even</code></p>
+</li>
+<li>
+<p>在主题的 exampleSite 目录下有一个 config.toml 文件，将这个 config.toml 文件复制到你的站点目录下，根据自己的需求更改即可。</p>
 <blockquote>
-<p>参考官方文档：<a href="https://github.com/olOwOlo/hugo-theme-even/blob/master/README-zh.md">even 主题的使用说明</a></p>
+<p>参考官方文档：<a href="https://github.com/olOwOlo/hugo-theme-even/blob/master/README-zh.md">even 主题的使用说明</a>
+作者的教程：<a href="https://blog.olowolo.com/post/hugo-quick-start/">作者本人的详细教程</a></p>
 </blockquote>
 </li>
-<li>将文章复制到 content/post/ 下面，<code>hugo server -D</code> 进行预览。</li>
+<li>
+<p>将文章复制到 content/post/ 下面，<code>hugo server -D</code> 进行预览。</p>
+<blockquote>
+<p>意外发现：</p>
+<blockquote>
+<p>onedrive 同步的时候把.git文件也同步了，意味着就不需要 git pull，git push 来同步两个文件了。
+有个问题就是.git文件太多太琐碎，onedrive 要操作半天，除了慢一点，暂不清楚有什么坏处。</p>
+</blockquote>
+</blockquote>
+</li>
 </ol>
 <h2 id="使用-git-管理-public-文件">使用 git 管理 public 文件</h2>
 <ul>
@@ -217,8 +237,12 @@
 </ul>
 <h2 id="同步的问题">同步的问题</h2>
 <ul>
-<li>现在我们使用 Git 来同步整个网站目录（“Myblog”文件夹），这样主题 even 只能以 submodule 的形式获取和同步，public/ 则是使用 gitignore 来忽略，其实 public/ 也是一个 git 仓库。这样我不能对 even 本身有任何改动，因为到了另一台电脑上，我只能获取原本仓库的主题文件，对主题文件的改动就丢失了。不去改动原主题文件，这一点其实是 hugo 所倡导的，它的文件结构也说明了这一点。</li>
-<li>另一个思路：使用 onedrive 或“坚果云”来同步整个网站目录（”Myblog“文件夹），主题文件和 public 文件就各是各的正常的 git 仓库，这样还可以保证整个站点目录的完整性。</li>
+<li>
+<p>现在我们使用 Git 来同步整个网站目录（“Myblog”文件夹），这样主题 even 只能以 submodule 的形式获取和同步，public/ 则是使用 gitignore 来忽略，其实 public/ 也是一个 git 仓库。这样我不能对 even 本身有任何改动，因为到了另一台电脑上，我只能获取原本仓库的主题文件，对主题文件的改动就丢失了。不去改动原主题文件，这一点其实是 hugo 所倡导的，它的文件结构也说明了这一点。</p>
+</li>
+<li>
+<p>另一个思路：使用 onedrive 或“坚果云”来同步整个网站目录（”Myblog“文件夹），主题文件和 public 文件就各是各的正常的 git 仓库，这样还可以保证整个站点目录的完整性。</p>
+</li>
 </ul>
 <h4 id="作废创建博客添加主题调试博客"><del>作废：创建博客，添加主题，调试博客</del></h4>
 <ul>
@@ -306,12 +330,17 @@ git push -u origin master
       <div class="post-tags">
           <a href="/tags/hugo/">Hugo</a>
           <a href="/tags/github/">github</a>
+          <a href="/tags/onedrive/">onedrive</a>
           <a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
           </div>
       <nav class="post-nav">
-        
-        <a class="next" href="/economics-about-glossary/">
-            <span class="next-text nav-default">经济学课之五（经济学辞典）</span>
+        <a class="prev" href="/enhance-the-theme-even-of-hugo/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">改善自己的even主题</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/great-software/">
+            <span class="next-text nav-default">我在使用的软件分享</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -344,11 +373,7 @@ git push -u origin master
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="brblmdxj_1@163.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://github.com/zhahuya" class="iconfont icon-github" title="github"></a>
-  <a href="https://vchv.tk/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
+      
 
 <div class="copyright">
   <span class="power-by">

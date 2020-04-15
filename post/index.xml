@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
-    <lastBuildDate>Mon, 13 Apr 2020 19:30:04 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2020 13:30:04 +0800</lastBuildDate>
     
 	<atom:link href="https://vchv.tk/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>改善自己的even主题</title>
+      <link>https://vchv.tk/enhance-the-theme-even-of-hugo/</link>
+      <pubDate>Tue, 14 Apr 2020 13:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/enhance-the-theme-even-of-hugo/</guid>
+      <description>为什么是 hugo? 静态博客可以批量地渲染 .md 文件，然后发表，十分快捷。 相比动态博客（typecho 、 WordPress）及市面上常见的在一个编辑器里写</description>
+    </item>
     
     <item>
       <title>从零开始搭建一个hugo博客</title>
@@ -19,6 +28,60 @@
       
       <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
       <description>前言 有一个虚拟主机，有一个域名，缺一些静态文件，所以使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPre</description>
+    </item>
+    
+    <item>
+      <title>我在使用的软件分享</title>
+      <link>https://vchv.tk/great-software/</link>
+      <pubDate>Sat, 04 Apr 2020 19:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/great-software/</guid>
+      <description>前言 之前发在xx的，没有使用 Markdown 排版实在是太糟糕了，现在把它重新写一下。 这些软件的共同特点就是极其小，几乎都是5M以下，中位数可能在2M，但是</description>
+    </item>
+    
+    <item>
+      <title>心理学课之五（创造、现实）</title>
+      <link>https://vchv.tk/creative-and-reality/</link>
+      <pubDate>Mon, 30 Mar 2020 19:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/creative-and-reality/</guid>
+      <description>新知 不要轻易拿你头脑已经有的判断，套用在一个事物上，必须把头脑的判断和知识拿掉，先去深入这个事物，让判断和思考从你和这个事物的【深度关系】中</description>
+    </item>
+    
+    <item>
+      <title>心理学课之四（觉知、空间）</title>
+      <link>https://vchv.tk/aware-and-space/</link>
+      <pubDate>Sun, 01 Mar 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/aware-and-space/</guid>
+      <description>新知 我感觉内容越来越神神叨叨，主要是概念本身不清晰了、概念之间的关系不清晰了，很多都是作者的个人体验，如果没有较强的鉴别能力，看这个还是挺危</description>
+    </item>
+    
+    <item>
+      <title>心理学课之三（思维、身体、情感）</title>
+      <link>https://vchv.tk/reason-feel-spirit/</link>
+      <pubDate>Fri, 17 Jan 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/reason-feel-spirit/</guid>
+      <description>新知 讲出自己的感受，就是捧出自己的心，用心和别人交流，而不是道理。 面试：讲感受，而不仅是道理，在感受中带出完美的道理。感受的说服力排山倒海。</description>
+    </item>
+    
+    <item>
+      <title>心理学课之二（关系、动力）</title>
+      <link>https://vchv.tk/relations-and-motive/</link>
+      <pubDate>Tue, 07 Jan 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/relations-and-motive/</guid>
+      <description>新知 要成为抱持的容器，而不是拿着尺子去评判他人，如果发现别人有什么事实上的谬误，只是询问他就好，不要给别人建议，当他人的老师。 认真倾听别人的</description>
+    </item>
+    
+    <item>
+      <title>心理学课之一（命运、自我）</title>
+      <link>https://vchv.tk/destiny-and-ego-of-psychology/</link>
+      <pubDate>Thu, 02 Jan 2020 20:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/destiny-and-ego-of-psychology/</guid>
+      <description>前言 武志红老师的心理学课是得到的四大金刚课之一，一看就很有体系，很有深度，很有可学的价值，人生的打底课，现在学习累点，但为了打好底，一切都是</description>
     </item>
     
     <item>
@@ -64,6 +127,24 @@
       
       <guid>https://vchv.tk/economics-about-scarce-cost-demand-and-price/</guid>
       <description>前言 经济是一种研究资源是如何分配的学科，这必然会深刻的影响和决定政治。 人类世界的四大基本约束：东西不够；生命有限；互相依赖；需要协调。 关注作</description>
+    </item>
+    
+    <item>
+      <title>Git的逻辑与基本操作</title>
+      <link>https://vchv.tk/git-manual/</link>
+      <pubDate>Fri, 25 Oct 2019 18:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/git-manual/</guid>
+      <description>前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档；廖雪峰Git教程 Git是一</description>
+    </item>
+    
+    <item>
+      <title>使用hugo和Markdown来写博客</title>
+      <link>https://vchv.tk/write-blog-by-hugo/</link>
+      <pubDate>Sun, 20 Oct 2019 14:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/write-blog-by-hugo/</guid>
+      <description>前言 梳理杂乱的思绪与生活，便签太丑，没层次，写完更乱了？你可能需要幕布了。 码字发布很简单，但如果想把文章从“A平台”移到“B平台”怎么办？你</description>
     </item>
     
   </channel>
