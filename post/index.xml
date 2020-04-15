@@ -2,166 +2,166 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Vchv - 书写过往，让前路更清晰</title>
-    <link>https://vchv.tk/post/</link>
+    <link>https://zhahuya.github.io/post/</link>
     <description>Recent content in Posts on Vchv - 书写过往，让前路更清晰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
     <lastBuildDate>Wed, 15 Apr 2020 13:30:04 +0800</lastBuildDate>
     
-	<atom:link href="https://vchv.tk/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhahuya.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>正确使用Markdown</title>
-      <link>https://vchv.tk/use-markdown-in-a-proper-way/</link>
+      <link>https://zhahuya.github.io/use-markdown-in-a-proper-way/</link>
       <pubDate>Wed, 15 Apr 2020 13:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/use-markdown-in-a-proper-way/</guid>
+      <guid>https://zhahuya.github.io/use-markdown-in-a-proper-way/</guid>
       <description>良好的习惯 不要滥用标题，注意标题的层级关系，按顺序使用，不要跳着用；使用**来加粗文段，而不是使用标题。总之，一定要慎重地使用标题标签。 个别</description>
     </item>
     
     <item>
       <title>改善自己的even主题</title>
-      <link>https://vchv.tk/enhance-the-theme-even-of-hugo/</link>
+      <link>https://zhahuya.github.io/enhance-the-theme-even-of-hugo/</link>
       <pubDate>Tue, 14 Apr 2020 13:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/enhance-the-theme-even-of-hugo/</guid>
+      <guid>https://zhahuya.github.io/enhance-the-theme-even-of-hugo/</guid>
       <description>为什么是 hugo? 静态博客可以批量地渲染 .md 文件，然后发表，十分快捷。 相比动态博客（typecho 、 WordPress）及市面上常见的在一个编辑器里写</description>
     </item>
     
     <item>
       <title>从零开始搭建一个hugo博客</title>
-      <link>https://vchv.tk/build-a-hugo-blog-from-zero/</link>
+      <link>https://zhahuya.github.io/build-a-hugo-blog-from-zero/</link>
       <pubDate>Mon, 13 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
+      <guid>https://zhahuya.github.io/build-a-hugo-blog-from-zero/</guid>
       <description>前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发</description>
     </item>
     
     <item>
       <title>我在使用的软件分享</title>
-      <link>https://vchv.tk/great-software/</link>
+      <link>https://zhahuya.github.io/great-software/</link>
       <pubDate>Sat, 04 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/great-software/</guid>
+      <guid>https://zhahuya.github.io/great-software/</guid>
       <description>前言 之前发在xx的，没有使用 Markdown 排版实在是太糟糕了，现在把它重新写一下。 这些软件的共同特点就是极其小，几乎都是5M以下，中位数可能在2M，但是</description>
     </item>
     
     <item>
       <title>test for gitinfo</title>
-      <link>https://vchv.tk/test-for-gitinfo/</link>
+      <link>https://zhahuya.github.io/test-for-gitinfo/</link>
       <pubDate>Mon, 30 Mar 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/test-for-gitinfo/</guid>
+      <guid>https://zhahuya.github.io/test-for-gitinfo/</guid>
       <description>this file is for test the gitinfo 执行命令 git config core.quotepath false</description>
     </item>
     
     <item>
       <title>心理学课之五（创造、现实）</title>
-      <link>https://vchv.tk/creative-and-reality/</link>
+      <link>https://zhahuya.github.io/creative-and-reality/</link>
       <pubDate>Mon, 30 Mar 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/creative-and-reality/</guid>
+      <guid>https://zhahuya.github.io/creative-and-reality/</guid>
       <description>新知 不要轻易拿你头脑已经有的判断，套用在一个事物上，必须把头脑的判断和知识拿掉，先去深入这个事物，让判断和思考从你和这个事物的【深度关系】中</description>
     </item>
     
     <item>
       <title>心理学课之四（觉知、空间）</title>
-      <link>https://vchv.tk/aware-and-space/</link>
+      <link>https://zhahuya.github.io/aware-and-space/</link>
       <pubDate>Sun, 01 Mar 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/aware-and-space/</guid>
+      <guid>https://zhahuya.github.io/aware-and-space/</guid>
       <description>新知 我感觉内容越来越神神叨叨，主要是概念本身不清晰了、概念之间的关系不清晰了，很多都是作者的个人体验，如果没有较强的鉴别能力，看这个还是挺危</description>
     </item>
     
     <item>
       <title>心理学课之三（思维、身体、情感）</title>
-      <link>https://vchv.tk/reason-feel-spirit/</link>
+      <link>https://zhahuya.github.io/reason-feel-spirit/</link>
       <pubDate>Fri, 17 Jan 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/reason-feel-spirit/</guid>
+      <guid>https://zhahuya.github.io/reason-feel-spirit/</guid>
       <description>新知 讲出自己的感受，就是捧出自己的心，用心和别人交流，而不是道理。 面试：讲感受，而不仅是道理，在感受中带出完美的道理。感受的说服力排山倒海。</description>
     </item>
     
     <item>
       <title>心理学课之二（关系、动力）</title>
-      <link>https://vchv.tk/relations-and-motive/</link>
+      <link>https://zhahuya.github.io/relations-and-motive/</link>
       <pubDate>Tue, 07 Jan 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/relations-and-motive/</guid>
+      <guid>https://zhahuya.github.io/relations-and-motive/</guid>
       <description>新知 要成为抱持的容器，而不是拿着尺子去评判他人，如果发现别人有什么事实上的谬误，只是询问他就好，不要给别人建议，当他人的老师。 认真倾听别人的</description>
     </item>
     
     <item>
       <title>心理学课之一（命运、自我）</title>
-      <link>https://vchv.tk/destiny-and-ego-of-psychology/</link>
+      <link>https://zhahuya.github.io/destiny-and-ego-of-psychology/</link>
       <pubDate>Thu, 02 Jan 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/destiny-and-ego-of-psychology/</guid>
+      <guid>https://zhahuya.github.io/destiny-and-ego-of-psychology/</guid>
       <description>前言 武志红老师的心理学课是得到的四大金刚课之一，一看就很有体系，很有深度，很有可学的价值，人生的打底课，现在学习累点，但为了打好底，一切都是</description>
     </item>
     
     <item>
       <title>经济学课之五（经济学辞典）</title>
-      <link>https://vchv.tk/economics-about-glossary/</link>
+      <link>https://zhahuya.github.io/economics-about-glossary/</link>
       <pubDate>Sun, 22 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-glossary/</guid>
+      <guid>https://zhahuya.github.io/economics-about-glossary/</guid>
       <description>前言 有记录的时间已经达到了46小时，Amazing！ 一个统领前面的章节，加油搞定吧ヾ(๑╹◡╹)ﾉ&amp;rdquo; 东西不够 哪怕物质的总量不发生</description>
     </item>
     
     <item>
       <title>经济学课之四（经济学家、经济学的应用）</title>
-      <link>https://vchv.tk/economics-about-economists-and-attribution/</link>
+      <link>https://zhahuya.github.io/economics-about-economists-and-attribution/</link>
       <pubDate>Tue, 17 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-economists-and-attribution/</guid>
+      <guid>https://zhahuya.github.io/economics-about-economists-and-attribution/</guid>
       <description>前言 认识凯恩斯、哈耶克、弗里德曼、阿尔钦、科斯等经济学大家。 新概念新收获 相关性与因果性 事与愿违的政策让我重新思考我自身的主观能动性，经济学全</description>
     </item>
     
     <item>
       <title>经济学课之三（宏观经济学、公共选择）</title>
-      <link>https://vchv.tk/economics-about-macroeconomics-public-chooses/</link>
+      <link>https://zhahuya.github.io/economics-about-macroeconomics-public-chooses/</link>
       <pubDate>Sun, 15 Dec 2019 06:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-macroeconomics-public-chooses/</guid>
+      <guid>https://zhahuya.github.io/economics-about-macroeconomics-public-chooses/</guid>
       <description>新概念新收获 公平与效率的辨析 宏观经济学 033-钞票和选票哪个重要？ 小心思和大现象-宏观经济学为何难？ 货币的起源 商业银行创造货币 中央银行的作用</description>
     </item>
     
     <item>
       <title>经济学课之二（权利、时间、分工、信任）</title>
-      <link>https://vchv.tk/economics-about-rights-time-and-trust/</link>
+      <link>https://zhahuya.github.io/economics-about-rights-time-and-trust/</link>
       <pubDate>Sun, 08 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-rights-time-and-trust/</guid>
+      <guid>https://zhahuya.github.io/economics-about-rights-time-and-trust/</guid>
       <description>新概念新收获 集体所有制、私有制、公有制的优劣之分。 共用品和私用品的区别。 使用光谱来分析事情，不再去寻找一种确定的真理，而是看现实的复杂性。 错</description>
     </item>
     
     <item>
       <title>经济学课之一（稀缺、成本、需求、价格）</title>
-      <link>https://vchv.tk/economics-about-scarce-cost-demand-and-price/</link>
+      <link>https://zhahuya.github.io/economics-about-scarce-cost-demand-and-price/</link>
       <pubDate>Tue, 03 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-scarce-cost-demand-and-price/</guid>
+      <guid>https://zhahuya.github.io/economics-about-scarce-cost-demand-and-price/</guid>
       <description>前言 经济是一种研究资源是如何分配的学科，这必然会深刻的影响和决定政治。 人类世界的四大基本约束：东西不够；生命有限；互相依赖；需要协调。 关注作</description>
     </item>
     
     <item>
       <title>Git的逻辑与基本操作</title>
-      <link>https://vchv.tk/git-manual/</link>
+      <link>https://zhahuya.github.io/git-manual/</link>
       <pubDate>Fri, 25 Oct 2019 18:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/git-manual/</guid>
+      <guid>https://zhahuya.github.io/git-manual/</guid>
       <description>前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档； 廖雪峰Git教程 Git是一</description>
     </item>
     
     <item>
       <title>使用hugo和Markdown来写博客</title>
-      <link>https://vchv.tk/write-blog-by-hugo/</link>
+      <link>https://zhahuya.github.io/write-blog-by-hugo/</link>
       <pubDate>Sun, 20 Oct 2019 14:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/write-blog-by-hugo/</guid>
+      <guid>https://zhahuya.github.io/write-blog-by-hugo/</guid>
       <description>前言 梳理杂乱的思绪与生活，便签太丑，没层次，写完更乱了？你可能需要幕布了。 码字发布很简单，但如果想把文章从“A平台”移到“B平台”怎么办？你</description>
     </item>
     

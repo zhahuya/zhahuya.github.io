@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>现实 on Vchv - 书写过往，让前路更清晰</title>
-    <link>https://vchv.tk/tags/%E7%8E%B0%E5%AE%9E/</link>
+    <link>https://zhahuya.github.io/tags/%E7%8E%B0%E5%AE%9E/</link>
     <description>Recent content in 现实 on Vchv - 书写过往，让前路更清晰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
     <lastBuildDate>Mon, 30 Mar 2020 19:30:04 +0800</lastBuildDate>
     
-	<atom:link href="https://vchv.tk/tags/%E7%8E%B0%E5%AE%9E/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhahuya.github.io/tags/%E7%8E%B0%E5%AE%9E/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>test for gitinfo</title>
-      <link>https://vchv.tk/test-for-gitinfo/</link>
+      <link>https://zhahuya.github.io/test-for-gitinfo/</link>
       <pubDate>Mon, 30 Mar 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/test-for-gitinfo/</guid>
+      <guid>https://zhahuya.github.io/test-for-gitinfo/</guid>
       <description>this file is for test the gitinfo 执行命令 git config core.quotepath false</description>
     </item>
     
     <item>
       <title>心理学课之五（创造、现实）</title>
-      <link>https://vchv.tk/creative-and-reality/</link>
+      <link>https://zhahuya.github.io/creative-and-reality/</link>
       <pubDate>Mon, 30 Mar 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/creative-and-reality/</guid>
+      <guid>https://zhahuya.github.io/creative-and-reality/</guid>
       <description>新知 不要轻易拿你头脑已经有的判断，套用在一个事物上，必须把头脑的判断和知识拿掉，先去深入这个事物，让判断和思考从你和这个事物的【深度关系】中</description>
     </item>
     

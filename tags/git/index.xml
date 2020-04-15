@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Vchv - 书写过往，让前路更清晰</title>
-    <link>https://vchv.tk/tags/git/</link>
+    <link>https://zhahuya.github.io/tags/git/</link>
     <description>Recent content in Git on Vchv - 书写过往，让前路更清晰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
     <lastBuildDate>Mon, 13 Apr 2020 19:30:04 +0800</lastBuildDate>
     
-	<atom:link href="https://vchv.tk/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhahuya.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git的逻辑与基本操作</title>
-      <link>https://vchv.tk/git-manual/</link>
+      <link>https://zhahuya.github.io/git-manual/</link>
       <pubDate>Fri, 25 Oct 2019 18:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/git-manual/</guid>
+      <guid>https://zhahuya.github.io/git-manual/</guid>
       <description>前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档； 廖雪峰Git教程 Git是一</description>
     </item>
     

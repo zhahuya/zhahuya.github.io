@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on Vchv - 书写过往，让前路更清晰</title>
-    <link>https://vchv.tk/tags/github/</link>
+    <link>https://zhahuya.github.io/tags/github/</link>
     <description>Recent content in Github on Vchv - 书写过往，让前路更清晰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
     <lastBuildDate>Mon, 13 Apr 2020 19:30:04 +0800</lastBuildDate>
     
-	<atom:link href="https://vchv.tk/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhahuya.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>从零开始搭建一个hugo博客</title>
-      <link>https://vchv.tk/build-a-hugo-blog-from-zero/</link>
+      <link>https://zhahuya.github.io/build-a-hugo-blog-from-zero/</link>
       <pubDate>Mon, 13 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
+      <guid>https://zhahuya.github.io/build-a-hugo-blog-from-zero/</guid>
       <description>前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发</description>
     </item>
     
     <item>
       <title>Git的逻辑与基本操作</title>
-      <link>https://vchv.tk/git-manual/</link>
+      <link>https://zhahuya.github.io/git-manual/</link>
       <pubDate>Fri, 25 Oct 2019 18:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/git-manual/</guid>
+      <guid>https://zhahuya.github.io/git-manual/</guid>
       <description>前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档； 廖雪峰Git教程 Git是一</description>
     </item>
     
     <item>
       <title>使用hugo和Markdown来写博客</title>
-      <link>https://vchv.tk/write-blog-by-hugo/</link>
+      <link>https://zhahuya.github.io/write-blog-by-hugo/</link>
       <pubDate>Sun, 20 Oct 2019 14:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/write-blog-by-hugo/</guid>
+      <guid>https://zhahuya.github.io/write-blog-by-hugo/</guid>
       <description>前言 梳理杂乱的思绪与生活，便签太丑，没层次，写完更乱了？你可能需要幕布了。 码字发布很简单，但如果想把文章从“A平台”移到“B平台”怎么办？你</description>
     </item>
     
