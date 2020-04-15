@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技术应用 on Vchv - concise elegance powerful</title>
+    <title>技术应用 on Vchv - 书写过往，让前路更清晰</title>
     <link>https://vchv.tk/categories/%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/</link>
-    <description>Recent content in 技术应用 on Vchv - concise elegance powerful</description>
+    <description>Recent content in 技术应用 on Vchv - 书写过往，让前路更清晰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
@@ -36,7 +36,7 @@
       <pubDate>Mon, 13 Apr 2020 19:30:04 +0800</pubDate>
       
       <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
-      <description>前言 有一个虚拟主机，有一个域名，缺一些静态文件，所以使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPre</description>
+      <description>前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@
       <pubDate>Fri, 25 Oct 2019 18:30:04 +0800</pubDate>
       
       <guid>https://vchv.tk/git-manual/</guid>
-      <description>前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档；廖雪峰Git教程 Git是一</description>
+      <description>前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档； 廖雪峰Git教程 Git是一</description>
     </item>
     
     <item>

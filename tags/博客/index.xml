@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>博客 on Vchv - concise elegance powerful</title>
+    <title>博客 on Vchv - 书写过往，让前路更清晰</title>
     <link>https://vchv.tk/tags/%E5%8D%9A%E5%AE%A2/</link>
-    <description>Recent content in 博客 on Vchv - concise elegance powerful</description>
+    <description>Recent content in 博客 on Vchv - 书写过往，让前路更清晰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Mon, 13 Apr 2020 19:30:04 +0800</pubDate>
       
       <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
-      <description>前言 有一个虚拟主机，有一个域名，缺一些静态文件，所以使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPre</description>
+      <description>前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发</description>
     </item>
     
   </channel>

@@ -3,7 +3,7 @@
   
   <url>
     <loc>https://vchv.tk/categories/</loc>
-    <lastmod>2020-04-15T13:30:04+08:00</lastmod>
+    <lastmod>2020-04-15T19:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -17,14 +17,14 @@
   
   <url>
     <loc>https://vchv.tk/post/</loc>
-    <lastmod>2020-04-15T13:30:04+08:00</lastmod>
+    <lastmod>2020-04-15T19:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/tags/</loc>
-    <lastmod>2020-04-15T13:30:04+08:00</lastmod>
+    <lastmod>2020-04-15T19:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -129,14 +129,14 @@
   
   <url>
     <loc>https://vchv.tk/categories/%E5%BF%83%E7%90%86%E5%AD%A6/</loc>
-    <lastmod>2020-03-30T19:30:04+08:00</lastmod>
+    <lastmod>2020-04-15T19:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/tags/%E5%BF%83%E7%90%86%E5%AD%A6%E8%AF%BE/</loc>
-    <lastmod>2020-03-30T19:30:04+08:00</lastmod>
+    <lastmod>2020-04-15T19:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -157,28 +157,28 @@
   
   <url>
     <loc>https://vchv.tk/aware-and-space/</loc>
-    <lastmod>2020-03-01T20:30:04+08:00</lastmod>
+    <lastmod>2020-04-15T19:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/tags/%E6%BD%9C%E6%84%8F%E8%AF%86/</loc>
-    <lastmod>2020-03-01T20:30:04+08:00</lastmod>
+    <lastmod>2020-04-15T19:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/tags/%E7%A9%BA%E9%97%B4/</loc>
-    <lastmod>2020-03-01T20:30:04+08:00</lastmod>
+    <lastmod>2020-04-15T19:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/tags/%E8%A7%89%E7%9F%A5/</loc>
-    <lastmod>2020-03-01T20:30:04+08:00</lastmod>
+    <lastmod>2020-04-15T19:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
