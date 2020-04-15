@@ -49,7 +49,7 @@
 <meta itemprop="description" content="前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档；廖雪峰Git教程 Git是一">
 <meta itemprop="datePublished" content="2019-10-25T18:30:04&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-25T18:30:04&#43;08:00" />
-<meta itemprop="wordCount" content="2361">
+<meta itemprop="wordCount" content="2376">
 
 
 
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"> 技术应用 </a>
             </div>
-          <span class="more-meta"> 约 2361 字 </span>
+          <span class="more-meta"> 约 2376 字 </span>
           <span class="more-meta"> 预计阅读 5 分钟 </span>
         
       </div>
@@ -137,7 +137,7 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content">
+  <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#前言">前言</a>
@@ -198,6 +198,7 @@
 </li>
 <li><code>git init</code> // 创建一个名为 .git 的子目录，使本目录（directory）成为Git repository。</li>
 <li><code>git remote add origin 地址</code> // 添加远端仓库，与远端仓库建立连接。</li>
+<li><code>git remote remove origin</code>  // 取消关联的远端仓库。</li>
 <li><code>git remote -v</code> //verify，确认当前目录连接的远端仓库是哪一个。</li>
 <li><code>git clone +url</code> //从远端仓库下载到本地，从无到有，区别于git pull。</li>
 <li><code>git pull &lt;origin&gt; &lt;master&gt;</code> //将远端仓库拉取到本地，本地修改后，每次push前先进行git pull操作，保证push到远程仓库时没有版本冲突。<del>会产生几种情况的冲突?</del></li>

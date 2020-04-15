@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>正确使用Markdown</title>
+      <link>https://vchv.tk/use-markdown-in-a-proper-way/</link>
+      <pubDate>Wed, 15 Apr 2020 13:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/use-markdown-in-a-proper-way/</guid>
+      <description>良好的习惯 不要滥用标题，注意标题的层级关系，按顺序使用，不要跳着用；使用**来加粗文段，而不是使用标题。总之，一定要慎重地使用标题标签。 个别</description>
+    </item>
+    
+    <item>
       <title>改善自己的even主题</title>
       <link>https://vchv.tk/enhance-the-theme-even-of-hugo/</link>
       <pubDate>Tue, 14 Apr 2020 13:30:04 +0800</pubDate>
