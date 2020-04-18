@@ -49,7 +49,7 @@
 <meta itemprop="description" content="前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发">
 <meta itemprop="datePublished" content="2020-04-13T19:30:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-15T21:23:28&#43;08:00" />
-<meta itemprop="wordCount" content="2209">
+<meta itemprop="wordCount" content="2363">
 
 
 
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF/"> 应用技术 </a>
             </div>
-          <span class="more-meta"> 约 2209 字 </span>
+          <span class="more-meta"> 约 2363 字 </span>
           <span class="more-meta"> 预计阅读 5 分钟 </span>
         
       </div>
@@ -159,6 +159,7 @@
       </ul>
     </li>
     <li><a href="#日常操作">日常操作</a></li>
+    <li><a href="#使用腾讯云静态网站托管发布网页">使用腾讯云静态网站托管发布网页</a></li>
     <li><a href="#将-public-里的文件上传到你的虚拟主机空间">将 public 里的文件上传到你的虚拟主机空间</a></li>
     <li><a href="#解析你的域名到你的虚拟主机">解析你的域名到你的虚拟主机</a></li>
     <li><a href="#后记">后记</a></li>
@@ -356,6 +357,17 @@ You may add the following settings to your config.toml.</p>
 <li>将站点文件 push 到云端</li>
 <li>将 public/ 文件 push 到云端</li>
 <li>对 even 的改动使用 onedrive 单独保存</li>
+</ol>
+<h2 id="使用腾讯云静态网站托管发布网页">使用腾讯云静态网站托管发布网页</h2>
+<ol>
+<li>开通你的云环境</li>
+<li>安装 cloudbase cli：<code>npm install -g @cloudbase/cli</code>，你应该先安装node.js，如果你切换了源，那么应该使用<code>cnpm install -g @cloudbase/cli</code>，cli 是 command-line interface 的缩写。</li>
+<li>登陆：<code>tcb login</code></li>
+<li>将你的网站文件部署到云端：<code>cloudbase hosting:deploy ./public e EnvID</code>
+<blockquote>
+<p>参考腾讯文档：<a href="https://cloud.tencent.com/document/product/1210/43389">静态托管部署</a></p>
+</blockquote>
+</li>
 </ol>
 <h2 id="将-public-里的文件上传到你的虚拟主机空间">将 public 里的文件上传到你的虚拟主机空间</h2>
 <h2 id="解析你的域名到你的虚拟主机">解析你的域名到你的虚拟主机</h2>
