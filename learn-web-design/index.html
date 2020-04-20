@@ -35,7 +35,7 @@
 
 
 
-<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="https://vchv.tk/sass/main.min.e1f2e845aca7f3202ba8ad4df5ba9fe1b4b79dd9e9a72a2231e5b8d83e6706ff.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -44,12 +44,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://vchv.tk/learn-web-design/" />
 <meta property="article:published_time" content="2020-04-05T19:30:04+08:00" />
-<meta property="article:modified_time" content="2020-04-16T23:02:34+08:00" />
+<meta property="article:modified_time" content="2020-04-19T00:28:06+08:00" />
 <meta itemprop="name" content="【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）">
 <meta itemprop="description" content="前言 根据我在上一个《大前端学习（HTML&#43;CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。 新知 demo.fishc.com HTML5 and CSS 文档 HTML：Hyp">
 <meta itemprop="datePublished" content="2020-04-05T19:30:04&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-16T23:02:34&#43;08:00" />
-<meta itemprop="wordCount" content="4023">
+<meta itemprop="dateModified" content="2020-04-19T00:28:06&#43;08:00" />
+<meta itemprop="wordCount" content="4371">
 
 
 
@@ -83,7 +83,7 @@
     <a href="/">
         <li class="mobile-menu-item">主页</li>
       </a><a href="/post/">
-        <li class="mobile-menu-item">归档</li>
+        <li class="mobile-menu-item">文章</li>
       </a><a href="/tags/">
         <li class="mobile-menu-item">标签</li>
       </a><a href="/categories/">
@@ -104,7 +104,7 @@
     <li class="menu-item">
         <a class="menu-item-link" href="/">主页</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">归档</a>
+        <a class="menu-item-link" href="/post/">文章</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tags/">标签</a>
       </li><li class="menu-item">
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
             </div>
-          <span class="more-meta"> 约 4023 字 </span>
+          <span class="more-meta"> 约 4371 字 </span>
           <span class="more-meta"> 预计阅读 9 分钟 </span>
         
       </div>
@@ -158,6 +158,9 @@
     <li><a href="#1415-数据就应该整整齐齐表格">14、15-数据就应该整整齐齐（表格）</a></li>
     <li><a href="#16-你说hello-我说hei表单">16-你说hello 我说hei（表单）</a></li>
     <li><a href="#17-一二三木头人表单">17-一二三木头人（表单）</a></li>
+    <li><a href="#31-鸟枪换大炮vscode">31-鸟枪换大炮（VScode)</a></li>
+    <li><a href="#32-男人的加油站女人的美容院css">32-男人的加油站女人的美容院（CSS）</a></li>
+    <li><a href="#33-朋友你会-ollie-吗精准定位元素">33-朋友，你会 Ollie 吗？（精准定位元素）</a></li>
   </ul>
 </nav>
   </div>
@@ -324,21 +327,21 @@
 <h2 id="11-引用大作战格式化">11-引用大作战（格式化）</h2>
 <ul>
 <li>
-<p>q 元素 简单的行内引用：q   <!-- raw HTML omitted -->什么表现，一个引用啦！<!-- raw HTML omitted --></p>
+<p>q 元素 简单的行内引用：q   <q>什么表现，一个引用啦！</q></p>
 </li>
 <li>
-<p>blockquote 元素 块状引用：<!-- raw HTML omitted -->只是
+<p>blockquote 元素 块状引用：<blockquote>只是
 整体加了一个<br>
-缩进而已啦<!-- raw HTML omitted --></p>
+缩进而已啦</blockquote></p>
 </li>
 <li>
 <p>cite 元素：书籍、歌曲、电视等作品的标题</p>
 </li>
 <li>
-<p>abbr 元素：abbreviation <!-- raw HTML omitted -->缩写<!-- raw HTML omitted --></p>
+<p>abbr 元素：abbreviation <abbr title="这就是我的全称">缩写</abbr></p>
 </li>
 <li>
-<p>dfn 元素：define  表现定义中的术语。<!-- raw HTML omitted -->HTML<!-- raw HTML omitted -->就是一个术语。</p>
+<p>dfn 元素：define  表现定义中的术语。<dfn>HTML</dfn>就是一个术语。</p>
 <ul>
 <li>术语又称技术名词，是在特定专业领域中一般概念的词语指称，一个术语表示一个概念。</li>
 </ul>
@@ -347,7 +350,7 @@
 <p>address 元素：会变斜</p>
 </li>
 <li>
-<p>ruby rt rp 元素：<!-- raw HTML omitted -->注<!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->zhù<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->音<!-- raw HTML omitted -->yīn<!-- raw HTML omitted --><!-- raw HTML omitted -->。</p>
+<p>ruby rt rp 元素：<ruby>注<rp>(</rp><rt>zhù</rt><rp>)</rp></ruby><ruby>音<rt>yīn</rt></ruby>。</p>
 <ul>
 <li>rt 元素用来标记注音符号，rp 元素用来标记当浏览器不支持时所显示的内容。</li>
 </ul>
@@ -359,22 +362,22 @@
 <h2 id="12-格式化大比拼格式化">12-格式化大比拼（格式化）</h2>
 <ul>
 <li>
-<p>strong 元素：<code>&lt;strong&gt;表示强调&lt;/strong&gt;</code>， 语义：表强调，eg：<!-- raw HTML omitted -->加粗<!-- raw HTML omitted --></p>
+<p>strong 元素：<code>&lt;strong&gt;表示强调&lt;/strong&gt;</code>， 语义：表强调，eg：<strong>加粗</strong></p>
 </li>
 <li>
-<p>b 元素（bolder）：<!-- raw HTML omitted -->只是变粗了而已，无语义<!-- raw HTML omitted -->，建议使用 CSS 样式来实现效果而非b。</p>
+<p>b 元素（bolder）：<b>只是变粗了而已，无语义</b>，建议使用 CSS 样式来实现效果而非b。</p>
 </li>
 <li>
-<p>en 元素：<code>&lt;em&gt;表示强调&lt;/em&gt;</code>，语义：表强调，eg：<!-- raw HTML omitted -->斜体<!-- raw HTML omitted --></p>
+<p>en 元素：<code>&lt;em&gt;表示强调&lt;/em&gt;</code>，语义：表强调，eg：<em>斜体</em></p>
 </li>
 <li>
-<p>i 元素（italic）：<!-- raw HTML omitted -->只是变斜了而已，无语义<!-- raw HTML omitted -->，建议使用 CSS 样式来实现效果而非i。</p>
+<p>i 元素（italic）：<i>只是变斜了而已，无语义</i>，建议使用 CSS 样式来实现效果而非i。</p>
 </li>
 <li>
-<p>del 元素（delete）：删除线  eg：<!-- raw HTML omitted -->就是这个样子啦<!-- raw HTML omitted --></p>
+<p>del 元素（delete）：删除线  eg：<del>就是这个样子啦</del></p>
 </li>
 <li>
-<p>ins 元素（insert）：下横线  eg：<!-- raw HTML omitted -->就是这个样子啦<!-- raw HTML omitted --></p>
+<p>ins 元素（insert）：下横线  eg：<ins>就是这个样子啦</ins></p>
 </li>
 <li>
 <p>s 元素：样式为删除线，<code>&lt;s&gt;语义：表示那些不正确的内容&lt;/s&gt;</code> eg：</p>
@@ -383,16 +386,16 @@
 <p>u 元素：样式为下横线，<code>&lt;u&gt;语义：表示拼写错误的单词或者汉语中的专有名词&lt;/u&gt;</code>eg：</p>
 </li>
 <li>
-<p>mark 元素：<code>&lt;mark&gt;样式为荧光笔画起来那个样子&lt;/mark&gt;</code> eg：<!-- raw HTML omitted -->我是什么颜色？<!-- raw HTML omitted --></p>
+<p>mark 元素：<code>&lt;mark&gt;样式为荧光笔画起来那个样子&lt;/mark&gt;</code> eg：<mark>我是什么颜色？</mark></p>
 </li>
 <li>
-<p>sup 元素：<code>上标&lt;sup&gt;1&lt;/sup&gt;</code>  eg：请看右上角<!-- raw HTML omitted -->1<!-- raw HTML omitted --></p>
+<p>sup 元素：<code>上标&lt;sup&gt;1&lt;/sup&gt;</code>  eg：请看右上角<sup>1</sup></p>
 </li>
 <li>
-<p>sub 元素：<code>下标&lt;sub&gt;2&lt;/sub&gt;</code>eg：H<!-- raw HTML omitted -->2<!-- raw HTML omitted -->O</p>
+<p>sub 元素：<code>下标&lt;sub&gt;2&lt;/sub&gt;</code>eg：H<sub>2</sub>O</p>
 </li>
 <li>
-<p>small 元素：<code>让内容变小&lt;small&gt;本活动最终解释权归XXX所有&lt;/small&gt;</code>eg：<!-- raw HTML omitted -->本活动最终解释权归XXX所有<!-- raw HTML omitted --></p>
+<p>small 元素：<code>让内容变小&lt;small&gt;本活动最终解释权归XXX所有&lt;/small&gt;</code>eg：<small>本活动最终解释权归XXX所有</small></p>
 </li>
 </ul>
 <h2 id="13-被安排的明明白白列表">13-被安排的明明白白（列表）</h2>
@@ -644,6 +647,47 @@
 </div>
 </div><h2 id="16-你说hello-我说hei表单">16-你说hello 我说hei（表单）</h2>
 <h2 id="17-一二三木头人表单">17-一二三木头人（表单）</h2>
+<h2 id="31-鸟枪换大炮vscode">31-鸟枪换大炮（VScode)</h2>
+<ul>
+<li>Vscode 的下载安装，设置中文语言，<code>ctrl + shift + P 输入 config</code></li>
+<li>安装 <code>live server</code> 插件，实时显示网页</li>
+<li>emmet，<code>ul&gt;li*5</code> 批量生成标签<a href="https://fishc.com.cn/forum.php?mod=viewthread&amp;tid=142330&amp;extra=page%3D1%26filter%3Dtypeid%26typeid%3D731">Emmet 语法规则</a></li>
+</ul>
+<h2 id="32-男人的加油站女人的美容院css">32-男人的加油站女人的美容院（CSS）</h2>
+<ul>
+<li>
+<p>CSS 语法：P  {color:red; font-size:14px}</p>
+</li>
+<li>
+<p>![](_v_images/20200420180951986_27636.png =325x)</p>
+</li>
+<li>
+<p>如何在网页中插入 CSS 样式表？</p>
+<ol>
+<li>内联样式（Inline Style)：灵活性强，但是很麻烦，每个位置都要写。</li>
+<li>内部样式表（Internal Style Sheet）：还是麻烦，一个网站1000个页面都是同样的风格，还刷要写很多遍。</li>
+<li>外部样式表（External Style Sheet）：link 外部样式表</li>
+</ol>
+</li>
+<li>
+<p>CSS 没有限制空格的使用；CSS对字母大小写是不敏感的。</p>
+</li>
+<li>
+<p>样式的优先级：内联样式 &gt; 内部样式表 &gt; 外部样式表</p>
+</li>
+</ul>
+<h2 id="33-朋友你会-ollie-吗精准定位元素">33-朋友，你会 Ollie 吗？（精准定位元素）</h2>
+<ul>
+<li>CSS 选择器：
+<ol>
+<li>基本选择器</li>
+<li>复合选择器</li>
+<li>伪类选择器</li>
+<li>伪元素选择器</li>
+<li>属性选择器</li>
+</ol>
+</li>
+</ul>
 
     </div>
 
@@ -655,8 +699,8 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2020-04-16
-        <a href="#ZgotmplZ/commit/9c5329d69d316f03533b11479f739c10eb378dd2" title="test for gitinfo">(9c5329d)</a>
+        2020-04-19
+        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/054122112649748a413aac56d568c75f1f3e2466" title="update the webdesign and psychology">(0541221)</a>
     </span>
   </p>
   
