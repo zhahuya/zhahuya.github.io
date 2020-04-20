@@ -3,7 +3,11 @@
   
   <url>
     <loc>https://vchv.tk/categories/</loc>
+<<<<<<< HEAD
     <lastmod>2020-04-19T00:28:06+08:00</lastmod>
+=======
+    <lastmod>2020-04-16T23:02:34+08:00</lastmod>
+>>>>>>> c725846d465359721ca407064c82e15ce7921b99
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -17,21 +21,33 @@
   
   <url>
     <loc>https://vchv.tk/post/</loc>
+<<<<<<< HEAD
     <lastmod>2020-04-19T00:28:06+08:00</lastmod>
+=======
+    <lastmod>2020-04-16T23:02:34+08:00</lastmod>
+>>>>>>> c725846d465359721ca407064c82e15ce7921b99
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/tags/</loc>
+<<<<<<< HEAD
     <lastmod>2020-04-19T00:28:06+08:00</lastmod>
+=======
+    <lastmod>2020-04-16T23:02:34+08:00</lastmod>
+>>>>>>> c725846d465359721ca407064c82e15ce7921b99
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/categories/%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF/</loc>
+<<<<<<< HEAD
     <lastmod>2020-04-19T00:28:06+08:00</lastmod>
+=======
+    <lastmod>2020-04-16T23:02:34+08:00</lastmod>
+>>>>>>> c725846d465359721ca407064c82e15ce7921b99
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -94,35 +110,55 @@
   
   <url>
     <loc>https://vchv.tk/tags/css/</loc>
+<<<<<<< HEAD
     <lastmod>2020-04-19T00:28:06+08:00</lastmod>
+=======
+    <lastmod>2020-04-16T23:02:34+08:00</lastmod>
+>>>>>>> c725846d465359721ca407064c82e15ce7921b99
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/tags/html/</loc>
+<<<<<<< HEAD
     <lastmod>2020-04-19T00:28:06+08:00</lastmod>
+=======
+    <lastmod>2020-04-16T23:02:34+08:00</lastmod>
+>>>>>>> c725846d465359721ca407064c82e15ce7921b99
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/learn-web-design/</loc>
+<<<<<<< HEAD
     <lastmod>2020-04-19T00:28:06+08:00</lastmod>
+=======
+    <lastmod>2020-04-16T23:02:34+08:00</lastmod>
+>>>>>>> c725846d465359721ca407064c82e15ce7921b99
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/tags/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/</loc>
+<<<<<<< HEAD
     <lastmod>2020-04-19T00:28:06+08:00</lastmod>
+=======
+    <lastmod>2020-04-16T23:02:34+08:00</lastmod>
+>>>>>>> c725846d465359721ca407064c82e15ce7921b99
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://vchv.tk/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/</loc>
+<<<<<<< HEAD
     <lastmod>2020-04-19T00:28:06+08:00</lastmod>
+=======
+    <lastmod>2020-04-16T23:02:34+08:00</lastmod>
+>>>>>>> c725846d465359721ca407064c82e15ce7921b99
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
