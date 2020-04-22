@@ -49,7 +49,7 @@
 <meta itemprop="description" content="前言 根据我在上一个《大前端学习（HTML&#43;CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。 新知 demo.fishc.com HTML5 and CSS 文档 HTML：Hyp">
 <meta itemprop="datePublished" content="2020-04-05T19:30:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-20T21:57:15&#43;08:00" />
-<meta itemprop="wordCount" content="4371">
+<meta itemprop="wordCount" content="5288">
 
 
 
@@ -129,8 +129,8 @@
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
             </div>
-          <span class="more-meta"> 约 4371 字 </span>
-          <span class="more-meta"> 预计阅读 9 分钟 </span>
+          <span class="more-meta"> 约 5288 字 </span>
+          <span class="more-meta"> 预计阅读 11 分钟 </span>
         
       </div>
     </header>
@@ -160,7 +160,17 @@
     <li><a href="#17-一二三木头人表单">17-一二三木头人（表单）</a></li>
     <li><a href="#31-鸟枪换大炮vscode">31-鸟枪换大炮（VScode)</a></li>
     <li><a href="#32-男人的加油站女人的美容院css">32-男人的加油站女人的美容院（CSS）</a></li>
-    <li><a href="#33-朋友你会-ollie-吗精准定位元素">33-朋友，你会 Ollie 吗？（精准定位元素）</a></li>
+    <li><a href="#33-朋友你会-ollie-吗选择器">33-朋友，你会 Ollie 吗？（选择器）</a></li>
+    <li><a href="#34-还能这么玩复合选择器">34-还能这么玩（复合选择器）</a></li>
+    <li><a href="#35-初学css的噩梦一伪元素选择器">35-初学CSS的噩梦一（伪元素选择器）</a></li>
+    <li><a href="#36-初学css的噩梦二伪类选择器">36-初学CSS的噩梦二（伪类选择器）</a></li>
+    <li><a href="#37-初学css的噩梦三ui伪类选择器">37-初学CSS的噩梦三（ui伪类选择器）</a></li>
+    <li><a href="#39-初学css的噩梦五结构伪类选择器">39-初学CSS的噩梦五（结构伪类选择器）</a></li>
+    <li><a href="#40-初学css的噩梦六其他伪类选择器">40-初学CSS的噩梦六（其他伪类选择器）</a></li>
+    <li><a href="#41-金木水火土属性选择器">41-金木水火土（属性选择器）</a></li>
+    <li><a href="#42-翩若惊鸿婉若游龙css的颜色表达">42-翩若惊鸿，婉若游龙（CSS的颜色表达）</a></li>
+    <li><a href="#43-道可道非常道背景色">43-道可道，非常道（背景色）</a></li>
+    <li><a href="#44-边框内边距外边距">44-边框、内边距、外边距</a></li>
   </ul>
 </nav>
   </div>
@@ -177,6 +187,8 @@
 <li>HTML：Hyper text Markup language</li>
 <li>CSS：Cascade Style Sheet</li>
 <li><strong>元素（element）——标签（label）——属性（attribute）——值（value）</strong></li>
+<li>hover 悬停状态选择器</li>
+<li>HTML 的重点在各种语义；CSS 的重点在于选择器（只要能选到就好了）和样式设计（会修改成品就好了）</li>
 </ul>
 <h2 id="01-学习web开发有前途吗">01-学习Web开发有前途吗？</h2>
 <ul>
@@ -676,17 +688,99 @@
 <p>样式的优先级：内联样式 &gt; 内部样式表 &gt; 外部样式表</p>
 </li>
 </ul>
-<h2 id="33-朋友你会-ollie-吗精准定位元素">33-朋友，你会 Ollie 吗？（精准定位元素）</h2>
+<h2 id="33-朋友你会-ollie-吗选择器">33-朋友，你会 Ollie 吗？（选择器）</h2>
 <ul>
-<li>CSS 选择器：
+<li>
+<p>精准定位元素——&gt; HTML 是骨架；CSS 是血肉；选择器 连接 HTML 和 CSS ！</p>
+</li>
+<li>
+<p>CSS 选择器：</p>
 <ol>
 <li>基本选择器</li>
 <li>复合选择器</li>
 <li>伪类选择器</li>
-<li>伪元素选择器</li>
+<li>伪元素选择器（Pseudo-elements Selector）</li>
 <li>属性选择器</li>
 </ol>
 </li>
+</ul>
+<ol>
+<li><strong>基本选择器：</strong>
+<ul>
+<li>通用选择器（Universal Selector）：<code>*</code> 选择所有元素</li>
+<li>元素选择器：就是标题 H ，段落 P ， span 等等</li>
+<li>类选择器：基本选择器的一个元素 <code>class=&quot;slogn&quot;</code> <code>.slogn {}</code></li>
+<li>id 选择器（ID Selector）：值是唯一的，指向单个元素 <code>ID=&quot;ol&quot;</code> <code>#ol</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="34-还能这么玩复合选择器">34-还能这么玩（复合选择器）</h2>
+<ol start="2">
+<li><strong>复合选择器：</strong>
+<ul>
+<li><img src="https://s1.ax1x.com/2020/04/22/JUYuxf.png" alt="HTML 元素结构图"></li>
+<li>交集选择器（Intersection Selector）：<code>元素选择器.类选择器</code> <code>元素选择器#ID选择器</code></li>
+<li>并集选择器（Union Selector）：<code>选择器1, selector2， selector3</code></li>
+<li>后代（包含）选择器（Descendant Selector）：<code>Selector1 selector2 selector3</code></li>
+<li>子元素选择器（Child Selector）：直接子元素  <code>Selector1 &gt; Selector2</code></li>
+<li>相邻兄弟选择器（Adjacent Sibling Selector）：<code>.slogan + p {}</code></li>
+<li>通用兄弟选择器（General Sibling Selector）：同一个层级就好 <code>.slogan~p</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="35-初学css的噩梦一伪元素选择器">35-初学CSS的噩梦一（伪元素选择器）</h2>
+<ul>
+<li>伪元素选择器 相当于 在不创建……</li>
+<li><code>::first-line</code>  只影响块级元素</li>
+<li><code>::first-letter</code></li>
+<li><code>::before</code></li>
+<li><code>::after</code></li>
+<li><code>::selection</code></li>
+</ul>
+<h2 id="36-初学css的噩梦二伪类选择器">36-初学CSS的噩梦二（伪类选择器）</h2>
+<ul>
+<li>Pseudo-classes Selector : 动态伪类选择器；UI伪类选择器；结构伪类选择器；其他伪类选择器</li>
+<li>伪类选择器 就相当于 在不创建 类 的情况下实现了类的功能。</li>
+<li>动态伪类选择器（Dynamic Pseudo-classes Selectors）——&gt; 善变的 a 元素
+<ol>
+<li><code>:link</code>  链接未被访问</li>
+<li><code>:visited</code>  链接被访问过之后</li>
+<li><code>:hover</code> 鼠标悬停在链接上方时</li>
+<li><code>:active</code> 鼠标按下链接的那一刻，判断的依据是 鼠标的点击。</li>
+<li><code>:focus</code> 当元素获得焦点时</li>
+<li>前四位 必须按顺序来，也就是 love &amp; hate</li>
+</ol>
+</li>
+</ul>
+<h2 id="37-初学css的噩梦三ui伪类选择器">37-初学CSS的噩梦三（ui伪类选择器）</h2>
+<h2 id="39-初学css的噩梦五结构伪类选择器">39-初学CSS的噩梦五（结构伪类选择器）</h2>
+<ul>
+<li>父与子讲的是绝对的，而不是相对的。</li>
+</ul>
+<h2 id="40-初学css的噩梦六其他伪类选择器">40-初学CSS的噩梦六（其他伪类选择器）</h2>
+<ul>
+<li>页面内锚点：<code>#ID</code></li>
+</ul>
+<h2 id="41-金木水火土属性选择器">41-金木水火土（属性选择器）</h2>
+<ul>
+<li>$</li>
+<li>^</li>
+<li>*</li>
+<li>~</li>
+<li>|</li>
+</ul>
+<h2 id="42-翩若惊鸿婉若游龙css的颜色表达">42-翩若惊鸿，婉若游龙（CSS的颜色表达）</h2>
+<ul>
+<li>CSS Color Expression</li>
+<li>RGB</li>
+<li>RGBA(alpha</li>
+<li>#ffffff</li>
+</ul>
+<h2 id="43-道可道非常道背景色">43-道可道，非常道（背景色）</h2>
+<h2 id="44-边框内边距外边距">44-边框、内边距、外边距</h2>
+<ul>
+<li>所有的HTML元素都可以看成是盒子的模样。</li>
+<li>看完了，还有吗？该死的老甲鱼不更新呀[○･｀Д´･ ○]</li>
 </ul>
 
     </div>
