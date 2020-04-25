@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
-    <lastBuildDate>Sun, 05 Apr 2020 19:30:04 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 19:30:04 +0800</lastBuildDate>
     
 	<atom:link href="https://vchv.tk/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>【黑马】JavaScript 从入门到高级</title>
+      <link>https://vchv.tk/learn-javascript-through-vedio-heima/</link>
+      <pubDate>Fri, 24 Apr 2020 19:30:04 +0800</pubDate>
+      
+      <guid>https://vchv.tk/learn-javascript-through-vedio-heima/</guid>
+      <description>前言 JS 基础 编程基础介绍 初识 JavaScript 浏览器执行 JS 简介 JS 的组成 JS 初体验 JS 注释 JS 输入输出语句 JS 变量 什么是变量？变量是程序在【内存】中申请的一块用来存放数</description>
+    </item>
     
     <item>
       <title>【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）</title>

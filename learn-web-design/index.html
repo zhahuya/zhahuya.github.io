@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0 with theme even" />
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
 
 
 <link rel="canonical" href="https://vchv.tk/learn-web-design/" />
@@ -35,7 +35,7 @@
 
 
 
-<link href="https://vchv.tk/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="https://vchv.tk/sass/main.min.e1f2e845aca7f3202ba8ad4df5ba9fe1b4b79dd9e9a72a2231e5b8d83e6706ff.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -44,12 +44,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://vchv.tk/learn-web-design/" />
 <meta property="article:published_time" content="2020-04-05T19:30:04+08:00" />
-<meta property="article:modified_time" content="2020-04-22T22:59:10+08:00" />
+<meta property="article:modified_time" content="2020-04-24T13:03:12+08:00" />
 <meta itemprop="name" content="【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）">
 <meta itemprop="description" content="前言 根据我在上一个《大前端学习（HTML&#43;CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。 新知 HTML：Hyper text Markup language C">
 <meta itemprop="datePublished" content="2020-04-05T19:30:04&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-22T22:59:10&#43;08:00" />
-<meta itemprop="wordCount" content="5722">
+<meta itemprop="dateModified" content="2020-04-24T13:03:12&#43;08:00" />
+<meta itemprop="wordCount" content="5705">
 
 
 
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
             </div>
-          <span class="more-meta"> 约 5722 字 </span>
+          <span class="more-meta"> 约 5705 字 </span>
           <span class="more-meta"> 预计阅读 12 分钟 </span>
         
       </div>
@@ -163,14 +163,14 @@
     <li><a href="#33-朋友你会-ollie-吗选择器">33-朋友，你会 Ollie 吗？（选择器）</a>
       <ul>
         <li><a href="#基本选择器">基本选择器：</a></li>
-        <li><a href="#34-还能这么玩复合选择器">34-还能这么玩（复合选择器）</a></li>
-        <li><a href="#35-初学css的噩梦一伪元素选择器">35-初学CSS的噩梦一（伪元素选择器）</a></li>
-        <li><a href="#36-初学css的噩梦二伪类选择器">36-初学CSS的噩梦二（伪类选择器）</a>
+        <li><a href="#复合选择器还能这么玩">复合选择器（还能这么玩）</a></li>
+        <li><a href="#35-伪元素选择器初学css的噩梦1">35-伪元素选择器（初学CSS的噩梦1）</a></li>
+        <li><a href="#36-伪类选择器初学css的噩梦2">36-伪类选择器（初学CSS的噩梦2）</a>
           <ul>
             <li><a href="#动态伪类选择器dynamic-pseudo-classes-selectors-善变的-a-元素">动态伪类选择器（Dynamic Pseudo-classes Selectors）—&gt; 善变的 a 元素</a></li>
-            <li><a href="#37-初学css的噩梦三ui伪类选择器">37-初学CSS的噩梦三（ui伪类选择器）</a></li>
-            <li><a href="#39-初学css的噩梦五结构伪类选择器">39-初学CSS的噩梦五（结构伪类选择器）</a></li>
-            <li><a href="#40-初学css的噩梦六其他伪类选择器">40-初学CSS的噩梦六（其他伪类选择器）</a></li>
+            <li><a href="#ui伪类选择器初学css的噩梦3">ui伪类选择器（初学CSS的噩梦3）</a></li>
+            <li><a href="#结构伪类选择器初学css的噩梦5">结构伪类选择器（初学CSS的噩梦5）</a></li>
+            <li><a href="#其他伪类选择器初学css的噩梦6">其他伪类选择器（初学CSS的噩梦6）</a></li>
           </ul>
         </li>
       </ul>
@@ -685,14 +685,16 @@
 <h2 id="32-男人的加油站女人的美容院css">32-男人的加油站女人的美容院（CSS）</h2>
 <ul>
 <li>
-<p>CSS 语法：P  {color:red; font-size:14px}
-<img src="https://s1.ax1x.com/2020/04/24/JBJ0p9.png" alt="CSS 语法"></p>
+<p>CSS 语法：P  {color:red; font-size:14px}</p>
+</li>
+<li>
+<p><img src="https://s1.ax1x.com/2020/04/24/JBJ0p9.png" alt="CSS 语法"></p>
 </li>
 <li>
 <p>如何在网页中插入 CSS 样式表？</p>
 <ol>
 <li>内联样式（Inline Style)：灵活性强，但是很麻烦，每个位置都要写。</li>
-<li>内部样式表（Internal Style Sheet）：还是麻烦，如果一个网站有1000个页面，还要写很多遍。</li>
+<li>内部样式表（Internal Style Sheet）：还是麻烦，如果一个网站有1000个页面，还是要写很多遍。</li>
 <li>外部样式表（External Style Sheet）：link 外部样式表</li>
 </ol>
 </li>
@@ -729,9 +731,7 @@
 <li>类选择器：基本选择器的一个元素 <code>class=&quot;slogn&quot;</code> <code>.slogn {}</code></li>
 <li>id 选择器（ID Selector）：值是唯一的，指向单个元素 <code>ID=&quot;ol&quot;</code> <code>#ol</code></li>
 </ul>
-<h3 id="34-还能这么玩复合选择器">34-还能这么玩（复合选择器）</h3>
-<ol start="2">
-<li><strong>复合选择器：</strong>
+<h3 id="复合选择器还能这么玩">复合选择器（还能这么玩）</h3>
 <ul>
 <li><img src="https://s1.ax1x.com/2020/04/22/JUYuxf.png" alt="HTML 元素结构图"></li>
 <li>交集选择器（Intersection Selector）：<code>元素选择器.类选择器</code> <code>元素选择器#ID选择器</code></li>
@@ -741,18 +741,28 @@
 <li>相邻兄弟选择器（Adjacent Sibling Selector）：<code>.slogan + p {}</code></li>
 <li>通用兄弟选择器（General Sibling Selector）：同一个层级就好 <code>.slogan~p</code></li>
 </ul>
-</li>
-</ol>
-<h3 id="35-初学css的噩梦一伪元素选择器">35-初学CSS的噩梦一（伪元素选择器）</h3>
+<h3 id="35-伪元素选择器初学css的噩梦1">35-伪元素选择器（初学CSS的噩梦1）</h3>
 <ul>
-<li>伪元素选择器 相当于 在不创建元素的情况下实现了选择元素的功能。</li>
-<li><code>::first-line</code>  只影响块级元素</li>
-<li><code>::first-letter</code></li>
-<li><code>::before</code></li>
-<li><code>::after</code></li>
-<li><code>::selection</code></li>
+<li>
+<p>伪元素选择器 相当于 在不创建元素的情况下实现了选择元素的功能。</p>
+</li>
+<li>
+<p><code>::first-line</code>  只影响块级元素</p>
+</li>
+<li>
+<p><code>::first-letter</code></p>
+</li>
+<li>
+<p><code>::before</code></p>
+</li>
+<li>
+<p><code>::after</code></p>
+</li>
+<li>
+<p><code>::selection</code></p>
+</li>
 </ul>
-<h3 id="36-初学css的噩梦二伪类选择器">36-初学CSS的噩梦二（伪类选择器）</h3>
+<h3 id="36-伪类选择器初学css的噩梦2">36-伪类选择器（初学CSS的噩梦2）</h3>
 <ul>
 <li>伪类选择器 就相当于 在不创建 类 的情况下实现了类的功能。</li>
 <li>Pseudo-classes Selector : 动态伪类选择器；UI伪类选择器；结构伪类选择器；其他伪类选择器</li>
@@ -765,12 +775,12 @@
 5. `:focus` 当元素获得焦点时
 6. 前四位 必须按顺序来，也就是 love &amp; hate
 </code></pre>
-<h4 id="37-初学css的噩梦三ui伪类选择器">37-初学CSS的噩梦三（ui伪类选择器）</h4>
-<h4 id="39-初学css的噩梦五结构伪类选择器">39-初学CSS的噩梦五（结构伪类选择器）</h4>
+<h4 id="ui伪类选择器初学css的噩梦3">ui伪类选择器（初学CSS的噩梦3）</h4>
+<h4 id="结构伪类选择器初学css的噩梦5">结构伪类选择器（初学CSS的噩梦5）</h4>
 <ul>
 <li>父与子讲的是绝对的，而不是相对的。</li>
 </ul>
-<h4 id="40-初学css的噩梦六其他伪类选择器">40-初学CSS的噩梦六（其他伪类选择器）</h4>
+<h4 id="其他伪类选择器初学css的噩梦6">其他伪类选择器（初学CSS的噩梦6）</h4>
 <ul>
 <li>页面内锚点：<code>#ID</code></li>
 </ul>
@@ -810,8 +820,8 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2020-04-22
-        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/2dc933f3267a6ac5d5d40c4db902ed92306051c1" title="update the notes about the webdesign lesson">(2dc933f)</a>
+        2020-04-24
+        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/f99b215e44f0dee878645977b176c8b142570bbc" title="review the article about webdesign">(f99b215)</a>
     </span>
   </p>
   
