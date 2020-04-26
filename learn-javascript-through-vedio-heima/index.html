@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="朝晖" /><meta name="description" content="前言 JS 基础 编程基础介绍 初识 JavaScript 浏览器执行 JS 简介 JS 的组成 JS 初体验 JS 注释 JS 输入输出语句 JS 变量 什么是变量？变量是程序在【内存】中申请的一块用来存放数" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
+<meta name="author" content="朝晖" /><meta name="description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="【黑马】JavaScript 从入门到高级" />
-<meta property="og:description" content="前言 JS 基础 编程基础介绍 初识 JavaScript 浏览器执行 JS 简介 JS 的组成 JS 初体验 JS 注释 JS 输入输出语句 JS 变量 什么是变量？变量是程序在【内存】中申请的一块用来存放数" />
+<meta property="og:description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://vchv.tk/learn-javascript-through-vedio-heima/" />
 <meta property="article:published_time" content="2020-04-24T19:30:04+08:00" />
-<meta property="article:modified_time" content="2020-04-24T19:30:04+08:00" />
+<meta property="article:modified_time" content="2020-04-25T21:37:30+08:00" />
 <meta itemprop="name" content="【黑马】JavaScript 从入门到高级">
-<meta itemprop="description" content="前言 JS 基础 编程基础介绍 初识 JavaScript 浏览器执行 JS 简介 JS 的组成 JS 初体验 JS 注释 JS 输入输出语句 JS 变量 什么是变量？变量是程序在【内存】中申请的一块用来存放数">
+<meta itemprop="description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执">
 <meta itemprop="datePublished" content="2020-04-24T19:30:04&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-24T19:30:04&#43;08:00" />
-<meta itemprop="wordCount" content="556">
+<meta itemprop="dateModified" content="2020-04-25T21:37:30&#43;08:00" />
+<meta itemprop="wordCount" content="1252">
 
 
 
 <meta itemprop="keywords" content="JavaScript,黑马程序员,V8," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="【黑马】JavaScript 从入门到高级"/>
-<meta name="twitter:description" content="前言 JS 基础 编程基础介绍 初识 JavaScript 浏览器执行 JS 简介 JS 的组成 JS 初体验 JS 注释 JS 输入输出语句 JS 变量 什么是变量？变量是程序在【内存】中申请的一块用来存放数"/>
+<meta name="twitter:description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,8 +129,8 @@
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
             </div>
-          <span class="more-meta"> 约 556 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 1252 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
     </header>
@@ -152,6 +152,7 @@
         <li><a href="#js-输入输出语句">JS 输入输出语句</a></li>
         <li><a href="#js-变量">JS 变量</a></li>
         <li><a href="#js-数据类型">JS 数据类型</a></li>
+        <li><a href="#js-数据类型的转换">JS 数据类型的转换</a></li>
         <li><a href="#js-运算符">JS 运算符</a></li>
       </ul>
     </li>
@@ -161,8 +162,18 @@
 </div>
     <div class="post-content">
       <h2 id="前言">前言</h2>
+<ul>
+<li>听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。</li>
+</ul>
 <h2 id="js-基础">JS 基础</h2>
 <h3 id="编程基础介绍">编程基础介绍</h3>
+<ol>
+<li>解释型语言：可以即时执行，读一行执行一行，也叫作脚本语言。</li>
+<li>编译型语言：全部编译为机器语言才可以运行。</li>
+<li>标识符：开发人员为变量、属性、函数、参数取的名字。</li>
+<li>关键字：JS 本身已经使用了的字，不能再用它们充当变量名、方法名。</li>
+<li>保留字：预留的“关键字”，虽然现在还不是关键字，但未来可能会成为关键字。</li>
+</ol>
 <h3 id="初识-javascript">初识 JavaScript</h3>
 <h3 id="浏览器执行-js-简介">浏览器执行 JS 简介</h3>
 <h3 id="js-的组成">JS 的组成</h3>
@@ -171,45 +182,46 @@
 <h3 id="js-输入输出语句">JS 输入输出语句</h3>
 <h3 id="js-变量">JS 变量</h3>
 <ul>
-<li>什么是变量？变量是程序在【内存】中申请的一块用来存放数据的【空间ccc】。</li>
+<li>什么是变量？程序在【内存】中申请的一块用来存放数据的【空间】。</li>
 <li>变量的使用：1.声明变量 2.赋值。eg：<code>var age;</code> // 声明一个名称为 age 的变量。</li>
 <li>变量的初始化：<code>var name = &quot;pink老师&quot;</code></li>
-<li>声明多个变量：<code>var age = 18, address = &quot;火影村&quot;, pay = 2000;</code></li>
+<li>同时声明多个变量：<code>var age = 18, address = &quot;火影村&quot;, pay = 2000;</code></li>
 </ul>
 <h3 id="js-数据类型">JS 数据类型</h3>
 <ul>
 <li>
-<p>为什么需要数据类型？不同的数据所占用的存储空间不同。</p>
+<p>为什么需要数据类型？因为不同的数据所占用的存储空间不同。</p>
 </li>
 <li>
-<p>JavaScript 是一种弱类型或者说动态语言。变量的数据类型根据等号右边的值来确定的。变量的数据类型是可以变化的。</p>
+<p>JavaScript 是一种弱类型或者说动态语言。变量的数据类型是不确定的（根据等号右边的值来确定的），是可变化的。</p>
 </li>
 <li>
-<p>**简单数据类型：**Number；Boolean；String；Undefined；Null；</p>
+<p><strong>简单数据类型</strong>：Number；Boolean；String；Undefined；Null；</p>
 <ul>
 <li>Number：
 <ul>
-<li>八进制：0 + 0~7</li>
-<li>十六进制：0x + 0~9 a~f</li>
-<li>number.MAX_VALUE</li>
+<li>八进制：<code>0 + 0~7</code></li>
+<li>十六进制：<code>0x + 0~9 a~f</code></li>
+<li><code>number.MAX_VALUE</code></li>
 <li>infinity</li>
 <li>NaN：not a number</li>
 </ul>
 </li>
 <li>String：<code>'单引号或者双引号'</code>
 <ul>
-<li>转义字符：<code>\n   \\  \'  \&quot;  \t  \b</code> newline  tab  blank</li>
-<li>检测字符串的长度：<code>string1.length</code></li>
+<li>转义字符：<code>\n   \\  \'  \&quot;  \t  \b</code>  <code>newline  tab  blank</code></li>
+<li><strong>重要：转义字符需要放在字符串里</strong></li>
+<li>length 检测字符串的长度：<code>string1.length</code></li>
 <li>字符串拼接：<code>strintj01 + anytypedata</code> \ 拼接前会把与字符串相加的任何类型转成字符串，再拼接成一个新的字符串。</li>
 </ul>
 </li>
 <li>Boolean：true false   1  0</li>
-<li>Undefined：如果一个变量声明未赋值 就是 undefined</li>
-<li>Null：空值</li>
+<li>Undefined：如果一个变量声明未赋值 就是 undefined，与数字相运算，结果是NaN。</li>
+<li>Null：空值，与数字相运算是数字本身。</li>
 </ul>
 </li>
 <li>
-<p><strong>获取变量的数据类型：</strong> <code>typeof variable</code></p>
+<p><strong>获取变量的数据类型</strong>： <code>typeof</code></p>
 </li>
 <li>
 <p>字面量：通过字面看这个变量是什么数据类型。</p>
@@ -221,7 +233,41 @@
 <p>验证是否是数字：<code>isNaN()</code></p>
 </li>
 </ul>
+<h3 id="js-数据类型的转换">JS 数据类型的转换</h3>
+<ul>
+<li>
+<p><strong>其他类型转换为 字符串类型</strong></p>
+<ol>
+<li><strong>加号拼接字符串</strong>  <code>10 + &quot; &quot;</code> 隐式转换</li>
+<li><code>variable.toString()</code></li>
+<li>String()函数  强制转换</li>
+</ol>
+</li>
+<li>
+<p><strong>其他类型转换为 数字类型</strong></p>
+<ol>
+<li>parselnt() 函数：<code>parseInt(variable)</code>  取得整数且完全向下取整，从左到右依次解析。</li>
+<li>parseFloat() 函数：<code>parseFloat(variable)</code> 取得浮点数值。</li>
+<li>Number() 强制转换函数：</li>
+<li>js 隐式转换 ( - * / )：<code>console.log('12'- 0)</code> <code>console.log('13' - '10')</code></li>
+</ol>
+</li>
+<li>
+<p><strong>其他类型转换为 Boolean type</strong></p>
+<ol>
+<li>Boolean() 函数：<code>Boolean('true');</code></li>
+<li><code>'', 0, NaN, null, undefined</code> 空的、否定的值会被转换成 false，其余转换为true</li>
+</ol>
+</li>
+</ul>
 <h3 id="js-运算符">JS 运算符</h3>
+<ul>
+<li>运算符（operator）：也被称为操作符，用于实现赋值、比较和执行算术运算等功能的符号。</li>
+<li>算术运算符：加，减，乘，除，取余（取模） <code> + - *  /  %</code>，浮点数的直接运算会有精度的问题。</li>
+<li>算术运算符的优先级：先乘除，后加减，有小括号先算小括号里面的。</li>
+<li>表达式：由数字、运算符、变量等以能求得数值的有意义排列方法所得的组合。简单的说就是由数字、运算符、变量等组成的式子。<code> 1 + 1</code></li>
+<li>返回值：表达式最终都会有一个结果返回给我们，称为返回值。右边的表达式计算完毕把返回值给左边。</li>
+</ul>
 
     </div>
 
@@ -233,8 +279,8 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2020-04-24
-        
+        2020-04-25
+        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/3fb30b3178983a4115d7fe57afce29f1fb7d7232" title="learn and note javascript lesson">(3fb30b3)</a>
     </span>
   </p>
   
