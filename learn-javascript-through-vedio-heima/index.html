@@ -44,12 +44,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://vchv.tk/learn-javascript-through-vedio-heima/" />
 <meta property="article:published_time" content="2020-04-24T19:30:04+08:00" />
-<meta property="article:modified_time" content="2020-04-25T21:37:30+08:00" />
+<meta property="article:modified_time" content="2020-04-26T22:58:58+08:00" />
 <meta itemprop="name" content="【黑马】JavaScript 从入门到高级">
 <meta itemprop="description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执">
 <meta itemprop="datePublished" content="2020-04-24T19:30:04&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-25T21:37:30&#43;08:00" />
-<meta itemprop="wordCount" content="1252">
+<meta itemprop="dateModified" content="2020-04-26T22:58:58&#43;08:00" />
+<meta itemprop="wordCount" content="1571">
 
 
 
@@ -129,8 +129,8 @@
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
             </div>
-          <span class="more-meta"> 约 1252 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+          <span class="more-meta"> 约 1571 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
     </header>
@@ -246,8 +246,8 @@
 <li>
 <p><strong>其他类型转换为 数字类型</strong></p>
 <ol>
-<li>parselnt() 函数：<code>parseInt(variable)</code>  取得整数且完全向下取整，从左到右依次解析。</li>
-<li>parseFloat() 函数：<code>parseFloat(variable)</code> 取得浮点数值。</li>
+<li><strong>parselnt() 函数</strong>：<code>parseInt(variable)</code>  取得整数且完全向下取整，从左到右依次解析。</li>
+<li><strong>parseFloat() 函数</strong>：<code>parseFloat(variable)</code> 取得浮点数值。</li>
 <li>Number() 强制转换函数：</li>
 <li>js 隐式转换 ( - * / )：<code>console.log('12'- 0)</code> <code>console.log('13' - '10')</code></li>
 </ol>
@@ -255,18 +255,51 @@
 <li>
 <p><strong>其他类型转换为 Boolean type</strong></p>
 <ol>
-<li>Boolean() 函数：<code>Boolean('true');</code></li>
+<li><strong>Boolean() 函数</strong>：<code>Boolean('true');</code></li>
 <li><code>'', 0, NaN, null, undefined</code> 空的、否定的值会被转换成 false，其余转换为true</li>
 </ol>
 </li>
 </ul>
 <h3 id="js-运算符">JS 运算符</h3>
+<blockquote>
+<p>表达式：由数字、运算符、变量等以能求得数值的有意义排列方法所得的组合。简单的说就是由数字、运算符、变量等组成的式子。eg：<code> 1 + 1</code>
+返回值：表达式最终都会有一个结果返回给我们，称为返回值。右边的表达式计算完毕把返回值给左边。</p>
+</blockquote>
 <ul>
-<li>运算符（operator）：也被称为操作符，用于实现赋值、比较和执行算术运算等功能的符号。</li>
-<li>算术运算符：加，减，乘，除，取余（取模） <code> + - *  /  %</code>，浮点数的直接运算会有精度的问题。</li>
+<li>
+<p>运算符（operator）：也被称为操作符，用于实现赋值、比较和执行算术运算等功能的符号。</p>
+</li>
+<li>
+<p><strong>算术运算符</strong>：加，减，乘，除，取余（取模） <code> + - *  /  %</code>，浮点数的直接运算会有精度的问题。</p>
+<ul>
 <li>算术运算符的优先级：先乘除，后加减，有小括号先算小括号里面的。</li>
-<li>表达式：由数字、运算符、变量等以能求得数值的有意义排列方法所得的组合。简单的说就是由数字、运算符、变量等组成的式子。<code> 1 + 1</code></li>
-<li>返回值：表达式最终都会有一个结果返回给我们，称为返回值。右边的表达式计算完毕把返回值给左边。</li>
+</ul>
+</li>
+<li>
+<p><strong>递增、递减运算符</strong>：<code>num = num + 1</code> <code>num = num +1</code> -&gt; <code>++ --</code></p>
+<ul>
+<li>如果需要反复给数字变量添加或减去1，可以使用递增（++）和递减（&ndash;）运算符来完成。</li>
+<li>++ &ndash; 必须和变量配合使用。</li>
+<li>既可以放在变量前面，也可以放在变量后面。放在前面时，称为前置递增（递减）运算符，放在后面时，称为后置递增（递减）运算符。</li>
+<li>前置自加：先自+1，再返回原值</li>
+<li><strong>后置自加：表达式先返回原值，变量再自+1</strong></li>
+<li>在开发时，大多使用后置递增/递减，并且代码独占一行，例如：<code>num++</code></li>
+</ul>
+</li>
+<li>
+<p><strong>比较运算符（关系运算符）</strong>：两个数据进行比较时所使用的运算符，比较运算后，会返回一个布尔值作为结果。</p>
+<ul>
+<li>&gt;=</li>
+<li>&lt;=</li>
+<li>==     //  默认转换数据类型，值相等就可以。</li>
+<li>===   //  严格模式的等于，值和数据类型都要完全相同。</li>
+<li>!=</li>
+<li>!==   // 严格模式</li>
+</ul>
+</li>
+<li>
+<p>逻辑运算符：</p>
+</li>
 </ul>
 
     </div>
@@ -279,8 +312,8 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2020-04-25
-        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/3fb30b3178983a4115d7fe57afce29f1fb7d7232" title="learn and note javascript lesson">(3fb30b3)</a>
+        2020-04-26
+        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/b47723cea3408d066ecb9606bf6917240a588aad" title="jsLesson about datatype translate">(b47723c)</a>
     </span>
   </p>
   
