@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://vchv.tk/sitemap.xml
+Sitemap: https://www.vchv.ltd/sitemap.xml

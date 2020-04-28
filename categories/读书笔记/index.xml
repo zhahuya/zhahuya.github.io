@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>读书笔记 on Vchv - 书写过往，让前路更清晰</title>
-    <link>https://vchv.tk/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
-    <description>Recent content in 读书笔记 on Vchv - 书写过往，让前路更清晰</description>
+    <title>读书笔记 on Vchv的网络日志</title>
+    <link>https://www.vchv.ltd/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 读书笔记 on Vchv的网络日志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
     <lastBuildDate>Sat, 11 Jan 2020 22:30:04 +0800</lastBuildDate>
     
-	<atom:link href="https://vchv.tk/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.vchv.ltd/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>数学通识</title>
-      <link>https://vchv.tk/math-common-sense/</link>
+      <link>https://www.vchv.ltd/math-common-sense/</link>
       <pubDate>Sat, 11 Jan 2020 22:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/math-common-sense/</guid>
+      <guid>https://www.vchv.ltd/math-common-sense/</guid>
       <description>前言 培养一下数学的兴趣，不只是为了计算机科学，还为了行测数量，还为了自己的逻辑思考能力。 只有56讲的话，按照我一般的速度，两天就看完了，注意</description>
     </item>
     
     <item>
       <title>刻意练习：如何从新手到大师</title>
-      <link>https://vchv.tk/deliberate-practice/</link>
+      <link>https://www.vchv.ltd/deliberate-practice/</link>
       <pubDate>Mon, 30 Dec 2019 20:21:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/deliberate-practice/</guid>
+      <guid>https://www.vchv.ltd/deliberate-practice/</guid>
       <description>前言 一个关于如何学习的学习方法论，必须要学习一下了。 我怀疑我近半年的工作已经在利用它的一些知识了，现在来系统性的读一下书，与自己的想法进行印</description>
     </item>
     

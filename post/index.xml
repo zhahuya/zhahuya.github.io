@@ -1,338 +1,338 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Vchv - 书写过往，让前路更清晰</title>
-    <link>https://vchv.tk/post/</link>
-    <description>Recent content in Posts on Vchv - 书写过往，让前路更清晰</description>
+    <title>Posts on Vchv的网络日志</title>
+    <link>https://www.vchv.ltd/post/</link>
+    <description>Recent content in Posts on Vchv的网络日志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
     <lastBuildDate>Fri, 24 Apr 2020 19:30:04 +0800</lastBuildDate>
     
-	<atom:link href="https://vchv.tk/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.vchv.ltd/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>【黑马】JavaScript 从入门到高级</title>
-      <link>https://vchv.tk/learn-javascript-through-vedio-heima/</link>
+      <link>https://www.vchv.ltd/learn-javascript-through-vedio-heima/</link>
       <pubDate>Fri, 24 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/learn-javascript-through-vedio-heima/</guid>
+      <guid>https://www.vchv.ltd/learn-javascript-through-vedio-heima/</guid>
       <description>前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执</description>
     </item>
     
     <item>
       <title>正确使用Markdown</title>
-      <link>https://vchv.tk/use-markdown-in-a-proper-way/</link>
+      <link>https://www.vchv.ltd/use-markdown-in-a-proper-way/</link>
       <pubDate>Wed, 15 Apr 2020 13:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/use-markdown-in-a-proper-way/</guid>
+      <guid>https://www.vchv.ltd/use-markdown-in-a-proper-way/</guid>
       <description>良好的习惯 不要滥用标题，注意标题的语义：表明层级关系。所以请按顺序使用，一定不要跳着用；使用**来加粗文段，而不是使用标题。总之，标题的使用</description>
     </item>
     
     <item>
       <title>从零开始搭建一个hugo博客</title>
-      <link>https://vchv.tk/build-a-hugo-blog-from-zero/</link>
+      <link>https://www.vchv.ltd/build-a-hugo-blog-from-zero/</link>
       <pubDate>Mon, 13 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/build-a-hugo-blog-from-zero/</guid>
+      <guid>https://www.vchv.ltd/build-a-hugo-blog-from-zero/</guid>
       <description>前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发</description>
     </item>
     
     <item>
       <title>【小甲鱼】零基础学习Web开发（HTML5&amp;CSS3）</title>
-      <link>https://vchv.tk/learn-web-design/</link>
+      <link>https://www.vchv.ltd/learn-web-design/</link>
       <pubDate>Sun, 05 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/learn-web-design/</guid>
+      <guid>https://www.vchv.ltd/learn-web-design/</guid>
       <description>前言 根据我在上一个《大前端学习（HTML+CSS）的感言，那么这次的课程就是极具框架化的课程，非常适合学习。 新知 HTML：Hyper text Markup language C</description>
     </item>
     
     <item>
       <title>我在使用的软件分享</title>
-      <link>https://vchv.tk/great-software/</link>
+      <link>https://www.vchv.ltd/great-software/</link>
       <pubDate>Sat, 04 Apr 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/great-software/</guid>
+      <guid>https://www.vchv.ltd/great-software/</guid>
       <description>前言 之前发在xx的，没有使用 Markdown 排版实在是太糟糕了，现在把它重新写一下。 这些软件的共同特点就是极其小，几乎都是5M以下，中位数可能在2M，但是</description>
     </item>
     
     <item>
       <title>test for gitinfo</title>
-      <link>https://vchv.tk/test-for-gitinfo/</link>
+      <link>https://www.vchv.ltd/test-for-gitinfo/</link>
       <pubDate>Mon, 30 Mar 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/test-for-gitinfo/</guid>
+      <guid>https://www.vchv.ltd/test-for-gitinfo/</guid>
       <description>this file made for test whether the lastmod is worked. 执行命令 git config core.quotepath false</description>
     </item>
     
     <item>
       <title>心理学课之五（创造、现实）</title>
-      <link>https://vchv.tk/creative-and-reality/</link>
+      <link>https://www.vchv.ltd/creative-and-reality/</link>
       <pubDate>Mon, 30 Mar 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/creative-and-reality/</guid>
+      <guid>https://www.vchv.ltd/creative-and-reality/</guid>
       <description>新知 了解一件事：不要拿你头脑已经有的判断套在它身上，把头脑的判断和知识拿掉，先去深入这个事物，让判断和思考 从你和这个事物的【深度关系】中 自然</description>
     </item>
     
     <item>
       <title>2020年第一季度总结</title>
-      <link>https://vchv.tk/the-first-season-of-2020/</link>
+      <link>https://www.vchv.ltd/the-first-season-of-2020/</link>
       <pubDate>Thu, 26 Mar 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/the-first-season-of-2020/</guid>
+      <guid>https://www.vchv.ltd/the-first-season-of-2020/</guid>
       <description>前言 最近这几天总感觉对自己时间和精力的掌控力降低了许多许多，因为工作的地方几个科室在一起，实在是很嘈杂，工作多倒还在其次；休息的地方，也是两</description>
     </item>
     
     <item>
       <title>零基础学Python（极客时间）</title>
-      <link>https://vchv.tk/learn-python-form-zero/</link>
+      <link>https://www.vchv.ltd/learn-python-form-zero/</link>
       <pubDate>Mon, 23 Mar 2020 22:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/learn-python-form-zero/</guid>
+      <guid>https://www.vchv.ltd/learn-python-form-zero/</guid>
       <description>前言 和小甲鱼完全不同的风格，小甲鱼的还是比较适合新手，这个比较适合有基础的，可以快速过完整个基本语法。 两者各有各的难点，小甲鱼会把一个东西直</description>
     </item>
     
     <item>
       <title>谈谈舆论，厉害了我的国！</title>
-      <link>https://vchv.tk/american-virus-awesome-my-country/</link>
+      <link>https://www.vchv.ltd/american-virus-awesome-my-country/</link>
       <pubDate>Fri, 20 Mar 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/american-virus-awesome-my-country/</guid>
+      <guid>https://www.vchv.ltd/american-virus-awesome-my-country/</guid>
       <description>讨论开始于一则国内新闻：美议员要求中赔偿美因疫情造成的损失，因为中隐瞒疫情。接着大家纷纷义愤填膺，怒骂美国太无耻，并言之凿凿疫情起源于美国，</description>
     </item>
     
     <item>
       <title>老罗复出做直播，我的青春回来了</title>
-      <link>https://vchv.tk/lao-luo/</link>
+      <link>https://www.vchv.ltd/lao-luo/</link>
       <pubDate>Thu, 19 Mar 2020 23:50:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/lao-luo/</guid>
+      <guid>https://www.vchv.ltd/lao-luo/</guid>
       <description>今天在动态里看到老罗准备去做电商直播的消息，赶忙去微博确认了一下，果然是真的，罗哥还是改不了那副刁样，决心去“颠覆”电商直播。 他似乎是觉得那</description>
     </item>
     
     <item>
       <title>心理学课之四（觉知、空间）</title>
-      <link>https://vchv.tk/aware-and-space/</link>
+      <link>https://www.vchv.ltd/aware-and-space/</link>
       <pubDate>Sun, 01 Mar 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/aware-and-space/</guid>
+      <guid>https://www.vchv.ltd/aware-and-space/</guid>
       <description>新知 我感觉内容越来越神神叨叨，主要是概念本身不清晰了、概念之间的关系不清晰了，很多都是作者的个人体验，如果没有较强的鉴别能力，看这个还是挺危</description>
     </item>
     
     <item>
       <title>Code-The hidden language of Computer Hardware and Software</title>
-      <link>https://vchv.tk/everything-is-code/</link>
+      <link>https://www.vchv.ltd/everything-is-code/</link>
       <pubDate>Tue, 04 Feb 2020 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/everything-is-code/</guid>
+      <guid>https://www.vchv.ltd/everything-is-code/</guid>
       <description>前言 Code: The Hidden Language of Computer Hardware and Software 一本被盛赞的计算机科学入门书籍，在不同的地方看到推荐，大概有3+次，根据介绍，推测和Crash Course的CS课程差</description>
     </item>
     
     <item>
       <title>心理学课之三（思维、身体、情感）</title>
-      <link>https://vchv.tk/reason-feel-spirit/</link>
+      <link>https://www.vchv.ltd/reason-feel-spirit/</link>
       <pubDate>Fri, 17 Jan 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/reason-feel-spirit/</guid>
+      <guid>https://www.vchv.ltd/reason-feel-spirit/</guid>
       <description>新知 讲出自己的感受，就是捧出自己的心，用心和别人交流，而不是道理。 面试：讲感受，而不仅是道理，在感受中带出完美的道理。感受的说服力排山倒海。</description>
     </item>
     
     <item>
       <title>Python_100days</title>
-      <link>https://vchv.tk/python-100days/</link>
+      <link>https://www.vchv.ltd/python-100days/</link>
       <pubDate>Wed, 15 Jan 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/python-100days/</guid>
+      <guid>https://www.vchv.ltd/python-100days/</guid>
       <description>前言 做一些学习笔记。 这个文档只能懂了以后再去看，当成一个路标，查缺补漏的资料，靠这个入门就是从入门到入土。 0——15days 01day 注释：单行注释</description>
     </item>
     
     <item>
       <title>Python零基础入门学习（老版）</title>
-      <link>https://vchv.tk/python-old-lesson-by-xjy/</link>
+      <link>https://www.vchv.ltd/python-old-lesson-by-xjy/</link>
       <pubDate>Mon, 13 Jan 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/python-old-lesson-by-xjy/</guid>
+      <guid>https://www.vchv.ltd/python-old-lesson-by-xjy/</guid>
       <description>前言 到7.8.9节有点看不懂了，结合GitHub上面的100天指引比较好。 时间可以让我们的脑子自发的啃下来开始觉得很难的东西 分支和循环之外，</description>
     </item>
     
     <item>
       <title>数学通识</title>
-      <link>https://vchv.tk/math-common-sense/</link>
+      <link>https://www.vchv.ltd/math-common-sense/</link>
       <pubDate>Sat, 11 Jan 2020 22:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/math-common-sense/</guid>
+      <guid>https://www.vchv.ltd/math-common-sense/</guid>
       <description>前言 培养一下数学的兴趣，不只是为了计算机科学，还为了行测数量，还为了自己的逻辑思考能力。 只有56讲的话，按照我一般的速度，两天就看完了，注意</description>
     </item>
     
     <item>
       <title>Python零基础入门学习（新版）</title>
-      <link>https://vchv.tk/python-new-lesson-by-xjy/</link>
+      <link>https://www.vchv.ltd/python-new-lesson-by-xjy/</link>
       <pubDate>Wed, 08 Jan 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/python-new-lesson-by-xjy/</guid>
+      <guid>https://www.vchv.ltd/python-new-lesson-by-xjy/</guid>
       <description>前言 我知道了 序章 Python is powerful&amp;hellip;and fast; plays well with others; runs everywhere; is friendly &amp;amp; easy to learn; is Open. 语法知识+案例开发的结合 环境搭建&amp;amp;课程介绍 IDLE：Integrated Development and Learning Environment</description>
     </item>
     
     <item>
       <title>心理学课之二（关系、动力）</title>
-      <link>https://vchv.tk/relations-and-motive/</link>
+      <link>https://www.vchv.ltd/relations-and-motive/</link>
       <pubDate>Tue, 07 Jan 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/relations-and-motive/</guid>
+      <guid>https://www.vchv.ltd/relations-and-motive/</guid>
       <description>新知 要成为抱持的容器，而不是拿着尺子去评判他人，如果发现别人有什么事实上的谬误，只是询问他就好，不要给别人建议，当他人的老师。 认真倾听别人的</description>
     </item>
     
     <item>
       <title>心理学课之一（命运、自我）</title>
-      <link>https://vchv.tk/destiny-and-ego-of-psychology/</link>
+      <link>https://www.vchv.ltd/destiny-and-ego-of-psychology/</link>
       <pubDate>Thu, 02 Jan 2020 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/destiny-and-ego-of-psychology/</guid>
+      <guid>https://www.vchv.ltd/destiny-and-ego-of-psychology/</guid>
       <description>前言 武志红老师的心理学课是得到的四大金刚课之一，一看就很有体系，很有深度，很有可学的价值，人生的打底课，现在学习累点，但为了打好底，一切都是</description>
     </item>
     
     <item>
       <title>刻意练习：如何从新手到大师</title>
-      <link>https://vchv.tk/deliberate-practice/</link>
+      <link>https://www.vchv.ltd/deliberate-practice/</link>
       <pubDate>Mon, 30 Dec 2019 20:21:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/deliberate-practice/</guid>
+      <guid>https://www.vchv.ltd/deliberate-practice/</guid>
       <description>前言 一个关于如何学习的学习方法论，必须要学习一下了。 我怀疑我近半年的工作已经在利用它的一些知识了，现在来系统性的读一下书，与自己的想法进行印</description>
     </item>
     
     <item>
       <title>Crash Course Computer Science</title>
-      <link>https://vchv.tk/crash-course-computer-science/</link>
+      <link>https://www.vchv.ltd/crash-course-computer-science/</link>
       <pubDate>Sat, 28 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/crash-course-computer-science/</guid>
+      <guid>https://www.vchv.ltd/crash-course-computer-science/</guid>
       <description>前言 第二次看这个，精看深究细节+学英语，计划慢慢来，每天看一个小片段。 1914-1918 第一次世界大战 1939-1945 第二次世界大战 1947-1991 冷战、太空竞赛、军备（核武器）竞赛 1912.1.1-1949.12.7</description>
     </item>
     
     <item>
       <title>大前端学习（HTML&#43;CSS）</title>
-      <link>https://vchv.tk/html-css/</link>
+      <link>https://www.vchv.ltd/html-css/</link>
       <pubDate>Fri, 27 Dec 2019 17:40:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/html-css/</guid>
+      <guid>https://www.vchv.ltd/html-css/</guid>
       <description>前言 2020.01.01学到了挺多基础的知识，但我发现我不喜欢调试样式，就像化妆一样，我兴趣不在这个上面，可以转向Python看看，我的时间</description>
     </item>
     
     <item>
       <title>浪潮之巅</title>
-      <link>https://vchv.tk/top-of-the-wave/</link>
+      <link>https://www.vchv.ltd/top-of-the-wave/</link>
       <pubDate>Tue, 24 Dec 2019 20:51:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/top-of-the-wave/</guid>
+      <guid>https://www.vchv.ltd/top-of-the-wave/</guid>
       <description>前言 按照《如何快速阅读》，先是经别人力荐，为了理解科技行业。看了豆瓣评分（9.0），拿到书后，看了前言、序和目录，文笔不花哨但精准传递信息很</description>
     </item>
     
     <item>
       <title>2019年总结2020年规划</title>
-      <link>https://vchv.tk/summary-of-2019/</link>
+      <link>https://www.vchv.ltd/summary-of-2019/</link>
       <pubDate>Mon, 23 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/summary-of-2019/</guid>
+      <guid>https://www.vchv.ltd/summary-of-2019/</guid>
       <description>前言 2019年是焦虑的一年，也是很有收获的一年。将时间和精力变得真实可触摸是最大的收获也是产生焦虑的部分原因。 2019年大概干了几件事：计算</description>
     </item>
     
     <item>
       <title>经济学课之五（经济学辞典）</title>
-      <link>https://vchv.tk/economics-about-glossary/</link>
+      <link>https://www.vchv.ltd/economics-about-glossary/</link>
       <pubDate>Sun, 22 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-glossary/</guid>
+      <guid>https://www.vchv.ltd/economics-about-glossary/</guid>
       <description>前言 有记录的时间已经达到了46小时，Amazing！ 一个统领前面的章节，加油搞定吧ヾ(๑╹◡╹)ﾉ&amp;rdquo; 东西不够 哪怕物质的总量不发生</description>
     </item>
     
     <item>
       <title>经济学课之四（经济学家、经济学的应用）</title>
-      <link>https://vchv.tk/economics-about-economists-and-attribution/</link>
+      <link>https://www.vchv.ltd/economics-about-economists-and-attribution/</link>
       <pubDate>Tue, 17 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-economists-and-attribution/</guid>
+      <guid>https://www.vchv.ltd/economics-about-economists-and-attribution/</guid>
       <description>前言 认识凯恩斯、哈耶克、弗里德曼、阿尔钦、科斯等经济学大家。 新概念新收获 相关性与因果性 事与愿违的政策让我重新思考我自身的主观能动性，经济学全</description>
     </item>
     
     <item>
       <title>从修改文章中学到的写作知识</title>
-      <link>https://vchv.tk/repair-more-and-more/</link>
+      <link>https://www.vchv.ltd/repair-more-and-more/</link>
       <pubDate>Mon, 16 Dec 2019 20:50:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/repair-more-and-more/</guid>
+      <guid>https://www.vchv.ltd/repair-more-and-more/</guid>
       <description>前言 写完文章，几天后再看，就能发现自己表达不精练的地方，有些会引起歧义，但是稍微修改一下就好了，如果能把每次修改心得记录下来，时时回顾参看，</description>
     </item>
     
     <item>
       <title>打破旧观念，树立新观念</title>
-      <link>https://vchv.tk/idea-notion/</link>
+      <link>https://www.vchv.ltd/idea-notion/</link>
       <pubDate>Mon, 16 Dec 2019 20:50:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/idea-notion/</guid>
+      <guid>https://www.vchv.ltd/idea-notion/</guid>
       <description>前言 白纸黑字，来一场破旧立新的旅程，把新的东西树立起来，把旧的东西彻底打倒！ 改变世界很难，改变世界观相对简单。改变世界不是很难，是不可能，因</description>
     </item>
     
     <item>
       <title>经济学课之三（宏观经济学、公共选择）</title>
-      <link>https://vchv.tk/economics-about-macroeconomics-public-chooses/</link>
+      <link>https://www.vchv.ltd/economics-about-macroeconomics-public-chooses/</link>
       <pubDate>Sun, 15 Dec 2019 06:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-macroeconomics-public-chooses/</guid>
+      <guid>https://www.vchv.ltd/economics-about-macroeconomics-public-chooses/</guid>
       <description>新概念新收获 公平与效率的辨析 宏观经济学 033-钞票和选票哪个重要？ 小心思和大现象-宏观经济学为何难？ 货币的起源 商业银行创造货币 中央银行的作用</description>
     </item>
     
     <item>
       <title>小新Pro13初体验</title>
-      <link>https://vchv.tk/lenovo-xiaoxinpro13/</link>
+      <link>https://www.vchv.ltd/lenovo-xiaoxinpro13/</link>
       <pubDate>Sat, 14 Dec 2019 19:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/lenovo-xiaoxinpro13/</guid>
+      <guid>https://www.vchv.ltd/lenovo-xiaoxinpro13/</guid>
       <description>前言 11.21日写了一篇文章，想买笔记本，当时想的是等2020新锐龙APU上市再说，但是因为工作的变动，外出频繁，且一个过年大概10几天，这</description>
     </item>
     
     <item>
       <title>经济学课之二（权利、时间、分工、信任）</title>
-      <link>https://vchv.tk/economics-about-rights-time-and-trust/</link>
+      <link>https://www.vchv.ltd/economics-about-rights-time-and-trust/</link>
       <pubDate>Sun, 08 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-rights-time-and-trust/</guid>
+      <guid>https://www.vchv.ltd/economics-about-rights-time-and-trust/</guid>
       <description>新概念新收获 集体所有制、私有制、公有制的优劣之分。 共用品和私用品的区别。 使用光谱来分析事情，不再去寻找一种确定的真理，而是看现实的复杂性。 错</description>
     </item>
     
     <item>
       <title>经济学课之一（稀缺、成本、需求、价格）</title>
-      <link>https://vchv.tk/economics-about-scarce-cost-demand-and-price/</link>
+      <link>https://www.vchv.ltd/economics-about-scarce-cost-demand-and-price/</link>
       <pubDate>Tue, 03 Dec 2019 20:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/economics-about-scarce-cost-demand-and-price/</guid>
+      <guid>https://www.vchv.ltd/economics-about-scarce-cost-demand-and-price/</guid>
       <description>前言 经济是一种研究资源是如何分配的学科，这必然会深刻的影响和决定政治。 人类世界的四大基本约束：东西不够；生命有限；互相依赖；需要协调。 关注作</description>
     </item>
     
     <item>
       <title>近期的一些购物渴望(计算机产品相关）</title>
-      <link>https://vchv.tk/purchase-desire/</link>
+      <link>https://www.vchv.ltd/purchase-desire/</link>
       <pubDate>Thu, 21 Nov 2019 18:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/purchase-desire/</guid>
+      <guid>https://www.vchv.ltd/purchase-desire/</guid>
       <description>前言 写一下最近的购买渴望吧，让躁动的心平静平静，打折的时候也能更好的把握机会。 笔记本 我拿来干什么？ 学习计算机科学（CS学科）的知识，可能从前</description>
     </item>
     
     <item>
       <title>Git的逻辑与基本操作</title>
-      <link>https://vchv.tk/git-manual/</link>
+      <link>https://www.vchv.ltd/git-manual/</link>
       <pubDate>Fri, 25 Oct 2019 18:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/git-manual/</guid>
+      <guid>https://www.vchv.ltd/git-manual/</guid>
       <description>前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档； 廖雪峰Git教程 Git是一</description>
     </item>
     
     <item>
       <title>使用hugo和Markdown来写博客</title>
-      <link>https://vchv.tk/write-blog-by-hugo/</link>
+      <link>https://www.vchv.ltd/write-blog-by-hugo/</link>
       <pubDate>Sun, 20 Oct 2019 14:30:04 +0800</pubDate>
       
-      <guid>https://vchv.tk/write-blog-by-hugo/</guid>
+      <guid>https://www.vchv.ltd/write-blog-by-hugo/</guid>
       <description>前言 梳理杂乱的思绪与生活，便签太丑，没层次，写完更乱了？你可能需要幕布了。 码字发布很简单，但如果想把文章从“A平台”移到“B平台”怎么办？你</description>
     </item>
     
