@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0 with theme even" />
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
 
 
 <link rel="canonical" href="https://www.vchv.ltd/learn-javascript-through-vedio-heima/" />
@@ -35,7 +35,7 @@
 
 
 
-<link href="https://www.vchv.ltd/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="https://www.vchv.ltd/sass/main.min.e1f2e845aca7f3202ba8ad4df5ba9fe1b4b79dd9e9a72a2231e5b8d83e6706ff.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -44,12 +44,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.vchv.ltd/learn-javascript-through-vedio-heima/" />
 <meta property="article:published_time" content="2020-04-24T19:30:04+08:00" />
-<meta property="article:modified_time" content="2020-04-27T23:25:10+08:00" />
+<meta property="article:modified_time" content="2020-04-28T16:00:57+08:00" />
 <meta itemprop="name" content="【黑马】JavaScript 从入门到高级">
 <meta itemprop="description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执">
 <meta itemprop="datePublished" content="2020-04-24T19:30:04&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-27T23:25:10&#43;08:00" />
-<meta itemprop="wordCount" content="1571">
+<meta itemprop="dateModified" content="2020-04-28T16:00:57&#43;08:00" />
+<meta itemprop="wordCount" content="2295">
 
 
 
@@ -129,8 +129,8 @@
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
             </div>
-          <span class="more-meta"> 约 1571 字 </span>
-          <span class="more-meta"> 预计阅读 4 分钟 </span>
+          <span class="more-meta"> 约 2295 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
         
       </div>
     </header>
@@ -154,6 +154,7 @@
         <li><a href="#js-数据类型">JS 数据类型</a></li>
         <li><a href="#js-数据类型的转换">JS 数据类型的转换</a></li>
         <li><a href="#js-运算符">JS 运算符</a></li>
+        <li><a href="#js-流程控制">JS 流程控制</a></li>
       </ul>
     </li>
   </ul>
@@ -267,7 +268,7 @@
 </blockquote>
 <ul>
 <li>
-<p>运算符（operator）：也被称为操作符，用于实现赋值、比较和执行算术运算等功能的符号。</p>
+<p><strong>运算符（operator）</strong>：也被称为操作符，用于实现赋值、比较和执行算术运算等功能的符号。</p>
 </li>
 <li>
 <p><strong>算术运算符</strong>：加，减，乘，除，取余（取模） <code> + - *  /  %</code>，浮点数的直接运算会有精度的问题。</p>
@@ -298,7 +299,98 @@
 </ul>
 </li>
 <li>
-<p>逻辑运算符：</p>
+<p><strong>逻辑运算符</strong>：<code>逻辑与运算符 &amp;&amp;</code> <code>逻辑或运算符 ||</code> <code>逻辑非运算符 !</code></p>
+</li>
+<li>
+<p><strong>短路运算</strong>（逻辑中断）：当有多个表达式（值）时，左边的表达式值可以确定结果时，就不再继续运算右边的表达式的值。</p>
+<ul>
+<li><code>&amp;&amp;</code>：表达式1 &amp;&amp; 表达式2；如果第一个表达式的值为真，则返回表达式2<code>console.log(123 &amp;&amp; 456)</code>；如果第一个表达式的值为假，则返回表达式1<code>console.log(0 &amp;&amp; 456)</code>或者<code>console.log(0 &amp;&amp; 1 +2 &amp;&amp; 456* 567)</code>。</li>
+<li><code>||</code>：表达式1 || 表达式2；如果表达式1结果为真，则返回表达式1；如果表达式1结果为假，则返回表达式2。</li>
+</ul>
+</li>
+<li>
+<p><strong>赋值运算符</strong>：<code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var num = 10;
+num = num + 1; // num++
+num = num + 2; // num += 2;
+num = num - 2; // num -= 2;
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>运算符优先级</strong>：使用小括号来表示优先级，稳妥</p>
+<ol>
+<li>小括号</li>
+<li>一元运算符：++ &ndash; !</li>
+<li>算术运算符：先 * / % 后 + -</li>
+<li>关系运算符：&gt; &gt;= &lt; &lt;=</li>
+<li>相等运算符：== != === !==</li>
+<li>逻辑运算符：先 &amp;&amp; 后 ||</li>
+<li>赋值运算符：=</li>
+<li>逗号运算符：,</li>
+</ol>
+</li>
+</ul>
+<h3 id="js-流程控制">JS 流程控制</h3>
+<ul>
+<li>
+<p>流程控制：控制代码按照什么结构顺序来执行。</p>
+<ul>
+<li>在一个程序执行的过程中，各条代码的执行顺序对程序的结果是有直接影响的。很多时候我们要通过控制代码的执行顺序来实现我们要完成的功能。</li>
+<li>流程控制主要有三种结构：顺序结构、分支结构、循环结构。</li>
+</ul>
+</li>
+<li>
+<p>顺序流程控制：最简单、最基本的流程控制，按照代码的先后顺序执行。</p>
+</li>
+<li>
+<p>分支流程控制：由上到下执行代码的过程中，根据不同的条件，执行不同的代码路径（执行代码多选一的过程），从而得到不同的结果。</p>
+</li>
+<li>
+<p>if 语句：<code>if (条件表达式) {}</code></p>
+</li>
+<li>
+<p>if else 语句：
+<code>
+if (条件表达式) {
+// 执行语句1
+} else {
+// 执行语句2
+}
+</code></p>
+</li>
+<li>
+<p>if else if 多分支语句：
+<code>
+if (条件表达式1) {
+// 执行语句1;
+} else if (条件表达式2) {
+// 执行语句2;
+} else if (条件表达式3) {
+// 执行语句3;
+} else {
+// 最后的语句;
+}
+</code></p>
+<ul>
+<li>switch 语句</li>
+</ul>
 </li>
 </ul>
 
@@ -312,8 +404,8 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2020-04-27
-        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/68eda2992f4f102c3b4c07e8074b24923d98e11f" title="JS Operator &#43;&#43;-- and compare">(68eda29)</a>
+        2020-04-28
+        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/9f999d999227aef3ba95cf6772b93d2ab9970753" title="update the hugo article">(9f999d9)</a>
     </span>
   </p>
   

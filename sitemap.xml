@@ -3,56 +3,63 @@
   
   <url>
     <loc>https://www.vchv.ltd/categories/</loc>
-    <lastmod>2020-04-27T23:25:10+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/javascript/</loc>
-    <lastmod>2020-04-27T23:25:10+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/post/</loc>
-    <lastmod>2020-04-27T23:25:10+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/</loc>
-    <lastmod>2020-04-27T23:25:10+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/v8/</loc>
-    <lastmod>2020-04-27T23:25:10+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vchv.ltd/</loc>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/learn-javascript-through-vedio-heima/</loc>
-    <lastmod>2020-04-27T23:25:10+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/</loc>
-    <lastmod>2020-04-27T23:25:10+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98/</loc>
-    <lastmod>2020-04-27T23:25:10+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -66,7 +73,7 @@
   
   <url>
     <loc>https://www.vchv.ltd/categories/%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2020-04-20T21:57:15+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -80,49 +87,49 @@
   
   <url>
     <loc>https://www.vchv.ltd/tags/even/</loc>
-    <lastmod>2020-04-20T21:57:15+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/git/</loc>
-    <lastmod>2020-04-20T21:57:15+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/github/</loc>
-    <lastmod>2020-04-20T21:57:15+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/hugo/</loc>
-    <lastmod>2020-04-20T21:57:15+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/onedrive/</loc>
-    <lastmod>2020-04-20T21:57:15+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/build-a-hugo-blog-from-zero/</loc>
-    <lastmod>2020-04-20T21:57:15+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2020-04-20T21:57:15+08:00</lastmod>
+    <lastmod>2020-04-28T16:00:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -828,20 +835,6 @@
   </url>
   
   <url>
-    <loc>https://www.vchv.ltd/about/</loc>
-    <lastmod>2020-04-15T21:23:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vchv.ltd/</loc>
-    <lastmod>2020-04-15T21:23:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.vchv.ltd/git-manual/</loc>
     <lastmod>2020-04-15T21:23:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -860,6 +853,11 @@
     <lastmod>2020-04-15T21:23:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vchv.ltd/about/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>

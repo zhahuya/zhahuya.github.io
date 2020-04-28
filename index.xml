@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
-    <lastBuildDate>Sun, 10 Nov 2019 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 19:30:04 +0800</lastBuildDate>
     
 	<atom:link href="https://www.vchv.ltd/index.xml" rel="self" type="application/rss+xml" />
     
@@ -319,15 +319,6 @@
     </item>
     
     <item>
-      <title>about</title>
-      <link>https://www.vchv.ltd/about/</link>
-      <pubDate>Sun, 10 Nov 2019 21:00:00 +0800</pubDate>
-      
-      <guid>https://www.vchv.ltd/about/</guid>
-      <description>关于我 喜欢看书、学习，rap、篮球，练习时长两年半，呃呃，对不起，串台了…… 关于博客 本博客创建于2019年10月份，是一个专注于分享计算机科</description>
-    </item>
-    
-    <item>
       <title>Git的逻辑与基本操作</title>
       <link>https://www.vchv.ltd/git-manual/</link>
       <pubDate>Fri, 25 Oct 2019 18:30:04 +0800</pubDate>
@@ -343,6 +334,18 @@
       
       <guid>https://www.vchv.ltd/write-blog-by-hugo/</guid>
       <description>前言 梳理杂乱的思绪与生活，便签太丑，没层次，写完更乱了？你可能需要幕布了。 码字发布很简单，但如果想把文章从“A平台”移到“B平台”怎么办？你</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.vchv.ltd/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.vchv.ltd/about/</guid>
+      <description>关于我 喜欢看书、学习，rap、篮球，练习时长两年半，呃呃，对不起，串台了……
+喜欢吃的：花菜、平菇、鸡蛋、金针菇、牛肉、鱼……
+关于博客 本博客创建于2019年10月份，是一个专注于分享计算机科学、英语、经济学、逻辑学、心理学等领域的个人博客，同时在博客里也会有一些博主个人对生活的心得感悟。
+框架变更  hugo 2019.10-2020.03 hexo 2020.03-2020.03 测试 WordPress 2020.03-2020.04 typecho 2020.03-2020.03 测试 hugo 2020.04-至今  主机变迁  腾讯云（大陆地区上海市） 2019.10-2020.04 云上互联虚拟主机（香港特别行政区） 2020.04-至今 腾讯云开发 2020.05-至今  联系方式：  电子邮箱：brblmdxj_1@163.com Telegram：vchv01  </description>
     </item>
     
   </channel>
