@@ -49,7 +49,7 @@
 <meta itemprop="description" content="前言 一个虚拟主机，一个域名，缺一些静态文件，使用 hugo 整点静态文件放上去…… 此次基于 hugo 的 even 主题搭建。 厌倦了 typecho、WordPress 的发">
 <meta itemprop="datePublished" content="2020-04-13T19:30:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-20T21:57:15&#43;08:00" />
-<meta itemprop="wordCount" content="2676">
+<meta itemprop="wordCount" content="2713">
 
 
 
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF/"> 应用技术 </a>
             </div>
-          <span class="more-meta"> 约 2676 字 </span>
+          <span class="more-meta"> 约 2713 字 </span>
           <span class="more-meta"> 预计阅读 6 分钟 </span>
         
       </div>
@@ -159,7 +159,7 @@
         <li><a href="#基于-even-改造的主题janehttpsgithubcomxianminhugo-theme-jane">基于 even 改造的主题：<a href="https://github.com/xianmin/hugo-theme-jane">Jane</a></a></li>
       </ul>
     </li>
-    <li><a href="#一款同样优秀的主题loveithttpsgithubcomdillonzqloveit">一款同样优秀的主题：<a href="https://github.com/dillonzq/LoveIt">LoveIt</a></a>
+    <li><a href="#一款异常优秀的主题loveithttpsgithubcomdillonzqloveit">一款异常优秀的主题：<a href="https://github.com/dillonzq/LoveIt">LoveIt</a></a>
       <ul>
         <li><a href="#调试-loveit-主题">调试 LoveIt 主题</a></li>
         <li><a href="#待改进">待改进</a></li>
@@ -183,12 +183,12 @@
 </ul>
 <h2 id="清空过去">清空过去</h2>
 <ul>
-<li>除了文章原文件外，删除所有以前的痕迹，hexo的，hugo的，没什么用，一切从零开始。</li>
+<li>除了文章原文件外，删除所有以前的痕迹，hexo 的，hugo 的，一切从零开始。</li>
 </ul>
 <h2 id="hugo-的安装与配置">hugo 的安装与配置</h2>
 <ul>
 <li>下载 hugo 最新版本。hugo 一直在疯狂的更新之中，而 even 主题已经很少更新了，但好像还在做一些新版本的适配工作……</li>
-<li>配置环境变量：右键 此计算机 - 属性 - 高级系统设置 - 环境变量 - Path 将 hugo所在的路径添加到里面。
+<li>配置环境变量：右键 此计算机 - 属性 - 高级系统设置 - 环境变量 - Path 将 hugo 所在的路径添加到里面。
 <ul>
 <li>我的路径是  D:\hugo_Windows-64bit ，没有写版本号，这意味着如果要更新 hugo，直接把最新的 hugo 程序丢到这个文件夹里就好了。</li>
 </ul>
@@ -200,7 +200,7 @@
 <li><code>hugo new site Myblog-hugo</code>  创建一个名为“Myblog-hugo”的文件夹</li>
 <li><code>git init</code> 将其设置为一个 Git 仓库</li>
 <li><code>git clone git@github.com:olOwOlo/hugo-theme-even.git themes/even</code></li>
-<li>：<code>git pull</code>  进行主题的更新或者手动去更新，因为 even 的更新很少了。</li>
+<li>：<code>git pull</code>  进行主题的更新或者手动去更新，建议手动更新，直接把 .git 删除来管理主题。</li>
 <li>在主题的 exampleSite 目录下有一个 config.toml 文件，将这个 config.toml 文件复制到你的站点目录下，根据自己的需求更改。</li>
 <li>你可以通过 front-matter 针对每一篇文章单独进行设置。themes/even/archetypes/default.md 文件陈列了所有可用的参数。
 <blockquote>
@@ -208,13 +208,13 @@
 作者的教程：<a href="https://blog.olowolo.com/post/hugo-quick-start/">快速开始文档</a></p>
 </blockquote>
 </li>
-<li><code>hugo server</code> 来预览。<code>hugo server -D</code></li>
-<li>使用<code>hugo</code> 就可以直接生成 public 文件。theme 和 baseURL 已经在 config.toml 指定了 。</li>
+<li><code>hugo server</code> 来预览。<code>hugo server -D</code> 草稿也预览。</li>
+<li>使用<code>hugo</code> 就可以直接生成 public 文件。theme 和 baseURL 可以在 config.toml 直接指定 。</li>
 </ul>
 <h2 id="使用-git-同步站点文件">使用 git 同步站点文件</h2>
 <ul>
 <li>在 GitHub 上创建一个新仓库用来管理站点文件</li>
-<li>在本地”Myblog-hugo”文件夹下新建一个 .gitignore 文件，内容：<code>public/ themes/</code></li>
+<li>在本地”Myblog-hugo”文件夹下新建一个 .gitignore 文件，内容：<code>public/ themes/</code>，用来忽略这两个文件夹。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -235,12 +235,12 @@
 </ul>
 <h2 id="使用-git-管理-public-文件">使用 git 管理 public 文件</h2>
 <ul>
-<li>在 GitHub 上创建一个新仓库，名称必须是 yourname.github.io，这样才可以直接访问这个名称。</li>
+<li>在 GitHub 上创建一个新仓库，名称必须是 yourname.github.io，这样才可以直接访问这个名称来访问 GitHub Pages。</li>
 <li>在“public”文件夹下：<code>git init</code></li>
-<li>关联远程仓库：<code>git remote add origin git@github.com:zhahuya/zhahuya.github.io.git</code></li>
+<li><code>git remote add origin git@github.com:zhahuya/zhahuya.github.io.git</code></li>
 <li><code>git add .</code></li>
 <li><code>git commit -m &quot;first submit&quot;</code></li>
-<li>推送到仓库：<code>git push -u origin master</code></li>
+<li><code>git push -u origin master</code></li>
 </ul>
 <h2 id="为-git-设置代理">为 git 设置代理</h2>
 <p>windows 下，找到 <code>.ssh 文件夹</code> 新建一个 config 文件，输入：</p>
@@ -249,7 +249,10 @@
 <p>参考：<a href="https://walkedby.com/sshwindowsproxy/">在 windows 上为 git ssh 设置代理</a></p>
 </blockquote>
 <h2 id="同步的问题"><del>同步的问题</del></h2>
-<p><del>- 现在我们使用 Git 来同步整个网站目录（“Myblog”文件夹），这样主题 even 只能以 submodule 的形式获取和同步，public/ 则是使用 gitignore 来忽略，其实 public/ 也是一个 git 仓库。这样我不能对 even 本身有任何改动，因为到了另一台电脑上，我只能获取原本仓库的主题文件，对主题文件的改动就丢失了。不去改动原主题文件，这一点其实是 hugo 所倡导的，它的文件结构也说明了这一点。</del></p>
+<p>~~- 现在我们使用 Git 来同步整个网站目录（“Myblog”文件夹），这样主题 even 只能以 submodule 的形式获取和同步，public/ 则是使用 gitignore 来忽略，其实 public/ 也是一个 git 仓库。</p>
+<ul>
+<li>这样我不能对 even 本身有任何改动，因为到了另一台电脑上，我只能获取原本仓库的主题文件，对主题文件的改动就丢失了。不去改动原主题文件，这一点其实是 hugo 所倡导的，它的文件结构也说明了这一点。~~</li>
+</ul>
 <p><del>- 另一个思路：使用 onedrive 或“坚果云”来同步整个网站目录（”Myblog“文件夹），主题文件和 public 文件就各是各的正常的 git 仓库，这样还可以保证整个站点目录的完整性。</del></p>
 <h2 id="日常操作">日常操作</h2>
 <ol>
@@ -278,7 +281,7 @@
 <h3 id="even-主题的优点">even 主题的优点</h3>
 <ol>
 <li>设计优秀：全页面一片纯色、浑然一体，简洁大方。向各种方块说不（Jane和loveit主题）。</li>
-<li>得体、易用的文章目录，缺陷一是支持的层级太浅，只到3级题目，二是样式不如（loveIt）美观。向花里胡哨的目录说不（Jane主题）。</li>
+<li>得体、易用的文章目录，~~缺陷一支持的层级太浅，只到3级题目，~~二样式不如（loveIt）美观；向花里胡哨的目录说不（Jane主题）。</li>
 </ol>
 <h3 id="even-主题的不足">even 主题的不足</h3>
 <ol>
@@ -286,7 +289,7 @@
 <li>【已解决】社交分享模块图标黑又大，笨重，难看，无法全部去除，会留下RSS图标。</li>
 <li>无内置搜索</li>
 <li>无流行的暗黑主题</li>
-<li>不支持分享文章</li>
+<li>不支持文章分享</li>
 </ol>
 <h3 id="提升-even-的表现">提升 even 的表现</h3>
 <ol>
@@ -355,7 +358,7 @@ You may add the following settings to your config.toml.</p>
 </ol>
 <h3 id="todo-list">Todo list</h3>
 <ul>
-<li><input disabled="" type="checkbox">内置搜索，功能和样式</li>
+<li><input disabled="" type="checkbox">内置美观的搜索</li>
 <li><input disabled="" type="checkbox">暗黑主题</li>
 <li><input disabled="" type="checkbox">文章内链接默认使用新标签页打开</li>
 <li><input checked="" disabled="" type="checkbox">enablegitinfo 让这个设置有效</li>
@@ -366,7 +369,7 @@ You may add the following settings to your config.toml.</p>
 <ol>
 <li>貌似丢失了原作的精髓……</li>
 </ol>
-<h2 id="一款同样优秀的主题loveithttpsgithubcomdillonzqloveit">一款同样优秀的主题：<a href="https://github.com/dillonzq/LoveIt">LoveIt</a></h2>
+<h2 id="一款异常优秀的主题loveithttpsgithubcomdillonzqloveit">一款异常优秀的主题：<a href="https://github.com/dillonzq/LoveIt">LoveIt</a></h2>
 <ol>
 <li>一款同样干净、简洁、优雅、强大、活跃的主题。</li>
 <li>文章目录要比 even 更加好看得体，层级从2到6，可以自定义。</li>
@@ -375,7 +378,7 @@ You may add the following settings to your config.toml.</p>
 <h3 id="调试-loveit-主题">调试 LoveIt 主题</h3>
 <ol>
 <li>将 config 中的位置设置为：<code>themesDir = &quot;./themes/&quot;</code></li>
-<li>删除 English 和 franch 语言，主要是转过去还需要搭配该语言的文章才有内容，麻烦。</li>
+<li>删除 English 和 franch 语言，主要是还需要搭配该语言的文章才能有内容，没有必要弄这个。</li>
 <li>使用 hugo_extended 来使 调试 CSS 样式变得可行。</li>
 <li>全页面一片纯色：在<code>./assets/css/.variables.scss</code> 将 global 和 header 的背景颜色改为：白色<code>#fefefe</code> and 黑色<code>#252627</code>，修改标题栏高度：<code>$header-height-desktop: 4.5rem !default;</code></li>
 <li>调整 header title  and manu 的字体与位置：在<code>./assets/css/_partial/_header.scss</code> 添加修改：<code>header {width: 80%;}</code>	<code>.header-title {font-family: rage; width: 60%;}</code></li>
@@ -383,8 +386,8 @@ You may add the following settings to your config.toml.</p>
 <h3 id="待改进">待改进</h3>
 <ul>
 <li><input disabled="" type="checkbox">主页标题取消加粗</li>
-<li><input disabled="" type="checkbox">归档页面自定义显示文章数</li>
-<li><input disabled="" type="checkbox">“引用”的样式调整</li>
+<li><input checked="" disabled="" type="checkbox">归档页面自定义显示文章数</li>
+<li><input checked="" disabled="" type="checkbox">“引用”的样式调整</li>
 <li><input disabled="" type="checkbox"></li>
 <li><input disabled="" type="checkbox"></li>
 </ul>
@@ -394,7 +397,7 @@ You may add the following settings to your config.toml.</p>
 <li>【弃用WordPress】在 WordPress 使用一个大神的 PublishMarkdown 工具，把约定俗成的 categories 写成了 category ，导致我现在无法适配 even 主题的分类，要么修改每一篇文章，要么就不能使用 分类，烦！</li>
 <li>【已修改】经过测试发现大神的工具是 categories 和 category 都匹配的，只是示例文章写成了 category ，导致我将30多篇文章都改成了 category ，流下了没技术的眼泪。</li>
 <li>【已解决的不太彻底】enablegitinfo 这个参数不管用，烦恼。</li>
-<li>前端 HTML5 的基本语义过了一遍，CSS 学习之前先实践。</li>
+<li>前端 HTML5 的基本语义过了一遍，CSS 学习之前先实践，JS 的学习，CSS 框架的了解。</li>
 </ul>
 
     </div>
