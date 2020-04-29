@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="朝晖" /><meta name="description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
+<meta name="author" content="朝晖" /><meta name="description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 新知 兴奋(p≧w≦q)，学习了断点调试，" /><meta name="keywords" content="vchv, hugo, python, 学习笔记" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="【黑马】JavaScript 从入门到高级" />
-<meta property="og:description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执" />
+<meta property="og:description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 新知 兴奋(p≧w≦q)，学习了断点调试，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.vchv.ltd/learn-javascript-through-vedio-heima/" />
 <meta property="article:published_time" content="2020-04-24T19:30:04+08:00" />
-<meta property="article:modified_time" content="2020-04-28T16:00:57+08:00" />
+<meta property="article:modified_time" content="2020-04-28T22:54:07+08:00" />
 <meta itemprop="name" content="【黑马】JavaScript 从入门到高级">
-<meta itemprop="description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执">
+<meta itemprop="description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 新知 兴奋(p≧w≦q)，学习了断点调试，">
 <meta itemprop="datePublished" content="2020-04-24T19:30:04&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-28T16:00:57&#43;08:00" />
-<meta itemprop="wordCount" content="2295">
+<meta itemprop="dateModified" content="2020-04-28T22:54:07&#43;08:00" />
+<meta itemprop="wordCount" content="3841">
 
 
 
 <meta itemprop="keywords" content="JavaScript,黑马程序员,V8," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="【黑马】JavaScript 从入门到高级"/>
-<meta name="twitter:description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 JS 基础 编程基础介绍 解释型语言：可以即时执"/>
+<meta name="twitter:description" content="前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 新知 兴奋(p≧w≦q)，学习了断点调试，"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,8 +129,8 @@
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
             </div>
-          <span class="more-meta"> 约 2295 字 </span>
-          <span class="more-meta"> 预计阅读 5 分钟 </span>
+          <span class="more-meta"> 约 3841 字 </span>
+          <span class="more-meta"> 预计阅读 8 分钟 </span>
         
       </div>
     </header>
@@ -141,6 +141,7 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#前言">前言</a></li>
+    <li><a href="#新知">新知</a></li>
     <li><a href="#js-基础">JS 基础</a>
       <ul>
         <li><a href="#编程基础介绍">编程基础介绍</a></li>
@@ -154,7 +155,12 @@
         <li><a href="#js-数据类型">JS 数据类型</a></li>
         <li><a href="#js-数据类型的转换">JS 数据类型的转换</a></li>
         <li><a href="#js-运算符">JS 运算符</a></li>
-        <li><a href="#js-流程控制">JS 流程控制</a></li>
+        <li><a href="#js-流程控制">JS 流程控制</a>
+          <ul>
+            <li><a href="#分支流程控制">分支流程控制</a></li>
+            <li><a href="#循环流程控制">循环流程控制</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -165,6 +171,10 @@
       <h2 id="前言">前言</h2>
 <ul>
 <li>听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。</li>
+</ul>
+<h2 id="新知">新知</h2>
+<ul>
+<li>兴奋(p≧w≦q)，学习了断点调试，理解了断点调试，调试bug，开心(<em>^▽^</em>)</li>
 </ul>
 <h2 id="js-基础">JS 基础</h2>
 <h3 id="编程基础介绍">编程基础介绍</h3>
@@ -263,8 +273,8 @@
 </ul>
 <h3 id="js-运算符">JS 运算符</h3>
 <blockquote>
-<p>表达式：由数字、运算符、变量等以能求得数值的有意义排列方法所得的组合。简单的说就是由数字、运算符、变量等组成的式子。eg：<code> 1 + 1</code><br>
-返回值：表达式最终都会有一个结果返回给我们，称为返回值。右边的表达式计算完毕把返回值给左边。</p>
+<p>表达式：由数字、运算符、变量等以能求得【数值】的有意义排列方法所得的组合。简单的说就是由数字、运算符、变量等组成的式子。eg：<code> 1 + 1</code><br>
+返回值：表达式最终都会有一个结果返回给我们，称为返回值。右边的表达式计算完毕把返回值给左边。一般使用一个变量来保存这个值。</p>
 </blockquote>
 <ul>
 <li>
@@ -360,40 +370,332 @@ num = num - 2; // num -= 2;
 <p>顺序流程控制：最简单、最基本的流程控制，按照代码的先后顺序执行。</p>
 </li>
 <li>
-<p>分支流程控制：由上到下执行代码的过程中，根据不同的条件，执行不同的代码路径（执行代码多选一的过程），从而得到不同的结果。</p>
+<p>分支流程控制：由上到下执行代码的过程中，根据不同的条件，执行不同的代码路径（执行代码**【多选一】**的过程），从而得到不同的结果。</p>
+</li>
+<li>
+<p>循环流程控制：</p>
+</li>
+</ul>
+<h4 id="分支流程控制">分支流程控制</h4>
+<ul>
+<li>
+<p><strong>if else</strong>：</p>
 </li>
 <li>
 <p>if 语句：<code>if (条件表达式) {}</code></p>
 </li>
 <li>
-<p>if else 语句：
-<code>
-if (条件表达式) {
-// 执行语句1
-} else {
-// 执行语句2
-}
-</code></p>
+<p>if else 语句：</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">	if (条件表达式) {
+		// 执行语句1
+	} else {
+		// 执行语句2
+	}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>if else if 多分支语句：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">	if (条件表达式1) {
+		// 执行语句1;
+	} else if (条件表达式2) {
+		// 执行语句2;
+	} else if (条件表达式3) {
+		// 执行语句3;
+	} else {
+		// 最后的语句;
+	}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>三元表达式</strong>：</p>
+<ul>
+<li>一元表达式：++num</li>
+<li>二元表达式：3 + 5</li>
+<li>三元表达式：<code>条件表达式 ? 表达式1: 表达式2</code> 如果条件表达式结果为真，则返回表达式1的值；如果结果为假，则返回表达式2的值。</li>
+</ul>
 </li>
 <li>
-<p>if else if 多分支语句：
-<code>
-if (条件表达式1) {
-// 执行语句1;
-} else if (条件表达式2) {
-// 执行语句2;
-} else if (条件表达式3) {
-// 执行语句3;
-} else {
-// 最后的语句;
-}
-</code></p>
+<p><strong>switch 语句</strong>：它基于不同的条件来执行不同的代码，当要针对【变量】设置一系列的【特定值】的选项时，就可以使用 switch。</p>
 <ul>
-<li>switch 语句</li>
+<li>switch 语法结构：expression 匹配哪个值就执行哪个语句。直接跳转匹配，执行效率较 if 高。</li>
+<li>开发里，表达式经常写成变量，灵活复用。</li>
+<li>num 和 case 的值相匹配的时候是全等，必须是值和数据类型一致才可以。</li>
+<li>break 不写的话，不会退出 switch ，继续执行下一个 case。</li>
 </ul>
 </li>
 </ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">switch(expression) {
+	case value1:
+		执行语句1;
+		break;
+	case value2:
+		执行语句2;
+		break;
+	...
+	default:
+		执行最后的语句;
+}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>if 语句 和 switch 语句的区别：
+<ol>
+<li>一般情况下，两个语句可以相互替换。</li>
+<li>switch&hellip;case 语句通常处理 case 为确定值的情况，而 if &hellip; else &hellip; 语句更加灵活，常用于范围判断（大于、等于某个范围）</li>
+<li>switch 语句进行条件判断后直接执行到程序的条件语句，效率更高。而 if &hellip; else 语句有几种条件，就得判断多少次。</li>
+<li>当分支比较少时，if &hellip; else 语句的执行效率比 switch 语句高。</li>
+<li>当分支比较多时，switch 语句的执行效率比较高，而且结构更清晰。</li>
+</ol>
+</li>
+</ul>
+<h4 id="循环流程控制">循环流程控制</h4>
+<ul>
+<li>
+<p>循环的目的： 可以重复执行某些代码。</p>
+</li>
+<li>
+<p>JS 中的三种循环：<strong>for 循环</strong>；while 循环；do..while 循环；</p>
+</li>
+<li>
+<p>在循环中，一组被重复执行的语句被称为【循环体】，能否继续重复执行，取决于循环的【终止条件】。由循环体及循环的终止条件组成的语句，被称为循环语句。</p>
+</li>
+<li>
+<p><strong>for 循环</strong>：用于把某些代码循环若干次，通常跟计数有关系。</p>
+</li>
+<li>
+<p>for 循环的语法结构：</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">for (初始化变量;condition expression;operation expression) {
+	// 循环体
+}
 
+// 初始化变量：用 var 声明的一个普通变量，通常用于作为计数器使用
+// condition expression：用来决定每一次循环是否继续执行，即终止条件
+// operation expression：每次循环最后执行的代码，用于更新计数器变量（递增或递减）
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>案例：重复打印 100 次 “hello world”</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">for (var count = 100; count &gt; 0;count--) {
+	console.log(&#39;Hello World&#39;)
+
+}
+
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>for 循环的执行过程</p>
+<ol>
+<li>首先执行计数器变量 var count = 1，但是这句话在 for 里面只执行一次。</li>
+<li>其次去 条件表达式 去判断是否满足条件，如果满足条件，就执行循环体，不满足条件，就退出循环。</li>
+<li>最后去执行 操作表达式 去更新计数器变量，第一轮循环结束。</li>
+<li>接着去执行 条件表达式 如果满足条件，就执行循环体，不满足…… 第二轮</li>
+</ol>
+</li>
+<li>
+<p><strong>断点调试（Breakpoints）</strong>：帮助我们观察程序的运行过程！</p>
+<ol>
+<li>Chrome 浏览器 按F12，选择 Source，选择 File，进行调试</li>
+<li>打上断点</li>
+<li>刷新观察</li>
+<li>watch：add watch expression</li>
+</ol>
+</li>
+<li>
+<p>for 循环执行相同代码、不同代码、相同操作：</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    &lt;script&gt;
+
+	// 简单的循环语句
+
+/*          for (var count = 1; count &lt;= 100;count+=2) {
+	        console.log(&#39;Hello World&#39;)
+    }  */
+
+    // 循环执行相同的代码
+
+/*     var num = prompt(&#39;请您输入次数：&#39;)
+    for (var i = 1; i &lt;= num; i++) {
+        console.log(&#39;你想来这么多次哦&#39;)
+    } */
+
+    // 循环执行不同的代码，使用if语句
+
+/*     for (var i = 1;i&lt;=100;i++){
+        if(i == 1){
+            console.log(&#39;the man is 1 years old today,he is born(〃0〃)&#39;);
+        }else if(i == 100){
+            console.log(&#39;the man is 100 years old today, he is died o(╥﹏╥)o&#39;);
+        }else{
+            console.log(&#39;the man is &#39;+i+&#39;years old this year.&#39;);
+            
+        }
+        
+    } */
+
+    // 循环执行不同的代码，使用switch语句
+    
+/*     for (var i = 1;i&lt;=100;i++){
+        switch(i){
+            case 1:
+                console.log(&#39;the man is 1 years old today,he is born(〃0〃)&#39;);
+            break;
+            case 100:
+                console.log(&#39;the man is 100 years old today, he is died o(╥﹏╥)o&#39;); 
+                break;
+            default:
+                console.log(&#39;the man is &#39;+i+&#39;years old this year.&#39;);
+                break;
+
+
+        }
+      
+        
+    } */
+
+    // 循环执行相同的操作,求1~100之间的整数累加和
+
+    var sum = 0;
+    for (var i = 1;i&lt;=100;i++){
+        // sum =sum+i;
+        sum += i;
+
+    }
+    console.log(sum);
+        
+    &lt;/script&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">
@@ -405,7 +707,7 @@ if (条件表达式1) {
     <span class="item-title">上次更新</span>
     <span class="item-content">
         2020-04-28
-        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/9f999d999227aef3ba95cf6772b93d2ab9970753" title="update the hugo article">(9f999d9)</a>
+        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/a80031f1668ef454e174f6090a00bbb19537a2b4" title="JS lesson">(a80031f)</a>
     </span>
   </p>
   
