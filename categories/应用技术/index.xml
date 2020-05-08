@@ -22,15 +22,6 @@
     </item>
     
     <item>
-      <title>正确使用Markdown</title>
-      <link>https://www.vchv.ltd/use-markdown-in-a-proper-way/</link>
-      <pubDate>Wed, 15 Apr 2020 13:30:04 +0800</pubDate>
-      
-      <guid>https://www.vchv.ltd/use-markdown-in-a-proper-way/</guid>
-      <description>良好的习惯 不要滥用标题，注意标题的语义：表明层级关系。所以请按顺序使用，一定不要跳着用；使用**来加粗文段，而不是使用标题。总之，标题的使用</description>
-    </item>
-    
-    <item>
       <title>从零开始搭建一个hugo博客</title>
       <link>https://www.vchv.ltd/build-a-hugo-blog-from-zero/</link>
       <pubDate>Mon, 13 Apr 2020 19:30:04 +0800</pubDate>
