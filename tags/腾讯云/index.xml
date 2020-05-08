@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>腾讯云 on Vchv的网络日志</title>
+    <link>https://www.vchv.ltd/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</link>
+    <description>Recent content in 腾讯云 on Vchv的网络日志</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>vchv</copyright>
+    <lastBuildDate>Fri, 08 May 2020 19:30:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.vchv.ltd/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于腾讯云的静态网站托管服务</title>
+      <link>https://www.vchv.ltd/tencent-cloudbase-static-website/</link>
+      <pubDate>Fri, 08 May 2020 19:30:04 +0800</pubDate>
+      
+      <guid>https://www.vchv.ltd/tencent-cloudbase-static-website/</guid>
+      <description>之前在知乎看到了腾讯云的静态网站托管服务，觉得非常方便，就想把自己的小博客放在这里，然而我的经历说明了转到这里需谨慎，这只是一个半成品，如果</description>
+    </item>
+    
+  </channel>
+</rss>

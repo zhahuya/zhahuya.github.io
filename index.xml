@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>vchv</copyright>
-    <lastBuildDate>Thu, 07 May 2020 19:30:04 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2020 19:30:04 +0800</lastBuildDate>
     
 	<atom:link href="https://www.vchv.ltd/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>关于腾讯云的静态网站托管服务</title>
+      <link>https://www.vchv.ltd/tencent-cloudbase-static-website/</link>
+      <pubDate>Fri, 08 May 2020 19:30:04 +0800</pubDate>
+      
+      <guid>https://www.vchv.ltd/tencent-cloudbase-static-website/</guid>
+      <description>之前在知乎看到了腾讯云的静态网站托管服务，觉得非常方便，就想把自己的小博客放在这里，然而我的经历说明了转到这里需谨慎，这只是一个半成品，如果</description>
+    </item>
     
     <item>
       <title>心理学课之六（自由、无常）</title>
@@ -18,7 +27,7 @@
       <pubDate>Thu, 07 May 2020 19:30:04 +0800</pubDate>
       
       <guid>https://www.vchv.ltd/free-and-sudden/</guid>
-      <description>新知 自由 预告：自我实现 成为你自己：带着攻击性的生命力一旦被看见，就会成为白色的、好的生命力，所以真正成为自己的人，他们的生命力的品质（人性化</description>
+      <description>新知 准确和充分地认识现实：匮乏认知的人会按照自己的需要、想象或欲望去认识世界，而存在认知的人不会那样，会认知现实。 接受模糊状态：他们很少条条</description>
     </item>
     
     <item>
@@ -28,6 +37,15 @@
       
       <guid>https://www.vchv.ltd/learn-javascript-through-vedio-heima/</guid>
       <description>前言 听了两节，还是很不错的，可以作为一个长期目标来听，大概设定时间2月吧，到7月1日截止看学习情况。 新知 兴奋(p≧w≦q)，理解了 for 循环，理</description>
+    </item>
+    
+    <item>
+      <title>正确使用Markdown</title>
+      <link>https://www.vchv.ltd/use-markdown-in-a-proper-way/</link>
+      <pubDate>Wed, 15 Apr 2020 13:30:04 +0800</pubDate>
+      
+      <guid>https://www.vchv.ltd/use-markdown-in-a-proper-way/</guid>
+      <description>良好的习惯 不要滥用标题，注意标题的语义：表明层级关系。所以请按顺序使用，一定不要跳着用；使用**来加粗文段，而不是使用标题。总之，标题的使用</description>
     </item>
     
     <item>
@@ -333,7 +351,7 @@
       <pubDate>Fri, 25 Oct 2019 18:30:04 +0800</pubDate>
       
       <guid>https://www.vchv.ltd/git-manual/</guid>
-      <description>前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git与GitHub 推荐教程：Progit官方文档； 廖雪峰Git教程 Git是一</description>
+      <description>前言 本文主要记录自己使用Git的经验和使用中遇到问题如何解决。 Git 与 GitHub 常识 参考教程：Progit官方文档； 廖雪峰Git教程； 小甲鱼Git教程 G</description>
     </item>
     
     <item>
