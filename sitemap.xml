@@ -23,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://www.vchv.ltd/</loc>
-    <lastmod>2020-05-08T23:06:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.vchv.ltd/tencent-cloudbase-static-website/</loc>
     <lastmod>2020-05-08T23:06:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -102,6 +95,13 @@
   <url>
     <loc>https://www.vchv.ltd/tags/v8/</loc>
     <lastmod>2020-05-08T23:06:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vchv.ltd/learn-javascript-through-vedio-heima/</loc>
+    <lastmod>2020-04-24T19:30:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -899,7 +899,16 @@
   
   <url>
     <loc>https://www.vchv.ltd/about/</loc>
-    <priority>0</priority>
+    <lastmod>2020-04-28T22:54:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vchv.ltd/</loc>
+    <lastmod>2020-04-28T22:54:07+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
 </urlset>
