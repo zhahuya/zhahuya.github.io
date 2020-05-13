@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0 with theme even" />
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
 
 
 <link rel="canonical" href="https://www.vchv.ltd/the-bubble-sort-in-heima-js-class/" />
@@ -35,7 +35,7 @@
 
 
 
-<link href="https://www.vchv.ltd/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="https://www.vchv.ltd/sass/main.min.e1f2e845aca7f3202ba8ad4df5ba9fe1b4b79dd9e9a72a2231e5b8d83e6706ff.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -44,12 +44,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.vchv.ltd/the-bubble-sort-in-heima-js-class/" />
 <meta property="article:published_time" content="2020-05-12T00:30:04+08:00" />
-<meta property="article:modified_time" content="2020-05-12T00:30:04+08:00" />
+<meta property="article:modified_time" content="2020-05-13T16:09:08+08:00" />
 <meta itemprop="name" content="关于“冒泡排序”的再思考">
 <meta itemprop="description" content="集中注意力到一个对象上，就像放大镜聚焦阳光一样……">
 <meta itemprop="datePublished" content="2020-05-12T00:30:04&#43;08:00" />
-<meta itemprop="dateModified" content="2020-05-12T00:30:04&#43;08:00" />
-<meta itemprop="wordCount" content="2102">
+<meta itemprop="dateModified" content="2020-05-13T16:09:08&#43;08:00" />
+<meta itemprop="wordCount" content="1953">
 
 
 
@@ -70,7 +70,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Vchv的网络日志</a>
+    <a href="/" class="logo">Vchv</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -96,7 +96,7 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Vchv的网络日志</a>
+  <a href="/" class="logo">Vchv</a>
 </div>
 
 <nav class="site-navbar">
@@ -129,8 +129,8 @@
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
             </div>
-          <span class="more-meta"> 约 2102 字 </span>
-          <span class="more-meta"> 预计阅读 5 分钟 </span>
+          <span class="more-meta"> 约 1953 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
     </header>
@@ -152,10 +152,10 @@
       <h2 id="前面的话">前面的话</h2>
 <p>冒泡排序是一个简单的排序算法，经常拿来作为初学者教学使用，但彻底理解它还是要花点功夫的，这对初学者而言并不简单。</p>
 <p>此外还有两个因素：一是在课堂上，有些老师在教学时会受限于自己的认知或者因为太熟悉而无法想象初学者的困惑点，导致出现细节上的纰漏；二是自学的时候，在网络上搜索“冒泡排序”，所获取的信息良莠不齐，更加大了初学者学习的难度。</p>
-<p>今天，作为一个初学者，我要花点时间采用 1+1=2 的笨方法来理解一下这个算法。</p>
+<p>今天，作为一个初学者，我采用 1+1=2 的笨方法来理解一下这个算法。</p>
 <p>本文以此视频为基础介绍：<a href="https://www.bilibili.com/video/BV1HJ41147DG?p=112">黑马JS教程，冒泡排序算法</a></p>
 <blockquote>
-<p>文章到最后是一个反转：教会我知识的课程，最后我用自己的思考校正了课程的不合理之处，并获得了更多，这就是不盲从，独立思考吧！说实话作为一个初学者要跳出老师的槽臼，相信自己的直觉挺难的，我做到了，我很高兴(〃&lsquo;▽&rsquo;〃)。</p>
+<p>文章到最后是一个反转：教会我知识的课程，最后我用自己的思考校正了课程的不合理之处，并获得了更多，这就是不盲从，独立思考吧！说实话作为一个初学者要跳出老师的槽臼，相信自己的直觉挺难的，我做到了(〃&lsquo;▽&rsquo;〃)。</p>
 </blockquote>
 <h2 id="对冒泡排序的想法">对冒泡排序的想法</h2>
 <ul>
@@ -163,13 +163,12 @@
 </ul>
 <ol>
 <li>
-<p>针对这个数组，可以看到，共有5个数，即 <code>arr1.length = 5</code> ，如果这个数组有 N 个数，N 就是 <code>arr1.length</code>。</p>
+<p>针对这个数组，可以看到共有5个数，即 <code>arr1.length = 5</code> ，如果这个数组有 N 个数，N 就是 <code>arr1.length</code>。</p>
 </li>
 <li>
 <p>我们要把这5个数从小到大各归其位，【从第一个数字3开始：3和4比较、不动；4和5比较、不动；5和2比较、换位；5和1比较、换位；这样就筛选出了一个最大的数5】。</p>
-<pre><code>- 即解决了一个最大数的问题，接下来是解决倒数第二的数、倒数第三的数、倒数第四的数，当有4个数的位置被确定时，第五个数的位置也就确定了，因为就剩它一个了，就只能在那了。  
-</code></pre>
 <ul>
+<li>即解决了一个最大数的问题，接下来是解决倒数第二的数、倒数第三的数、倒数第四的数，当有4个数的位置被确定时，第五个数的位置也就确定了，因为就剩它一个了，就只能在那了。</li>
 <li>因此如果一个数组的长度是 <code>N</code> ，那么要通过这种【两两比较】所要解决的次数就是 <code>N-1</code>。为了和下面的次数区分，我们把这个叫做趟数，即需要 <code>N-1</code> 趟。</li>
 </ul>
 </li>
@@ -205,7 +204,7 @@
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">var arr1 = [3, 4, 5, 2, 1];
 for (var i = 1; i &lt; arr1.length; i++) { // 外层循环管趟数,执行n-1趟
-    for (var j = 0; j &lt;= arr1.length - i; j++) { // 里面循环管每一趟的交换次数,执行n-i次
+    for (var j = 0; j &lt;= arr1.length - i - 1; j++) { // 里面循环管每一趟的交换次数,执行n-i次
         // 前一个元素和后一个元素比较,如果前&gt;后,则交换两个变量的值.
         if (arr1[j] &gt; arr1[j + 1]) {
             var temp = arr1[j];
@@ -219,9 +218,9 @@ console.log(arr1);
 </div>
 </div><p><em>关于第3步的想法</em>：</p>
 <ol>
-<li>每一趟比较都确定了一个数，因此下一次比较时都不需要再去比较已经确定的数，因此【需要比较的元素个数】随着趟数的增加递减1，这是动态的关系。若从1开始计数，关系式为：（N-i+1）<br>
-2. 【需要比较的次数】=【需要比较的元素个数】- 1，这是固定的关系，一个数学事实，3个数比大小，两两比较2次，即可完成排序。<br>
-3. 最后若 i 从 1 开始计数，【趟数】和【需要比较的次数】关系为：<code>N - i + 1 - 1</code></li>
+<li>每一趟比较都确定了一个数，因此下一次比较时都不需要再去比较已经确定的数，因此【需要比较的元素个数】随着 趟数的增加 递减1，这是动态的关系。若从1开始计数，关系式为：（N-i+1）</li>
+<li>【需要比较的次数】=【需要比较的元素个数】- 1，这是固定的关系。一个数学事实，3个数比大小，两两比较2次，即可完成排序。</li>
+<li>最后若 i 从 1 开始计数，【趟数】和【需要比较的次数】关系为：<code>N - i + 1 - 1</code></li>
 </ol>
 <table>
 <thead>
@@ -308,41 +307,11 @@ console.log(arr1);
 </ol>
 <h2 id="疑问">疑问</h2>
 <ol>
-<li>j 从 0 开始是可以理解的，因为 j 要在数组中取值，那么 i 为什么需要从 0 开始呢？
+<li>j 从 0 开始是可以理解的，因为 j 要在数组中取值，那么 i 为什么需要从 0 开始呢？<br>
 答：因为 j 和 i 是联动的，如果 j 从 0 开始, 而 i 从 1 开始, 那么第一趟的次数<code>n-i</code>次, 就会是4次，咦，这没有什么影响啊！？？！！<br>
-代码试一下，果然输出是正确的，也就是说我们可以写成以下的代码：</li>
+代码试一下，果然输出是正确的，也就是说我们可以写成上面的代码。</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">var arr1 = [3, 4, 5, 2, 1];
-for (var i = 1; i &lt; arr1.length; i++) { // 外层循环管趟数,执行n-1趟
-    for (var j = 0; j &lt;= arr1.length - i; j++) { // 里面循环管每一趟的交换次数,执行n-i次
-        // 前一个元素和后一个元素比较,如果前&gt;后,则交换两个变量的值.
-        if (arr1[j] &gt; arr1[j + 1]) {
-            var temp = arr1[j];
-            arr1[j] = arr1[j + 1];
-            arr1[j + 1] = temp;
-        }
-    }
-}
-console.log(arr1);
-</code></pre></td></tr></table>
-</div>
-</div><p>这个结果表明了这个课程的不简洁、不明白之处。不过瑕不掩瑜，如果要我给这个课程打分，我会打高分，因为课程总体来说非常棒，老师也非常好，感谢老师的付出！</p>
+<p>这个结果表明了这个课程的不简洁、不明白之处。不过瑕不掩瑜，如果要我给这个课程打分，我会打高分，因为课程总体来说非常棒，老师也非常好，感谢老师的付出！</p>
 
     </div>
 
@@ -354,8 +323,8 @@ console.log(arr1);
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2020-05-12
-        
+        2020-05-13
+        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/fbbbd1d60acd597d22551bf55495fbe62bd90f3c" title="update logotitle">(fbbbd1d)</a>
     </span>
   </p>
   
