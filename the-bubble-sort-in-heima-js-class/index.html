@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>关于“冒泡排序”的再思考 - Vchv的网络日志</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="朝晖" /><meta name="description" content="集中注意力到一个对象上，就像放大镜聚焦阳光一样……" /><meta name="keywords" content="vchv, 个人博客, javascript, python, hugo, 学习笔记" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.0 with theme even" />
+
+
+<link rel="canonical" href="https://www.vchv.ltd/the-bubble-sort-in-heima-js-class/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="https://www.vchv.ltd/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="关于“冒泡排序”的再思考" />
+<meta property="og:description" content="集中注意力到一个对象上，就像放大镜聚焦阳光一样……" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vchv.ltd/the-bubble-sort-in-heima-js-class/" />
+<meta property="article:published_time" content="2020-05-12T00:30:04+08:00" />
+<meta property="article:modified_time" content="2020-05-13T00:12:58+08:00" />
+<meta itemprop="name" content="关于“冒泡排序”的再思考">
+<meta itemprop="description" content="集中注意力到一个对象上，就像放大镜聚焦阳光一样……">
+<meta itemprop="datePublished" content="2020-05-12T00:30:04&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-13T00:12:58&#43;08:00" />
+<meta itemprop="wordCount" content="1990">
+
+
+
+<meta itemprop="keywords" content="冒泡排序,bubble sort," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="关于“冒泡排序”的再思考"/>
+<meta name="twitter:description" content="集中注意力到一个对象上，就像放大镜聚焦阳光一样……"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Vchv的网络日志</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Vchv的网络日志</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">关于“冒泡排序”的再思考</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-12 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
+            </div>
+          <span class="more-meta"> 约 1990 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#关于冒泡排序的想法">关于冒泡排序的想法</a></li>
+            <li><a href="#代码分析">代码分析</a></li>
+            <li><a href="#疑问点">疑问点</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>冒泡排序是一个简单的排序算法，经常拿来教学，但彻底理解还是要花点功夫的，对初学者而言并不简单。</p>
+<p>有些老师在教这个的时候会受限于自己的认知或者因为太熟悉某种技艺而无法想象初学者的困惑点，导致出现细节上的纰漏；在网络上搜索“冒泡排序”，信息实在是良莠不齐，更加大了初学者的难度。</p>
+<p>今天，作为一个初学者，花点时间采用 1+1=2 的笨方法理解一下这个算法。</p>
+<p>文章到最后是一个反转：教会我知识的课程，最后我根据自己的思考校正了课程的不合理之处，也许这就是不盲从，独立思考吧，说实话作为一个初学者要跳出老师的槽臼，相信自己的直觉挺难的，但我庆幸自己做到了！</p>
+<h4 id="关于冒泡排序的想法">关于冒泡排序的想法</h4>
+<ul>
+<li>
+<p>要求：将数组<code>arr1 = [3,4,5,2,1]</code>，从小到大排序。</p>
+</li>
+<li>
+<p>针对数组：<code>arr1 = [3,4,5,2,1] </code>，可以看到，这个数组总共有5个数，即<code>arr1.length = 5</code>。如果这个数组有 N 个数，N 就是 <code>arr1.length</code>。</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>我们要把这5个数从小到大各归其位，【从第一个数字3开始：3和4比较、不动；4和5比较、不动；5和2比较、换位；5和1比较、换位；】这样就筛选出了一个最大的数5。
+- 即解决了一个最大数的问题，接下来是倒数第二的数，倒数第三的数，倒数第四的数，当有4个数的位置被确定时，第五个数也就确定了。因为就剩它一个了，就只能在那了。</p>
+<ul>
+<li>因此如果一个数组的长度是 <code>N</code> ，那么要通过【两两比较】所要解决的敌人数量就是 <code>N-1</code>。为了和下面的次数区分，我们把这个叫做趟数，即需要<code>N-1</code>趟。</li>
+</ul>
+</li>
+<li>
+<p>将每一趟筛选数的方法单独抽出来看：</p>
+<ul>
+<li>第一趟-两两比较了4次：3和4比较、不动；4和5比较、不动；5和2比较、换位；5和1比较、换位。结果<code>arr1 = [3,4,2,1,5]</code></li>
+<li>第二趟-两两比较了3次：3和4比较、不动；4和2比较、换位；4和1比较、换位；4和5无需比较。结果<code>arr1 = [3,2,1,4,5]</code></li>
+<li>第三趟-两两比较了2次：3和2比较、换位；3和1比较、换位；3和4无需比较，4和5无需比较。结果<code>arr1 = [2,1,3,4,5]</code></li>
+<li>第四趟-两两比较了1次：2和1比较、换位；2和3无需比较，3和4无需比较，4和5无需比较。结果<code>arr1 = [1,2,3,4,5]</code></li>
+<li>总结：如果一个数组的长度是 <code>N</code> ，那么每趟要比较的次数就是 <code>N - 趟数</code></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>依据以上想法的代码实现：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var arr1 = [3, 4, 5, 2, 1];
+for (var i = 1; i &lt; arr1.length; i++) { // 外层循环管趟数,执行n-1趟
+    for (var j = 0; j &lt;= arr1.length - i; j++) { // 里面循环管每一趟的交换次数,执行n-i次
+        // 前一个元素和后一个元素比较,如果前&gt;后,则交换两个变量的值.
+        if (arr1[j] &gt; arr1[j + 1]) {
+            var temp = arr1[j];
+            arr1[j] = arr1[j + 1];
+            arr1[j + 1] = temp;
+        }
+    }
+}
+console.log(arr1);
+</code></pre></td></tr></table>
+</div>
+</div><p><em>关于第二步不成熟的想法</em>：</p>
+<ol>
+<li>每一趟比较都确定了一个数，因此下一次比较时都不需要再去比较已经确定的数，因此【需要比较的元素个数】随着趟数的增加递减1，这是动态的关系。若从1开始计数，关系式为：（N-i+1）
+2. 【需要比较的次数】=【需要比较的元素个数】- 1，这是固定的关系，一个数学事实，3个数比大小，两两比较2次，即可完成排序。
+3. 最后【趟数】和【需要比较的次数】关系为：<code>N - i + 1 - 1</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">趟数</th>
+<th align="left">需要比较的元素个数</th>
+<th align="center">需要比较的次数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">5</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">4</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">3</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">2</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="代码分析">代码分析</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var arr1 = [3,4,5,2,1];
+for (var i = 0; i &lt; arr1.length - 1; i++) { // 外层循环管趟数
+    for (var j = 0; j &lt;= arr1.length - i - 1; j++) { // 里层循环管每一趟的交换次数
+        // 前一个元素和后一个元素比较,如果前&gt;后,则交换两个变量的值.
+        if (arr1[j] &gt; arr1[j + 1]) {
+            var temp = arr1[j];
+            arr1[j] = arr1[j + 1];
+            arr1[j + 1] = temp;
+        }
+    }
+}
+console.log(arr1);
+
+</code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>
+<p>外层循环管趟数：5个数要排4趟，即<code>var i = 1; i&lt;= arr1.length - 1; i++</code>，因为数组的索引从0开始，因此写为：<code>var i = 0; i &lt; arr1.length -1; i++</code> 等同于 <code>var i = 0; i &lt;= arr1.length - 2; i++</code>，只有这样，可以保证 i 可取的值为 <code>n-1</code>个。</p>
+<ul>
+<li>有 1 个错误（已更正）：应为 <code>var i = 0; i &lt; arr1.length -1; i++</code>, 去掉 = 号, 才是4趟。</li>
+<li>有 1 个令初学者疑惑的重要干扰项：外层管趟数，无需从 0 开始，从 1 开始就好了，从0开始计数大大增加理解这个简单算法的难度。</li>
+</ul>
+</li>
+<li>
+<p>内层循环管每一趟的交换次数，次数就是<code>N - 趟数</code>，即<code>var j = 1; j &lt;= arr1.length -i; j++</code>，因为数组的索引从0开始，因此写为<code>var j = 0; j &lt;= arr1.length -i - 1; j++</code></p>
+</li>
+<li>
+<p>在内层循环中写出两数比较的交换代码。</p>
+</li>
+<li>
+<p>使用双重 for 循环 来实现冒泡排序。</p>
+</li>
+</ol>
+<h4 id="疑问点">疑问点</h4>
+<ol>
+<li>j 从 0 开始是可以理解的，因为 j 需要在数组中取值。那么 i 为什么需要从 0 开始呢？
+答：因为 j 和 i 是联动的，如果 j 从 0 开始, 而 i 从 1 开始, 那么第一趟的次数<code>n-i</code>次, 就会是4次，咦，这没有什么影响啊！？？！！<br>
+代码试一下，果然输出是正确的，也就是说我们可以写成以下的代码：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var arr1 = [3, 4, 5, 2, 1];
+for (var i = 1; i &lt; arr1.length; i++) { // 外层循环管趟数,执行n-1趟
+    for (var j = 0; j &lt;= arr1.length - i; j++) { // 里面循环管每一趟的交换次数,执行n-i次
+        // 前一个元素和后一个元素比较,如果前&gt;后,则交换两个变量的值.
+        if (arr1[j] &gt; arr1[j + 1]) {
+            var temp = arr1[j];
+            arr1[j] = arr1[j + 1];
+            arr1[j + 1] = temp;
+        }
+    }
+}
+console.log(arr1);
+</code></pre></td></tr></table>
+</div>
+</div><p>这个结果表明了 <a href="https://www.bilibili.com/video/BV1HJ41147DG?p=112">黑马JS教程，冒泡排序算法</a>这个课程的不简洁、不明白之处。但瑕不掩瑜，如果要我给这个课程打分，我会打高分，老师非常好，感谢老师的付出！</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">朝晖</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-05-13
+        <a href="https://github.com/zhahuya/Blog-by-Hugo/commit/7e55547c335d65e2f63f83b69591d714be3d25ce" title="new article about bubbleSort">(7e55547)</a>
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel=license href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>知识共享署名-非商业性使用 4.0 </a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">冒泡排序</a>
+          <a href="/tags/bubble-sort/">bubble sort</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/tencent-cloudbase-static-website/">
+            <span class="next-text nav-default">关于腾讯云的静态网站托管服务</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hnqQxTyUKisFBDXjJaq0AU72-gzGzoHsz',
+        appKey: 'uBGYh5dib6aCPTW4QORY9K5W',
+        notify:  false ,
+        verify:  true ,
+        avatar:'mm',
+        placeholder: '说点什么吧...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">vchv</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+
+
+
+<script type="text/javascript" src="https://www.vchv.ltd/js/main.5752f2e84f6b9dbe51d23ba7f5ad2291c9988d2120df9e62e5f699c9d250fa7f.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-152858031-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script id="baidu_analytics">
+  var _hmt = _hmt || [];
+  (function() {
+    if (window.location.hostname === 'localhost') return;
+    var hm = document.createElement("script"); hm.async = true;
+    hm.src = "https://hm.baidu.com/hm.js?83441492476cd4fc52fe2f8e3399e766";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+
+
+
+
+
+</body>
+</html>

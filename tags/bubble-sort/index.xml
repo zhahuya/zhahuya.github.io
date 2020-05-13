@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bubble sort on Vchv的网络日志</title>
+    <link>https://www.vchv.ltd/tags/bubble-sort/</link>
+    <description>Recent content in bubble sort on Vchv的网络日志</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>vchv</copyright>
+    <lastBuildDate>Tue, 12 May 2020 00:30:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.vchv.ltd/tags/bubble-sort/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于“冒泡排序”的再思考</title>
+      <link>https://www.vchv.ltd/the-bubble-sort-in-heima-js-class/</link>
+      <pubDate>Tue, 12 May 2020 00:30:04 +0800</pubDate>
+      
+      <guid>https://www.vchv.ltd/the-bubble-sort-in-heima-js-class/</guid>
+      <description>冒泡排序是一个简单的排序算法，经常拿来教学，但彻底理解还是要花点功夫的，对初学者而言并不简单。 有些老师在教这个的时候会受限于自己的认知或者因</description>
+    </item>
+    
+  </channel>
+</rss>

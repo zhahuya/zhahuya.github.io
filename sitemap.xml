@@ -2,22 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.vchv.ltd/tags/bubble-sort/</loc>
+    <lastmod>2020-05-13T00:12:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.vchv.ltd/categories/</loc>
-    <lastmod>2020-05-13T00:07:34+08:00</lastmod>
+    <lastmod>2020-05-13T00:12:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/post/</loc>
-    <lastmod>2020-05-13T00:07:34+08:00</lastmod>
+    <lastmod>2020-05-13T00:12:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.vchv.ltd/tags/</loc>
-    <lastmod>2020-05-13T00:07:34+08:00</lastmod>
+    <lastmod>2020-05-13T00:12:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vchv.ltd/the-bubble-sort-in-heima-js-class/</loc>
+    <lastmod>2020-05-13T00:12:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vchv.ltd/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2020-05-13T00:12:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vchv.ltd/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/</loc>
+    <lastmod>2020-05-13T00:12:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -101,20 +129,6 @@
   
   <url>
     <loc>https://www.vchv.ltd/learn-javascript-through-vedio-heima/</loc>
-    <lastmod>2020-05-13T00:07:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vchv.ltd/learn-javascript-through-vedio-heima/</loc>
-    <lastmod>2020-05-08T23:06:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.vchv.ltd/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/</loc>
     <lastmod>2020-05-13T00:07:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
