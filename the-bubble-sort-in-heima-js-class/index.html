@@ -49,7 +49,7 @@
 <meta itemprop="description" content="集中注意力到一个对象上，就像放大镜聚焦阳光一样……">
 <meta itemprop="datePublished" content="2020-05-12T00:30:04&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-13T16:09:08&#43;08:00" />
-<meta itemprop="wordCount" content="1953">
+<meta itemprop="wordCount" content="1968">
 
 
 
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/"> 计算机科学 </a>
             </div>
-          <span class="more-meta"> 约 1953 字 </span>
+          <span class="more-meta"> 约 1968 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
@@ -204,7 +204,7 @@
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">var arr1 = [3, 4, 5, 2, 1];
 for (var i = 1; i &lt; arr1.length; i++) { // 外层循环管趟数,执行n-1趟
-    for (var j = 0; j &lt;= arr1.length - i - 1; j++) { // 里面循环管每一趟的交换次数,执行n-i次
+    for (var j = 0; j &lt;= arr1.length - i - 1; j++) { // 里面循环管每一趟的交换次数,执行n-i次，里面可以等价写为：j &lt; arr1.length - i;
         // 前一个元素和后一个元素比较,如果前&gt;后,则交换两个变量的值.
         if (arr1[j] &gt; arr1[j + 1]) {
             var temp = arr1[j];
